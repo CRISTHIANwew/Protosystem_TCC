@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 0
-  Top = 0
+  Left = 645
+  Top = 376
   Caption = 'Form2'
   ClientHeight = 325
   ClientWidth = 607
@@ -10,5 +10,6 @@ object Form2: TForm2
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesigned
   TextHeight = 15
 end

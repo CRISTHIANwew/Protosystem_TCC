@@ -4,13 +4,104 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin,
+  Vcl.Menus;
 
 type
   TForm1 = class(TForm)
-    TreeView1: TTreeView;
-    Panel1: TPanel;
-    procedure TreeView1Click(Sender: TObject);
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    Estoque1: TMenuItem;
+    Vendas1: TMenuItem;
+    Caixa1: TMenuItem;
+    Banco1: TMenuItem;
+    Contasareceber1: TMenuItem;
+    Contasapagar1: TMenuItem;
+    N8: TMenuItem;
+    N9: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    N11: TMenuItem;
+    N21: TMenuItem;
+    N31: TMenuItem;
+    N41: TMenuItem;
+    N51: TMenuItem;
+    Cadastros1: TMenuItem;
+    N7: TMenuItem;
+    Cadastros2: TMenuItem;
+    N10: TMenuItem;
+    Digitaes1: TMenuItem;
+    N12: TMenuItem;
+    Pesquisas1: TMenuItem;
+    N13: TMenuItem;
+    Relatorios1: TMenuItem;
+    Cadastrodeprodutos1: TMenuItem;
+    CadastrodeProdutos2: TMenuItem;
+    Digitaeos1: TMenuItem;
+    N14: TMenuItem;
+    N15: TMenuItem;
+    Pesquisas2: TMenuItem;
+    N16: TMenuItem;
+    Relatorios2: TMenuItem;
+    N17: TMenuItem;
+    Cad1: TMenuItem;
+    Pesquisadeestoque1: TMenuItem;
+    Cadastros3: TMenuItem;
+    N18: TMenuItem;
+    Digitaes2: TMenuItem;
+    N19: TMenuItem;
+    Pesquisas3: TMenuItem;
+    N20: TMenuItem;
+    Relatorios3: TMenuItem;
+    N22: TMenuItem;
+    Cadastrodenaturezas1: TMenuItem;
+    Vendas2: TMenuItem;
+    Pesquisadevendas1: TMenuItem;
+    Cadastros4: TMenuItem;
+    N23: TMenuItem;
+    C1: TMenuItem;
+    Digitaes3: TMenuItem;
+    N24: TMenuItem;
+    Lanamentosdocaixa1: TMenuItem;
+    Lanamentosdocaixa2: TMenuItem;
+    N25: TMenuItem;
+    Relatorios4: TMenuItem;
+    N26: TMenuItem;
+    Pesquisadelanamentos1: TMenuItem;
+    Cadastros5: TMenuItem;
+    N27: TMenuItem;
+    Digitaes4: TMenuItem;
+    N28: TMenuItem;
+    Pesquisas4: TMenuItem;
+    N29: TMenuItem;
+    Relatorios5: TMenuItem;
+    N30: TMenuItem;
+    Cadasrodecontasbancarias1: TMenuItem;
+    Lanamentosbancrios1: TMenuItem;
+    Pesquisalanamentos1: TMenuItem;
+    Cadastros6: TMenuItem;
+    N32: TMenuItem;
+    Digitaes5: TMenuItem;
+    N33: TMenuItem;
+    Pesquisas5: TMenuItem;
+    N34: TMenuItem;
+    Relatorios6: TMenuItem;
+    N35: TMenuItem;
+    Cadastrodedocumentosareceber1: TMenuItem;
+    Baixadedocumentos1: TMenuItem;
+    Cadastros7: TMenuItem;
+    N36: TMenuItem;
+    Digitaes6: TMenuItem;
+    N37: TMenuItem;
+    Pesquisas6: TMenuItem;
+    N38: TMenuItem;
+    Relatorios7: TMenuItem;
+    N39: TMenuItem;
+    Cadastrodecontasapagar1: TMenuItem;
+    Baixadedocumentos2: TMenuItem;
   private
     { Private declarations }
   public
@@ -25,23 +116,5 @@ implementation
 {$R *.dfm}
 
 uses UDataModule, UCadprodpas;
-
-procedure TForm1.TreeView1Click(Sender: TObject);
-begin
- // Verifica se algum item foi selecionado
-  if TreeView1.Selected <> nil then
-  begin
-    // Exemplo de lógica para abrir a tela correspondente ao item selecionado
-    if TreeView1.Selected.Text = 'Cadastro de produtos' then
-      Form2 := TForm2.Create(Self)
-    else if TreeView1.Selected.Text = 'Cadastro de produtos' then
-      Form2 := TForm2.Create(Self)
-    // Continue com outras verificações para os demais itens da árvore
-
-    // Mostra a tela (caso tenha sido criada)
-    if Assigned(Form2) then
-      Form2.Show;
-  end;
-end;
 
 end.
