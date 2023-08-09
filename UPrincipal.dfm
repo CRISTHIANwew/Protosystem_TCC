@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 516
   Top = 245
   Align = alClient
-  ClientHeight = 500
-  ClientWidth = 888
+  ClientHeight = 702
+  ClientWidth = 1096
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,7 +16,8 @@ object Form1: TForm1
   object MainMenu1: TMainMenu
     BiDiMode = bdLeftToRight
     ParentBiDiMode = False
-    Left = 840
+    Left = 984
+    Top = 32
     object N1: TMenuItem
       Caption = 'Configura'#231#245'es'
       object N11: TMenuItem
@@ -71,6 +72,7 @@ object Form1: TForm1
         Caption = 'Cadastros'
         object CadastrodeProdutos2: TMenuItem
           Caption = 'Cadastro de Produtos'
+          OnClick = CadastrodeProdutos2Click
         end
         object Cad1: TMenuItem
           Caption = 'Cadastro de Grupos'
@@ -130,13 +132,13 @@ object Form1: TForm1
           Caption = 'Pesquisa de vendas'
         end
       end
-      object N20: TMenuItem
-        Caption = '-'
-      end
       object Relatorios3: TMenuItem
         Caption = 'Relatorios'
       end
       object N22: TMenuItem
+        Caption = '-'
+      end
+      object N20: TMenuItem
         Caption = '-'
       end
     end
@@ -244,13 +246,13 @@ object Form1: TForm1
       object Pesquisas5: TMenuItem
         Caption = 'Pesquisas'
       end
-      object N34: TMenuItem
-        Caption = '-'
-      end
       object Relatorios6: TMenuItem
         Caption = 'Relatorios'
       end
       object N35: TMenuItem
+        Caption = '-'
+      end
+      object N34: TMenuItem
         Caption = '-'
       end
     end

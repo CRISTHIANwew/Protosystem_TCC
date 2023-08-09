@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin,
-  Vcl.Menus;
+  Vcl.Menus, Vcl.StdCtrls;
 
 type
   TForm1 = class(TForm)
@@ -102,6 +102,8 @@ type
     N39: TMenuItem;
     Cadastrodecontasapagar1: TMenuItem;
     Baixadedocumentos2: TMenuItem;
+    procedure CadastrodeProdutos2Click(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -116,5 +118,17 @@ implementation
 {$R *.dfm}
 
 uses UDataModule, UCadprodpas;
+
+procedure TForm1.CadastrodeProdutos2Click(Sender: TObject);
+var
+  Form2: TForm2; // Declare uma variável para o formulário
+begin
+  Form2 := TForm2.Create(Self); // Crie uma instância do formulário
+  try
+    Form2.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Form2.Free; // Libere a memória após fechar o formulário
+  end;
+end;
 
 end.
