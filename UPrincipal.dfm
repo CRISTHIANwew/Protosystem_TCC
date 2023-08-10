@@ -11,7 +11,7 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   Menu = MainMenu1
-  Position = poDesigned
+  Position = poDesktopCenter
   TextHeight = 15
   object MainMenu1: TMainMenu
     BiDiMode = bdLeftToRight

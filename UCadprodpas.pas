@@ -11,9 +11,6 @@ type
   TForm2 = class(TForm)
     DBEdit1: TDBEdit;
     DataSource1: TDataSource;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
     TDBEdit2: TDBEdit;
     TDBEdit3: TDBEdit;
     Panel1: TPanel;
@@ -23,7 +20,6 @@ type
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     Panel2: TPanel;
-    Button4: TButton;
   private
     { Private declarations }
   public

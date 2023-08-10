@@ -1,16 +1,16 @@
 object Form2: TForm2
   Left = 645
-  Top = 376
+  Top = 344
   Caption = 'Form2'
-  ClientHeight = 568
-  ClientWidth = 895
+  ClientHeight = 555
+  ClientWidth = 765
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesigned
+  Position = poDesktopCenter
   TextHeight = 15
   object Panel1: TPanel
     Left = -8
@@ -43,7 +43,7 @@ object Form2: TForm2
       Left = 32
       Top = 18
       Width = 73
-      Height = 30
+      Height = 23
       DataField = 'ID'
       DataSource = DataSource1
       ParentShowHint = False
@@ -54,7 +54,7 @@ object Form2: TForm2
       Left = 111
       Top = 18
       Width = 587
-      Height = 30
+      Height = 23
       DataField = 'DESCRICAO'
       DataSource = DataSource1
       TabOrder = 1
@@ -63,7 +63,7 @@ object Form2: TForm2
       Left = 32
       Top = 74
       Width = 129
-      Height = 30
+      Height = 23
       DataField = 'ESTOQUE'
       DataSource = DataSource1
       TabOrder = 2
@@ -85,9 +85,9 @@ object Form2: TForm2
     TabOrder = 2
     object DBGrid1: TDBGrid
       Left = 13
-      Top = 71
+      Top = 0
       Width = 753
-      Height = 225
+      Height = 305
       DataSource = DataSource1
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
@@ -112,46 +112,10 @@ object Form2: TForm2
           Visible = True
         end>
     end
-    object Button1: TButton
-      Left = 57
-      Top = 0
-      Width = 145
-      Height = 65
-      Align = alCustom
-      Caption = 'Cadastrar'
-      TabOrder = 1
-    end
-    object Button2: TButton
-      Left = 208
-      Top = 0
-      Width = 161
-      Height = 65
-      Align = alCustom
-      Caption = 'Editar'
-      TabOrder = 2
-    end
-    object Button3: TButton
-      Left = 375
-      Top = 0
-      Width = 155
-      Height = 65
-      Align = alCustom
-      Caption = 'Localizar'
-      TabOrder = 3
-    end
-    object Button4: TButton
-      Left = 536
-      Top = 0
-      Width = 154
-      Height = 65
-      Align = alCustom
-      Caption = 'Excluir'
-      TabOrder = 4
-    end
   end
   object DataSource1: TDataSource
     DataSet = DataModule1.Query
-    Left = 824
-    Top = 184
+    Left = 688
+    Top = 88
   end
 end
