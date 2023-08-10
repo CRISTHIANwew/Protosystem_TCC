@@ -16,5 +16,6 @@ begin
   TStyleManager.TrySetStyle('Tablet Dark');
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.

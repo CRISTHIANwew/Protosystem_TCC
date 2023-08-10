@@ -13,10 +13,10 @@ uses
 
 type
   TDataModule1 = class(TDataModule)
-    FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    conexao: TFDConnection;
+    Query: TFDQuery;
   private
     { Private declarations }
   public
