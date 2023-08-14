@@ -5,7 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin,
-  Vcl.Menus, Vcl.StdCtrls;
+  Vcl.Menus, Vcl.StdCtrls, System.ImageList, Vcl.ImgList,
+  Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.VirtualImageList,
+  Vcl.VirtualImage, Vcl.ColorGrd;
 
 type
   TForm1 = class(TForm)
@@ -102,7 +104,11 @@ type
     N39: TMenuItem;
     Cadastrodecontasapagar1: TMenuItem;
     Baixadedocumentos2: TMenuItem;
+    Cadastrodeclientes1: TMenuItem;
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
     procedure CadastrodeProdutos2Click(Sender: TObject);
+    procedure Cadastrodeclientes1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -117,7 +123,19 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule, UCadprodpas;
+uses UDataModule, UCadprodpas, UCadCliente;
+
+procedure TForm1.Cadastrodeclientes1Click(Sender: TObject);
+var
+  Form3: TForm3; // Declare uma variável para o formulário
+begin
+  Form3 := TForm3.Create(Self); // Crie uma instância do formulário
+  try
+    Form3.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Form3.Free; // Libere a memória após fechar o formulário
+  end;
+end;
 
 procedure TForm1.CadastrodeProdutos2Click(Sender: TObject);
 var

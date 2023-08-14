@@ -1,23 +1,28 @@
 object Form2: TForm2
-  Left = 645
-  Top = 344
-  Caption = 'Form2'
-  ClientHeight = 555
-  ClientWidth = 765
+  Left = 436
+  Top = 147
+  BorderStyle = bsDialog
+  Caption = 'Cadastro de produtos'
+  ClientHeight = 591
+  ClientWidth = 781
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poDesktopCenter
+  Position = poDesigned
   TextHeight = 15
   object Panel1: TPanel
-    Left = -8
+    Left = 0
     Top = 0
-    Width = 777
-    Height = 242
+    Width = 781
+    Height = 249
+    Align = alTop
     TabOrder = 0
+    ExplicitLeft = -8
+    ExplicitTop = -7
+    ExplicitWidth = 889
     object Label1: TLabel
       Left = 32
       Top = 0
@@ -47,6 +52,7 @@ object Form2: TForm2
       DataField = 'ID'
       DataSource = DataSource1
       ParentShowHint = False
+      ReadOnly = True
       ShowHint = False
       TabOrder = 0
     end
@@ -71,50 +77,53 @@ object Form2: TForm2
   end
   object DBNavigator1: TDBNavigator
     Left = 0
-    Top = 208
-    Width = 740
+    Top = 249
+    Width = 781
     Height = 34
     DataSource = DataSource1
+    Align = alTop
     TabOrder = 1
+    ExplicitLeft = 48
+    ExplicitTop = 248
+    ExplicitWidth = 720
   end
-  object Panel2: TPanel
-    Left = -13
-    Top = 248
-    Width = 782
-    Height = 313
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 283
+    Width = 781
+    Height = 305
+    Align = alTop
+    DataSource = DataSource1
     TabOrder = 2
-    object DBGrid1: TDBGrid
-      Left = 13
-      Top = 0
-      Width = 753
-      Height = 305
-      DataSource = DataSource1
-      TabOrder = 0
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -12
-      TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
-      Columns = <
-        item
-          Expanded = False
-          FieldName = 'ID'
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'DESCRICAO'
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'ESTOQUE'
-          Visible = True
-        end>
-    end
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ESTOQUE'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ID_GRUPO'
+        Visible = True
+      end>
   end
   object DataSource1: TDataSource
-    DataSet = DataModule1.Query
+    DataSet = DataModule1.QueryPRODUTO
     Left = 688
     Top = 88
   end

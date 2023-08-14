@@ -1,0 +1,183 @@
+object Form3: TForm3
+  Left = 436
+  Top = 245
+  BorderStyle = bsSingle
+  Caption = 'Cadastro de clientes'
+  ClientHeight = 606
+  ClientWidth = 822
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poDesigned
+  TextHeight = 15
+  object Pclientes: TPanel
+    Left = 0
+    Top = 0
+    Width = 822
+    Height = 193
+    Align = alTop
+    TabOrder = 0
+    ExplicitLeft = -6
+    ExplicitTop = 8
+    ExplicitWidth = 823
+    object Label1: TLabel
+      Left = 8
+      Top = 0
+      Width = 11
+      Height = 15
+      Caption = 'ID'
+    end
+    object Label2: TLabel
+      Left = 135
+      Top = 0
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+    end
+    object Label3: TLabel
+      Left = 623
+      Top = 0
+      Width = 59
+      Height = 15
+      Caption = 'CPF / CNPJ'
+    end
+    object Label4: TLabel
+      Left = 328
+      Top = 45
+      Width = 35
+      Height = 15
+      Caption = 'RG / IE'
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 45
+      Width = 49
+      Height = 15
+      Caption = 'Endere'#231'o'
+    end
+    object TLABEL13: TLabel
+      Left = 8
+      Top = 93
+      Width = 31
+      Height = 15
+      Caption = 'Bairro'
+    end
+    object Label7: TLabel
+      Left = 328
+      Top = 93
+      Width = 44
+      Height = 15
+      Caption = 'Numero'
+    end
+    object Label6: TLabel
+      Left = 8
+      Top = 139
+      Width = 37
+      Height = 15
+      Caption = 'Celular'
+    end
+    object DBEdit1: TDBEdit
+      Left = 8
+      Top = 16
+      Width = 121
+      Height = 23
+      DataField = 'ID'
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 135
+      Top = 16
+      Width = 482
+      Height = 23
+      DataField = 'NOME'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 623
+      Top = 16
+      Width = 193
+      Height = 23
+      DataField = 'CPFCNPJ'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+    object DBEdit4: TDBEdit
+      Left = 8
+      Top = 64
+      Width = 281
+      Height = 23
+      DataField = 'ENDERECO'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 8
+      Top = 109
+      Width = 281
+      Height = 23
+      DataField = 'BAIRRO'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
+    object DBEdit6: TDBEdit
+      Left = 328
+      Top = 64
+      Width = 153
+      Height = 23
+      DataField = 'RGIE'
+      DataSource = DataSource1
+      TabOrder = 5
+    end
+    object DBEdit7: TDBEdit
+      Left = 328
+      Top = 109
+      Width = 153
+      Height = 23
+      DataField = 'NUMERO'
+      DataSource = DataSource1
+      TabOrder = 6
+    end
+    object DBEdit8: TDBEdit
+      Left = 8
+      Top = 160
+      Width = 193
+      Height = 23
+      DataField = 'CELULAR'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 227
+    Width = 822
+    Height = 353
+    Align = alTop
+    DataSource = DataSource1
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 193
+    Width = 822
+    Height = 34
+    DataSource = DataSource1
+    Align = alTop
+    TabOrder = 2
+  end
+  object DataSource1: TDataSource
+    DataSet = DataModule1.QueryCLIENTE
+    Left = 712
+    Top = 80
+  end
+end

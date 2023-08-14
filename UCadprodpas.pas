@@ -17,9 +17,8 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
-    Panel2: TPanel;
+    DBGrid1: TDBGrid;
   private
     { Private declarations }
   public

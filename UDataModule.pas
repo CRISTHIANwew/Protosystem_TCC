@@ -16,7 +16,9 @@ type
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     conexao: TFDConnection;
-    Query: TFDQuery;
+    QueryPRODUTO: TFDQuery;
+    QueryGRUPO_PRODUTO: TFDQuery;
+    QueryCLIENTE: TFDQuery;
   private
     { Private declarations }
   public

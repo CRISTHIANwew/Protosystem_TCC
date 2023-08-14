@@ -87,6 +87,9 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>Project1_Icon.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>..\..\..\Downloads\cat-black-face.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>..\..\..\Downloads\cat-black-face.png</UWP_DelphiLogo150>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -112,6 +115,10 @@
         </DCCReference>
         <DCCReference Include="UCadprodpas.pas">
             <Form>Form2</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UCadCliente.pas">
+            <Form>Form3</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
@@ -140,6 +147,13 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
+                <DeployFile LocalName="..\..\..\Downloads\cat-black-face.png" Configuration="Debug" Class="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets\</RemoteDir>
+                        <RemoteName>Logo44x44.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Project1.exe</RemoteName>
