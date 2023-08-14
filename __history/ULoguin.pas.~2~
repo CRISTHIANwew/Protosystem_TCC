@@ -1,0 +1,42 @@
+unit ULoguin;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask,
+  Vcl.ExtCtrls, Vcl.VirtualImage, Vcl.BaseImageCollection, Vcl.ImageCollection,
+  System.ImageList, Vcl.ImgList, Vcl.VirtualImageList;
+
+type
+  TForm4 = class(TForm)
+    Panel2: TPanel;
+    Panel1: TPanel;
+    Btn_comfirmar: TButton;
+    DBEdit2: TDBEdit;
+    Senha: TDBText;
+    DBEdit1: TDBEdit;
+    Loguin: TDBText;
+    Lb_sistema: TLabel;
+    Lb_protosystem: TLabel;
+    Vtm_logo: TVirtualImage;
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
+    Lb_Versao: TLabel;
+    Lb_link: TLinkLabel;
+    Lb_Desenvolvido: TLabel;
+    Lb_Digite: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+
+implementation
+
+{$R *.dfm}
+
+end.

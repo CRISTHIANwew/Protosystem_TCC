@@ -3,6 +3,7 @@ object Form1: TForm1
   Top = 245
   Align = alClient
   BorderStyle = bsSingle
+  Caption = '  ProtoSystem'
   ClientHeight = 702
   ClientWidth = 1109
   Color = clBtnFace
@@ -139,6 +140,7 @@ object Form1: TForm1
     240000000049454E44AE426082}
   Menu = MainMenu1
   Position = poDefault
+  WindowState = wsMaximized
   TextHeight = 15
   object MainMenu1: TMainMenu
     BiDiMode = bdLeftToRight
