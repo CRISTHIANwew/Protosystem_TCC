@@ -82,7 +82,7 @@ procedure TForm4.SpeedButton2Click(Sender: TObject);
 
       if fdquery_user.Fields[0].AsInteger > 0 then
       begin
-      ShowMessage('Login realizado com sucesso.');
+      //ShowMessage('Login realizado com sucesso.');
       Close;
       end
       else

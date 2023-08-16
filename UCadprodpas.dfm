@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 147
   BorderStyle = bsSingle
   Caption = 'Cadastro de produtos'
-  ClientHeight = 591
+  ClientHeight = 751
   ClientWidth = 781
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -244,8 +244,8 @@ object Form2: TForm2
       end>
   end
   object Button1: TButton
-    Left = 160
-    Top = 624
+    Left = 24
+    Top = 608
     Width = 153
     Height = 33
     Caption = 'Button1'
@@ -254,7 +254,7 @@ object Form2: TForm2
   end
   object DataSource1: TDataSource
     DataSet = DataModule1.QueryPRODUTO
-    Left = 736
+    Left = 720
     Top = 600
   end
   object Query_Produto: TFDQuery
