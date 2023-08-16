@@ -243,9 +243,25 @@ object Form2: TForm2
         Visible = True
       end>
   end
+  object Button1: TButton
+    Left = 160
+    Top = 624
+    Width = 153
+    Height = 33
+    Caption = 'Button1'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
   object DataSource1: TDataSource
     DataSet = DataModule1.QueryPRODUTO
-    Left = 688
-    Top = 88
+    Left = 736
+    Top = 600
+  end
+  object Query_Produto: TFDQuery
+    Connection = DataModule1.conexao
+    SQL.Strings = (
+      'Select * from produtos')
+    Left = 632
+    Top = 600
   end
 end

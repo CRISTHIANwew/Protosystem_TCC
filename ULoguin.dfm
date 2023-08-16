@@ -154,7 +154,7 @@ object Form4: TForm4
       Align = alLeft
       Color = 12369084
       ParentBackground = False
-      TabOrder = 0
+      TabOrder = 2
       object Lb_sistema: TLabel
         Left = 1
         Top = 24
@@ -269,7 +269,7 @@ object Form4: TForm4
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 3
       object SpeedButton2: TSpeedButton
         Left = 1
         Top = 1
@@ -302,7 +302,7 @@ object Form4: TForm4
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 4
       object SpeedButton1: TSpeedButton
         Left = 1
         Top = 1
@@ -332,7 +332,7 @@ object Form4: TForm4
       EditLabel.Width = 37
       EditLabel.Height = 15
       EditLabel.Caption = 'Loguin'
-      TabOrder = 3
+      TabOrder = 0
       Text = ''
     end
     object edit_senha: TLabeledEdit
@@ -343,7 +343,7 @@ object Form4: TForm4
       EditLabel.Width = 32
       EditLabel.Height = 15
       EditLabel.Caption = 'Senha'
-      TabOrder = 4
+      TabOrder = 1
       Text = ''
     end
   end
