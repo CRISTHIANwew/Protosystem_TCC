@@ -3,8 +3,8 @@ object Form4: TForm4
   Top = 327
   BorderStyle = bsNone
   Caption = 'Loguin'
-  ClientHeight = 313
-  ClientWidth = 927
+  ClientHeight = 295
+  ClientWidth = 923
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -139,51 +139,22 @@ object Form4: TForm4
   Position = poDesigned
   TextHeight = 15
   object Panel2: TPanel
-    Left = -2
-    Top = 0
+    Left = -3
+    Top = -2
     Width = 929
-    Height = 313
+    Height = 299
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    object Lb_loguin: TLabel
-      Left = 392
-      Top = 83
-      Width = 45
-      Height = 20
-      Alignment = taCenter
-      Caption = 'Loguin'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clScrollBar
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
-    object Lb_senha: TLabel
-      Left = 656
-      Top = 83
-      Width = 40
-      Height = 20
-      Alignment = taCenter
-      Caption = 'Senha'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clScrollBar
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-    end
     object Panel1: TPanel
       Left = 1
       Top = 1
       Width = 360
-      Height = 311
+      Height = 297
       Align = alLeft
-      Color = clBtnShadow
+      Color = 12369084
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 623
       object Lb_sistema: TLabel
         Left = 1
         Top = 24
@@ -269,38 +240,20 @@ object Form4: TForm4
         Font.Style = []
         ParentFont = False
       end
-      object Lb_link: TLinkLabel
-        Left = 65
-        Top = 277
-        Width = 194
-        Height = 19
-        Cursor = crHandPoint
+      object Label2: TLabel
+        Left = 58
+        Top = 270
+        Width = 200
+        Height = 17
+        Alignment = taCenter
         Caption = 'https://github.com/CRISTHIANwew'
-        Color = clWhite
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
-        Font.Height = -12
+        Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
-        ParentColor = False
         ParentFont = False
-        TabOrder = 0
-        OnClick = Lb_linkClick
       end
-    end
-    object DBEdit2: TDBEdit
-      Left = 656
-      Top = 109
-      Width = 250
-      Height = 23
-      TabOrder = 1
-    end
-    object DBEdit1: TDBEdit
-      Left = 392
-      Top = 109
-      Width = 250
-      Height = 23
-      TabOrder = 2
     end
     object Pnl_comfirmar: TPanel
       Left = 508
@@ -308,9 +261,15 @@ object Form4: TForm4
       Width = 262
       Height = 49
       Cursor = crHandPoint
-      Color = 16549908
+      Color = clBlack
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 2302755
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       ParentBackground = False
-      TabOrder = 3
+      ParentFont = False
+      TabOrder = 1
       object SpeedButton2: TSpeedButton
         Left = 1
         Top = 1
@@ -320,7 +279,7 @@ object Form4: TForm4
         Caption = 'Comfirmar'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
+        Font.Color = clScrollBar
         Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -330,14 +289,20 @@ object Form4: TForm4
         ExplicitTop = 9
       end
     end
-    object Panel3: TPanel
+    object Pnl_Sair: TPanel
       Left = 880
       Top = 2
       Width = 47
       Height = 45
-      Color = 16549908
+      Color = 2302755
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
       ParentBackground = False
-      TabOrder = 4
+      ParentFont = False
+      TabOrder = 2
       object SpeedButton1: TSpeedButton
         Left = 1
         Top = 1
@@ -348,7 +313,7 @@ object Form4: TForm4
         Caption = 'X'
         Flat = True
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
+        Font.Color = clScrollBar
         Font.Height = -13
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -358,6 +323,28 @@ object Form4: TForm4
         ExplicitLeft = 2
         ExplicitTop = 2
       end
+    end
+    object edit_usuario: TLabeledEdit
+      Left = 406
+      Top = 115
+      Width = 203
+      Height = 23
+      EditLabel.Width = 37
+      EditLabel.Height = 15
+      EditLabel.Caption = 'Loguin'
+      TabOrder = 3
+      Text = ''
+    end
+    object edit_senha: TLabeledEdit
+      Left = 657
+      Top = 115
+      Width = 192
+      Height = 23
+      EditLabel.Width = 32
+      EditLabel.Height = 15
+      EditLabel.Caption = 'Senha'
+      TabOrder = 4
+      Text = ''
     end
   end
   object VirtualImageList1: TVirtualImageList
@@ -369,7 +356,7 @@ object Form4: TForm4
       end>
     ImageCollection = ImageCollection1
     Left = 1033
-    Top = 57
+    Top = 55
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -570,6 +557,13 @@ object Form4: TForm4
           end>
       end>
     Left = 1033
-    Top = 145
+    Top = 143
+  end
+  object fdquery_user: TFDQuery
+    Connection = DataModule1.conexao
+    SQL.Strings = (
+      'select * from user')
+    Left = 1136
+    Top = 64
   end
 end
