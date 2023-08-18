@@ -1,0 +1,27 @@
+unit UPesEstoque;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Data.DB, Vcl.StdCtrls,
+  Vcl.Mask, Vcl.ExtCtrls, Vcl.DBGrids;
+
+type
+  TFrm_PesEstoqe = class(TForm)
+    DBGrid1: TDBGrid;
+    LabeledEdit1: TLabeledEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_PesEstoqe: TFrm_PesEstoqe;
+
+implementation
+
+{$R *.dfm}
+
+end.

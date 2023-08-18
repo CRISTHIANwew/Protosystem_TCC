@@ -1,4 +1,4 @@
-object DataModule1: TDataModule1
+object DM: TDM
   Height = 363
   Width = 602
   PixelsPerInch = 120

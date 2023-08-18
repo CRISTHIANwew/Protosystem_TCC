@@ -1,4 +1,4 @@
-object Form3: TForm3
+object Frm_CadCliente: TFrm_CadCliente
   Left = 436
   Top = 131
   BorderStyle = bsSingle

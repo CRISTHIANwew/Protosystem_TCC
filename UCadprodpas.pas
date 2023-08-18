@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TForm2 = class(TForm)
+  TFrm_CadProd = class(TForm)
     DBEdit1: TDBEdit;
     DataSource1: TDataSource;
     TDBEdit2: TDBEdit;
@@ -23,7 +23,6 @@ type
     DBNavigator1: TDBNavigator;
     DBGrid1: TDBGrid;
     Query_Produto: TFDQuery;
-    Button1: TButton;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -32,7 +31,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  Frm_CadProd: TFrm_CadProd;
 
 implementation
 
@@ -40,7 +39,7 @@ implementation
 
 uses UDataModule;
 
-procedure TForm2.Button1Click(Sender: TObject);
+procedure TFrm_CadProd.Button1Click(Sender: TObject);
 begin
        query_produto.Insert;
 

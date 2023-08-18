@@ -8,7 +8,7 @@ uses
   Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids;
 
 type
-  TForm3 = class(TForm)
+  TFrm_CadCliente = class(TForm)
     Pclientes: TPanel;
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
@@ -36,7 +36,7 @@ type
   end;
 
 var
-  Form3: TForm3;
+  Frm_CadCliente: TFrm_CadCliente;
 
 implementation
 

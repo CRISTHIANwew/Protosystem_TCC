@@ -10,7 +10,7 @@ uses
   Vcl.VirtualImage, Vcl.ColorGrd;
 
 type
-  TForm1 = class(TForm)
+  TFrm_Principal = class(TForm)
     MainMenu1: TMainMenu;
     N1: TMenuItem;
     Estoque1: TMenuItem;
@@ -109,6 +109,8 @@ type
     ImageCollection1: TImageCollection;
     procedure CadastrodeProdutos2Click(Sender: TObject);
     procedure Cadastrodeclientes1Click(Sender: TObject);
+    procedure Pesquisadeestoque1Click(Sender: TObject);
+    procedure N11Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -117,36 +119,59 @@ type
   end;
 
 var
-  Form1: TForm1;
+  Frm_Principal: TFrm_Principal;
 
 implementation
 
 {$R *.dfm}
 
-uses UDataModule, UCadprodpas, UCadCliente;
+uses UDataModule, UCadprodpas, UCadCliente, UPesEstoque, UCadUsuario;
 
-procedure TForm1.Cadastrodeclientes1Click(Sender: TObject);
+procedure TFrm_Principal.Cadastrodeclientes1Click(Sender: TObject);
 var
-  Form3: TForm3; // Declare uma variável para o formulário
+  Frm_CadCliente: TFrm_CadCliente; // Declare uma variável para o formulário
 begin
-  Form3 := TForm3.Create(Self); // Crie uma instância do formulário
+  Frm_CadCliente := TFrm_CadCliente.Create(Self); // Crie uma instância do formulário
   try
-    Form3.ShowModal; // Exiba o formulário de maneira modal
+    Frm_CadCliente.ShowModal; // Exiba o formulário de maneira modal
   finally
-    Form3.Free; // Libere a memória após fechar o formulário
+    Frm_CadCliente.Free; // Libere a memória após fechar o formulário
   end;
 end;
 
-procedure TForm1.CadastrodeProdutos2Click(Sender: TObject);
+procedure TFrm_Principal.CadastrodeProdutos2Click(Sender: TObject);
 var
-  Form2: TForm2; // Declare uma variável para o formulário
+  Frm_CadProd: TFrm_CadProd; // Declare uma variável para o formulário
 begin
-  Form2 := TForm2.Create(Self); // Crie uma instância do formulário
+  Frm_CadProd := TFrm_CadProd.Create(Self); // Crie uma instância do formulário
   try
-    Form2.ShowModal; // Exiba o formulário de maneira modal
+    Frm_CadProd.ShowModal; // Exiba o formulário de maneira modal
   finally
-    Form2.Free; // Libere a memória após fechar o formulário
+    Frm_CadProd.Free; // Libere a memória após fechar o formulário
   end;
 end;
 
+procedure TFrm_Principal.N11Click(Sender: TObject);
+var
+  Frm_CadUsuario: TFrm_CadUsuario; // Declare uma variável para o formulário
+begin
+  Frm_CadUsuario := TFrm_CadUsuario.Create(Self); // Crie uma instância do formulário
+  try
+    Frm_CadUsuario.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadUsuario.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.Pesquisadeestoque1Click(Sender: TObject);
+var
+  Frm_PesEstoqe: TFrm_PesEstoqe; // Declare uma variável para o formulário
+begin
+  Frm_PesEstoqe := TFrm_PesEstoqe.Create(Self); // Crie uma instância do formulário
+  try
+    Frm_PesEstoqe.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_PesEstoqe.Free; // Libere a memória após fechar o formulário
+  end;
+end;
 end.

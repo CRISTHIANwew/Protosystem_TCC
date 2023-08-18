@@ -1,10 +1,10 @@
-object Form2: TForm2
+object Frm_CadProd: TFrm_CadProd
   Left = 436
   Top = 147
   BorderStyle = bsSingle
   Caption = 'Cadastro de produtos'
-  ClientHeight = 751
-  ClientWidth = 781
+  ClientHeight = 586
+  ClientWidth = 799
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -141,7 +141,7 @@ object Form2: TForm2
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 781
+    Width = 799
     Height = 249
     Align = alTop
     TabOrder = 0
@@ -201,7 +201,7 @@ object Form2: TForm2
   object DBNavigator1: TDBNavigator
     Left = 0
     Top = 249
-    Width = 781
+    Width = 799
     Height = 34
     DataSource = DataSource1
     Align = alTop
@@ -211,7 +211,7 @@ object Form2: TForm2
   object DBGrid1: TDBGrid
     Left = 0
     Top = 283
-    Width = 781
+    Width = 799
     Height = 305
     Align = alTop
     DataSource = DataSource1
@@ -243,22 +243,14 @@ object Form2: TForm2
         Visible = True
       end>
   end
-  object Button1: TButton
-    Left = 24
-    Top = 608
-    Width = 153
-    Height = 33
-    Caption = 'Button1'
-    TabOrder = 3
-    OnClick = Button1Click
-  end
   object DataSource1: TDataSource
-    DataSet = DataModule1.QueryPRODUTO
+    DataSet = DM.QueryPRODUTO
     Left = 720
     Top = 600
   end
   object Query_Produto: TFDQuery
-    Connection = DataModule1.conexao
+    Active = True
+    Connection = DM.conexao
     SQL.Strings = (
       'Select * from produtos')
     Left = 632

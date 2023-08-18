@@ -1,0 +1,33 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {Frm_Principal},
+  UDataModule in 'UDataModule.pas' {DataModule1: TDataModule},
+  UCadprodpas in 'UCadprodpas.pas' {Frm_CadProd},
+  Vcl.Themes,
+  Vcl.Styles,
+  UCadCliente in 'UCadCliente.pas' {Frm_CadCliente},
+  ULoguin in 'ULoguin.pas' {Form4},
+  UPesEstoque in 'UPesEstoque.pas' {Frm_PesEstoqe};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TFrm_PesEstoqe, Frm_PesEstoqe);
+  Form4 := TForm4.Create(nil);
+  FORM4.ShowModal;
+
+  Application.CreateForm(TForm1, Form1);
+
+  FORM4.Hide;
+  FORM4.Free;
+
+  Application.CreateForm(TFrm_CadProd, Frm_CadProd);
+  Application.CreateForm(TFrm_CadCliente, Frm_CadCliente);
+
+  Application.Run;
+end.

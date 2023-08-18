@@ -10,10 +10,10 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, System.Actions, Vcl.ActnList;
 
 type
-  TForm4 = class(TForm)
+  TFrm_Loguin = class(TForm)
     Panel2: TPanel;
     Panel1: TPanel;
     Lb_sistema: TLabel;
@@ -34,7 +34,6 @@ type
     edit_senha: TLabeledEdit;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
-    procedure Lb_linkClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,7 +41,7 @@ type
   end;
 
 var
-  Form4: TForm4;
+  Frm_Loguin: TFrm_Loguin;
 
 implementation
 
@@ -50,22 +49,12 @@ implementation
 
 uses UDataModule;
 
-procedure TForm4.Lb_linkClick(Sender: TObject);
-begin
-// adicionar dps
-//procedure TForm1.HyperlinkLabelClick(Sender: TObject);
-//begin
-  // Abre o navegador padrão com o URL especificado
-  //ShellExecute(0, 'open', 'https://www.example.com', nil, nil, SW_SHOWNORMAL);
-//end;
-end;
-
-procedure TForm4.SpeedButton1Click(Sender: TObject);
+procedure TFrm_Loguin.SpeedButton1Click(Sender: TObject);
 begin
  Application.Terminate;
 end;
 
-procedure TForm4.SpeedButton2Click(Sender: TObject);
+procedure TFrm_Loguin.SpeedButton2Click(Sender: TObject);
   begin
     if (edit_usuario.Text = '') or (edit_senha.Text = '') then
       begin

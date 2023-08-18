@@ -1,4 +1,4 @@
-object Form1: TForm1
+object Frm_Principal: TFrm_Principal
   Left = 516
   Top = 245
   Align = alClient
@@ -151,6 +151,7 @@ object Form1: TForm1
       Caption = 'Configura'#231#245'es'
       object N11: TMenuItem
         Caption = 'Cadastro de usuarios'
+        OnClick = N11Click
       end
       object N21: TMenuItem
         Caption = '2'
@@ -220,6 +221,7 @@ object Form1: TForm1
         Caption = 'Pesquisas'
         object Pesquisadeestoque1: TMenuItem
           Caption = 'Pesquisa de estoque'
+          OnClick = Pesquisadeestoque1Click
         end
       end
       object N15: TMenuItem

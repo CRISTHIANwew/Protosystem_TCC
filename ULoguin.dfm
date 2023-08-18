@@ -1,4 +1,4 @@
-object Form4: TForm4
+object Frm_Loguin: TFrm_Loguin
   Left = 307
   Top = 327
   BorderStyle = bsNone
@@ -188,10 +188,10 @@ object Form4: TForm4
         ExplicitWidth = 96
       end
       object Vtm_logo: TVirtualImage
-        Left = 105
-        Top = 63
-        Width = 129
-        Height = 97
+        Left = 127
+        Top = 87
+        Width = 96
+        Height = 74
         ImageCollection = ImageCollection1
         ImageWidth = 0
         ImageHeight = 0
@@ -560,7 +560,7 @@ object Form4: TForm4
     Top = 143
   end
   object fdquery_user: TFDQuery
-    Connection = DataModule1.conexao
+    Connection = DM.conexao
     SQL.Strings = (
       'select * from user')
     Left = 1136
