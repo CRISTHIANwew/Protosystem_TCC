@@ -433,7 +433,6 @@ object Frm_Principal: TFrm_Principal
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>
-    ImageCollection = ImageCollection1
     Left = 1040
     Top = 88
   end

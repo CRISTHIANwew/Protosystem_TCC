@@ -3,8 +3,8 @@ object Frm_CadCliente: TFrm_CadCliente
   Top = 131
   BorderStyle = bsSingle
   Caption = 'Cadastro de clientes'
-  ClientHeight = 606
-  ClientWidth = 822
+  ClientHeight = 581
+  ClientWidth = 865
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -141,7 +141,7 @@ object Frm_CadCliente: TFrm_CadCliente
   object Pclientes: TPanel
     Left = 0
     Top = 0
-    Width = 822
+    Width = 865
     Height = 193
     Align = alTop
     TabOrder = 0
@@ -278,7 +278,7 @@ object Frm_CadCliente: TFrm_CadCliente
   object DBGrid1: TDBGrid
     Left = 0
     Top = 227
-    Width = 822
+    Width = 865
     Height = 353
     Align = alTop
     DataSource = DataSource1
@@ -292,7 +292,7 @@ object Frm_CadCliente: TFrm_CadCliente
   object DBNavigator1: TDBNavigator
     Left = 0
     Top = 193
-    Width = 822
+    Width = 865
     Height = 34
     DataSource = DataSource1
     Align = alTop
@@ -300,7 +300,7 @@ object Frm_CadCliente: TFrm_CadCliente
     ExplicitWidth = 816
   end
   object DataSource1: TDataSource
-    DataSet = DataModule1.QueryCLIENTE
+    DataSet = DM.QueryCLIENTE
     Left = 712
     Top = 80
   end
