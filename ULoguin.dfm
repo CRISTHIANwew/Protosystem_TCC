@@ -146,6 +146,16 @@ object Frm_Loguin: TFrm_Loguin
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    object Button1: TButton
+      Left = 600
+      Top = 179
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      Default = True
+      TabOrder = 5
+      OnClick = Button1Click
+    end
     object Panel1: TPanel
       Left = 1
       Top = 1

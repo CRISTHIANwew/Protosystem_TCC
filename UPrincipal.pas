@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin,
   Vcl.Menus, Vcl.StdCtrls, System.ImageList, Vcl.ImgList,
   Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.VirtualImageList,
-  Vcl.VirtualImage, Vcl.ColorGrd, Vcl.Tabs;
+  Vcl.VirtualImage, Vcl.ColorGrd, Vcl.Tabs, System.Win.TaskbarCore, Vcl.Taskbar,
+  Vcl.WinXCtrls;
 
 type
   TFrm_Principal = class(TForm)
@@ -174,4 +175,5 @@ begin
     Frm_PesEstoqe.Free; // Libere a memória após fechar o formulário
   end;
 end;
+
 end.

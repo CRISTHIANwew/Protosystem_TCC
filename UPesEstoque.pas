@@ -18,7 +18,7 @@ type
     Btn_pesquisar: TButton;
     Edit_pesquisa: TEdit;
     DBGrid1: TDBGrid;
-    procedure Btn_pesquisarClick(Sender: TObject);
+    procedure Edit_pesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,10 +34,9 @@ implementation
 
 uses
       Udatamodule;
-procedure TFrm_PesEstoqe.Btn_pesquisarClick(Sender: TObject);
+procedure TFrm_PesEstoqe.Edit_pesquisaChange(Sender: TObject);
 begin
-      begin
-  // Verifique se o critério de pesquisa não está vazio
+    // Verifique se o critério de pesquisa não está vazio
   if Edit_pesquisa.Text <> '' then
   begin
     // Atualize o filtro do DataSet ligado ao DBGrid
@@ -46,12 +45,10 @@ begin
     Query_PesProd.Filter := 'DESCRICAO LIKE ' + QuotedStr('%' + Edit_pesquisa.Text + '%');
     Query_PesProd.Filtered := True;
   end
+
   else
-  begin
     // Se o critério de pesquisa estiver vazio, remova o filtro
     Query_PesProd.Filtered := False;
-  end;
-end;
 end;
 
 end.

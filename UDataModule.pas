@@ -17,7 +17,6 @@ type
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     conexao: TFDConnection;
     QueryPRODUTO: TFDQuery;
-    QueryGRUPO_PRODUTO: TFDQuery;
     QueryCLIENTE: TFDQuery;
   private
     { Private declarations }

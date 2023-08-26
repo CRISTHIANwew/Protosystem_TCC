@@ -28,7 +28,6 @@ object Frm_PesEstoqe: TFrm_PesEstoqe
       Caption = 'Pesquisar'
       Default = True
       TabOrder = 0
-      OnClick = Btn_pesquisarClick
     end
     object Edit_pesquisa: TEdit
       Left = 8
@@ -36,6 +35,7 @@ object Frm_PesEstoqe: TFrm_PesEstoqe
       Width = 426
       Height = 23
       TabOrder = 1
+      OnChange = Edit_pesquisaChange
     end
     object DBGrid1: TDBGrid
       Left = 8

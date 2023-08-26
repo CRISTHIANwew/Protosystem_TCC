@@ -30,14 +30,6 @@ object DM: TDM
       'select * from produtos')
     Left = 424
   end
-  object QueryGRUPO_PRODUTO: TFDQuery
-    Active = True
-    Connection = conexao
-    SQL.Strings = (
-      'SELECT * FROM GRUPO_PRODUTO')
-    Left = 424
-    Top = 64
-  end
   object QueryCLIENTE: TFDQuery
     Active = True
     Connection = conexao

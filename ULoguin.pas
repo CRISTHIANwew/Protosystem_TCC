@@ -32,8 +32,10 @@ type
     fdquery_user: TFDQuery;
     edit_usuario: TLabeledEdit;
     edit_senha: TLabeledEdit;
+    Button1: TButton;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +50,35 @@ implementation
 {$R *.dfm}
 
 uses UDataModule;
+
+procedure TFrm_Loguin.Button1Click(Sender: TObject);
+begin
+    if (edit_usuario.Text = '') or (edit_senha.Text = '') then
+      begin
+      ShowMessage('Informe o usuário e a senha para proseguir.');
+      Exit;
+      //close;
+    end;
+
+    try
+    fdquery_user.SQL.Text := 'SELECT COUNT(*) FROM user WHERE username = :username AND password = :password';
+    fdquery_user.ParamByName('username').AsString := edit_usuario.Text;
+    fdquery_user.ParamByName('password').AsString := edit_senha.Text;
+    fdquery_user.Open;
+
+      if fdquery_user.Fields[0].AsInteger > 0 then
+      begin
+      //ShowMessage('Login realizado com sucesso.');
+      Close;
+      end
+      else
+      ShowMessage('Usuário ou senha incorretos.');
+
+      except
+      on E: Exception do
+      ShowMessage('Erro ao realizar login: ' + E.Message);
+      end;
+  end;
 
 procedure TFrm_Loguin.SpeedButton1Click(Sender: TObject);
 begin

@@ -145,7 +145,7 @@ object Frm_CadProd: TFrm_CadProd
     Height = 249
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 775
+    ExplicitWidth = 793
     object Label1: TLabel
       Left = 32
       Top = 0
@@ -206,7 +206,7 @@ object Frm_CadProd: TFrm_CadProd
     DataSource = DataSource1
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 775
+    ExplicitWidth = 793
   end
   object DBGrid1: TDBGrid
     Left = 0
@@ -215,6 +215,7 @@ object Frm_CadProd: TFrm_CadProd
     Height = 305
     Align = alTop
     DataSource = DataSource1
+    ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
