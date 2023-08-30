@@ -29,4 +29,3 @@ Tenha acesso a informações e métricas relevantes por meio de relatórios pers
 Contribuindo
 
 Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga.
- 

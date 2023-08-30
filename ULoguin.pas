@@ -39,6 +39,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
 
+    procedure edit_usuarioKeyPress(Sender: TObject; var Key: Char);
+
   private
     { Private declarations }
   public
@@ -57,11 +59,8 @@ uses
 
 procedure TFrm_Loguin.box_senhaClick(Sender: TObject);
 begin
-
   if box_senha.Checked = true then
-  begin
     edit_senha.PasswordChar := '*'
-  end
   else
     edit_senha.PasswordChar := #0;
 end;
@@ -96,6 +95,18 @@ begin
   end;
 end;
 
+procedure TFrm_Loguin.edit_usuarioKeyPress(Sender: TObject; var Key: Char);
+begin
+
+  if Key = #13 then
+  begin
+    SelectNext(Sender as TWinControl, true, true);
+    Key := #0
+
+  end;
+
+end;
+
 procedure TFrm_Loguin.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   // CanClose := False;
@@ -116,9 +127,7 @@ begin
         result := true
     else
       result := false
-
     end;
-
   end;
 
 end;

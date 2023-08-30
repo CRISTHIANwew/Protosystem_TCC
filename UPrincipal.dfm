@@ -4,8 +4,8 @@ object Frm_Principal: TFrm_Principal
   Align = alClient
   BorderStyle = bsSingle
   Caption = '  ProtoSystem'
-  ClientHeight = 702
-  ClientWidth = 964
+  ClientHeight = 665
+  ClientWidth = 1408
   Color = clBtnFace
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
@@ -138,304 +138,116 @@ object Frm_Principal: TFrm_Principal
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Menu = MainMenu1
   Position = poDefault
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
-  object MainMenu1: TMainMenu
-    BiDiMode = bdLeftToRight
-    ParentBiDiMode = False
-    Left = 1400
-    Top = 544
-    object N1: TMenuItem
-      Caption = 'Configura'#231#245'es'
-      object N11: TMenuItem
-        Caption = 'Cadastro de usuarios'
-        OnClick = N11Click
-      end
-      object N21: TMenuItem
-        Caption = '2'
-      end
-      object N31: TMenuItem
-        Caption = '3'
-      end
-      object N41: TMenuItem
-        Caption = '4'
-      end
-      object N51: TMenuItem
-        Caption = '5'
-      end
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1408
+    Height = 646
+    ActivePage = TabSheet2
+    Align = alClient
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Tela inicial'
     end
-    object N9: TMenuItem
-      Caption = '-'
-      object N7: TMenuItem
-        Caption = '-'
-      end
-      object Cadastros2: TMenuItem
-        Caption = 'Cadastros'
-        object Cadastrodeprodutos1: TMenuItem
-          Caption = 'Cadastro de produtos'
-        end
-      end
-      object N10: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes1: TMenuItem
-        Caption = 'Digita'#231#245'es'
-      end
-      object N12: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas1: TMenuItem
-        Caption = 'Pesquisas'
-      end
-      object N13: TMenuItem
-        Caption = '-'
-      end
-      object Relatorios1: TMenuItem
-        Caption = 'Relatorios'
-      end
-    end
-    object Estoque1: TMenuItem
+    object TabSheet2: TTabSheet
       Caption = 'Estoque'
-      object Cadastros1: TMenuItem
-        Caption = 'Cadastros'
-        object CadastrodeProdutos2: TMenuItem
-          Caption = 'Cadastro de Produtos'
-          OnClick = CadastrodeProdutos2Click
+      ImageIndex = 1
+      object PageControl2: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 614
+        ActivePage = TabSheet8
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet8: TTabSheet
+          Caption = 'Cadastros'
+          object Button1: TButton
+            Left = 5
+            Top = 3
+            Width = 266
+            Height = 88
+            Caption = 'Cadastro de produtos'
+            TabOrder = 0
+          end
         end
-        object Cad1: TMenuItem
-          Caption = 'Cadastro de Grupos'
+        object TabSheet9: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
         end
-      end
-      object N14: TMenuItem
-        Caption = '-'
-      end
-      object Digitaeos1: TMenuItem
-        Caption = 'Digita'#231#245'es'
-      end
-      object N16: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas2: TMenuItem
-        Caption = 'Pesquisas'
-        object Pesquisadeestoque1: TMenuItem
-          Caption = 'Pesquisa de estoque'
-          OnClick = Pesquisadeestoque1Click
+        object TabSheet10: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
         end
-      end
-      object N15: TMenuItem
-        Caption = '-'
-      end
-      object Relatorios2: TMenuItem
-        Caption = 'Relat'#243'rios'
-      end
-      object N17: TMenuItem
-        Caption = '-'
+        object TabSheet11: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+        end
       end
     end
-    object N2: TMenuItem
-      Caption = '-'
-    end
-    object Vendas1: TMenuItem
+    object TabSheet3: TTabSheet
       Caption = 'Vendas'
-      object Cadastros3: TMenuItem
-        Caption = 'Cadastros'
-        object Cadastrodenaturezas1: TMenuItem
-          Caption = 'Cadastro de naturezas'
-        end
-      end
-      object N18: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes2: TMenuItem
-        Caption = 'Digita'#231#245'es'
-        object Vendas2: TMenuItem
-          Caption = 'Vendas'
-        end
-      end
-      object N19: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas3: TMenuItem
-        Caption = 'Pesquisas'
-        object Pesquisadevendas1: TMenuItem
-          Caption = 'Pesquisa de vendas'
-        end
-      end
-      object Relatorios3: TMenuItem
-        Caption = 'Relatorios'
-      end
-      object N22: TMenuItem
-        Caption = '-'
-      end
-      object N20: TMenuItem
-        Caption = '-'
-      end
+      ImageIndex = 2
     end
-    object N3: TMenuItem
-      Caption = '-'
-    end
-    object Caixa1: TMenuItem
+    object TabSheet4: TTabSheet
       Caption = 'Caixa'
-      object Cadastros4: TMenuItem
-        Caption = 'Cadastros'
-        object C1: TMenuItem
-          Caption = 'Cadastro de caixas'
-        end
-      end
-      object N23: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes3: TMenuItem
-        Caption = 'Digita'#231#245'es'
-        object Lanamentosdocaixa1: TMenuItem
-          Caption = 'Lan'#231'amentos do caixa'
-        end
-      end
-      object N24: TMenuItem
-        Caption = '-'
-      end
-      object Lanamentosdocaixa2: TMenuItem
-        Caption = 'Pesquisas'
-        object Pesquisadelanamentos1: TMenuItem
-          Caption = 'Pesquisa de lan'#231'amentos'
-        end
-      end
-      object N25: TMenuItem
-        Caption = '-'
-      end
-      object Relatorios4: TMenuItem
-        Caption = 'Relatorios'
-      end
-      object N26: TMenuItem
-        Caption = '-'
-      end
+      ImageIndex = 3
     end
-    object N4: TMenuItem
-      Caption = '-'
-    end
-    object Banco1: TMenuItem
+    object TabSheet5: TTabSheet
       Caption = 'Banco'
-      object Cadastros5: TMenuItem
-        Caption = 'Cadastros'
-        object Cadasrodecontasbancarias1: TMenuItem
-          Caption = 'Cadastro de contas banc'#225'rias'
-        end
-      end
-      object N27: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes4: TMenuItem
-        Caption = 'Digita'#231#245'es'
-        object Lanamentosbancrios1: TMenuItem
-          Caption = 'Lan'#231'amentos banc'#225'rios'
-        end
-      end
-      object N28: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas4: TMenuItem
-        Caption = 'Pesquisas'
-        object Pesquisalanamentos1: TMenuItem
-          Caption = 'Pesquisa  de lan'#231'amentos'
-        end
-      end
-      object N29: TMenuItem
-        Caption = '-'
-      end
-      object Relatorios5: TMenuItem
-        Caption = 'Relatorios'
-      end
-      object N30: TMenuItem
-        Caption = '-'
-      end
+      ImageIndex = 4
     end
-    object N5: TMenuItem
-      Caption = '-'
-    end
-    object Contasareceber1: TMenuItem
+    object TabSheet6: TTabSheet
       Caption = 'Contas a receber'
-      object Cadastros6: TMenuItem
-        Caption = 'Cadastros'
-        object Cadastrodeclientes1: TMenuItem
-          Caption = 'Cadastro de clientes'
-          OnClick = Cadastrodeclientes1Click
-        end
-        object Cadastrodedocumentosareceber1: TMenuItem
-          Caption = 'Cadastro de documentos a receber'
-        end
-      end
-      object N32: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes5: TMenuItem
-        Caption = 'Digita'#231#245'es'
-        object Baixadedocumentos1: TMenuItem
-          Caption = 'Baixa de documentos'
-        end
-      end
-      object N33: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas5: TMenuItem
-        Caption = 'Pesquisas'
-      end
-      object Relatorios6: TMenuItem
-        Caption = 'Relatorios'
-      end
-      object N35: TMenuItem
-        Caption = '-'
-      end
-      object N34: TMenuItem
-        Caption = '-'
-      end
+      ImageIndex = 5
     end
-    object N6: TMenuItem
-      Caption = '-'
-    end
-    object Contasapagar1: TMenuItem
+    object TabSheet7: TTabSheet
       Caption = 'Contas a pagar'
-      object Cadastros7: TMenuItem
-        Caption = 'Cadastros'
-        object Cadastrodecontasapagar1: TMenuItem
-          Caption = 'Cadastro de contas a pagar'
-        end
-      end
-      object N36: TMenuItem
-        Caption = '-'
-      end
-      object Digitaes6: TMenuItem
-        Caption = 'Digita'#231#245'es'
-        object Baixadedocumentos2: TMenuItem
-          Caption = 'Baixa de documentos'
-        end
-      end
-      object N37: TMenuItem
-        Caption = '-'
-      end
-      object Pesquisas6: TMenuItem
-        Caption = 'Pesquisas'
-      end
-      object N38: TMenuItem
-        Caption = '-'
-      end
-      object Relatorios7: TMenuItem
-        Caption = 'Relatorios'
-      end
-      object N39: TMenuItem
-        Caption = '-'
-      end
+      ImageIndex = 6
     end
-    object N8: TMenuItem
-      Caption = '-'
+    object TabSheet12: TTabSheet
+      Caption = 'Configura'#231#245'es'
+      ImageIndex = 7
     end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 646
+    Width = 1408
+    Height = 19
+    Color = clBtnShadow
+    Panels = <
+      item
+        Alignment = taCenter
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = 'Data e Hora'
+        Width = 50
+      end>
+    ExplicitTop = 637
+    ExplicitWidth = 1402
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>
     ImageCollection = ImageCollection1
-    Left = 1400
-    Top = 592
+    Left = 1320
+    Top = 120
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -802,7 +614,12 @@ object Frm_Principal: TFrm_Principal
               B1E5DD1DF4790000000049454E44AE426082}
           end>
       end>
-    Left = 1400
-    Top = 640
+    Left = 1320
+    Top = 176
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 1316
+    Top = 66
   end
 end

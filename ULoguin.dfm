@@ -189,9 +189,7 @@ object Frm_Loguin: TFrm_Loguin
       Font.Style = []
       Font.Quality = fqClearTypeNatural
       ParentFont = False
-      ExplicitLeft = 1
-      ExplicitTop = 46
-      ExplicitWidth = 181
+      ExplicitWidth = 183
     end
     object VirtualImage3: TVirtualImage
       Left = 11
@@ -235,9 +233,6 @@ object Frm_Loguin: TFrm_Loguin
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
-      ExplicitLeft = 1
-      ExplicitTop = 334
-      ExplicitWidth = 347
       object SpeedButton2: TSpeedButton
         Left = 1
         Top = 1
@@ -302,6 +297,7 @@ object Frm_Loguin: TFrm_Loguin
       EditLabel.Caption = 'Usuario'
       TabOrder = 0
       Text = ''
+      OnKeyPress = edit_usuarioKeyPress
     end
     object edit_senha: TLabeledEdit
       Left = 72
@@ -313,6 +309,7 @@ object Frm_Loguin: TFrm_Loguin
       EditLabel.Caption = 'Senha'
       TabOrder = 1
       Text = ''
+      OnKeyPress = edit_usuarioKeyPress
     end
     object box_senha: TCheckBox
       Left = 296
