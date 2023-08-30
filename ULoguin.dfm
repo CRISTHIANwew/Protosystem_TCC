@@ -1,10 +1,11 @@
 object Frm_Loguin: TFrm_Loguin
-  Left = 307
-  Top = 327
+  Left = 678
+  Top = 196
+  AlphaBlendValue = 200
   BorderStyle = bsNone
   Caption = 'Loguin'
-  ClientHeight = 295
-  ClientWidth = 923
+  ClientHeight = 396
+  ClientWidth = 353
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -137,140 +138,94 @@ object Frm_Loguin: TFrm_Loguin
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poDesigned
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel2: TPanel
-    Left = -3
-    Top = -2
-    Width = 929
-    Height = 299
+    Left = 0
+    Top = 0
+    Width = 353
+    Height = 396
+    Align = alClient
+    BorderWidth = 10
+    BorderStyle = bsSingle
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    object VirtualImage1: TVirtualImage
+      Left = 28
+      Top = 216
+      Width = 46
+      Height = 40
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'senha'
+    end
+    object VirtualImage2: TVirtualImage
+      Left = 28
+      Top = 146
+      Width = 46
+      Height = 40
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 1
+      ImageName = 'usuario'
+    end
+    object lb_logo: TLabel
+      Left = 11
+      Top = 56
+      Width = 327
+      Height = 45
+      Align = alTop
+      Alignment = taCenter
+      Caption = 'ProtoSystem'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -33
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Font.Quality = fqClearTypeNatural
+      ParentFont = False
+      ExplicitLeft = 1
+      ExplicitTop = 46
+      ExplicitWidth = 181
+    end
+    object VirtualImage3: TVirtualImage
+      Left = 11
+      Top = 11
+      Width = 327
+      Height = 45
+      Align = alTop
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 0
+      ImageName = 'cat-black-face'
+      ExplicitLeft = 2
+      ExplicitTop = 1
+      ExplicitWidth = 55
+    end
     object Button1: TButton
-      Left = 600
-      Top = 179
-      Width = 75
+      Left = 128
+      Top = 341
+      Width = 89
       Height = 25
-      Caption = 'Button1'
+      Caption = 'Comfirmar'
       Default = True
       TabOrder = 5
+      StyleName = 'Windows'
       OnClick = Button1Click
     end
-    object Panel1: TPanel
-      Left = 1
-      Top = 1
-      Width = 360
-      Height = 297
-      Align = alLeft
-      Color = 12369084
-      ParentBackground = False
-      TabOrder = 2
-      object Lb_sistema: TLabel
-        Left = 1
-        Top = 24
-        Width = 358
-        Height = 23
-        Align = alTop
-        Alignment = taCenter
-        Caption = 'Sistema de gest'#227'o empresarial'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitWidth = 232
-      end
-      object Lb_protosystem: TLabel
-        Left = 1
-        Top = 1
-        Width = 358
-        Height = 23
-        Align = alTop
-        Alignment = taCenter
-        Caption = 'ProtoSystem'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ExplicitWidth = 96
-      end
-      object Vtm_logo: TVirtualImage
-        Left = 127
-        Top = 87
-        Width = 96
-        Height = 74
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 0
-        ImageName = 'cat-black-face'
-      end
-      object Lb_Versao: TLabel
-        Left = 127
-        Top = 190
-        Width = 91
-        Height = 23
-        Alignment = taCenter
-        Caption = 'Vers'#227'o 1.0.0'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Lb_Desenvolvido: TLabel
-        Left = 35
-        Top = 219
-        Width = 255
-        Height = 23
-        Alignment = taCenter
-        Caption = 'Desenvolvido por CRISTHIANwew'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label1: TLabel
-        Left = 58
-        Top = 241
-        Width = 209
-        Height = 23
-        Alignment = taCenter
-        Caption = 'Todos os diretos reservados'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label2: TLabel
-        Left = 58
-        Top = 270
-        Width = 200
-        Height = 17
-        Alignment = taCenter
-        Caption = 'https://github.com/CRISTHIANwew'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWhite
-        Font.Height = -13
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-      end
-    end
     object Pnl_comfirmar: TPanel
-      Left = 508
-      Top = 165
-      Width = 262
-      Height = 49
+      Left = 11
+      Top = 324
+      Width = 327
+      Height = 57
       Cursor = crHandPoint
+      Align = alBottom
       Color = clBlack
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 2302755
@@ -279,12 +234,15 @@ object Frm_Loguin: TFrm_Loguin
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 2
+      ExplicitLeft = 1
+      ExplicitTop = 334
+      ExplicitWidth = 347
       object SpeedButton2: TSpeedButton
         Left = 1
         Top = 1
-        Width = 260
-        Height = 47
+        Width = 325
+        Height = 55
         Align = alClient
         Caption = 'Comfirmar'
         Flat = True
@@ -295,13 +253,13 @@ object Frm_Loguin: TFrm_Loguin
         Font.Style = []
         ParentFont = False
         OnClick = SpeedButton2Click
-        ExplicitLeft = 9
+        ExplicitLeft = 0
         ExplicitTop = 9
       end
     end
     object Pnl_Sair: TPanel
-      Left = 880
-      Top = 2
+      Left = 302
+      Top = 0
       Width = 47
       Height = 45
       Color = 2302755
@@ -312,7 +270,7 @@ object Frm_Loguin: TFrm_Loguin
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 4
+      TabOrder = 3
       object SpeedButton1: TSpeedButton
         Left = 1
         Top = 1
@@ -330,31 +288,39 @@ object Frm_Loguin: TFrm_Loguin
         Font.Quality = fqClearTypeNatural
         ParentFont = False
         OnClick = SpeedButton1Click
-        ExplicitLeft = 2
-        ExplicitTop = 2
+        ExplicitLeft = 9
+        ExplicitTop = 25
       end
     end
     object edit_usuario: TLabeledEdit
-      Left = 406
-      Top = 115
-      Width = 203
+      Left = 72
+      Top = 158
+      Width = 218
       Height = 23
-      EditLabel.Width = 37
+      EditLabel.Width = 40
       EditLabel.Height = 15
-      EditLabel.Caption = 'Loguin'
+      EditLabel.Caption = 'Usuario'
       TabOrder = 0
       Text = ''
     end
     object edit_senha: TLabeledEdit
-      Left = 657
-      Top = 115
-      Width = 192
+      Left = 72
+      Top = 233
+      Width = 218
       Height = 23
       EditLabel.Width = 32
       EditLabel.Height = 15
       EditLabel.Caption = 'Senha'
       TabOrder = 1
       Text = ''
+    end
+    object box_senha: TCheckBox
+      Left = 296
+      Top = 236
+      Width = 17
+      Height = 17
+      TabOrder = 4
+      OnClick = box_senhaClick
     end
   end
   object VirtualImageList1: TVirtualImageList
@@ -365,8 +331,8 @@ object Frm_Loguin: TFrm_Loguin
         Name = 'cat-black-face'
       end>
     ImageCollection = ImageCollection1
-    Left = 1033
-    Top = 55
+    Left = 417
+    Top = 119
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -565,15 +531,94 @@ object Frm_Loguin: TFrm_Loguin
               841042082184104208218410420821841042082184106EF2FF3074BB69874A2C
               120000000049454E44AE426082}
           end>
+      end
+      item
+        Name = 'usuario'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000097048597300000B1300000B1301009A9C180000038949444154789C
+              ED9D3B68544114863F627C90CE17A289162262A5364A82D81BB01044220A3E7A
+              B5114C8816626152891A631E6A612382A8858F421BEDC4476188DA09C6D86812
+              51634C84E4C8C5B3102EAE92B87BE7EC9DF3C1074B366477FED9DCB973EEEC5C
+              701CC7711CC7711CC7B1C91CA00168056E02AF8011E0A79A3CEED7E792DFA907
+              AA42BFE93CB0126807060199A1EF8136A02E74232A91A5400F30318BE0D3267F
+              A30B5812BA5195C21E60B804C1A71D0276876E9C65E60297CA107CDA6E7D2D67
+              1A35C0FD0CC22F784F5FD3E1F7A731CBF00B3E04E6790F90C961A798C9E01C35
+              7B03865FB08948590C7C32D001C3B19EA2F61808BF6027915157A2499694C8E4
+              BDAC2222DA0D842E2993B2451454699D468C39A845BFDCD360206C29E26622A0
+              D540D052C41622E09681A0A5883788807E03414B11FB888072949AA5442613C3
+              DC63E9FC5F528E1301DE0181F14350607C100E8C9F8606C6F244AC9908A83710
+              B41471139114E3060C842D29DFC5B49AAECD40E092F2341161ED82CC38504B64
+              741908BE600711B2C8C845F9A1582FCAA36B354377C02E22A73B60F8174237DE
+              027380DB01C2BF0B54876EBC156A74C16C56E1DFF1C5B97F5EA4DB95D161C73F
+              F97FA1A94C67471F7DC09DD9BAD14E9D20FD6FF0E37A9E9F9CF63A33A456CB16
+              B3A91D0D687921BA196E39A8D245532DBA74A44FAFAC4DA8C9E397FA5CB35635
+              A329AC398EE3388EE3388EE36CD0A9FF6B60344099594AECA8B6E53CB0DE72F7
+              2E007A814903A149999CD40B48F33118FE63030149463EB2D609BD0642918C4D
+              FE13CC1CF3F37CD891224E5A19133A0C8421813C8B01DE1808420299ECDE189C
+              6F06829040266D0F8E446E7024728323911B9C3103214820BF6380D96C2B9C17
+              0730C0730341482093B607C7D2172D24C672C43E034148200F608085C00F0361
+              48C626F72D588611AE19084462DEDC69636415D129600BC6B8622018C9C8EB18
+              BDEB450C738261CB9BBCD6EBE02439751268C438FB733A1E4C0187A9100EE6AC
+              13A6804354188D7A7F2FA970BF56F277CBD600CF0C8428B3F405B08E1C7C11FB
+              887E92A48256C31DCDDBD7599703E78C972DC68033964A0CE56005700AF86020
+              F0E975FD13790F3E4D35B01DB80A7C0EB44DCD65605B2CF70DF8D736055B8193
+              BAEEB21CE345D2C90F80E33A61CCD5F1BDD454016B819DC031BDE14FB299C753
+              DD5C6F24D5495FF4676F8127BA13CA451D487700AB4337C8711CC7711CC7711C
+              07E517AD95B21F17E86A6A0000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'senha'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000097048597300000B1300000B1301009A9C180000032B49444154789C
+              ED9DCB6A14411486BF952E8CAE44DD69301AD04566A511D48589AFA0E23B886F
+              2059F802890635BA56F11DE2251044F7C66C04856CBC4490649111E148910A0C
+              21DD3393E9EE5335E77CF0C330F47455FDA7AE4D570D388EE3388EE3388EE3A4
+              CB61E016B0007C047E007FA3C2E70FC013E02630A29DD961E204300F6C02D2A3
+              C2B50F81E3DA99CF9983C00CB0D187F1BB157E7B0F38A05D98DC380ABC1DC0F8
+              DD5AF6D6D03BE7816F159ABFA3AFC0B91A2BCDD0D4FC2F3598DF198463DA854C
+              B9CF5FEE62E016F03CCE74C6814351E37186F4225E53768F251F13F666A68B71
+              C1F8933D04F214F0B2CBBDEE575C798662AAB95160D63FE0CE3EEE7937FEB6A8
+              258DD6508E6C992FA9ADFB31BF330845F77D5C61FEB35FE16E96743B83F2AA64
+              8DE02B66B607CFA26EA2973EBF1BA1AB6917A471A382FB67CF428DB57F87A241
+              D9BB21B61FACED654E986A56C5ED8234DE579846B6FC2C30E76C85698C17A4F1
+              BDC234B2A55D604E9503E448C938631E293027D774B2433C001E00D388B7000F
+              8069C45B8007C034E22DA07AAE034F81D53E5F2791C414F2FE393EAF9A2603C2
+              E383770918273529BCA9718644B90AFC4EC024A959EBC01512ACF916CC978E20
+              8C9110AF13304514BAA364065C31AA2912E05902468892C2DBD8EAAC26608428
+              294C51D519E4ED65C95CA1ECEA8871A923C6A58E18973A625CEA8871A923C6A5
+              8E18973A625CEA8871A923C6A58E18973A625CEA8871A9D37481B78059E062C7
+              3EE1F079AE873DC21E80014D5803264A2A432B5EE301A8A9E64FF4D0225B0DB7
+              04759A2AE86C1F797AE001A83E0017FA08C0A407A0FA008C54B027CCBBA08602
+              70C403E05D506334D5D4E7FAC8930FC23504602B4E31BBD12AD97BEC63C08026
+              AC7509822FC41AA871EDD8C54CC68139E852FCAEC99ABF2375C4B8D411E35247
+              8C4B1D312E75C4B8D411E352478C4B1D312E75C4B8D411E352478C4B1D312E75
+              C4B8D4B1BC4DF50F096079A3F60A091FBE6D418F4880E9048C10255D23111613
+              30431AD61B1262B4E414F461D47A6A0736118FF15A4FC01CA959BF80CB24CAD8
+              909F9EB5089C2603A6E261462B99AF1336804FF1AF4E9219701DC7711CC7711C
+              C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
+          end>
       end>
-    Left = 1033
-    Top = 143
+    Left = 417
+    Top = 223
   end
-  object fdquery_user: TFDQuery
+  object DS_usuario: TDataSource
+    DataSet = Query_usuario
+    Left = 560
+    Top = 144
+  end
+  object Query_usuario: TFDQuery
+    Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'select * from user')
-    Left = 1136
-    Top = 64
+      'select * from usuario')
+    Left = 531
+    Top = 56
   end
 end

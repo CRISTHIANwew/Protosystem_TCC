@@ -4,7 +4,7 @@ object Frm_PesEstoqe: TFrm_PesEstoqe
   BorderStyle = bsDialog
   Caption = 'Pesquisa de estoque'
   ClientHeight = 517
-  ClientWidth = 697
+  ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -39,7 +39,7 @@ object Frm_PesEstoqe: TFrm_PesEstoqe
     end
     object DBGrid1: TDBGrid
       Left = 8
-      Top = 45
+      Top = 38
       Width = 694
       Height = 465
       DataSource = DataSource1
@@ -61,7 +61,7 @@ object Frm_PesEstoqe: TFrm_PesEstoqe
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'Select descricao, estoque from produtos ')
+      'Select descricao, estoque from produto ')
     Left = 736
     Top = 40
   end

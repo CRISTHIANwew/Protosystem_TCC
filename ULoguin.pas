@@ -3,43 +3,46 @@ unit ULoguin;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask,
   Vcl.ExtCtrls, Vcl.VirtualImage, Vcl.BaseImageCollection, Vcl.ImageCollection,
   System.ImageList, Vcl.ImgList, Vcl.VirtualImageList, Vcl.Buttons,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, System.Actions, Vcl.ActnList;
+  FireDAC.Comp.Client, System.Actions, Vcl.ActnList, Vcl.WinXCtrls;
 
 type
   TFrm_Loguin = class(TForm)
     Panel2: TPanel;
-    Panel1: TPanel;
-    Lb_sistema: TLabel;
-    Lb_protosystem: TLabel;
-    Vtm_logo: TVirtualImage;
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
-    Lb_Versao: TLabel;
-    Lb_Desenvolvido: TLabel;
-    Label1: TLabel;
     Pnl_comfirmar: TPanel;
     SpeedButton2: TSpeedButton;
     Pnl_Sair: TPanel;
     SpeedButton1: TSpeedButton;
-    Label2: TLabel;
-    fdquery_user: TFDQuery;
     edit_usuario: TLabeledEdit;
     edit_senha: TLabeledEdit;
+    VirtualImage1: TVirtualImage;
+    VirtualImage2: TVirtualImage;
+    DS_usuario: TDataSource;
+    Query_usuario: TFDQuery;
+    lb_logo: TLabel;
+    VirtualImage3: TVirtualImage;
+    box_senha: TCheckBox;
     Button1: TButton;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure box_senhaClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+
   private
     { Private declarations }
   public
-    { Public declarations }
+    class function Login: Boolean;
   end;
 
 var
@@ -49,69 +52,110 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule;
+uses
+  UDataModule;
+
+procedure TFrm_Loguin.box_senhaClick(Sender: TObject);
+begin
+
+  if box_senha.Checked = true then
+  begin
+    edit_senha.PasswordChar := '*'
+  end
+  else
+    edit_senha.PasswordChar := #0;
+end;
 
 procedure TFrm_Loguin.Button1Click(Sender: TObject);
 begin
-    if (edit_usuario.Text = '') or (edit_senha.Text = '') then
-      begin
-      ShowMessage('Informe o usuário e a senha para proseguir.');
-      Exit;
-      //close;
-    end;
+  edit_usuario.Text := UpperCase(edit_usuario.Text);
+  if (edit_usuario.Text = '') or (edit_senha.Text = '') then
+  begin
+    ShowMessage('Informe o usuário e a senha para proseguir.');
+    Exit;
+  end;
 
-    try
-    fdquery_user.SQL.Text := 'SELECT COUNT(*) FROM user WHERE username = :username AND password = :password';
-    fdquery_user.ParamByName('username').AsString := edit_usuario.Text;
-    fdquery_user.ParamByName('password').AsString := edit_senha.Text;
-    fdquery_user.Open;
+  try
+    Query_usuario.SQL.Text :=
+      'SELECT COUNT(*) FROM usuario WHERE username = :username AND password = :password';
+    Query_usuario.ParamByName('username').AsString := edit_usuario.Text;
+    Query_usuario.ParamByName('password').AsString := edit_senha.Text;
+    Query_usuario.Open;
 
-      if fdquery_user.Fields[0].AsInteger > 0 then
-      begin
-      //ShowMessage('Login realizado com sucesso.');
-      Close;
-      end
-      else
+    if Query_usuario.Fields[0].AsInteger > 0 then
+    begin
+      // ShowMessage('Login realizado com sucesso.');
+      Modalresult := mrok;
+    end
+    else
       ShowMessage('Usuário ou senha incorretos.');
 
-      except
-      on E: Exception do
+  except
+    on E: Exception do
       ShowMessage('Erro ao realizar login: ' + E.Message);
-      end;
   end;
+end;
+
+procedure TFrm_Loguin.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  // CanClose := False;
+end;
+
+procedure TFrm_Loguin.FormCreate(Sender: TObject);
+begin
+  box_senha.Checked := true;
+  edit_senha.PasswordChar := '*';
+end;
+
+class function TFrm_Loguin.Login: Boolean;
+begin
+  with self.Create(nil) do
+  begin
+    case showmodal of
+      mrok:
+        result := true
+    else
+      result := false
+
+    end;
+
+  end;
+
+end;
 
 procedure TFrm_Loguin.SpeedButton1Click(Sender: TObject);
 begin
- Application.Terminate;
+  Application.Terminate;
 end;
 
 procedure TFrm_Loguin.SpeedButton2Click(Sender: TObject);
+begin
+  edit_usuario.Text := UpperCase(edit_usuario.Text);
+  if (edit_usuario.Text = '') or (edit_senha.Text = '') then
   begin
-    if (edit_usuario.Text = '') or (edit_senha.Text = '') then
-      begin
-      ShowMessage('Informe o usuário e a senha para proseguir.');
-      Exit;
-      //close;
-    end;
+    ShowMessage('Informe o usuário e a senha para proseguir.');
+    Exit;
+  end;
 
-    try
-    fdquery_user.SQL.Text := 'SELECT COUNT(*) FROM user WHERE username = :username AND password = :password';
-    fdquery_user.ParamByName('username').AsString := edit_usuario.Text;
-    fdquery_user.ParamByName('password').AsString := edit_senha.Text;
-    fdquery_user.Open;
+  try
+    Query_usuario.SQL.Text :=
+      'SELECT COUNT(*) FROM usuario WHERE username = :username AND password = :password';
+    Query_usuario.ParamByName('username').AsString := edit_usuario.Text;
+    Query_usuario.ParamByName('password').AsString := edit_senha.Text;
+    Query_usuario.Open;
 
-      if fdquery_user.Fields[0].AsInteger > 0 then
-      begin
-      //ShowMessage('Login realizado com sucesso.');
-      Close;
-      end
-      else
+    if Query_usuario.Fields[0].AsInteger > 0 then
+    begin
+      // ShowMessage('Login realizado com sucesso.');
+      Modalresult := mrok;
+    end
+    else
       ShowMessage('Usuário ou senha incorretos.');
 
-      except
-      on E: Exception do
+  except
+    on E: Exception do
       ShowMessage('Erro ao realizar login: ' + E.Message);
-      end;
   end;
+end;
 
 end.

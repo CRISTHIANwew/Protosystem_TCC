@@ -1,6 +1,6 @@
 object DM: TDM
-  Height = 363
-  Width = 602
+  Height = 246
+  Width = 518
   PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
@@ -27,7 +27,7 @@ object DM: TDM
     Active = True
     Connection = conexao
     SQL.Strings = (
-      'select * from produtos')
+      'select * from produto')
     Left = 424
   end
   object QueryCLIENTE: TFDQuery
@@ -36,6 +36,6 @@ object DM: TDM
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
     Left = 424
-    Top = 128
+    Top = 160
   end
 end

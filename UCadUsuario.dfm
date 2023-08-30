@@ -2,8 +2,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
   Left = 516
   Top = 360
   Caption = 'Cadastro de usu'#225'rio'
-  ClientHeight = 169
-  ClientWidth = 383
+  ClientHeight = 173
+  ClientWidth = 384
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,23 +15,22 @@ object Frm_CadUsuario: TFrm_CadUsuario
   object DBNavigator1: TDBNavigator
     Left = 0
     Top = 130
-    Width = 383
+    Width = 384
     Height = 45
     DataSource = DS_user
     Align = alTop
     TabOrder = 0
-    ExplicitTop = 132
-    ExplicitWidth = 380
+    OnClick = DBNavigator1Click
+    ExplicitWidth = 377
   end
   object pnl_dados_user: TPanel
     Left = 0
     Top = 0
-    Width = 383
+    Width = 384
     Height = 130
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = -7
-    ExplicitWidth = 384
+    ExplicitWidth = 377
     object lb_id: TLabel
       Left = 9
       Top = 43
@@ -62,7 +61,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
       DataSource = DS_user
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
+    object Edit_usuario: TDBEdit
       Left = 72
       Top = 64
       Width = 178
@@ -85,7 +84,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'select * from user')
+      'select * from usuario')
     Left = 408
     Top = 24
   end
