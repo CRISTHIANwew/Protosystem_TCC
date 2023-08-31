@@ -1,0 +1,148 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.ToolWin,
+  Vcl.Menus, Vcl.StdCtrls, System.ImageList, Vcl.ImgList,
+  Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.VirtualImageList,
+  Vcl.VirtualImage, Vcl.ColorGrd, Vcl.Tabs, System.Win.TaskbarCore, Vcl.Taskbar,
+  Vcl.WinXCtrls;
+
+type
+  TFrm_Principal = class(TForm)
+    VirtualImageList1: TVirtualImageList;
+    ImageCollection1: TImageCollection;
+    PGC_MENU: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
+    TabSheet5: TTabSheet;
+    TabSheet6: TTabSheet;
+    TabSheet7: TTabSheet;
+    StatusBar1: TStatusBar;
+    Timer1: TTimer;
+    PGC_ESTOQUE: TPageControl;
+    TabSheet8: TTabSheet;
+    TabSheet9: TTabSheet;
+    TabSheet10: TTabSheet;
+    TabSheet11: TTabSheet;
+    TabSheet12: TTabSheet;
+    BTN_CAD_PROD: TButton;
+    BTN_PES_ESTOQUE: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    PGC_VENDAS: TPageControl;
+    TabSheet13: TTabSheet;
+    Button5: TButton;
+    TabSheet14: TTabSheet;
+    Button6: TButton;
+    TabSheet15: TTabSheet;
+    Button7: TButton;
+    TabSheet16: TTabSheet;
+    Button8: TButton;
+    PGC_CAIXA: TPageControl;
+    TabSheet17: TTabSheet;
+    Button9: TButton;
+    TabSheet18: TTabSheet;
+    Button10: TButton;
+    TabSheet19: TTabSheet;
+    Button11: TButton;
+    TabSheet20: TTabSheet;
+    Button12: TButton;
+    PGC_BANCO: TPageControl;
+    TabSheet21: TTabSheet;
+    Button13: TButton;
+    TabSheet22: TTabSheet;
+    Button14: TButton;
+    TabSheet23: TTabSheet;
+    Button15: TButton;
+    TabSheet24: TTabSheet;
+    Button16: TButton;
+    PGC_RECEBER: TPageControl;
+    TabSheet25: TTabSheet;
+    Button17: TButton;
+    TabSheet26: TTabSheet;
+    Button18: TButton;
+    TabSheet27: TTabSheet;
+    Button19: TButton;
+    TabSheet28: TTabSheet;
+    Button20: TButton;
+    PGC_PAGAR: TPageControl;
+    TabSheet29: TTabSheet;
+    Button21: TButton;
+    TabSheet30: TTabSheet;
+    Button22: TButton;
+    TabSheet31: TTabSheet;
+    Button23: TButton;
+    TabSheet32: TTabSheet;
+    Button24: TButton;
+    PGC_CONFIGURACAO: TPageControl;
+    TabSheet33: TTabSheet;
+    Button25: TButton;
+    TabSheet34: TTabSheet;
+    TabSheet35: TTabSheet;
+    Button27: TButton;
+    TabSheet36: TTabSheet;
+    Button28: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure BTN_CAD_PRODClick(Sender: TObject);
+    procedure BTN_PES_ESTOQUEClick(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Principal: TFrm_Principal;
+
+implementation
+
+{$R *.dfm}
+
+uses UDataModule, UCadprodpas, UCadCliente, UPesEstoque, UCadUsuario;
+
+procedure TFrm_Principal.BTN_CAD_PRODClick(Sender: TObject);
+begin
+  var
+    Frm_CadProd: TFrm_CadProd; // Declare uma variável para o formulário
+  Frm_CadProd := TFrm_CadProd.Create(Self); // Crie uma instância do formulário
+  try
+    Frm_CadProd.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadProd.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.BTN_PES_ESTOQUEClick(Sender: TObject);
+begin
+  var
+    Frm_PesEstoque: TFrm_PesEstoque; // Declare uma variável para o formulário
+  Frm_PesEstoque := TFrm_PesEstoque.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_PesEstoque.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_PesEstoque.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.FormCreate(Sender: TObject);
+begin
+  Timer1.Enabled := True; // Iniciar o timer quando o formulário for criado
+end;
+
+procedure TFrm_Principal.Timer1Timer(Sender: TObject);
+begin
+  // atualizar data e hora
+  StatusBar1.Panels[0].Text := 'Data e Hora: ' +
+    FormatDateTime('dd/mm/yyyy hh:nn:ss', Now);
+end;
+
+end.

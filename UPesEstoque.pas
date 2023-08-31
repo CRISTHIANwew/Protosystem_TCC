@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TFrm_PesEstoqe = class(TForm)
+  TFrm_PesEstoque = class(TForm)
     DataSource1: TDataSource;
     Query_PesProd: TFDQuery;
     Panel1: TPanel;
@@ -26,7 +26,7 @@ type
   end;
 
 var
-  Frm_PesEstoqe: TFrm_PesEstoqe;
+  Frm_PesEstoque: TFrm_PesEstoque;
 
 implementation
 
@@ -34,7 +34,7 @@ implementation
 
 uses
       Udatamodule;
-procedure TFrm_PesEstoqe.Edit_pesquisaChange(Sender: TObject);
+procedure TFrm_PesEstoque.Edit_pesquisaChange(Sender: TObject);
 begin
     // Verifique se o critério de pesquisa não está vazio
   if Edit_pesquisa.Text <> '' then

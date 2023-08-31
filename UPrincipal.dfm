@@ -4,7 +4,7 @@ object Frm_Principal: TFrm_Principal
   Align = alClient
   BorderStyle = bsSingle
   Caption = '  ProtoSystem'
-  ClientHeight = 665
+  ClientHeight = 626
   ClientWidth = 1408
   Color = clBtnFace
   DefaultMonitor = dmDesktop
@@ -142,12 +142,12 @@ object Frm_Principal: TFrm_Principal
   WindowState = wsMaximized
   OnCreate = FormCreate
   TextHeight = 15
-  object PageControl1: TPageControl
+  object PGC_MENU: TPageControl
     Left = 0
     Top = 0
     Width = 1408
-    Height = 646
-    ActivePage = TabSheet2
+    Height = 607
+    ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -156,18 +156,21 @@ object Frm_Principal: TFrm_Principal
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    StyleName = 'Windows'
+    ExplicitWidth = 1402
+    ExplicitHeight = 598
     object TabSheet1: TTabSheet
       Caption = 'Tela inicial'
     end
     object TabSheet2: TTabSheet
       Caption = 'Estoque'
       ImageIndex = 1
-      object PageControl2: TPageControl
+      object PGC_ESTOQUE: TPageControl
         Left = 0
         Top = 0
         Width = 1400
-        Height = 614
-        ActivePage = TabSheet8
+        Height = 575
+        ActivePage = TabSheet10
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -178,57 +181,479 @@ object Frm_Principal: TFrm_Principal
         TabOrder = 0
         object TabSheet8: TTabSheet
           Caption = 'Cadastros'
-          object Button1: TButton
-            Left = 5
-            Top = 3
-            Width = 266
-            Height = 88
+          object BTN_CAD_PROD: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
             Caption = 'Cadastro de produtos'
             TabOrder = 0
+            OnClick = BTN_CAD_PRODClick
           end
         end
         object TabSheet9: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
+          object Button4: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
         end
         object TabSheet10: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
+          object BTN_PES_ESTOQUE: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+            OnClick = BTN_PES_ESTOQUEClick
+          end
         end
         object TabSheet11: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
+          object Button3: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
         end
       end
     end
     object TabSheet3: TTabSheet
       Caption = 'Vendas'
       ImageIndex = 2
+      object PGC_VENDAS: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet13
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet13: TTabSheet
+          Caption = 'Cadastros'
+          object Button5: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de produtos'
+            TabOrder = 0
+          end
+        end
+        object TabSheet14: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button6: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+        object TabSheet15: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button7: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet16: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button8: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
     object TabSheet4: TTabSheet
       Caption = 'Caixa'
       ImageIndex = 3
+      object PGC_CAIXA: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet17
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet17: TTabSheet
+          Caption = 'Cadastros'
+          object Button9: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de produtos'
+            TabOrder = 0
+          end
+        end
+        object TabSheet18: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button10: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+        object TabSheet19: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button11: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet20: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button12: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
     object TabSheet5: TTabSheet
       Caption = 'Banco'
       ImageIndex = 4
+      object PGC_BANCO: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet21
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet21: TTabSheet
+          Caption = 'Cadastros'
+          object Button13: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de produtos'
+            TabOrder = 0
+          end
+        end
+        object TabSheet22: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button14: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+        object TabSheet23: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button15: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet24: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button16: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
     object TabSheet6: TTabSheet
       Caption = 'Contas a receber'
       ImageIndex = 5
+      object PGC_RECEBER: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet25
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet25: TTabSheet
+          Caption = 'Cadastros'
+          object BTN_CAD_CLIENTE: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de clientes'
+            TabOrder = 0
+            OnClick = BTN_CAD_CLIENTEClick
+          end
+        end
+        object TabSheet26: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button18: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+        object TabSheet27: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button19: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet28: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button20: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
     object TabSheet7: TTabSheet
       Caption = 'Contas a pagar'
       ImageIndex = 6
+      object PGC_PAGAR: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet29
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet29: TTabSheet
+          Caption = 'Cadastros'
+          object Button21: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de produtos'
+            TabOrder = 0
+          end
+        end
+        object TabSheet30: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button22: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+        object TabSheet31: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button23: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet32: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button24: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
     object TabSheet12: TTabSheet
       Caption = 'Configura'#231#245'es'
       ImageIndex = 7
+      object PGC_CONFIGURACAO: TPageControl
+        Left = 0
+        Top = 0
+        Width = 1400
+        Height = 575
+        ActivePage = TabSheet34
+        Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object TabSheet33: TTabSheet
+          Caption = 'Cadastros'
+          object BTN_CAD_USUARIO: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Cadastro de usuarios'
+            TabOrder = 0
+            OnClick = BTN_CAD_USUARIOClick
+          end
+        end
+        object TabSheet34: TTabSheet
+          Caption = 'Digita'#231#245'es'
+          ImageIndex = 1
+          object Button26: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+          object CB_STYLES: TComboBox
+            Left = 216
+            Top = 37
+            Width = 265
+            Height = 25
+            Style = csDropDownList
+            TabOrder = 1
+            OnChange = CB_STYLESChange
+          end
+          object ComboBox1: TComboBox
+            Left = 552
+            Top = 37
+            Width = 241
+            Height = 25
+            Style = csDropDownList
+            TabOrder = 2
+            OnSelect = ComboBox1Select
+            Items.Strings = (
+              'Windows'
+              'Luna'
+              'Lavender Classico')
+          end
+        end
+        object TabSheet35: TTabSheet
+          Caption = 'Pesquisas'
+          ImageIndex = 2
+          object Button27: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'Pesquisa de estoque'
+            TabOrder = 0
+          end
+        end
+        object TabSheet36: TTabSheet
+          Caption = 'Relatorios'
+          ImageIndex = 3
+          object Button28: TButton
+            Left = 20
+            Top = 20
+            Width = 170
+            Height = 60
+            Caption = 'nada por aqui....'
+            TabOrder = 0
+          end
+        end
+      end
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 646
+    Top = 607
     Width = 1408
     Height = 19
     Color = clBtnShadow
@@ -240,7 +665,7 @@ object Frm_Principal: TFrm_Principal
         Text = 'Data e Hora'
         Width = 50
       end>
-    ExplicitTop = 637
+    ExplicitTop = 598
     ExplicitWidth = 1402
   end
   object VirtualImageList1: TVirtualImageList

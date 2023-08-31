@@ -1,4 +1,4 @@
-object Frm_PesEstoqe: TFrm_PesEstoqe
+object Frm_PesEstoque: TFrm_PesEstoque
   Left = 452
   Top = 147
   BorderStyle = bsDialog
