@@ -18,6 +18,7 @@ type
     conexao: TFDConnection;
     QueryPRODUTO: TFDQuery;
     QueryCLIENTE: TFDQuery;
+    QueryFORNECEDOR: TFDQuery;
   private
     { Private declarations }
   public

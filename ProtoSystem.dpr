@@ -11,7 +11,8 @@ uses
   ProtoSystem.View.Login in 'Source\View\ProtoSystem.View.Login.pas' {Frm_Login},
   ProtoSystem.Model.PesquisaEstoque in 'Source\Model\ProtoSystem.Model.PesquisaEstoque.pas' {Frm_PesEstoque},
   ProtoSystem.Model.CadastroUsuario in 'Source\Model\ProtoSystem.Model.CadastroUsuario.pas' {Frm_CadUsuario},
-  ProtoSystem.Model.CadastroFornecedor in 'Source\Model\ProtoSystem.Model.CadastroFornecedor.pas' {Form1};
+  ProtoSystem.Model.CadastroFornecedor in 'Source\Model\ProtoSystem.Model.CadastroFornecedor.pas' {Frm_CadFornecedor},
+  ProtoSystem.Model.Vendas in 'Source\Model\ProtoSystem.Model.Vendas.pas' {Frm_Vendas};
 
 {$R *.res}
 
@@ -20,7 +21,8 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFrm_CadFornecedor, Frm_CadFornecedor);
+  Application.CreateForm(TFrm_Vendas, Frm_Vendas);
   if TFrm_Login.Login then
     Application.Run
   else

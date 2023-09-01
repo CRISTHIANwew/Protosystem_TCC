@@ -1,6 +1,6 @@
 object Frm_Principal: TFrm_Principal
-  Left = 516
-  Top = 245
+  Left = 258
+  Top = 213
   Align = alClient
   BorderStyle = bsSingle
   Caption = '  ProtoSystem'
@@ -138,7 +138,7 @@ object Frm_Principal: TFrm_Principal
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poDefault
+  Position = poDesigned
   WindowState = wsMaximized
   OnCreate = FormCreate
   TextHeight = 15
@@ -147,7 +147,7 @@ object Frm_Principal: TFrm_Principal
     Top = 0
     Width = 1408
     Height = 607
-    ActivePage = TabSheet7
+    ActivePage = TabSheet3
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -170,7 +170,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 1400
         Height = 575
-        ActivePage = TabSheet10
+        ActivePage = TabSheet8
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -238,7 +238,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 1400
         Height = 575
-        ActivePage = TabSheet13
+        ActivePage = TabSheet14
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -261,13 +261,14 @@ object Frm_Principal: TFrm_Principal
         object TabSheet14: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button6: TButton
+          object BTN_VENDAS: TButton
             Left = 20
             Top = 20
             Width = 170
             Height = 60
-            Caption = 'nada por aqui....'
+            Caption = 'Vendas'
             TabOrder = 0
+            OnClick = BTN_VENDASClick
           end
         end
         object TabSheet15: TTabSheet

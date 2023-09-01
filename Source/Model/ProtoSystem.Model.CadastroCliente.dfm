@@ -1,10 +1,10 @@
 object Frm_CadCliente: TFrm_CadCliente
-  Left = 436
-  Top = 131
+  Left = 290
+  Top = 262
   BorderStyle = bsSingle
   Caption = 'Cadastro de clientes'
-  ClientHeight = 581
-  ClientWidth = 865
+  ClientHeight = 188
+  ClientWidth = 888
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -141,167 +141,201 @@ object Frm_CadCliente: TFrm_CadCliente
   object Pclientes: TPanel
     Left = 0
     Top = 0
-    Width = 865
-    Height = 193
+    Width = 888
+    Height = 153
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 859
-    object Label1: TLabel
-      Left = 8
-      Top = 0
-      Width = 11
-      Height = 15
-      Caption = 'ID'
-    end
+    ExplicitLeft = 8
     object Label2: TLabel
-      Left = 135
-      Top = 0
+      Left = 97
+      Top = 18
       Width = 33
       Height = 15
       Caption = 'Nome'
     end
     object Label3: TLabel
-      Left = 623
-      Top = 0
+      Left = 503
+      Top = 18
       Width = 59
       Height = 15
       Caption = 'CPF / CNPJ'
     end
     object Label4: TLabel
-      Left = 328
-      Top = 45
+      Left = 707
+      Top = 18
       Width = 35
       Height = 15
       Caption = 'RG / IE'
     end
     object Label5: TLabel
-      Left = 8
-      Top = 45
+      Left = 9
+      Top = 52
       Width = 49
       Height = 15
       Caption = 'Endere'#231'o'
     end
     object TLABEL13: TLabel
-      Left = 8
-      Top = 93
+      Left = 416
+      Top = 52
       Width = 31
       Height = 15
       Caption = 'Bairro'
     end
     object Label7: TLabel
-      Left = 328
-      Top = 93
+      Left = 273
+      Top = 52
       Width = 44
       Height = 15
       Caption = 'Numero'
     end
     object Label6: TLabel
-      Left = 8
-      Top = 139
+      Left = 581
+      Top = 87
       Width = 37
       Height = 15
       Caption = 'Celular'
     end
-    object DBEdit1: TDBEdit
-      Left = 8
-      Top = 16
-      Width = 121
-      Height = 23
-      DataField = 'ID'
-      DataSource = DataSource1
-      TabOrder = 0
+    object Label8: TLabel
+      Left = 667
+      Top = 52
+      Width = 37
+      Height = 15
+      Caption = 'Cidade'
+    end
+    object TLabel
+      Left = 17
+      Top = 87
+      Width = 21
+      Height = 15
+      Caption = 'Cep'
+    end
+    object TLabel
+      Left = 205
+      Top = 87
+      Width = 29
+      Height = 15
+      Caption = 'Email'
+    end
+    object Label1: TLabel
+      Left = 17
+      Top = 18
+      Width = 10
+      Height = 15
+      Caption = 'Id'
     end
     object DBEdit2: TDBEdit
-      Left = 135
-      Top = 16
-      Width = 482
+      Left = 136
+      Top = 18
+      Width = 345
       Height = 23
       DataField = 'NOME'
       DataSource = DataSource1
-      TabOrder = 1
+      TabOrder = 0
     end
     object DBEdit3: TDBEdit
-      Left = 623
-      Top = 16
-      Width = 193
+      Left = 568
+      Top = 18
+      Width = 114
       Height = 23
       DataField = 'CPFCNPJ'
       DataSource = DataSource1
-      TabOrder = 2
+      TabOrder = 1
     end
     object DBEdit4: TDBEdit
-      Left = 8
-      Top = 64
-      Width = 281
+      Left = 64
+      Top = 52
+      Width = 193
       Height = 23
       DataField = 'ENDERECO'
       DataSource = DataSource1
-      TabOrder = 3
+      TabOrder = 2
     end
     object DBEdit5: TDBEdit
-      Left = 8
-      Top = 109
-      Width = 281
+      Left = 453
+      Top = 52
+      Width = 193
       Height = 23
       DataField = 'BAIRRO'
       DataSource = DataSource1
-      TabOrder = 5
+      TabOrder = 4
     end
     object DBEdit6: TDBEdit
-      Left = 328
-      Top = 64
-      Width = 153
+      Left = 748
+      Top = 18
+      Width = 77
       Height = 23
       DataField = 'RGIE'
       DataSource = DataSource1
-      TabOrder = 4
+      TabOrder = 3
     end
     object DBEdit7: TDBEdit
-      Left = 328
-      Top = 109
-      Width = 153
+      Left = 327
+      Top = 52
+      Width = 65
       Height = 23
       DataField = 'NUMERO'
       DataSource = DataSource1
-      TabOrder = 6
+      TabOrder = 5
     end
     object DBEdit8: TDBEdit
-      Left = 8
-      Top = 160
+      Left = 624
+      Top = 87
       Width = 193
       Height = 23
       DataField = 'CELULAR'
       DataSource = DataSource1
+      TabOrder = 6
+    end
+    object DBEdit9: TDBEdit
+      Left = 715
+      Top = 52
+      Width = 161
+      Height = 23
+      DataField = 'CIDADE'
+      DataSource = DataSource1
       TabOrder = 7
     end
-  end
-  object DBGrid1: TDBGrid
-    Left = 0
-    Top = 227
-    Width = 865
-    Height = 353
-    Align = alTop
-    DataSource = DataSource1
-    TabOrder = 1
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    object DBEdit10: TDBEdit
+      Left = 56
+      Top = 87
+      Width = 121
+      Height = 23
+      DataField = 'CEP'
+      DataSource = DataSource1
+      TabOrder = 8
+    end
+    object DBEdit11: TDBEdit
+      Left = 240
+      Top = 87
+      Width = 321
+      Height = 23
+      DataField = 'EMAIL'
+      DataSource = DataSource1
+      TabOrder = 9
+    end
+    object DBEdit1: TDBEdit
+      Left = 33
+      Top = 15
+      Width = 30
+      Height = 23
+      DataField = 'ID'
+      DataSource = DataSource1
+      TabOrder = 10
+    end
   end
   object DBNavigator1: TDBNavigator
     Left = 0
-    Top = 193
-    Width = 865
+    Top = 153
+    Width = 888
     Height = 34
     DataSource = DataSource1
     Align = alTop
-    TabOrder = 2
-    ExplicitWidth = 859
+    TabOrder = 1
+    ExplicitLeft = 8
   end
   object DataSource1: TDataSource
     DataSet = DM.QueryCLIENTE
-    Left = 712
-    Top = 80
+    Left = 1344
+    Top = 224
   end
 end

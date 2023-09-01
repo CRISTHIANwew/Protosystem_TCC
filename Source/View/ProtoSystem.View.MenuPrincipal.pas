@@ -39,7 +39,7 @@ type
     TabSheet13: TTabSheet;
     Button5: TButton;
     TabSheet14: TTabSheet;
-    Button6: TButton;
+    BTN_VENDAS: TButton;
     TabSheet15: TTabSheet;
     Button7: TButton;
     TabSheet16: TTabSheet;
@@ -98,6 +98,7 @@ type
     procedure BTN_CAD_USUARIOClick(Sender: TObject);
     procedure CB_STYLESChange(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
+    procedure BTN_VENDASClick(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -115,7 +116,7 @@ implementation
 uses
   ProtoSystem.Controller.Dm, ProtoSystem.Model.CadastroProduto,
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
-  ProtoSystem.Model.CadastroUsuario;
+  ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);
 begin
@@ -165,6 +166,19 @@ begin
     Frm_PesEstoque.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_PesEstoque.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.BTN_VENDASClick(Sender: TObject);
+begin
+  var
+    Frm_Vendas: TFrm_Vendas; // Declare uma variável para o formulário
+  Frm_Vendas := TFrm_Vendas.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_Vendas.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_Vendas.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

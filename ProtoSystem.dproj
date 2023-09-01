@@ -124,7 +124,11 @@
             <Form>Frm_CadUsuario</Form>
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroFornecedor.pas">
-            <Form>Form1</Form>
+            <Form>Frm_CadFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.Vendas.pas">
+            <Form>Frm_Vendas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

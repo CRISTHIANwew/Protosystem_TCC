@@ -1,9 +1,6 @@
 ﻿[DBEdit7]
 Coordinates=10,124,62,36
 
-[DBEdit1]
-Coordinates=226,78,62,36
-
 [DBEdit6]
 Coordinates=154,78,62,36
 
@@ -23,6 +20,6 @@ Coordinates=263,10,62,36
 Coordinates=190,10,62,36
 
 []
-Coordinates=10,10,94,58
+Coordinates=226,78,62,36
 Visible=True
 
