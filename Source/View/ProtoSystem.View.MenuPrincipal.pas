@@ -112,7 +112,10 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule, UCadprodpas, UCadCliente, UPesEstoque, UCadUsuario;
+uses
+  ProtoSystem.Controller.Dm, ProtoSystem.Model.CadastroProduto,
+  ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
+  ProtoSystem.Model.CadastroUsuario;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);
 begin
@@ -172,14 +175,14 @@ end;
 
 procedure TFrm_Principal.ComboBox1Select(Sender: TObject);
 begin
-       if ComboBox1.Text = 'Windows' then
-       TStyleManager.TrySetStyle('Windows');
+  if ComboBox1.Text = 'Windows' then
+    TStyleManager.TrySetStyle('Windows');
 
-        if ComboBox1.Text = 'Luna' then
-       TStyleManager.TrySetStyle('Luna');
+  if ComboBox1.Text = 'Luna' then
+    TStyleManager.TrySetStyle('Luna');
 
-        if ComboBox1.Text = 'Lavender Classico' then
-       TStyleManager.TrySetStyle('Lavender Classico');
+  if ComboBox1.Text = 'Lavender Classico' then
+    TStyleManager.TrySetStyle('Lavender Classico');
 end;
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);
@@ -193,33 +196,33 @@ begin
   comboBox.Clear;
   // Adicione o estilo definido como padrão ao primeiro item do ComboBox.
   comboBox.Items.Add('Windows');
-//  comboBox.Items.Add('Amakrits');
-//  comboBox.Items.Add('Amethyst Kamri');
-//  comboBox.Items.Add('Aqua Graphite');
-//  comboBox.Items.Add('Aqua Light Slate');
-//  comboBox.Items.Add('Auric');
-//  comboBox.Items.Add('Carbon');
-//  comboBox.Items.Add('Charcoal Dark Slate');
-//  comboBox.Items.Add('Cobalt XEMedia');
-//  comboBox.Items.Add('Cyan Dusk');
-//  comboBox.Items.Add('Cyan Night');
-//  comboBox.Items.Add('Emerald Light Slate');
-//  comboBox.Items.Add('Golden Graphite');
+  // comboBox.Items.Add('Amakrits');
+  // comboBox.Items.Add('Amethyst Kamri');
+  // comboBox.Items.Add('Aqua Graphite');
+  // comboBox.Items.Add('Aqua Light Slate');
+  // comboBox.Items.Add('Auric');
+  // comboBox.Items.Add('Carbon');
+  // comboBox.Items.Add('Charcoal Dark Slate');
+  // comboBox.Items.Add('Cobalt XEMedia');
+  // comboBox.Items.Add('Cyan Dusk');
+  // comboBox.Items.Add('Cyan Night');
+  // comboBox.Items.Add('Emerald Light Slate');
+  // comboBox.Items.Add('Golden Graphite');
   comboBox.Items.Add('Iceberg Classico');
- // comboBox.Items.Add('Lavender Classico');
- // comboBox.Items.Add('Light');
-//  comboBox.Items.Add('Luna');
-//  comboBox.Items.Add('Metropolis UI Black');
-//  comboBox.Items.Add('Metropolis UI Blue');
-//  comboBox.Items.Add('Metropolis UI Dark');
-//  comboBox.Items.Add('Metropolis UI Green');
-//  comboBox.Items.Add('Obsidian');
-//  comboBox.Items.Add('Ruby Graphite');
-//  comboBox.Items.Add('Sapphire Kamri');
-//  comboBox.Items.Add('Silver');
-//  comboBox.Items.Add('Slate Classico');
-//  comboBox.Items.Add('Smokey Quartz Kamri');
-//  comboBox.Items.Add('Turquoise Gray');
+  // comboBox.Items.Add('Lavender Classico');
+  // comboBox.Items.Add('Light');
+  // comboBox.Items.Add('Luna');
+  // comboBox.Items.Add('Metropolis UI Black');
+  // comboBox.Items.Add('Metropolis UI Blue');
+  // comboBox.Items.Add('Metropolis UI Dark');
+  // comboBox.Items.Add('Metropolis UI Green');
+  // comboBox.Items.Add('Obsidian');
+  // comboBox.Items.Add('Ruby Graphite');
+  // comboBox.Items.Add('Sapphire Kamri');
+  // comboBox.Items.Add('Silver');
+  // comboBox.Items.Add('Slate Classico');
+  // comboBox.Items.Add('Smokey Quartz Kamri');
+  // comboBox.Items.Add('Turquoise Gray');
   // Exibe no ComboBox o tema padrão definido.
   comboBox.ItemIndex := 0;
 end;

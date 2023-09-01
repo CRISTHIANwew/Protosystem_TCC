@@ -3,7 +3,8 @@ unit ProtoSystem.Model.CadastroCliente;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
   Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids;
 
@@ -42,6 +43,6 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule;
+uses ProtoSystem.Controller.Dm;
 
 end.

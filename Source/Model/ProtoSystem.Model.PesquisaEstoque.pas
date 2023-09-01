@@ -32,8 +32,8 @@ implementation
 
 {$R *.dfm}
 
-uses
-      Udatamodule;
+uses  ProtoSystem.Controller.Dm;
+
 procedure TFrm_PesEstoque.Edit_pesquisaChange(Sender: TObject);
 begin
     // Verifique se o critério de pesquisa não está vazio

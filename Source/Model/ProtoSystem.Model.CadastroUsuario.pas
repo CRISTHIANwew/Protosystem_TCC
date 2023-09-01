@@ -36,7 +36,7 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule;
+uses ProtoSystem.Controller.Dm;
 
 procedure TFrm_CadUsuario.DBNavigator1Click(Sender: TObject;
   Button: TNavigateBtn);

@@ -37,7 +37,7 @@ implementation
 
 {$R *.dfm}
 
-uses UDataModule;
+uses ProtoSystem.Controller.Dm;
 
 procedure TFrm_CadProd.Button1Click(Sender: TObject);
 begin
