@@ -101,27 +101,31 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="UPrincipal.pas">
+        <DCCReference Include="Source\View\ProtoSystem.View.MenuPrincipal.pas">
             <Form>Frm_Principal</Form>
         </DCCReference>
-        <DCCReference Include="UDataModule.pas">
+        <DCCReference Include="Source\Controller\ProtoSystem.Controller.Dm.pas">
             <Form>DM</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="UCadprodpas.pas">
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroProduto.pas">
             <Form>Frm_CadProd</Form>
         </DCCReference>
-        <DCCReference Include="UCadCliente.pas">
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroCliente.pas">
             <Form>Frm_CadCliente</Form>
         </DCCReference>
-        <DCCReference Include="ULogin.pas">
+        <DCCReference Include="Source\View\ProtoSystem.View.Login.pas">
             <Form>Frm_Login</Form>
         </DCCReference>
-        <DCCReference Include="UPesEstoque.pas">
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaEstoque.pas">
             <Form>Frm_PesEstoque</Form>
         </DCCReference>
-        <DCCReference Include="UCadUsuario.pas">
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroUsuario.pas">
             <Form>Frm_CadUsuario</Form>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroFornecedor.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -154,6 +158,12 @@
             </Platforms>
             <Deployment Version="4">
                 <DeployFile LocalName="ProtoSystem.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>ProtoSystem.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ProtoSystem.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ProtoSystem.exe</RemoteName>
                         <Overwrite>true</Overwrite>

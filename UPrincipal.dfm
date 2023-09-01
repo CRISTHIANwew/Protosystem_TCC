@@ -147,7 +147,7 @@ object Frm_Principal: TFrm_Principal
     Top = 0
     Width = 1408
     Height = 607
-    ActivePage = TabSheet1
+    ActivePage = TabSheet7
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

@@ -14,8 +14,8 @@ object DM: TDM
   object conexao: TFDConnection
     Params.Strings = (
       
-        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\dados.s3db'
+        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\d' +
+        'ados.s3db'
       'LockingMode=Normal'
       'DriverID=SQLite')
     Connected = True
