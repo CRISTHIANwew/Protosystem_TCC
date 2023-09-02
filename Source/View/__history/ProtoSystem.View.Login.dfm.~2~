@@ -206,6 +206,8 @@ object Frm_Login: TFrm_Login
       Font.Style = []
       Font.Quality = fqClearTypeNatural
       ParentFont = False
+      ExplicitLeft = 14
+      ExplicitTop = 70
       ExplicitWidth = 227
     end
     object VirtualImage3: TVirtualImage
@@ -398,7 +400,7 @@ object Frm_Login: TFrm_Login
     end
     object GroupBox1: TGroupBox
       Left = 90
-      Top = 337
+      Top = 324
       Width = 272
       Height = 67
       Margins.Left = 4
