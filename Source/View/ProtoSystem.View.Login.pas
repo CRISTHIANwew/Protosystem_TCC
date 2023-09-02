@@ -19,7 +19,6 @@ type
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
     Pnl_comfirmar: TPanel;
-    SpeedButton2: TSpeedButton;
     Pnl_Sair: TPanel;
     SpeedButton1: TSpeedButton;
     edit_usuario: TLabeledEdit;
@@ -32,6 +31,9 @@ type
     VirtualImage3: TVirtualImage;
     box_senha: TCheckBox;
     Button1: TButton;
+    Shape1: TShape;
+    SpeedButton2: TSpeedButton;
+    GroupBox1: TGroupBox;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);

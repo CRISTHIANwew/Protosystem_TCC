@@ -73,7 +73,7 @@ type
     Button20: TButton;
     PGC_PAGAR: TPageControl;
     TabSheet29: TTabSheet;
-    Button21: TButton;
+    BTN_CAD_FORNECEDOR: TButton;
     TabSheet30: TTabSheet;
     Button22: TButton;
     TabSheet31: TTabSheet;
@@ -99,6 +99,7 @@ type
     procedure CB_STYLESChange(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
     procedure BTN_VENDASClick(Sender: TObject);
+    procedure BTN_CAD_FORNECEDORClick(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -116,7 +117,8 @@ implementation
 uses
   ProtoSystem.Controller.Dm, ProtoSystem.Model.CadastroProduto,
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
-  ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas;
+  ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
+  ProtoSystem.Model.CadastroFornecedor;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);
 begin
@@ -128,6 +130,18 @@ begin
     Frm_CadCliente.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_CadCliente.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.BTN_CAD_FORNECEDORClick(Sender: TObject);
+begin
+  var
+    Frm_CadFornecedor: TFrm_CadFornecedor; // Declare uma variável para o formulário
+  Frm_CadFornecedor := TFrm_CadFornecedor.Create(Self); // Crie uma instância do formulário
+  try
+    Frm_CadFornecedor.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadFornecedor.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

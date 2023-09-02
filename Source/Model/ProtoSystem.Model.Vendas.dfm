@@ -1,14 +1,14 @@
 object Frm_Vendas: TFrm_Vendas
-  Left = 0
-  Top = 0
+  Left = 258
+  Top = 164
   BorderStyle = bsNone
   Caption = 'Vendas'
-  ClientHeight = 647
-  ClientWidth = 1183
+  ClientHeight = 825
+  ClientWidth = 1368
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -137,44 +137,639 @@ object Frm_Vendas: TFrm_Vendas
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poScreenCenter
-  TextHeight = 15
-  object Pnl_1: TPanel
+  PixelsPerInch = 120
+  TextHeight = 20
+  object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1183
-    Height = 647
+    Width = 1368
+    Height = 825
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1001
-    ExplicitHeight = 457
-    object DBGrid1: TDBGrid
-      Left = 184
-      Top = 96
-      Width = 705
-      Height = 345
+    ExplicitWidth = 1576
+    ExplicitHeight = 778
+    object PNL_PRODUTO: TPanel
+      Left = 1
+      Top = 1
+      Width = 1366
+      Height = 80
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'Caixa Aberto'
+      Color = 9474192
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -53
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
       TabOrder = 0
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -12
-      TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
-      Columns = <
-        item
-          Expanded = False
-          Visible = True
+      ExplicitLeft = 2
+      ExplicitTop = -1
+      ExplicitWidth = 1348
+    end
+    object PNL_BUTTONS: TPanel
+      Left = 1
+      Top = 737
+      Width = 1366
+      Height = 87
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alBottom
+      Color = 9474192
+      Padding.Left = 6
+      Padding.Top = 13
+      Padding.Right = 6
+      Padding.Bottom = 13
+      ParentBackground = False
+      TabOrder = 1
+      ExplicitTop = 690
+      ExplicitWidth = 1348
+      object Panel1: TPanel
+        Left = 7
+        Top = 14
+        Width = 223
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 0
+        ExplicitHeight = 95
+        object Shape1: TShape
+          Left = 0
+          Top = 0
+          Width = 217
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitWidth = 218
+          ExplicitHeight = 96
         end
-        item
-          Expanded = False
-          Visible = True
+        object BTN_CANCELAR: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 217
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          BiDiMode = bdLeftToRight
+          Caption = 'Cancelar Opera'#231#227'o'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ParentBiDiMode = False
+          ExplicitWidth = 218
+          ExplicitHeight = 96
         end
-        item
-          Expanded = False
-          Visible = True
+      end
+      object Panel2: TPanel
+        Left = 230
+        Top = 14
+        Width = 224
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 1
+        ExplicitHeight = 95
+        object Shape2: TShape
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitHeight = 96
         end
-        item
-          Expanded = False
-          Visible = True
-        end>
+        object BTN_ConsultarPreco: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Consultar Pre'#231'o'
+          Flat = True
+          ExplicitHeight = 96
+        end
+      end
+      object Panel3: TPanel
+        Left = 454
+        Top = 14
+        Width = 224
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 2
+        ExplicitHeight = 95
+        object Shape3: TShape
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitHeight = 96
+        end
+        object BTN_AbrirCaixa: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Abrir Caixa'
+          Flat = True
+          ExplicitHeight = 96
+        end
+      end
+      object Panel4: TPanel
+        Left = 678
+        Top = 14
+        Width = 224
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 3
+        ExplicitHeight = 95
+        object Shape4: TShape
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitHeight = 96
+        end
+        object BTN_CancelarVenda: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Cancelar Venda'
+          Flat = True
+          ExplicitHeight = 96
+        end
+      end
+      object Panel5: TPanel
+        Left = 902
+        Top = 14
+        Width = 223
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 4
+        ExplicitHeight = 95
+        object Shape5: TShape
+          Left = 0
+          Top = 0
+          Width = 217
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitWidth = 218
+          ExplicitHeight = 96
+        end
+        object BTN_CancelarItem: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 217
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Cancelar Item'
+          Flat = True
+          ExplicitWidth = 218
+          ExplicitHeight = 96
+        end
+      end
+      object Panel6: TPanel
+        Left = 1125
+        Top = 14
+        Width = 224
+        Height = 59
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alLeft
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 5
+        ExplicitHeight = 95
+        object Shape6: TShape
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = 8618369
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitHeight = 96
+        end
+        object BTN_FUNCOES: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 218
+          Height = 59
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Menu'
+          Flat = True
+          ExplicitHeight = 96
+        end
+      end
+    end
+    object PNL_PRINCIPAL_MAIN: TPanel
+      Left = 1
+      Top = 81
+      Width = 1366
+      Height = 656
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alClient
+      Color = 12105912
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
+      ParentBackground = False
+      TabOrder = 2
+      ExplicitTop = 87
+      ExplicitWidth = 1348
+      ExplicitHeight = 609
+      object DBGrid1: TDBGrid
+        Left = 6
+        Top = 6
+        Width = 914
+        Height = 644
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alClient
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -15
+        TitleFont.Name = 'Segoe UI'
+        TitleFont.Style = []
+      end
+      object PNL_OPERACOES: TPanel
+        Left = 920
+        Top = 6
+        Width = 440
+        Height = 644
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alRight
+        BevelOuter = bvNone
+        BorderStyle = bsSingle
+        Color = clWhite
+        Padding.Left = 10
+        Padding.Top = 10
+        Padding.Right = 10
+        Padding.Bottom = 10
+        ParentBackground = False
+        TabOrder = 1
+        object GB_Total: TGroupBox
+          Left = 10
+          Top = 559
+          Width = 416
+          Height = 71
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          Caption = 'Total da Compra'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 0
+          ExplicitWidth = 408
+          object Sh_Total: TShape
+            Left = 2
+            Top = 25
+            Width = 412
+            Height = 44
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8750469
+            Shape = stRoundRect
+            ExplicitLeft = 4
+            ExplicitTop = 24
+            ExplicitWidth = 405
+            ExplicitHeight = 43
+          end
+        end
+        object GB_QTD: TGroupBox
+          Left = 10
+          Top = 417
+          Width = 416
+          Height = 71
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          Caption = 'Quantidade'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 1
+          ExplicitLeft = 15
+          ExplicitTop = 412
+          ExplicitWidth = 406
+          object Shape7: TShape
+            Left = 2
+            Top = 25
+            Width = 412
+            Height = 44
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8750469
+            Shape = stRoundRect
+            ExplicitLeft = 4
+            ExplicitTop = 24
+            ExplicitWidth = 405
+            ExplicitHeight = 43
+          end
+        end
+        object GB_SUBTOTAL: TGroupBox
+          Left = 10
+          Top = 488
+          Width = 416
+          Height = 71
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          Caption = 'Sub Total'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 2
+          ExplicitWidth = 408
+          object Shape8: TShape
+            Left = 2
+            Top = 25
+            Width = 412
+            Height = 44
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8750469
+            Shape = stRoundRect
+            ExplicitLeft = 4
+            ExplicitTop = 24
+            ExplicitWidth = 405
+            ExplicitHeight = 43
+          end
+        end
+        object GB_PRECO: TGroupBox
+          Left = 10
+          Top = 346
+          Width = 416
+          Height = 71
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          Caption = 'Pre'#231'o Unit'#225'rio'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 3
+          ExplicitLeft = 15
+          ExplicitTop = 412
+          ExplicitWidth = 406
+          object Shape9: TShape
+            Left = 2
+            Top = 25
+            Width = 412
+            Height = 44
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8750469
+            Shape = stRoundRect
+            ExplicitLeft = 4
+            ExplicitTop = 24
+            ExplicitWidth = 405
+            ExplicitHeight = 43
+          end
+        end
+        object GB_PRODUTO: TGroupBox
+          Left = 10
+          Top = 275
+          Width = 416
+          Height = 71
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          Caption = 'Produto'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 4
+          ExplicitLeft = 15
+          ExplicitTop = 412
+          ExplicitWidth = 406
+          object Shape10: TShape
+            Left = 2
+            Top = 25
+            Width = 412
+            Height = 44
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8750469
+            Shape = stRoundRect
+            ExplicitLeft = -18
+            ExplicitTop = 19
+          end
+        end
+        object PNL_IMAGEM: TPanel
+          Left = 10
+          Top = 10
+          Width = 416
+          Height = 265
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Color = 7039851
+          Padding.Left = 5
+          Padding.Top = 5
+          Padding.Right = 5
+          Padding.Bottom = 5
+          ParentBackground = False
+          TabOrder = 5
+          ExplicitLeft = 6
+          ExplicitTop = 2
+          object DBImage1: TDBImage
+            Left = 6
+            Top = 6
+            Width = 404
+            Height = 253
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            TabOrder = 0
+            ExplicitLeft = 150
+            ExplicitTop = 70
+            ExplicitWidth = 131
+            ExplicitHeight = 131
+          end
+        end
+      end
     end
   end
 end

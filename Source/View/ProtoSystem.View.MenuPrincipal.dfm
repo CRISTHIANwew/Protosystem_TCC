@@ -170,7 +170,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 1400
         Height = 575
-        ActivePage = TabSheet8
+        ActivePage = TabSheet11
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -247,6 +247,8 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitWidth = 1394
+        ExplicitHeight = 566
         object TabSheet13: TTabSheet
           Caption = 'Cadastros'
           object Button5: TButton
@@ -513,17 +515,16 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1394
-        ExplicitHeight = 566
         object TabSheet29: TTabSheet
           Caption = 'Cadastros'
-          object Button21: TButton
+          object BTN_CAD_FORNECEDOR: TButton
             Left = 20
             Top = 20
             Width = 170
             Height = 60
-            Caption = 'Cadastro de produtos'
+            Caption = 'Cadastro de fornecedor'
             TabOrder = 0
+            OnClick = BTN_CAD_FORNECEDORClick
           end
         end
         object TabSheet30: TTabSheet
