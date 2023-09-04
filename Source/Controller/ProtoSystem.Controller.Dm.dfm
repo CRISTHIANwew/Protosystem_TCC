@@ -1,5 +1,5 @@
 object DM: TDM
-  Height = 218
+  Height = 556
   Width = 526
   PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor

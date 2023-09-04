@@ -23,6 +23,10 @@ type
     DBNavigator1: TDBNavigator;
     DBGrid1: TDBGrid;
     Query_Produto: TFDQuery;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }

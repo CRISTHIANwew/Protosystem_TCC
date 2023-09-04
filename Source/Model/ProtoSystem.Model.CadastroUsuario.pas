@@ -22,7 +22,10 @@ type
     DBEdit3: TDBEdit;
     Query_user: TFDQuery;
     DS_user: TDataSource;
-    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    ED_ID: TLabeledEdit;
+    ED_USUARIO: TLabeledEdit;
+    ED_SENHA: TLabeledEdit;
+
   private
     { Private declarations }
   public
@@ -37,11 +40,5 @@ implementation
 {$R *.dfm}
 
 uses ProtoSystem.Controller.Dm;
-
-procedure TFrm_CadUsuario.DBNavigator1Click(Sender: TObject;
-  Button: TNavigateBtn);
-begin
-   // edit_usuario.Text := UpperCase(edit_usuario.Text);
-end;
 
 end.

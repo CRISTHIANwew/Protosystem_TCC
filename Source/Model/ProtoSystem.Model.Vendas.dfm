@@ -150,8 +150,6 @@ object Frm_Vendas: TFrm_Vendas
     Margins.Bottom = 4
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1576
-    ExplicitHeight = 778
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -173,9 +171,6 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 2
-      ExplicitTop = -1
-      ExplicitWidth = 1348
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -194,8 +189,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 13
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 690
-      ExplicitWidth = 1348
       object Panel1: TPanel
         Left = 7
         Top = 14
@@ -209,7 +202,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 0
-        ExplicitHeight = 95
         object Shape1: TShape
           Left = 0
           Top = 0
@@ -263,7 +255,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 1
-        ExplicitHeight = 95
         object Shape2: TShape
           Left = 0
           Top = 0
@@ -307,7 +298,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 2
-        ExplicitHeight = 95
         object Shape3: TShape
           Left = 0
           Top = 0
@@ -351,7 +341,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 3
-        ExplicitHeight = 95
         object Shape4: TShape
           Left = 0
           Top = 0
@@ -395,7 +384,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 4
-        ExplicitHeight = 95
         object Shape5: TShape
           Left = 0
           Top = 0
@@ -441,7 +429,6 @@ object Frm_Vendas: TFrm_Vendas
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 5
-        ExplicitHeight = 95
         object Shape6: TShape
           Left = 0
           Top = 0
@@ -490,9 +477,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 2
-      ExplicitTop = 87
-      ExplicitWidth = 1348
-      ExplicitHeight = 609
       object DBGrid1: TDBGrid
         Left = 6
         Top = 6
@@ -550,7 +534,6 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 408
           object Sh_Total: TShape
             Left = 2
             Top = 25
@@ -590,9 +573,6 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 1
-          ExplicitLeft = 15
-          ExplicitTop = 412
-          ExplicitWidth = 406
           object Shape7: TShape
             Left = 2
             Top = 25
@@ -632,7 +612,6 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 2
-          ExplicitWidth = 408
           object Shape8: TShape
             Left = 2
             Top = 25
@@ -672,9 +651,6 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 3
-          ExplicitLeft = 15
-          ExplicitTop = 412
-          ExplicitWidth = 406
           object Shape9: TShape
             Left = 2
             Top = 25
@@ -714,9 +690,6 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 4
-          ExplicitLeft = 15
-          ExplicitTop = 412
-          ExplicitWidth = 406
           object Shape10: TShape
             Left = 2
             Top = 25
@@ -750,8 +723,6 @@ object Frm_Vendas: TFrm_Vendas
           Padding.Bottom = 5
           ParentBackground = False
           TabOrder = 5
-          ExplicitLeft = 6
-          ExplicitTop = 2
           object DBImage1: TDBImage
             Left = 6
             Top = 6
@@ -764,9 +735,9 @@ object Frm_Vendas: TFrm_Vendas
             Align = alClient
             TabOrder = 0
             ExplicitLeft = 150
-            ExplicitTop = 70
+            ExplicitTop = 76
             ExplicitWidth = 131
-            ExplicitHeight = 131
+            ExplicitHeight = 115
           end
         end
       end

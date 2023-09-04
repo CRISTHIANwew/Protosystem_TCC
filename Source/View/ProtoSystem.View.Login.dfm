@@ -1,11 +1,11 @@
 object Frm_Login: TFrm_Login
-  Left = 678
-  Top = 196
+  Left = 323
+  Top = 278
   AlphaBlendValue = 200
   BorderStyle = bsNone
   Caption = 'Login'
   ClientHeight = 495
-  ClientWidth = 441
+  ClientWidth = 426
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -137,7 +137,7 @@ object Frm_Login: TFrm_Login
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poDesigned
+  Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 120
@@ -145,7 +145,7 @@ object Frm_Login: TFrm_Login
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 441
+    Width = 426
     Height = 495
     Margins.Left = 4
     Margins.Top = 4
@@ -155,6 +155,10 @@ object Frm_Login: TFrm_Login
     BorderWidth = 10
     BorderStyle = bsSingle
     Color = clWhite
+    Padding.Left = 10
+    Padding.Top = 10
+    Padding.Right = 10
+    Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
     object VirtualImage1: TVirtualImage
@@ -187,46 +191,6 @@ object Frm_Login: TFrm_Login
       ImageIndex = 1
       ImageName = 'usuario'
     end
-    object lb_logo: TLabel
-      Left = 11
-      Top = 67
-      Width = 415
-      Height = 55
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Align = alTop
-      Alignment = taCenter
-      Caption = 'ProtoSystem'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -41
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Font.Quality = fqClearTypeNatural
-      ParentFont = False
-      ExplicitWidth = 227
-    end
-    object VirtualImage3: TVirtualImage
-      Left = 11
-      Top = 11
-      Width = 415
-      Height = 56
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Align = alTop
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 0
-      ImageName = 'cat-black-face'
-      ExplicitLeft = 14
-      ExplicitTop = 14
-      ExplicitWidth = 409
-    end
     object Button1: TButton
       Left = 160
       Top = 426
@@ -238,7 +202,7 @@ object Frm_Login: TFrm_Login
       Margins.Bottom = 4
       Caption = 'Comfirmar'
       Default = True
-      TabOrder = 5
+      TabOrder = 4
       StyleName = 'Windows'
       OnClick = Button1Click
     end
@@ -302,48 +266,6 @@ object Frm_Login: TFrm_Login
         ExplicitHeight = 69
       end
     end
-    object Pnl_Sair: TPanel
-      Left = 378
-      Top = 0
-      Width = 58
-      Height = 56
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Color = 2302755
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentBackground = False
-      ParentFont = False
-      TabOrder = 3
-      object SpeedButton1: TSpeedButton
-        Left = 1
-        Top = 1
-        Width = 56
-        Height = 54
-        Cursor = crHandPoint
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alClient
-        Caption = 'X'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clScrollBar
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Font.Quality = fqClearTypeNatural
-        ParentFont = False
-        OnClick = SpeedButton1Click
-        ExplicitWidth = 57
-      end
-    end
     object edit_usuario: TLabeledEdit
       Left = 90
       Top = 205
@@ -393,20 +315,117 @@ object Frm_Login: TFrm_Login
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      TabOrder = 4
+      TabOrder = 3
       OnClick = box_senhaClick
     end
-    object GroupBox1: TGroupBox
-      Left = 90
-      Top = 337
-      Width = 272
-      Height = 67
+    object Panel1: TPanel
+      Left = 21
+      Top = 21
+      Width = 380
+      Height = 110
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'GroupBox1'
-      TabOrder = 6
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 5
+      object VirtualImage3: TVirtualImage
+        Left = 0
+        Top = 0
+        Width = 380
+        Height = 56
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alTop
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 0
+        ImageName = 'cat-black-face'
+        ExplicitLeft = 2
+        ExplicitTop = 11
+        ExplicitWidth = 429
+      end
+      object lb_logo: TLabel
+        Left = 0
+        Top = 56
+        Width = 380
+        Height = 55
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alTop
+        Alignment = taCenter
+        Caption = 'ProtoSystem'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -41
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Font.Quality = fqClearTypeNatural
+        ParentFont = False
+        ExplicitWidth = 227
+      end
+      object Pnl_sair: TPanel
+        Left = 314
+        Top = 1
+        Width = 71
+        Height = 61
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        BevelOuter = bvNone
+        Padding.Right = 6
+        TabOrder = 0
+        object Shape2: TShape
+          Left = 0
+          Top = 0
+          Width = 65
+          Height = 61
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = clDefault
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitWidth = 81
+          ExplicitHeight = 70
+        end
+        object SpeedButton1: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 65
+          Height = 61
+          Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'X'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clScrollBar
+          Font.Height = -16
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentFont = False
+          OnClick = SpeedButton1Click
+          ExplicitLeft = 6
+          ExplicitWidth = 64
+          ExplicitHeight = 59
+        end
+      end
     end
   end
   object VirtualImageList1: TVirtualImageList
@@ -419,8 +438,8 @@ object Frm_Login: TFrm_Login
     ImageCollection = ImageCollection1
     Width = 20
     Height = 20
-    Left = 367
-    Top = 89
+    Left = 537
+    Top = 179
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -693,20 +712,20 @@ object Frm_Login: TFrm_Login
               C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
           end>
       end>
-    Left = 397
-    Top = 93
+    Left = 577
+    Top = 183
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 560
-    Top = 144
+    Left = 570
+    Top = 120
   end
   object Query_usuario: TFDQuery
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 531
-    Top = 56
+    Left = 534
+    Top = 120
   end
 end

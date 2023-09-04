@@ -3,12 +3,12 @@ object Frm_CadProd: TFrm_CadProd
   Top = 147
   BorderStyle = bsSingle
   Caption = 'Cadastro de produtos'
-  ClientHeight = 590
-  ClientWidth = 782
+  ClientHeight = 738
+  ClientWidth = 978
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -137,41 +137,83 @@ object Frm_CadProd: TFrm_CadProd
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poDesigned
-  TextHeight = 15
+  PixelsPerInch = 120
+  TextHeight = 20
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 782
-    Height = 249
+    Width = 978
+    Height = 311
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 776
     object Label1: TLabel
-      Left = 32
+      Left = 40
       Top = 0
-      Width = 11
-      Height = 15
+      Width = 15
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'ID'
     end
     object Label2: TLabel
-      Left = 111
+      Left = 139
       Top = 0
-      Width = 51
-      Height = 15
+      Width = 65
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Descri'#231#227'o'
     end
     object Label3: TLabel
-      Left = 32
-      Top = 54
-      Width = 42
-      Height = 15
+      Left = 40
+      Top = 68
+      Width = 53
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Caption = 'Estoque'
     end
+    object Label4: TLabel
+      Left = 220
+      Top = 68
+      Width = 37
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Caption = 'Custo'
+    end
+    object Label5: TLabel
+      Left = 360
+      Top = 65
+      Width = 37
+      Height = 20
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Caption = 'Pre'#231'o'
+    end
     object DBEdit1: TDBEdit
-      Left = 32
-      Top = 18
-      Width = 73
-      Height = 23
+      Left = 40
+      Top = 23
+      Width = 91
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       DataField = 'ID'
       DataSource = DataSource1
       ParentShowHint = False
@@ -180,69 +222,89 @@ object Frm_CadProd: TFrm_CadProd
       TabOrder = 0
     end
     object TDBEdit2: TDBEdit
-      Left = 111
-      Top = 18
-      Width = 587
-      Height = 23
+      Left = 139
+      Top = 23
+      Width = 734
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       DataField = 'DESCRICAO'
       DataSource = DataSource1
       TabOrder = 1
     end
     object TDBEdit3: TDBEdit
-      Left = 32
-      Top = 74
-      Width = 129
-      Height = 23
+      Left = 40
+      Top = 93
+      Width = 161
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       DataField = 'ESTOQUE'
       DataSource = DataSource1
       TabOrder = 2
     end
+    object DBEdit2: TDBEdit
+      Left = 220
+      Top = 93
+      Width = 111
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      DataField = 'CUSTO'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBEdit3: TDBEdit
+      Left = 360
+      Top = 93
+      Width = 101
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      DataField = 'PRECO'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
   end
   object DBNavigator1: TDBNavigator
     Left = 0
-    Top = 249
-    Width = 782
-    Height = 34
+    Top = 311
+    Width = 978
+    Height = 43
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     DataSource = DataSource1
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 776
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Top = 283
-    Width = 782
-    Height = 305
+    Top = 354
+    Width = 978
+    Height = 381
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alTop
     DataSource = DataSource1
     ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
-    TitleFont.Height = -12
+    TitleFont.Height = -15
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'ID'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'DESCRICAO'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'ESTOQUE'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'ID_GRUPO'
-        Visible = True
-      end>
   end
   object DataSource1: TDataSource
     DataSet = DM.QueryPRODUTO
