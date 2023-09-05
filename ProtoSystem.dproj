@@ -133,6 +133,10 @@
             <Form>Frm_Vendas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\View\ProtoSystem.View.TelaPadrao.pas">
+            <Form>formTelaPadrao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -169,7 +173,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="ProtoSystem.exe" Configuration="Release" Class="ProjectOutput">
+                <DeployFile LocalName="bin\ProtoSystem.exe" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ProtoSystem.exe</RemoteName>
                         <Overwrite>true</Overwrite>

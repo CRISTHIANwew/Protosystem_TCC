@@ -152,7 +152,7 @@ object Frm_Principal: TFrm_Principal
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    ActivePage = TabSheet2
+    ActivePage = TabSheet12
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -162,8 +162,6 @@ object Frm_Principal: TFrm_Principal
     ParentFont = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 1760
-    ExplicitHeight = 759
     object TabSheet1: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -187,7 +185,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet8
+        ActivePage = TabSheet11
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -196,8 +194,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet8: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -306,8 +302,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet13: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -415,8 +409,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet17: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -523,8 +515,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet21: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -631,8 +621,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet25: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -740,8 +728,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet29: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -849,8 +835,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1752
-        ExplicitHeight = 723
         object TabSheet33: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -982,8 +966,6 @@ object Frm_Principal: TFrm_Principal
         Text = 'Data e Hora'
         Width = 63
       end>
-    ExplicitTop = 759
-    ExplicitWidth = 1760
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>

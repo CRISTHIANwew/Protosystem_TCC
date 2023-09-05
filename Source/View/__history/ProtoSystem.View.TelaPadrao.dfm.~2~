@@ -1,0 +1,15 @@
+object formTelaPadrao: TformTelaPadrao
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro'
+  ClientHeight = 553
+  ClientWidth = 782
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  PixelsPerInch = 120
+  TextHeight = 20
+end

@@ -238,8 +238,8 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = []
           ParentFont = False
           ParentBiDiMode = False
-          ExplicitWidth = 218
-          ExplicitHeight = 96
+          ExplicitLeft = -2
+          ExplicitTop = -6
         end
       end
       object Panel2: TPanel
@@ -734,10 +734,6 @@ object Frm_Vendas: TFrm_Vendas
             Margins.Bottom = 4
             Align = alClient
             TabOrder = 0
-            ExplicitLeft = 150
-            ExplicitTop = 76
-            ExplicitWidth = 131
-            ExplicitHeight = 115
           end
         end
       end
