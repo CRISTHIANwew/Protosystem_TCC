@@ -23,7 +23,7 @@ type
     Query_userusername: TStringField;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
-    PageControl1: TPageControl;
+    PgcUsuario: TPageControl;
     TabOperacao: TTabSheet;
     TabPesquisa: TTabSheet;
     pnl_dados_user: TPanel;
@@ -44,9 +44,9 @@ type
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
     Panel1: TPanel;
-    DBLabeledEdit1: TDBLabeledEdit;
-    DBLabeledEdit2: TDBLabeledEdit;
-    DBLabeledEdit3: TDBLabeledEdit;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
     DBGrid1: TDBGrid;
     edtPesquisa: TEdit;
     procedure btnNovoClick(Sender: TObject);
@@ -57,11 +57,13 @@ type
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
 
   private
     { Private declarations }
   public
     { Public declarations }
+
   end;
 
 var
@@ -85,9 +87,8 @@ end;
 
 procedure TFrm_CadUsuario.btnSalvarClick(Sender: TObject);
 begin
-
   if Query_user.State in [dsInsert, dsEdit] then
-    Query_user.Post
+    Query_user.Post;
 end;
 
 procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);
@@ -96,10 +97,29 @@ begin
   TabPesquisa.Visible := false;
 end;
 
+procedure TFrm_CadUsuario.edtPesquisaChange(Sender: TObject);
+begin
+  // Verifique se o critério de pesquisa não está vazio
+  if edtPesquisa.Text <> '' then
+  begin
+    // Atualize o filtro do DataSet ligado ao DBGrid
+    // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
+    Query_user.Filtered := false;
+    Query_user.Filter := 'USERNAME LIKE ' +
+      QuotedStr('%' + edtPesquisa.Text + '%');
+    Query_user.Filtered := true;
+  end
+
+  else
+    // Se o critério de pesquisa estiver vazio, remova o filtro
+    Query_user.Filtered := false;
+end;
+
 procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);
 begin
   TabOperacao.Visible := false;
   TabPesquisa.Visible := true;
+  // PgcUsuario.TabIndex := 1
   Query_user.Edit
 end;
 
@@ -110,12 +130,12 @@ end;
 
 procedure TFrm_CadUsuario.btnCadastrarClick(Sender: TObject);
 begin
-  Query_user.Insert
+  Query_user.Insert;
 end;
 
 procedure TFrm_CadUsuario.btnCancelarClick(Sender: TObject);
 begin
-  Query_user.Cancel
+  Query_user.Cancel;
 end;
 
 end.
