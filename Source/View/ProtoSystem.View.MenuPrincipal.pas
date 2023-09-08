@@ -9,7 +9,12 @@ uses
   Vcl.Menus, Vcl.StdCtrls, System.ImageList, Vcl.ImgList,
   Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.VirtualImageList,
   Vcl.VirtualImage, Vcl.ColorGrd, Vcl.Tabs, System.Win.TaskbarCore, Vcl.Taskbar,
-  Vcl.WinXCtrls, Vcl.Themes, Vcl.Styles;
+  Vcl.WinXCtrls, Vcl.Themes, Vcl.Styles, System.IOUtils, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
+  FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, FireDAC.Comp.UI, Data.DB,
+  FireDAC.Comp.Client;
 
 type
   TFrm_Principal = class(TForm)
@@ -90,6 +95,7 @@ type
     Button28: TButton;
     CB_STYLES: TComboBox;
     ComboBox1: TComboBox;
+    pnl_boasvindas: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -119,6 +125,13 @@ uses
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
   ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
   ProtoSystem.Model.CadastroFornecedor;
+
+procedure TFrm_Principal.FormCreate(Sender: TObject);
+begin
+  Timer1.Enabled := True; // Iniciar o timer quando o formulário for criado
+  PreencheEstilos(CB_STYLES);
+  //--------------------------------------------------------------------------//
+end;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);
 begin
@@ -213,51 +226,18 @@ begin
     TStyleManager.TrySetStyle('Lavender Classico');
 end;
 
-procedure TFrm_Principal.FormCreate(Sender: TObject);
-begin
-  Timer1.Enabled := True; // Iniciar o timer quando o formulário for criado
-  PreencheEstilos(CB_STYLES);
-end;
-
 procedure TFrm_Principal.PreencheEstilos(comboBox: TComboBox);
 begin
   comboBox.Clear;
   // Adicione o estilo definido como padrão ao primeiro item do ComboBox.
   comboBox.Items.Add('Windows');
-  // comboBox.Items.Add('Amakrits');
-  // comboBox.Items.Add('Amethyst Kamri');
-  // comboBox.Items.Add('Aqua Graphite');
-  // comboBox.Items.Add('Aqua Light Slate');
-  // comboBox.Items.Add('Auric');
-  // comboBox.Items.Add('Carbon');
-  // comboBox.Items.Add('Charcoal Dark Slate');
-  // comboBox.Items.Add('Cobalt XEMedia');
-  // comboBox.Items.Add('Cyan Dusk');
-  // comboBox.Items.Add('Cyan Night');
-  // comboBox.Items.Add('Emerald Light Slate');
-  // comboBox.Items.Add('Golden Graphite');
   comboBox.Items.Add('Iceberg Classico');
-  // comboBox.Items.Add('Lavender Classico');
-  // comboBox.Items.Add('Light');
-  // comboBox.Items.Add('Luna');
-  // comboBox.Items.Add('Metropolis UI Black');
-  // comboBox.Items.Add('Metropolis UI Blue');
-  // comboBox.Items.Add('Metropolis UI Dark');
-  // comboBox.Items.Add('Metropolis UI Green');
-  // comboBox.Items.Add('Obsidian');
-  // comboBox.Items.Add('Ruby Graphite');
-  // comboBox.Items.Add('Sapphire Kamri');
-  // comboBox.Items.Add('Silver');
-  // comboBox.Items.Add('Slate Classico');
-  // comboBox.Items.Add('Smokey Quartz Kamri');
-  // comboBox.Items.Add('Turquoise Gray');
-  // Exibe no ComboBox o tema padrão definido.
   comboBox.ItemIndex := 0;
 end;
 
 procedure TFrm_Principal.Timer1Timer(Sender: TObject);
 begin
-  // atualizar data e hora
+  // atualizar data e hora na statur bar
   StatusBar1.Panels[0].Text := 'Data e Hora: ' +
     FormatDateTime('dd/mm/yyyy hh:nn:ss', Now);
 end;

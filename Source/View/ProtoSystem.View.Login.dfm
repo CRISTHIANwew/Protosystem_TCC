@@ -5,10 +5,10 @@ object Frm_Login: TFrm_Login
   BorderStyle = bsNone
   Caption = 'Login'
   ClientHeight = 495
-  ClientWidth = 426
+  ClientWidth = 425
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clWindow
   Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
@@ -145,7 +145,7 @@ object Frm_Login: TFrm_Login
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 426
+    Width = 425
     Height = 495
     Margins.Left = 4
     Margins.Top = 4
@@ -161,6 +161,7 @@ object Frm_Login: TFrm_Login
     Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 426
     object VirtualImage1: TVirtualImage
       Left = 35
       Top = 270
@@ -282,6 +283,14 @@ object Frm_Login: TFrm_Login
       EditLabel.Margins.Right = 4
       EditLabel.Margins.Bottom = 4
       EditLabel.Caption = 'Usuario'
+      EditLabel.Color = clBlack
+      EditLabel.ParentColor = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
       Text = ''
       OnKeyPress = edit_usuarioKeyPress
@@ -302,6 +311,14 @@ object Frm_Login: TFrm_Login
       EditLabel.Margins.Right = 4
       EditLabel.Margins.Bottom = 4
       EditLabel.Caption = 'Senha'
+      EditLabel.Color = -1
+      EditLabel.ParentColor = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       Text = ''
       OnKeyPress = edit_usuarioKeyPress
@@ -321,7 +338,7 @@ object Frm_Login: TFrm_Login
     object Panel1: TPanel
       Left = 21
       Top = 21
-      Width = 380
+      Width = 379
       Height = 110
       Margins.Left = 4
       Margins.Top = 4
@@ -332,10 +349,11 @@ object Frm_Login: TFrm_Login
       Color = clWhite
       ParentBackground = False
       TabOrder = 5
+      ExplicitWidth = 380
       object VirtualImage3: TVirtualImage
         Left = 0
         Top = 0
-        Width = 380
+        Width = 379
         Height = 56
         Margins.Left = 4
         Margins.Top = 4
@@ -354,7 +372,7 @@ object Frm_Login: TFrm_Login
       object lb_logo: TLabel
         Left = 0
         Top = 56
-        Width = 380
+        Width = 379
         Height = 55
         Margins.Left = 4
         Margins.Top = 4
@@ -438,8 +456,8 @@ object Frm_Login: TFrm_Login
     ImageCollection = ImageCollection1
     Width = 20
     Height = 20
-    Left = 537
-    Top = 179
+    Left = 31
+    Top = 94
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -712,20 +730,20 @@ object Frm_Login: TFrm_Login
               C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
           end>
       end>
-    Left = 577
-    Top = 183
+    Left = 61
+    Top = 89
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 570
-    Top = 120
+    Left = 223
+    Top = 100
   end
   object Query_usuario: TFDQuery
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 534
-    Top = 120
+    Left = 138
+    Top = 100
   end
 end

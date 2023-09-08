@@ -1,0 +1,109 @@
+unit ProtoSystem.Controller.Dm;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
+  FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.Comp.UI, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.IOUtils, System.Variants;
+
+type
+  TDM = class(TDataModule)
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    conexao: TFDConnection;
+    QueryPRODUTO: TFDQuery;
+    QueryCLIENTE: TFDQuery;
+    QueryFORNECEDOR: TFDQuery;
+    FDQuery: TFDQuery;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure CreateDB;
+  public
+    { Public declarations }
+  end;
+
+var
+  Dm: TDM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+{$R *.dfm}
+
+procedure TDM.DataModuleCreate(Sender: TObject);
+var
+  LPath: string;
+  LFile: TextFile;
+begin
+{$IFDEF MSWINDOWS}
+  LPath := System.SysUtils.GetCurrentDir;
+{$ELSE}
+  LPath := System.IOUtils.TPath.GetDocumentsPath;
+{$ENDIF}
+  LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
+  ForceDirectories(LPath);
+  LPath := System.IOUtils.TPath.Combine(LPath, 'Dados.db');
+  if not(FileExists(LPath)) then
+  begin
+    try
+      AssignFile(LFile, LPath);
+      Rewrite(LFile);
+    finally
+      CloseFile(LFile);
+    end;
+  end;
+  conexao.Params.Values['Database'] := LPath;
+  CreateDB;
+end;
+
+procedure TDM.CreateDB;
+var
+  LPath: string;
+  LFile: TextFile;
+begin
+{$IFDEF MSWINDOWS}
+  LPath := System.SysUtils.GetCurrentDir;
+{$ELSE}
+  LPath := System.IOUtils.TPath.GetDocumentsPath;
+{$ENDIF}
+  LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
+  ForceDirectories(LPath);
+  LPath := System.IOUtils.TPath.Combine(LPath, 'Dados.db');
+  if not(FileExists(LPath)) then
+  begin
+    try
+      AssignFile(LFile, LPath);
+      Rewrite(LFile);
+    finally
+      CloseFile(LFile);
+    end;
+  end;
+  conexao.Params.Values['Database'] := LPath;
+
+  FDQuery.ExecSQL( 'CREATE TABLE IF NOT EXISTS Person (' +
+      'Id INTEGER PRIMARY KEY,' +
+      'FirstName VARCHAR(50) NOT NULL,' +
+      'Email VARCHAR(100),' +
+      'Birthday DATE);' );
+
+  FDQuery.ExecSQL( 'CREATE TABLE CLIENTE (' +
+    'ID INTEGER NOT NULL PRIMARY KEY ,' +
+    'NOME VARCHAR (60) ,' +
+    'CPFCNPJ VARCHAR (14) ,' +
+    'RGIE VARCHAR (20) ,' +
+    'ENDERECO VARCHAR (60) ,' +
+    'BAIRRO VARCHAR (60) ,' +
+    'CIDADE VARCHAR (60) ,' +
+    'CEP VARCHAR (20) ,' +
+    'NUMERO VARCHAR(10) ,' +
+    'CELULAR VARCHAR(20) ,' +
+    'EMAIL VARCHAR (60);' );
+end;
+
+end.

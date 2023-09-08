@@ -152,7 +152,7 @@ object Frm_Principal: TFrm_Principal
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    ActivePage = TabSheet12
+    ActivePage = TabSheet1
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -168,6 +168,28 @@ object Frm_Principal: TFrm_Principal
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Tela inicial'
+      object pnl_boasvindas: TPanel
+        Left = 0
+        Top = 0
+        Width = 988
+        Height = 41
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alTop
+        Caption = 'Bem vindo (a) User'
+        Color = clBlack
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindow
+        Font.Height = -17
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Font.Quality = fqClearTypeNatural
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 0
+      end
     end
     object TabSheet2: TTabSheet
       Margins.Left = 4
@@ -185,7 +207,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet11
+        ActivePage = TabSheet8
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText

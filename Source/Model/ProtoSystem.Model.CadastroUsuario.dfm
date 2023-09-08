@@ -25,7 +25,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
-    ExplicitHeight = 249
     object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -49,7 +48,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 153
         object edtID: TDBLabeledEdit
           Left = 86
           Top = 33
@@ -60,7 +58,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Margins.Right = 4
           Margins.Bottom = 4
           BorderStyle = bsNone
-          Color = 8553090
+          Color = clWhite
           DataField = 'id'
           DataSource = DS_user
           Enabled = False
@@ -83,7 +81,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Margins.Right = 4
           Margins.Bottom = 4
           BorderStyle = bsNone
-          Color = 8553090
+          Color = clWhite
           DataField = 'username'
           DataSource = DS_user
           TabOrder = 0
@@ -106,7 +104,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Margins.Right = 4
           Margins.Bottom = 4
           BorderStyle = bsNone
-          Color = 8553090
+          Color = clWhite
           DataField = 'password'
           DataSource = DS_user
           TabOrder = 1
@@ -137,7 +135,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 153
         object pnlEditar: TPanel
           Left = 111
           Top = 6
@@ -401,7 +398,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
-        ExplicitHeight = 214
         object DBGrid1: TDBGrid
           Left = 6
           Top = 34
@@ -437,7 +433,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Align = alTop
           TabOrder = 1
           OnChange = edtPesquisaChange
-          ExplicitTop = -2
         end
       end
     end

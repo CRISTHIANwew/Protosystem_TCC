@@ -1,6 +1,7 @@
 object DM: TDM
+  OnCreate = DataModuleCreate
   Height = 556
-  Width = 526
+  Width = 525
   PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
@@ -18,20 +19,17 @@ object DM: TDM
         'CC\Source\Database\dados.s3db'
       'LockingMode=Normal'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 72
     Top = 8
   end
   object QueryPRODUTO: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from produto')
     Left = 424
   end
   object QueryCLIENTE: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
@@ -39,11 +37,15 @@ object DM: TDM
     Top = 128
   end
   object QueryFORNECEDOR: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from fornecedor')
     Left = 424
     Top = 64
+  end
+  object FDQuery: TFDQuery
+    Connection = conexao
+    Left = 304
+    Top = 16
   end
 end
