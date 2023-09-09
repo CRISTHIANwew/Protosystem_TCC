@@ -16,14 +16,12 @@ type
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     conexao: TFDConnection;
-    QueryPRODUTO: TFDQuery;
-    QueryCLIENTE: TFDQuery;
-    QueryFORNECEDOR: TFDQuery;
     FDQuery: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
     procedure CreateDB;
+    function GetTables: TDataSet;
   public
     { Public declarations }
   end;
@@ -48,7 +46,7 @@ begin
 {$ENDIF}
   LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
   ForceDirectories(LPath);
-  LPath := System.IOUtils.TPath.Combine(LPath, 'Dados.db');
+  LPath := System.IOUtils.TPath.Combine(LPath, 'ProtoSystem.s3db');
   if not(FileExists(LPath)) then
   begin
     try
@@ -66,6 +64,10 @@ procedure TDM.CreateDB;
 var
   LPath: string;
   LFile: TextFile;
+  LDSTables: TDataSet;
+  TableNames: TStringList;
+  Result: boolean;
+
 begin
 {$IFDEF MSWINDOWS}
   LPath := System.SysUtils.GetCurrentDir;
@@ -74,7 +76,7 @@ begin
 {$ENDIF}
   LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
   ForceDirectories(LPath);
-  LPath := System.IOUtils.TPath.Combine(LPath, 'Dados.db');
+  LPath := System.IOUtils.TPath.Combine(LPath, 'ProtoSystem.s3db');
   if not(FileExists(LPath)) then
   begin
     try
@@ -86,46 +88,98 @@ begin
  end;
   conexao.Params.Values['Database'] := LPath;
 
-  FDQuery.ExecSQL(
+   LDSTables := nil;
+   LDSTables := GetTables;
+   TableNames := TStringList.Create;
+
+  conexao.GetTableNames('', '', '', TableNames);
+
+  Result := false;
+  Result := TableNames.IndexOf('CLIENTE') >= 0;
+
+  if Result = false then
+ begin
+   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS CLIENTE (' +
       'ID INTEGER PRIMARY KEY,' +
-      'NOME VARCHAR(100),' +
-      'CFPCNPJ VARCHAR(100),' +
-      'EMAIL VARCHAR(100));'
+      'NOME VARCHAR(60),' +
+      'CPFCNPJ VARCHAR(14),' +
+      'RGIE VARCHAR (20),' +
+      'ENDERECO VARCHAR (60) ,' +
+      'BAIRRO VARCHAR (60) ,' +
+      'CIDADE VARCHAR (60) ,' +
+      'CEP VARCHAR (20) ,' +
+      'NUMERO VARCHAR(10) ,' +
+      'CELULAR VARCHAR(20) ,' +
+      'EMAIL VARCHAR(60));'
     );
+ end;
 
+Result := false;
+  Result := TableNames.IndexOf('DOC_PAGAR') >= 0;
+
+  if Result = false then
+ begin
   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS DOC_PAGAR (' +
       'ID INTEGER PRIMARY KEY,' +
-      'NOME VARCHAR(100),' +
-      'CFPCNPJ VARCHAR(100),' +
-      'EMAIL VARCHAR(100));'
+      'A VARCHAR(100));'
     );
+end;
 
+Result := false;
+  Result := TableNames.IndexOf('DOC_RECEBER') >= 0;
+
+  if Result = false then
+ begin
   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS DOC_RECEBER (' +
       'ID INTEGER PRIMARY KEY,' +
-      'NOME VARCHAR(100),' +
-      'CFPCNPJ VARCHAR(100),' +
-      'EMAIL VARCHAR(100));'
+      'A VARCHAR(100));'
     );
+end;
 
+Result := false;
+  Result := TableNames.IndexOf('FORNECEDOR') >= 0;
+
+  if Result = false then
+ begin
   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS FORNECEDOR (' +
       'ID INTEGER PRIMARY KEY,' +
-      'NOME VARCHAR(100),' +
-      'CFPCNPJ VARCHAR(100),' +
-      'EMAIL VARCHAR(100));'
+      'NOME VARCHAR(60),' +
+     'CPFCNPJ VARCHAR(14),' +
+      'RGIE VARCHAR (20),' +
+      'ENDERECO VARCHAR (60) ,' +
+      'BAIRRO VARCHAR (60) ,' +
+      'CIDADE VARCHAR (60) ,' +
+      'CEP VARCHAR (20) ,' +
+      'NUMERO VARCHAR(10) ,' +
+      'CELULAR VARCHAR(20) ,' +
+      'EMAIL VARCHAR(60));'
     );
+end;
 
+Result := false;
+  Result := TableNames.IndexOf('PRODUTO') >= 0;
+
+  if Result = false then
+ begin
   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS PRODUTO (' +
       'ID INTEGER PRIMARY KEY,' +
-      'NOME VARCHAR(100),' +
-      'CFPCNPJ VARCHAR(100),' +
-      'EMAIL VARCHAR(100));'
+      'DESCRICAO VARCHAR(90),' +
+      'ESTOQUE INTEGER,' +
+      'CUSTO REAL,' +
+      'PRECO REAL);'
     );
+end;
 
+Result := false;
+  Result := TableNames.IndexOf('USUARIO') >= 0;
+
+  if Result = false then
+ begin
   FDQuery.ExecSQL(
     'CREATE TABLE IF NOT EXISTS USUARIO (' +
       'ID INTEGER PRIMARY KEY,' +
@@ -135,10 +189,23 @@ begin
 
     FDQuery.SQL.Text :='INSERT INTO USUARIO (ID, USERNAME, PASSWORD) VALUES (:ID, :USERNAME, :PASSWORD)';
     FDQuery.ParamByName('ID').AsString := '01';
-    FDQuery.ParamByName('USERNAME').AsString := 'CRISTHIAN';
+    FDQuery.ParamByName('USERNAME').AsString := 'SUPORTE';
     FDQuery.ParamByName('PASSWORD').AsString := '123';
     FDQuery.ExecSQL;
+end;
+end;
 
+function TDM.GetTables: TDataSet;
+begin
+  try
+    Result := TFDQuery.Create(nil);
+    TFDQuery(Result).Connection := conexao;
+    TFDQuery(Result).SQL.Add('select name from sqlite_master where type="table"');
+    TFDQuery(Result).Open;
+  except
+    FreeAndNil(Result);
+    raise ;
+  end;
 end;
 
 end.

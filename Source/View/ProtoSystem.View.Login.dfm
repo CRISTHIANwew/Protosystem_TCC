@@ -4,8 +4,8 @@ object Frm_Login: TFrm_Login
   AlphaBlendValue = 200
   BorderStyle = bsNone
   Caption = 'Login'
-  ClientHeight = 495
-  ClientWidth = 425
+  ClientHeight = 491
+  ClientWidth = 423
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindow
@@ -145,26 +145,35 @@ object Frm_Login: TFrm_Login
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 425
-    Height = 495
+    Width = 423
+    Height = 491
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
     Align = alClient
+    BevelOuter = bvNone
     BorderWidth = 10
-    BorderStyle = bsSingle
     Color = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
     Padding.Left = 10
     Padding.Top = 10
     Padding.Right = 10
     Padding.Bottom = 10
     ParentBackground = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = False
     TabOrder = 0
-    ExplicitWidth = 426
+    ExplicitWidth = 1024
+    ExplicitHeight = 581
     object VirtualImage1: TVirtualImage
-      Left = 35
-      Top = 270
+      Left = 20
+      Top = 269
       Width = 58
       Height = 50
       Margins.Left = 4
@@ -178,7 +187,7 @@ object Frm_Login: TFrm_Login
       ImageName = 'senha'
     end
     object VirtualImage2: TVirtualImage
-      Left = 35
+      Left = 20
       Top = 183
       Width = 58
       Height = 50
@@ -203,7 +212,7 @@ object Frm_Login: TFrm_Login
       Margins.Bottom = 4
       Caption = 'Comfirmar'
       Default = True
-      TabOrder = 4
+      TabOrder = 3
       StyleName = 'Windows'
       OnClick = Button1Click
     end
@@ -225,7 +234,7 @@ object Frm_Login: TFrm_Login
       Font.Style = []
       ParentBackground = False
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 5
       object Shape1: TShape
         Left = 1
         Top = 1
@@ -267,62 +276,6 @@ object Frm_Login: TFrm_Login
         ExplicitHeight = 69
       end
     end
-    object edit_usuario: TLabeledEdit
-      Left = 90
-      Top = 205
-      Width = 273
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      EditLabel.Width = 50
-      EditLabel.Height = 20
-      EditLabel.Margins.Left = 4
-      EditLabel.Margins.Top = 4
-      EditLabel.Margins.Right = 4
-      EditLabel.Margins.Bottom = 4
-      EditLabel.Caption = 'Usuario'
-      EditLabel.Color = clBlack
-      EditLabel.ParentColor = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      Text = ''
-      OnKeyPress = edit_usuarioKeyPress
-    end
-    object edit_senha: TLabeledEdit
-      Left = 90
-      Top = 291
-      Width = 273
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      EditLabel.Width = 40
-      EditLabel.Height = 20
-      EditLabel.Margins.Left = 4
-      EditLabel.Margins.Top = 4
-      EditLabel.Margins.Right = 4
-      EditLabel.Margins.Bottom = 4
-      EditLabel.Caption = 'Senha'
-      EditLabel.Color = -1
-      EditLabel.ParentColor = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 1
-      Text = ''
-      OnKeyPress = edit_usuarioKeyPress
-    end
     object box_senha: TCheckBox
       Left = 370
       Top = 295
@@ -332,13 +285,13 @@ object Frm_Login: TFrm_Login
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      TabOrder = 3
+      TabOrder = 2
       OnClick = box_senhaClick
     end
     object Panel1: TPanel
-      Left = 21
-      Top = 21
-      Width = 379
+      Left = 20
+      Top = 20
+      Width = 383
       Height = 110
       Margins.Left = 4
       Margins.Top = 4
@@ -347,13 +300,19 @@ object Frm_Login: TFrm_Login
       Align = alTop
       BevelOuter = bvNone
       Color = clWhite
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
       ParentBackground = False
-      TabOrder = 5
-      ExplicitWidth = 380
+      TabOrder = 4
+      ExplicitLeft = 21
+      ExplicitTop = 21
+      ExplicitWidth = 982
       object VirtualImage3: TVirtualImage
-        Left = 0
-        Top = 0
-        Width = 379
+        Left = 5
+        Top = 5
+        Width = 373
         Height = 56
         Margins.Left = 4
         Margins.Top = 4
@@ -370,9 +329,9 @@ object Frm_Login: TFrm_Login
         ExplicitWidth = 429
       end
       object lb_logo: TLabel
-        Left = 0
-        Top = 56
-        Width = 379
+        Left = 5
+        Top = 61
+        Width = 373
         Height = 55
         Margins.Left = 4
         Margins.Top = 4
@@ -388,6 +347,8 @@ object Frm_Login: TFrm_Login
         Font.Style = []
         Font.Quality = fqClearTypeNatural
         ParentFont = False
+        ExplicitLeft = 0
+        ExplicitTop = 56
         ExplicitWidth = 227
       end
       object Pnl_sair: TPanel
@@ -444,6 +405,64 @@ object Frm_Login: TFrm_Login
           ExplicitHeight = 59
         end
       end
+    end
+    object edit_senha: TLabeledEdit
+      Left = 74
+      Top = 291
+      Width = 273
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      EditLabel.Width = 40
+      EditLabel.Height = 20
+      EditLabel.Margins.Left = 4
+      EditLabel.Margins.Top = 4
+      EditLabel.Margins.Right = 4
+      EditLabel.Margins.Bottom = 4
+      EditLabel.Caption = 'Senha'
+      EditLabel.Color = -1
+      EditLabel.ParentColor = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      NumbersOnly = True
+      ParentFont = False
+      TabOrder = 1
+      Text = ''
+      OnKeyPress = edit_usuarioKeyPress
+    end
+    object edit_usuario: TLabeledEdit
+      Left = 74
+      Top = 205
+      Width = 273
+      Height = 28
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Color = clWhite
+      EditLabel.Width = 50
+      EditLabel.Height = 20
+      EditLabel.Margins.Left = 4
+      EditLabel.Margins.Top = 4
+      EditLabel.Margins.Right = 4
+      EditLabel.Margins.Bottom = 4
+      EditLabel.Caption = 'Usuario'
+      EditLabel.Color = clBlack
+      EditLabel.ParentColor = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = ''
+      OnKeyPress = edit_usuarioKeyPress
     end
   end
   object VirtualImageList1: TVirtualImageList

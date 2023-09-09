@@ -366,10 +366,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
             Caption = 'Excluir'
             Flat = True
             OnClick = btnExcluirClick
-            ExplicitLeft = 40
-            ExplicitTop = 12
-            ExplicitWidth = 29
-            ExplicitHeight = 28
+            ExplicitLeft = -10
+            ExplicitTop = -20
           end
         end
       end
@@ -442,8 +440,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 404
-    Top = 100
+    Left = 315
+    Top = 5
     object Query_userid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -463,19 +461,19 @@ object Frm_CadUsuario: TFrm_CadUsuario
   end
   object DS_user: TDataSource
     DataSet = Query_user
-    Left = 329
-    Top = 100
+    Left = 231
+    Top = 5
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = Query_user
     ScopeMappings = <>
-    Left = 390
-    Top = 38
+    Left = 488
+    Top = 65534
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 350
-    Top = 35
+    Left = 488
+    Top = 65530
   end
 end

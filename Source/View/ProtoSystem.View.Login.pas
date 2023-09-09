@@ -20,7 +20,6 @@ type
     ImageCollection1: TImageCollection;
     Pnl_comfirmar: TPanel;
     edit_usuario: TLabeledEdit;
-    edit_senha: TLabeledEdit;
     VirtualImage1: TVirtualImage;
     VirtualImage2: TVirtualImage;
     DS_usuario: TDataSource;
@@ -35,6 +34,7 @@ type
     SpeedButton1: TSpeedButton;
     VirtualImage3: TVirtualImage;
     lb_logo: TLabel;
+    edit_senha: TLabeledEdit;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);

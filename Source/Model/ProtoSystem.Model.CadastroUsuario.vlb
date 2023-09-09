@@ -1,9 +1,6 @@
 ﻿[Query_userpassword]
 Coordinates=500,232,119,33
 
-[DM.QueryCLIENTE]
-Coordinates=183,10,107,249
-
 [DM.QueryPRODUTO]
 Coordinates=320,10,114,141
 
@@ -13,9 +10,6 @@ Coordinates=14,319,56,33
 [Query_user]
 Coordinates=840,110,71,33
 Visible=False
-
-[DM.QueryFORNECEDOR]
-Coordinates=10,10,136,249
 
 [Query_userusername]
 Coordinates=500,507,120,33
@@ -32,4 +26,7 @@ Coordinates=840,110,92,123
 
 [BindingsList1]
 Coordinates=388,197,82,33
+
+[DM.]
+Coordinates=10,10,136,249
 

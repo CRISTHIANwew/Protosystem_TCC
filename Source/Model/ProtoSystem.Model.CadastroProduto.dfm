@@ -3,8 +3,8 @@ object Frm_CadProd: TFrm_CadProd
   Top = 147
   BorderStyle = bsSingle
   Caption = 'Cadastro de produtos'
-  ClientHeight = 738
-  ClientWidth = 978
+  ClientHeight = 734
+  ClientWidth = 878
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -142,7 +142,7 @@ object Frm_CadProd: TFrm_CadProd
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 978
+    Width = 878
     Height = 311
     Margins.Left = 4
     Margins.Top = 4
@@ -277,7 +277,7 @@ object Frm_CadProd: TFrm_CadProd
   object DBNavigator1: TDBNavigator
     Left = 0
     Top = 311
-    Width = 978
+    Width = 878
     Height = 43
     Margins.Left = 4
     Margins.Top = 4
@@ -290,7 +290,7 @@ object Frm_CadProd: TFrm_CadProd
   object DBGrid1: TDBGrid
     Left = 0
     Top = 354
-    Width = 978
+    Width = 878
     Height = 381
     Margins.Left = 4
     Margins.Top = 4
@@ -307,15 +307,16 @@ object Frm_CadProd: TFrm_CadProd
     TitleFont.Style = []
   end
   object DataSource1: TDataSource
-    DataSet = DM.QueryPRODUTO
-    Left = 720
-    Top = 600
+    DataSet = Query_Produto
+    Left = 513
+    Top = 81
   end
   object Query_Produto: TFDQuery
+    Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'Select * from produtos')
-    Left = 632
-    Top = 600
+      'select * from produto')
+    Left = 594
+    Top = 81
   end
 end
