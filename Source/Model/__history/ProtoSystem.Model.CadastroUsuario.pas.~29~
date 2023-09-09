@@ -23,13 +23,13 @@ type
     Query_userusername: TStringField;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
-    PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    TabPesquisa: TTabSheet;
     pnl_dados_user: TPanel;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
-    ShpNovo: TShape;
+    Shpeditar: TShape;
     btnEditar: TSpeedButton;
     pnlCadastrar: TPanel;
     ShpCadastrar: TShape;
@@ -43,6 +43,12 @@ type
     pnlExcluir: TPanel;
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
+    Panel1: TPanel;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
     procedure btnNovoClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -50,11 +56,14 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
 
   private
     { Private declarations }
   public
     { Public declarations }
+
   end;
 
 var
@@ -79,12 +88,48 @@ end;
 procedure TFrm_CadUsuario.btnSalvarClick(Sender: TObject);
 begin
   if Query_user.State in [dsInsert, dsEdit] then
-    Query_user.Post
+    Query_user.Post;
+end;
+
+procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);
+begin
+  TabOperacao.Visible := true;
+  TabPesquisa.Visible := false;
+end;
+
+procedure TFrm_CadUsuario.edtPesquisaChange(Sender: TObject);
+begin
+  // Verifique se o critério de pesquisa não está vazio
+  if edtPesquisa.Text <> '' then
+  begin
+    // Atualize o filtro do DataSet ligado ao DBGrid
+    // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
+    Query_user.Filtered := false;
+    Query_user.Filter := 'USERNAME LIKE ' +
+      QuotedStr('%' + edtPesquisa.Text + '%');
+    Query_user.Filtered := true;
+  end
+
+  else
+    // Se o critério de pesquisa estiver vazio, remova o filtro
+    Query_user.Filtered := false;
 end;
 
 procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);
 begin
-      Query_user.Edit
+  TabOperacao.Visible := false;
+  TabPesquisa.Visible := true;
+  Query_user.Edit;
+  //desabilitar cadastar, excluir.
+  btnCadastrar.Enabled := false;
+  ShpCadastrar.Brush.Color :=$00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+ //habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color:= $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color:= $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnExcluirClick(Sender: TObject);
@@ -94,12 +139,22 @@ end;
 
 procedure TFrm_CadUsuario.btnCadastrarClick(Sender: TObject);
 begin
-      Query_user.Insert
+  Query_user.Insert;
+  //desabilita editar, excluir.
+  btnEditar.Enabled := false;
+  Shpeditar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  //habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color:= $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color:= $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnCancelarClick(Sender: TObject);
 begin
-  Query_user.Cancel
+  Query_user.Cancel;
 end;
 
 end.

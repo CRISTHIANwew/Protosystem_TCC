@@ -29,7 +29,7 @@ type
     pnl_dados_user: TPanel;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
-    ShpNovo: TShape;
+    Shpeditar: TShape;
     btnEditar: TSpeedButton;
     pnlCadastrar: TPanel;
     ShpCadastrar: TShape;
@@ -89,6 +89,18 @@ procedure TFrm_CadUsuario.btnSalvarClick(Sender: TObject);
 begin
   if Query_user.State in [dsInsert, dsEdit] then
     Query_user.Post;
+  // desabilitar salvar e cancelar
+  btnSalvar.Enabled := false;
+  shpSalvar.Brush.Color := $00D6D6D6;
+  btnCancelar.Enabled := false;
+  ShpCancelar.Brush.Color := $00D6D6D6;
+  // habilitar editar, excluir, cadastrar.
+  btnEditar.Enabled := true;
+  Shpeditar.Brush.Color := $00838181;
+  btnExcluir.Enabled := true;
+  shpExcluir.Brush.Color := $00838181;
+  btnCadastrar.Enabled := true;
+  ShpCadastrar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);
@@ -119,8 +131,17 @@ procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);
 begin
   TabOperacao.Visible := false;
   TabPesquisa.Visible := true;
-  // PgcUsuario.TabIndex := 1
-  Query_user.Edit
+  Query_user.Edit;
+  // desabilitar cadastar, excluir.
+  btnCadastrar.Enabled := false;
+  ShpCadastrar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnExcluirClick(Sender: TObject);
@@ -131,11 +152,32 @@ end;
 procedure TFrm_CadUsuario.btnCadastrarClick(Sender: TObject);
 begin
   Query_user.Insert;
+  // desabilita editar, excluir.
+  btnEditar.Enabled := false;
+  Shpeditar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnCancelarClick(Sender: TObject);
 begin
   Query_user.Cancel;
+  // desabilitar salvar e cancelar
+  btnSalvar.Enabled := false;
+  shpSalvar.Brush.Color := $00D6D6D6;
+  btnCancelar.Enabled := false;
+  ShpCancelar.Brush.Color := $00D6D6D6;
+  // habilitar editar, excluir, cadastrar.
+  btnEditar.Enabled := true;
+  Shpeditar.Brush.Color := $00838181;
+  btnExcluir.Enabled := true;
+  shpExcluir.Brush.Color := $00838181;
+  btnCadastrar.Enabled := true;
+  ShpCadastrar.Brush.Color := $00838181;
 end;
-
 end.

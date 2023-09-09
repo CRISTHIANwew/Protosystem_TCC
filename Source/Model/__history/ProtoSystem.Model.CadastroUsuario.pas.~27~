@@ -12,11 +12,10 @@ uses
   FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls,
   Vcl.Grids, Vcl.DBGrids, System.Rtti, System.Bindings.Outputs,
   Vcl.Bind.Editors, Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components,
-  Data.Bind.DBScope, Vcl.Buttons;
+  Data.Bind.DBScope, Vcl.Buttons, Vcl.ComCtrls;
 
 type
   TFrm_CadUsuario = class(TForm)
-    pnl_dados_user: TPanel;
     Query_user: TFDQuery;
     DS_user: TDataSource;
     Query_userid: TFDAutoIncField;
@@ -24,6 +23,10 @@ type
     Query_userusername: TStringField;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    TabPesquisa: TTabSheet;
+    pnl_dados_user: TPanel;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
     ShpNovo: TShape;
@@ -40,6 +43,12 @@ type
     pnlExcluir: TPanel;
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
+    Panel1: TPanel;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
     procedure btnNovoClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -47,11 +56,14 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure edtPesquisaChange(Sender: TObject);
 
   private
     { Private declarations }
   public
     { Public declarations }
+
   end;
 
 var
@@ -76,12 +88,39 @@ end;
 procedure TFrm_CadUsuario.btnSalvarClick(Sender: TObject);
 begin
   if Query_user.State in [dsInsert, dsEdit] then
-    Query_user.Post
+    Query_user.Post;
+end;
+
+procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);
+begin
+  TabOperacao.Visible := true;
+  TabPesquisa.Visible := false;
+end;
+
+procedure TFrm_CadUsuario.edtPesquisaChange(Sender: TObject);
+begin
+  // Verifique se o critério de pesquisa não está vazio
+  if edtPesquisa.Text <> '' then
+  begin
+    // Atualize o filtro do DataSet ligado ao DBGrid
+    // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
+    Query_user.Filtered := false;
+    Query_user.Filter := 'USERNAME LIKE ' +
+      QuotedStr('%' + edtPesquisa.Text + '%');
+    Query_user.Filtered := true;
+  end
+
+  else
+    // Se o critério de pesquisa estiver vazio, remova o filtro
+    Query_user.Filtered := false;
 end;
 
 procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);
 begin
-      Query_user.Edit
+  TabOperacao.Visible := false;
+  TabPesquisa.Visible := true;
+  // PgcUsuario.TabIndex := 1
+  Query_user.Edit
 end;
 
 procedure TFrm_CadUsuario.btnExcluirClick(Sender: TObject);
@@ -91,12 +130,12 @@ end;
 
 procedure TFrm_CadUsuario.btnCadastrarClick(Sender: TObject);
 begin
-      Query_user.Insert
+  Query_user.Insert;
 end;
 
 procedure TFrm_CadUsuario.btnCancelarClick(Sender: TObject);
 begin
-  Query_user.Cancel
+  Query_user.Cancel;
 end;
 
 end.

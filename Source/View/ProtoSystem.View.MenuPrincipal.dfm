@@ -189,7 +189,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet8
+        ActivePage = TabSheet11
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -213,14 +213,6 @@ object Frm_Principal: TFrm_Principal
         object TabSheet9: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button4: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
         object TabSheet10: TTabSheet
           Caption = 'Pesquisas'
@@ -238,14 +230,6 @@ object Frm_Principal: TFrm_Principal
         object TabSheet11: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button3: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -257,7 +241,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet13
+        ActivePage = TabSheet16
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -268,14 +252,6 @@ object Frm_Principal: TFrm_Principal
         TabOrder = 0
         object TabSheet13: TTabSheet
           Caption = 'Cadastros'
-          object Button5: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Cadastro de produtos'
-            TabOrder = 0
-          end
         end
         object TabSheet14: TTabSheet
           Caption = 'Digita'#231#245'es'
@@ -293,26 +269,10 @@ object Frm_Principal: TFrm_Principal
         object TabSheet15: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button7: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet16: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button8: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -324,7 +284,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet17
+        ActivePage = TabSheet20
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -335,50 +295,18 @@ object Frm_Principal: TFrm_Principal
         TabOrder = 0
         object TabSheet17: TTabSheet
           Caption = 'Cadastros'
-          object Button9: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Cadastro de produtos'
-            TabOrder = 0
-          end
         end
         object TabSheet18: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button10: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
         object TabSheet19: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button11: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet20: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button12: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -390,7 +318,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet21
+        ActivePage = TabSheet24
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -401,50 +329,18 @@ object Frm_Principal: TFrm_Principal
         TabOrder = 0
         object TabSheet21: TTabSheet
           Caption = 'Cadastros'
-          object Button13: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Cadastro de produtos'
-            TabOrder = 0
-          end
         end
         object TabSheet22: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button14: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
         object TabSheet23: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button15: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet24: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button16: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -456,7 +352,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet25
+        ActivePage = TabSheet28
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -465,6 +361,8 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 3
+        ExplicitTop = -3
         object TabSheet25: TTabSheet
           Caption = 'Cadastros'
           object BTN_CAD_CLIENTE: TButton
@@ -480,38 +378,14 @@ object Frm_Principal: TFrm_Principal
         object TabSheet26: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button18: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
         object TabSheet27: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button19: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet28: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button20: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -523,7 +397,7 @@ object Frm_Principal: TFrm_Principal
         Top = 0
         Width = 789
         Height = 350
-        ActivePage = TabSheet29
+        ActivePage = TabSheet32
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -547,38 +421,14 @@ object Frm_Principal: TFrm_Principal
         object TabSheet30: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button22: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
         object TabSheet31: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button23: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet32: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button24: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -614,21 +464,13 @@ object Frm_Principal: TFrm_Principal
         object TabSheet34: TTabSheet
           Caption = 'Digita'#231#245'es'
           ImageIndex = 1
-          object Button26: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
           object CB_STYLES: TComboBox
             Left = 216
             Top = 37
             Width = 265
             Height = 25
             Style = csDropDownList
-            TabOrder = 1
+            TabOrder = 0
             OnChange = CB_STYLESChange
           end
           object ComboBox1: TComboBox
@@ -637,7 +479,7 @@ object Frm_Principal: TFrm_Principal
             Width = 241
             Height = 25
             Style = csDropDownList
-            TabOrder = 2
+            TabOrder = 1
             OnSelect = ComboBox1Select
             Items.Strings = (
               'Windows'
@@ -648,26 +490,10 @@ object Frm_Principal: TFrm_Principal
         object TabSheet35: TTabSheet
           Caption = 'Pesquisas'
           ImageIndex = 2
-          object Button27: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-          end
         end
         object TabSheet36: TTabSheet
           Caption = 'Relatorios'
           ImageIndex = 3
-          object Button28: TButton
-            Left = 20
-            Top = 20
-            Width = 170
-            Height = 60
-            Caption = 'nada por aqui....'
-            TabOrder = 0
-          end
         end
       end
     end
@@ -677,7 +503,7 @@ object Frm_Principal: TFrm_Principal
     Top = 382
     Width = 797
     Height = 20
-    Color = clBtnShadow
+    Color = clMedGray
     Panels = <
       item
         Alignment = taCenter
@@ -686,8 +512,6 @@ object Frm_Principal: TFrm_Principal
         Text = 'Data e Hora'
         Width = 50
       end>
-    ExplicitTop = 373
-    ExplicitWidth = 791
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>
