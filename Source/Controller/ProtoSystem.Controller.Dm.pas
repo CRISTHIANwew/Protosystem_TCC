@@ -28,35 +28,14 @@ type
 
 var
   Dm: TDM;
+  caminho: string;
 
 implementation
 
-{%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
 
 procedure TDM.DataModuleCreate(Sender: TObject);
-var
-  LPath: string;
-  LFile: TextFile;
 begin
-{$IFDEF MSWINDOWS}
-  LPath := System.SysUtils.GetCurrentDir;
-{$ELSE}
-  LPath := System.IOUtils.TPath.GetDocumentsPath;
-{$ENDIF}
-  LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
-  ForceDirectories(LPath);
-  LPath := System.IOUtils.TPath.Combine(LPath, 'ProtoSystem.s3db');
-  if not(FileExists(LPath)) then
-  begin
-    try
-      AssignFile(LFile, LPath);
-      Rewrite(LFile);
-    finally
-      CloseFile(LFile);
-    end;
-  end;
-  conexao.Params.Values['Database'] := LPath;
   CreateDB;
 end;
 
@@ -86,6 +65,9 @@ begin
       CloseFile(LFile);
     end;
  end;
+
+ caminho := LPath;
+
   conexao.Params.Values['Database'] := LPath;
 
    LDSTables := nil;
@@ -192,6 +174,8 @@ Result := false;
     FDQuery.ParamByName('USERNAME').AsString := 'SUPORTE';
     FDQuery.ParamByName('PASSWORD').AsString := '123';
     FDQuery.ExecSQL;
+
+    conexao.Connected:= true;
 end;
 end;
 

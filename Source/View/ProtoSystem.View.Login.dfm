@@ -169,8 +169,6 @@ object Frm_Login: TFrm_Login
     ParentShowHint = False
     ShowHint = False
     TabOrder = 0
-    ExplicitWidth = 1024
-    ExplicitHeight = 581
     object VirtualImage1: TVirtualImage
       Left = 20
       Top = 269
@@ -306,9 +304,6 @@ object Frm_Login: TFrm_Login
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 4
-      ExplicitLeft = 21
-      ExplicitTop = 21
-      ExplicitWidth = 982
       object VirtualImage3: TVirtualImage
         Left = 5
         Top = 5
@@ -347,8 +342,6 @@ object Frm_Login: TFrm_Login
         Font.Style = []
         Font.Quality = fqClearTypeNatural
         ParentFont = False
-        ExplicitLeft = 0
-        ExplicitTop = 56
         ExplicitWidth = 227
       end
       object Pnl_sair: TPanel
@@ -475,8 +468,8 @@ object Frm_Login: TFrm_Login
     ImageCollection = ImageCollection1
     Width = 20
     Height = 20
-    Left = 31
-    Top = 94
+    Left = 49
+    Top = 118
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -749,20 +742,19 @@ object Frm_Login: TFrm_Login
               C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
           end>
       end>
-    Left = 61
-    Top = 89
+    Left = 106
+    Top = 61
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 223
-    Top = 100
+    Left = 270
+    Top = 120
   end
   object Query_usuario: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 138
-    Top = 100
+    Left = 168
+    Top = 120
   end
 end

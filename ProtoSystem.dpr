@@ -21,11 +21,8 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFrm_Login, Frm_Login);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
-  Application.CreateForm(TFrm_CadFornecedor, Frm_CadFornecedor);
-  Application.CreateForm(TFrm_Vendas, Frm_Vendas);
-  Application.CreateForm(TformTelaPadrao, formTelaPadrao);
-
   if TFrm_Login.Login then
     Application.Run
   else

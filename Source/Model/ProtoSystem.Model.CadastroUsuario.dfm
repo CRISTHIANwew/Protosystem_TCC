@@ -440,8 +440,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 315
-    Top = 5
+    Left = 364
+    Top = 6
     object Query_userid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'

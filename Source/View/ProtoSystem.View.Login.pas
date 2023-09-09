@@ -119,6 +119,7 @@ procedure TFrm_Login.FormCreate(Sender: TObject);
 begin
   box_senha.Checked := true;
   edit_senha.PasswordChar := '*';
+  ShowMessage(caminho);
 end;
 
 class function TFrm_Login.Login: Boolean;
