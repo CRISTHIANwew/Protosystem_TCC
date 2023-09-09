@@ -16,10 +16,9 @@ object DM: TDM
     Params.Strings = (
       'LockingMode=Normal'
       
-        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\bin\Database\ProtoSystem.s3db'
+        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
+        'in\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 72
     Top = 8

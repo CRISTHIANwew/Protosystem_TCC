@@ -30,6 +30,7 @@ var
   Dm: TDM;
   caminho: string;
 
+
 implementation
 
 {$R *.dfm}
@@ -42,6 +43,7 @@ end;
 procedure TDM.CreateDB;
 var
   LPath: string;
+  Lpathsdb: string;
   LFile: TextFile;
   LDSTables: TDataSet;
   TableNames: TStringList;
@@ -54,8 +56,13 @@ begin
   LPath := System.IOUtils.TPath.GetDocumentsPath;
 {$ENDIF}
   LPath := System.IOUtils.TPath.Combine(LPath, 'Database');
+  Lpathsdb := lpath;
   ForceDirectories(LPath);
   LPath := System.IOUtils.TPath.Combine(LPath, 'ProtoSystem.s3db');
+
+if not DirectoryExists(Lpathsdb) then
+begin
+CreateDir(Lpathsdb);
   if not(FileExists(LPath)) then
   begin
     try
@@ -65,10 +72,11 @@ begin
       CloseFile(LFile);
     end;
  end;
-
+end;
  caminho := LPath;
 
   conexao.Params.Values['Database'] := LPath;
+  conexao.Connected := true;
 
    LDSTables := nil;
    LDSTables := GetTables;

@@ -21,8 +21,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TDM, DM);
-  Application.CreateForm(TFrm_Login, Frm_Login);
+
   Application.CreateForm(TFrm_Principal, Frm_Principal);
+  Application.CreateForm(TFrm_Login, Frm_Login);
   if TFrm_Login.Login then
     Application.Run
   else

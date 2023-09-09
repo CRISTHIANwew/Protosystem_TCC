@@ -115,6 +115,8 @@ type
 
 var
   Frm_Principal: TFrm_Principal;
+  msg: string;
+  user2: string;
 
 implementation
 
@@ -128,9 +130,13 @@ uses
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);
 begin
+
+  msg := 'Bem vindo (a) ';
+
   Timer1.Enabled := True; // Iniciar o timer quando o formulário for criado
   PreencheEstilos(CB_STYLES);
-  //--------------------------------------------------------------------------//
+  // --------------------------------------------------------------------------//
+  pnl_boasvindas.Caption := msg;
 end;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);
@@ -149,8 +155,10 @@ end;
 procedure TFrm_Principal.BTN_CAD_FORNECEDORClick(Sender: TObject);
 begin
   var
-    Frm_CadFornecedor: TFrm_CadFornecedor; // Declare uma variável para o formulário
-  Frm_CadFornecedor := TFrm_CadFornecedor.Create(Self); // Crie uma instância do formulário
+    Frm_CadFornecedor: TFrm_CadFornecedor;
+    // Declare uma variável para o formulário
+  Frm_CadFornecedor := TFrm_CadFornecedor.Create(Self);
+  // Crie uma instância do formulário
   try
     Frm_CadFornecedor.ShowModal; // Exiba o formulário de maneira modal
   finally

@@ -35,6 +35,7 @@ type
     VirtualImage3: TVirtualImage;
     lb_logo: TLabel;
     edit_senha: TLabeledEdit;
+    Button2: TButton;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -43,6 +44,7 @@ type
     procedure Button1Click(Sender: TObject);
 
     procedure edit_usuarioKeyPress(Sender: TObject; var Key: Char);
+    procedure Button2Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -87,6 +89,8 @@ begin
     if Query_usuario.Fields[0].AsInteger > 0 then
     begin
       // ShowMessage('Login realizado com sucesso.');
+
+
       Modalresult := mrok;
     end
     else
@@ -96,6 +100,11 @@ begin
     on E: Exception do
       ShowMessage('Erro ao realizar login: ' + E.Message);
   end;
+end;
+
+procedure TFrm_Login.Button2Click(Sender: TObject);
+begin
+   ShowMessage(caminho);
 end;
 
 procedure TFrm_Login.edit_usuarioKeyPress(Sender: TObject; var Key: Char);
@@ -119,7 +128,7 @@ procedure TFrm_Login.FormCreate(Sender: TObject);
 begin
   box_senha.Checked := true;
   edit_senha.PasswordChar := '*';
-  ShowMessage(caminho);
+  Query_usuario.active := true;
 end;
 
 class function TFrm_Login.Login: Boolean;
@@ -160,6 +169,7 @@ begin
     if Query_usuario.Fields[0].AsInteger > 0 then
     begin
       // ShowMessage('Login realizado com sucesso.');
+
       Modalresult := mrok;
     end
     else
