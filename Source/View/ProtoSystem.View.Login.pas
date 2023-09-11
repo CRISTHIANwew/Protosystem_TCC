@@ -35,17 +35,13 @@ type
     VirtualImage3: TVirtualImage;
     lb_logo: TLabel;
     edit_senha: TLabeledEdit;
-    Button2: TButton;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure box_senhaClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-
     procedure edit_usuarioKeyPress(Sender: TObject; var Key: Char);
-    procedure Button2Click(Sender: TObject);
-
   private
     { Private declarations }
   public
@@ -102,10 +98,7 @@ begin
   end;
 end;
 
-procedure TFrm_Login.Button2Click(Sender: TObject);
-begin
-   ShowMessage(caminho);
-end;
+
 
 procedure TFrm_Login.edit_usuarioKeyPress(Sender: TObject; var Key: Char);
 begin

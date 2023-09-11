@@ -1,10 +1,10 @@
 object Frm_CadCliente: TFrm_CadCliente
   Left = 290
   Top = 262
-  BorderStyle = bsSingle
+  BorderStyle = bsDialog
   Caption = 'Cadastro de clientes'
-  ClientHeight = 235
-  ClientWidth = 1229
+  ClientHeight = 294
+  ClientWidth = 949
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -136,311 +136,636 @@ object Frm_CadCliente: TFrm_CadCliente
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poDesigned
+  Position = poScreenCenter
   PixelsPerInch = 120
   TextHeight = 20
-  object Pclientes: TPanel
+  object PgcUsuario: TPageControl
     Left = 0
     Top = 0
-    Width = 1229
-    Height = 191
+    Width = 949
+    Height = 294
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
-    Align = alTop
+    ActivePage = TabOperacao
+    Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1110
-    object Label2: TLabel
-      Left = 121
-      Top = 23
-      Width = 41
-      Height = 20
+    ExplicitLeft = 10
+    ExplicitTop = 10
+    ExplicitWidth = 950
+    ExplicitHeight = 295
+    object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'Nome'
+      Caption = 'Operacao'
+      object pnl_dados_user: TPanel
+        Left = 0
+        Top = 0
+        Width = 941
+        Height = 259
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alClient
+        Color = 14079702
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitWidth = 942
+        ExplicitHeight = 260
+        object edtID: TDBLabeledEdit
+          Left = 26
+          Top = 33
+          Width = 35
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'ID'
+          DataSource = DataSource1
+          Enabled = False
+          TabOrder = 2
+          EditLabel.Width = 13
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Id'
+          EditLabel.Layout = tlCenter
+        end
+        object edtUsuario: TDBLabeledEdit
+          Left = 69
+          Top = 33
+          Width = 403
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'NOME'
+          DataSource = DataSource1
+          TabOrder = 0
+          EditLabel.Width = 41
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Nome'
+          EditLabel.Layout = tlCenter
+        end
+        object edtSenha: TDBLabeledEdit
+          Left = 218
+          Top = 86
+          Width = 151
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'BAIRRO'
+          DataSource = DataSource1
+          TabOrder = 1
+          EditLabel.Width = 40
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Bairro'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit1: TDBLabeledEdit
+          Left = 569
+          Top = 136
+          Width = 182
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'CELULAR'
+          DataSource = DataSource1
+          TabOrder = 3
+          EditLabel.Width = 46
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Celular'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit2: TDBLabeledEdit
+          Left = 569
+          Top = 86
+          Width = 121
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'CEP'
+          DataSource = DataSource1
+          TabOrder = 4
+          EditLabel.Width = 26
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Cep'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit3: TDBLabeledEdit
+          Left = 698
+          Top = 86
+          Width = 223
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'CIDADE'
+          DataSource = DataSource1
+          TabOrder = 5
+          EditLabel.Width = 47
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Cidade'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit4: TDBLabeledEdit
+          Left = 480
+          Top = 33
+          Width = 210
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'CPFCNPJ'
+          DataSource = DataSource1
+          TabOrder = 6
+          EditLabel.Width = 59
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Cpf/Cnpj'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit5: TDBLabeledEdit
+          Left = 26
+          Top = 136
+          Width = 535
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'EMAIL'
+          DataSource = DataSource1
+          TabOrder = 7
+          EditLabel.Width = 37
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Email'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit6: TDBLabeledEdit
+          Left = 26
+          Top = 86
+          Width = 184
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'ENDERECO'
+          DataSource = DataSource1
+          TabOrder = 8
+          EditLabel.Width = 62
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Endereco'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit7: TDBLabeledEdit
+          Left = 377
+          Top = 86
+          Width = 184
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'NUMERO'
+          DataSource = DataSource1
+          TabOrder = 9
+          EditLabel.Width = 54
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'Numero'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit8: TDBLabeledEdit
+          Left = 698
+          Top = 33
+          Width = 223
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BorderStyle = bsNone
+          Color = clWhite
+          DataField = 'RGIE'
+          DataSource = DataSource1
+          TabOrder = 10
+          EditLabel.Width = 37
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 5
+          EditLabel.Margins.Top = 5
+          EditLabel.Margins.Right = 5
+          EditLabel.Margins.Bottom = 5
+          EditLabel.Caption = 'RG/IE'
+          EditLabel.Layout = tlCenter
+        end
+      end
+      object pnlButtons: TPanel
+        Left = 187
+        Top = 199
+        Width = 531
+        Height = 61
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Color = 14079702
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
+        ParentBackground = False
+        TabOrder = 1
+        object pnlEditar: TPanel
+          Left = 111
+          Top = 6
+          Width = 105
+          Height = 49
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 0
+          object Shpeditar: TShape
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8618369
+            Pen.Style = psClear
+            Shape = stRoundRect
+          end
+          object btnEditar: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'Editar'
+            Flat = True
+            OnClick = btnEditarClick
+          end
+        end
+        object pnlCadastrar: TPanel
+          Left = 6
+          Top = 6
+          Width = 105
+          Height = 49
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 1
+          object ShpCadastrar: TShape
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8618369
+            Pen.Style = psClear
+            Shape = stRoundRect
+          end
+          object btnCadastrar: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'Cadastrar'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Height = -15
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            OnClick = btnCadastrarClick
+          end
+        end
+        object pnlSalvar: TPanel
+          Left = 216
+          Top = 6
+          Width = 105
+          Height = 49
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 2
+          object shpSalvar: TShape
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 14079702
+            Pen.Style = psClear
+            Shape = stRoundRect
+          end
+          object btnSalvar: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'Salvar'
+            Enabled = False
+            Flat = True
+            OnClick = btnSalvarClick
+          end
+        end
+        object pnlCancelar: TPanel
+          Left = 321
+          Top = 6
+          Width = 105
+          Height = 49
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 3
+          object ShpCancelar: TShape
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 14079702
+            Pen.Style = psClear
+            Shape = stRoundRect
+          end
+          object btnCancelar: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'Cancelar'
+            Enabled = False
+            Flat = True
+            OnClick = btnCancelarClick
+            ExplicitLeft = -2
+          end
+        end
+        object pnlExcluir: TPanel
+          Left = 426
+          Top = 6
+          Width = 105
+          Height = 49
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 4
+          object shpExcluir: TShape
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = 8618369
+            Pen.Style = psClear
+            Shape = stRoundRect
+          end
+          object btnExcluir: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 99
+            Height = 49
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'Excluir'
+            Flat = True
+            OnClick = btnExcluirClick
+          end
+        end
+      end
     end
-    object Label3: TLabel
-      Left = 629
-      Top = 23
-      Width = 70
-      Height = 20
+    object TabPesquisa: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'CPF / CNPJ'
+      Caption = 'Pesquisa'
+      ImageIndex = 1
+      object Panel1: TPanel
+        Left = 0
+        Top = 0
+        Width = 941
+        Height = 259
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = alClient
+        Color = 14079702
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
+        ParentBackground = False
+        TabOrder = 0
+        ExplicitWidth = 949
+        object DBGrid1: TDBGrid
+          Left = 6
+          Top = 34
+          Width = 929
+          Height = 219
+          Hint = 'Clique duas vezes para selecionar'
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          DataSource = DataSource1
+          ParentShowHint = False
+          ReadOnly = True
+          ShowHint = True
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -15
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+          OnDblClick = DBGrid1DblClick
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'ID'
+              Width = 52
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NOME'
+              Width = 599
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CPFCNPJ'
+              Width = 259
+              Visible = True
+            end>
+        end
+        object edtPesquisa: TEdit
+          Left = 6
+          Top = 6
+          Width = 929
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alTop
+          TabOrder = 1
+          ExplicitWidth = 937
+        end
+      end
     end
-    object Label4: TLabel
-      Left = 884
-      Top = 23
-      Width = 45
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'RG / IE'
-    end
-    object Label5: TLabel
-      Left = 11
-      Top = 65
-      Width = 62
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Endere'#231'o'
-    end
-    object TLABEL13: TLabel
-      Left = 520
-      Top = 65
-      Width = 40
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Bairro'
-    end
-    object Label7: TLabel
-      Left = 341
-      Top = 65
-      Width = 54
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Numero'
-    end
-    object Label6: TLabel
-      Left = 726
-      Top = 109
-      Width = 46
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Celular'
-    end
-    object Label8: TLabel
-      Left = 834
-      Top = 65
-      Width = 47
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Cidade'
-    end
-    object TLabel
-      Left = 21
-      Top = 109
-      Width = 26
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Cep'
-    end
-    object TLabel
-      Left = 256
-      Top = 109
-      Width = 37
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Email'
-    end
-    object Label1: TLabel
-      Left = 21
-      Top = 23
-      Width = 13
-      Height = 20
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Id'
-    end
-    object DBEdit2: TDBEdit
-      Left = 170
-      Top = 23
-      Width = 431
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'NOME'
-      DataSource = DataSource1
-      TabOrder = 0
-    end
-    object DBEdit3: TDBEdit
-      Left = 710
-      Top = 23
-      Width = 143
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'CPFCNPJ'
-      DataSource = DataSource1
-      TabOrder = 1
-    end
-    object DBEdit4: TDBEdit
-      Left = 80
-      Top = 65
-      Width = 241
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'ENDERECO'
-      DataSource = DataSource1
-      TabOrder = 2
-    end
-    object DBEdit5: TDBEdit
-      Left = 566
-      Top = 65
-      Width = 242
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'BAIRRO'
-      DataSource = DataSource1
-      TabOrder = 4
-    end
-    object DBEdit6: TDBEdit
-      Left = 935
-      Top = 23
-      Width = 96
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'RGIE'
-      DataSource = DataSource1
-      TabOrder = 3
-    end
-    object DBEdit7: TDBEdit
-      Left = 409
-      Top = 65
-      Width = 81
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'NUMERO'
-      DataSource = DataSource1
-      TabOrder = 5
-    end
-    object DBEdit8: TDBEdit
-      Left = 780
-      Top = 109
-      Width = 241
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'CELULAR'
-      DataSource = DataSource1
-      TabOrder = 6
-    end
-    object DBEdit9: TDBEdit
-      Left = 894
-      Top = 65
-      Width = 201
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'CIDADE'
-      DataSource = DataSource1
-      TabOrder = 7
-    end
-    object DBEdit10: TDBEdit
-      Left = 70
-      Top = 109
-      Width = 151
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'CEP'
-      DataSource = DataSource1
-      TabOrder = 8
-    end
-    object DBEdit11: TDBEdit
-      Left = 300
-      Top = 109
-      Width = 401
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'EMAIL'
-      DataSource = DataSource1
-      TabOrder = 9
-    end
-    object DBEdit1: TDBEdit
-      Left = 41
-      Top = 19
-      Width = 38
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      DataField = 'ID'
-      DataSource = DataSource1
-      TabOrder = 10
-    end
-  end
-  object DBNavigator1: TDBNavigator
-    Left = 0
-    Top = 191
-    Width = 1229
-    Height = 43
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    DataSource = DataSource1
-    Align = alTop
-    TabOrder = 1
-    ExplicitWidth = 1110
   end
   object DataSource1: TDataSource
     DataSet = QueryCLIENTE
-    Left = 1140
-    Top = 30
+    Left = 875
+    Top = 168
   end
   object QueryCLIENTE: TFDQuery
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
-    Left = 1044
-    Top = 28
+    Left = 775
+    Top = 165
   end
 end

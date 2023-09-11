@@ -101,6 +101,7 @@ begin
   shpExcluir.Brush.Color := $00838181;
   btnCadastrar.Enabled := true;
   ShpCadastrar.Brush.Color := $00838181;
+  Query_user.Refresh;
 end;
 
 procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);

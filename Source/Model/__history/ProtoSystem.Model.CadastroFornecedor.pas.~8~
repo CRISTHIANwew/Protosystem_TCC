@@ -1,0 +1,101 @@
+unit ProtoSystem.Model.CadastroFornecedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
+  Vcl.DBCtrls, Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.ComCtrls;
+
+type
+  TFrm_CadFornecedor = class(TForm)
+    DataSource1: TDataSource;
+    QueryFORNECEDOR: TFDQuery;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    pnl_dados_user: TPanel;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
+    pnlButtons: TPanel;
+    pnlEditar: TPanel;
+    Shpeditar: TShape;
+    btnEditar: TSpeedButton;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+    pnlSalvar: TPanel;
+    shpSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlCancelar: TPanel;
+    ShpCancelar: TShape;
+    btnCancelar: TSpeedButton;
+    pnlExcluir: TPanel;
+    shpExcluir: TShape;
+    btnExcluir: TSpeedButton;
+    TabPesquisa: TTabSheet;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
+    DBLabeledEdit3: TDBLabeledEdit;
+    DBLabeledEdit4: TDBLabeledEdit;
+    DBLabeledEdit5: TDBLabeledEdit;
+    DBLabeledEdit6: TDBLabeledEdit;
+    DBLabeledEdit7: TDBLabeledEdit;
+    DBLabeledEdit8: TDBLabeledEdit;
+    procedure btnCadastrarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_CadFornecedor: TFrm_CadFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+procedure TFrm_CadFornecedor.btnCadastrarClick(Sender: TObject);
+begin
+  QueryFORNECEDOR.Insert;
+  // desabilita editar, excluir.
+  btnEditar.Enabled := false;
+  Shpeditar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
+end;
+
+procedure TFrm_CadFornecedor.btnEditarClick(Sender: TObject);
+begin
+  TabOperacao.Visible := false;
+  TabPesquisa.Visible := true;
+  QueryFORNECEDOR.Edit;
+  // desabilitar cadastar, excluir.
+  btnCadastrar.Enabled := false;
+  ShpCadastrar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
+end;
+
+end.

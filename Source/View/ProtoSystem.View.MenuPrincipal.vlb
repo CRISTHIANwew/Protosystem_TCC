@@ -23,3 +23,6 @@ Coordinates=359,623,173,36
 Coordinates=312,401,40,36
 Visible=True
 
+[Frm_CadUsuario.Query_user]
+Visible=False
+

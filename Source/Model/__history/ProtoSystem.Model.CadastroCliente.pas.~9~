@@ -1,0 +1,67 @@
+unit ProtoSystem.Model.CadastroCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
+  Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons, Vcl.ComCtrls;
+
+type
+  TFrm_CadCliente = class(TForm)
+    DataSource1: TDataSource;
+    QueryCLIENTE: TFDQuery;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    pnl_dados_user: TPanel;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
+    DBLabeledEdit3: TDBLabeledEdit;
+    DBLabeledEdit4: TDBLabeledEdit;
+    DBLabeledEdit5: TDBLabeledEdit;
+    DBLabeledEdit6: TDBLabeledEdit;
+    DBLabeledEdit7: TDBLabeledEdit;
+    DBLabeledEdit8: TDBLabeledEdit;
+    pnlButtons: TPanel;
+    pnlEditar: TPanel;
+    Shpeditar: TShape;
+    btnEditar: TSpeedButton;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+    pnlSalvar: TPanel;
+    shpSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlCancelar: TPanel;
+    ShpCancelar: TShape;
+    btnCancelar: TSpeedButton;
+    pnlExcluir: TPanel;
+    shpExcluir: TShape;
+    btnExcluir: TSpeedButton;
+    TabPesquisa: TTabSheet;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_CadCliente: TFrm_CadCliente;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+end.

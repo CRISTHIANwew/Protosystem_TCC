@@ -15,7 +15,6 @@ type
     DataSource1: TDataSource;
     Query_PesProd: TFDQuery;
     Panel1: TPanel;
-    Btn_pesquisar: TButton;
     Edit_pesquisa: TEdit;
     DBGrid1: TDBGrid;
     procedure Edit_pesquisaChange(Sender: TObject);

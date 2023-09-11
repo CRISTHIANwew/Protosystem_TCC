@@ -14,7 +14,7 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, FireDAC.Comp.UI, Data.DB,
-  FireDAC.Comp.Client;
+  FireDAC.Comp.Client, Vcl.Buttons;
 
 type
   TFrm_Principal = class(TForm)
@@ -36,7 +36,6 @@ type
     TabSheet10: TTabSheet;
     TabSheet11: TTabSheet;
     TabSheet12: TTabSheet;
-    BTN_CAD_PROD: TButton;
     BTN_PES_ESTOQUE: TButton;
     PGC_VENDAS: TPageControl;
     TabSheet13: TTabSheet;
@@ -75,6 +74,10 @@ type
     CB_STYLES: TComboBox;
     ComboBox1: TComboBox;
     pnl_boasvindas: TPanel;
+    Panel1: TPanel;
+    PnlCadastroProdutos: TPanel;
+    shpCadastroProdutos: TShape;
+    btnCadastroProdutos: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -85,6 +88,7 @@ type
     procedure ComboBox1Select(Sender: TObject);
     procedure BTN_VENDASClick(Sender: TObject);
     procedure BTN_CAD_FORNECEDORClick(Sender: TObject);
+    procedure btnCadastroProdutosClick(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -116,6 +120,18 @@ begin
   PreencheEstilos(CB_STYLES);
   // --------------------------------------------------------------------------//
   pnl_boasvindas.Caption := msg;
+end;
+
+procedure TFrm_Principal.btnCadastroProdutosClick(Sender: TObject);
+begin
+var
+    Frm_CadProd: TFrm_CadProd; // Declare uma variável para o formulário
+  Frm_CadProd := TFrm_CadProd.Create(Self); // Crie uma instância do formulário
+  try
+    Frm_CadProd.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadProd.Free; // Libere a memória após fechar o formulário
+  end;
 end;
 
 procedure TFrm_Principal.BTN_CAD_CLIENTEClick(Sender: TObject);

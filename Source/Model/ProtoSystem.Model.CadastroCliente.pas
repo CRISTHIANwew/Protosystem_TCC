@@ -9,34 +9,52 @@ uses
   Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf,
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
   FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons, Vcl.ComCtrls;
 
 type
   TFrm_CadCliente = class(TForm)
-    Pclientes: TPanel;
-    DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
-    DBEdit6: TDBEdit;
-    DBEdit7: TDBEdit;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    TLABEL13: TLabel;
-    Label7: TLabel;
-    Label6: TLabel;
-    DBEdit8: TDBEdit;
-    DBNavigator1: TDBNavigator;
     DataSource1: TDataSource;
-    DBEdit9: TDBEdit;
-    Label8: TLabel;
-    DBEdit10: TDBEdit;
-    DBEdit11: TDBEdit;
-    Label1: TLabel;
-    DBEdit1: TDBEdit;
     QueryCLIENTE: TFDQuery;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    pnl_dados_user: TPanel;
+    edtID: TDBLabeledEdit;
+    edtUsuario: TDBLabeledEdit;
+    edtSenha: TDBLabeledEdit;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
+    DBLabeledEdit3: TDBLabeledEdit;
+    DBLabeledEdit4: TDBLabeledEdit;
+    DBLabeledEdit5: TDBLabeledEdit;
+    DBLabeledEdit6: TDBLabeledEdit;
+    DBLabeledEdit7: TDBLabeledEdit;
+    DBLabeledEdit8: TDBLabeledEdit;
+    pnlButtons: TPanel;
+    pnlEditar: TPanel;
+    Shpeditar: TShape;
+    btnEditar: TSpeedButton;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+    pnlSalvar: TPanel;
+    shpSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlCancelar: TPanel;
+    ShpCancelar: TShape;
+    btnCancelar: TSpeedButton;
+    pnlExcluir: TPanel;
+    shpExcluir: TShape;
+    btnExcluir: TSpeedButton;
+    TabPesquisa: TTabSheet;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
+    procedure btnCadastrarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,5 +69,84 @@ implementation
 {$R *.dfm}
 
 uses ProtoSystem.Controller.Dm;
+
+procedure TFrm_CadCliente.btnCadastrarClick(Sender: TObject);
+begin
+  QueryCLIENTE.Insert;
+  // desabilita editar, excluir.
+  btnEditar.Enabled := false;
+  Shpeditar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
+end;
+
+procedure TFrm_CadCliente.btnCancelarClick(Sender: TObject);
+begin
+  QueryCLIENTE.Cancel;
+  // desabilitar salvar e cancelar
+  btnSalvar.Enabled := false;
+  shpSalvar.Brush.Color := $00D6D6D6;
+  btnCancelar.Enabled := false;
+  ShpCancelar.Brush.Color := $00D6D6D6;
+  // habilitar editar, excluir, cadastrar.
+  btnEditar.Enabled := true;
+  Shpeditar.Brush.Color := $00838181;
+  btnExcluir.Enabled := true;
+  shpExcluir.Brush.Color := $00838181;
+  btnCadastrar.Enabled := true;
+  ShpCadastrar.Brush.Color := $00838181;
+end;
+
+procedure TFrm_CadCliente.btnEditarClick(Sender: TObject);
+begin
+  TabOperacao.Visible := false;
+  TabPesquisa.Visible := true;
+  QueryCLIENTE.Edit;
+  // desabilitar cadastar, excluir.
+  btnCadastrar.Enabled := false;
+  ShpCadastrar.Brush.Color := $00D6D6D6;
+  btnExcluir.Enabled := false;
+  shpExcluir.Brush.Color := $00D6D6D6;
+  // habilita salvar e cancelar
+  btnSalvar.Enabled := true;
+  shpSalvar.Brush.Color := $00838181;
+  btnCancelar.Enabled := true;
+  ShpCancelar.Brush.Color := $00838181;
+end;
+
+procedure TFrm_CadCliente.btnExcluirClick(Sender: TObject);
+begin
+ QueryCLIENTE.Delete
+end;
+
+procedure TFrm_CadCliente.btnSalvarClick(Sender: TObject);
+begin
+  if QueryCLIENTE.State in [dsInsert, dsEdit] then
+    QueryCLIENTE.Post;
+  // desabilitar salvar e cancelar
+  btnSalvar.Enabled := false;
+  shpSalvar.Brush.Color := $00D6D6D6;
+  btnCancelar.Enabled := false;
+  ShpCancelar.Brush.Color := $00D6D6D6;
+  // habilitar editar, excluir, cadastrar.
+  btnEditar.Enabled := true;
+  Shpeditar.Brush.Color := $00838181;
+  btnExcluir.Enabled := true;
+  shpExcluir.Brush.Color := $00838181;
+  btnCadastrar.Enabled := true;
+  ShpCadastrar.Brush.Color := $00838181;
+  QueryCLIENTE.Refresh;
+end;
+
+procedure TFrm_CadCliente.DBGrid1DblClick(Sender: TObject);
+begin
+  TabOperacao.Visible := true;
+  TabPesquisa.Visible := false;
+end;
 
 end.

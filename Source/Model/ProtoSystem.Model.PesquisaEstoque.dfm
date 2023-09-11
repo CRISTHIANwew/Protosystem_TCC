@@ -24,30 +24,21 @@ object Frm_PesEstoque: TFrm_PesEstoque
     Margins.Right = 4
     Margins.Bottom = 4
     Caption = 'Panel1'
+    Padding.Left = 10
+    Padding.Top = 10
+    Padding.Right = 10
+    Padding.Bottom = 10
     TabOrder = 0
-    object Btn_pesquisar: TButton
-      Left = 550
-      Top = 11
-      Width = 291
-      Height = 29
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Pesquisar'
-      Default = True
-      TabOrder = 0
-    end
     object Edit_pesquisa: TEdit
-      Left = 10
-      Top = 11
-      Width = 533
+      Left = 20
+      Top = 12
+      Width = 841
       Height = 28
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      TabOrder = 1
+      TabOrder = 0
       OnChange = Edit_pesquisaChange
     end
     object DBGrid1: TDBGrid
@@ -61,25 +52,37 @@ object Frm_PesEstoque: TFrm_PesEstoque
       Margins.Bottom = 4
       DataSource = DataSource1
       ReadOnly = True
-      TabOrder = 2
+      TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -15
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'DESCRICAO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ESTOQUE'
+          Width = 103
+          Visible = True
+        end>
     end
   end
   object DataSource1: TDataSource
     DataSet = Query_PesProd
-    Left = 550
-    Top = 120
+    Left = 458
+    Top = 180
   end
   object Query_PesProd: TFDQuery
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'Select descricao, estoque from produto ')
-    Left = 563
-    Top = 148
+    Left = 564
+    Top = 185
   end
 end
