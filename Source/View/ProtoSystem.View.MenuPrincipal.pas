@@ -78,6 +78,7 @@ type
     PnlCadastroProdutos: TPanel;
     shpCadastroProdutos: TShape;
     btnCadastroProdutos: TSpeedButton;
+    btnCadReceber: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);

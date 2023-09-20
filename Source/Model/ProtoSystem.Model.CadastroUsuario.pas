@@ -58,6 +58,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
     { Private declarations }
@@ -128,6 +129,11 @@ begin
     Query_user.Filtered := false;
 end;
 
+procedure TFrm_CadUsuario.FormCreate(Sender: TObject);
+begin
+  Query_user.Active := true;
+end;
+
 procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);
 begin
   TabOperacao.Visible := false;
@@ -181,4 +187,5 @@ begin
   btnCadastrar.Enabled := true;
   ShpCadastrar.Brush.Color := $00838181;
 end;
+
 end.

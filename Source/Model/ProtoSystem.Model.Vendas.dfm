@@ -1,10 +1,10 @@
 object Frm_Vendas: TFrm_Vendas
   Left = 258
   Top = 164
-  BorderStyle = bsNone
+  BorderStyle = bsDialog
   Caption = 'Vendas'
-  ClientHeight = 825
-  ClientWidth = 1368
+  ClientHeight = 778
+  ClientWidth = 1350
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -142,8 +142,8 @@ object Frm_Vendas: TFrm_Vendas
   object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1368
-    Height = 825
+    Width = 1350
+    Height = 778
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -153,7 +153,7 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
-      Width = 1366
+      Width = 1348
       Height = 80
       Margins.Left = 4
       Margins.Top = 4
@@ -174,8 +174,8 @@ object Frm_Vendas: TFrm_Vendas
     end
     object PNL_BUTTONS: TPanel
       Left = 1
-      Top = 737
-      Width = 1366
+      Top = 690
+      Width = 1348
       Height = 87
       Margins.Left = 4
       Margins.Top = 4
@@ -463,8 +463,8 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_PRINCIPAL_MAIN: TPanel
       Left = 1
       Top = 81
-      Width = 1366
-      Height = 656
+      Width = 1348
+      Height = 609
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -480,25 +480,62 @@ object Frm_Vendas: TFrm_Vendas
       object DBGrid1: TDBGrid
         Left = 6
         Top = 6
-        Width = 914
-        Height = 644
+        Width = 896
+        Height = 597
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
         Align = alClient
+        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
         TabOrder = 0
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -15
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'C'#243'digo'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'item'
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Descri'#231#227'o'
+            Width = 480
+            Visible = True
+          end
+          item
+            Alignment = taRightJustify
+            Expanded = False
+            FieldName = 'Valor Unit'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'quantidade'
+            Width = 88
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Valor Total'
+            Width = 90
+            Visible = True
+          end>
       end
       object PNL_OPERACOES: TPanel
-        Left = 920
+        Left = 902
         Top = 6
         Width = 440
-        Height = 644
+        Height = 597
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -515,7 +552,7 @@ object Frm_Vendas: TFrm_Vendas
         TabOrder = 1
         object GB_Total: TGroupBox
           Left = 10
-          Top = 559
+          Top = 512
           Width = 416
           Height = 71
           Margins.Left = 4
@@ -554,7 +591,7 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_QTD: TGroupBox
           Left = 10
-          Top = 417
+          Top = 370
           Width = 416
           Height = 71
           Margins.Left = 4
@@ -593,7 +630,7 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_SUBTOTAL: TGroupBox
           Left = 10
-          Top = 488
+          Top = 441
           Width = 416
           Height = 71
           Margins.Left = 4
@@ -632,7 +669,7 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRECO: TGroupBox
           Left = 10
-          Top = 346
+          Top = 299
           Width = 416
           Height = 71
           Margins.Left = 4
@@ -671,7 +708,7 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRODUTO: TGroupBox
           Left = 10
-          Top = 275
+          Top = 228
           Width = 416
           Height = 71
           Margins.Left = 4
@@ -710,7 +747,7 @@ object Frm_Vendas: TFrm_Vendas
           Left = 10
           Top = 10
           Width = 416
-          Height = 265
+          Height = 218
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -727,7 +764,7 @@ object Frm_Vendas: TFrm_Vendas
             Left = 6
             Top = 6
             Width = 404
-            Height = 253
+            Height = 206
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4

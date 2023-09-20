@@ -1,0 +1,45 @@
+object Fom_CadastroContasReceber: TFom_CadastroContasReceber
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de contas a receber'
+  ClientHeight = 553
+  ClientWidth = 782
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  PixelsPerInch = 120
+  TextHeight = 20
+  object pnl_1: TPanel
+    Left = 0
+    Top = 0
+    Width = 782
+    Height = 553
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    Align = alClient
+    Color = clSilver
+    Padding.Left = 10
+    Padding.Right = 10
+    Padding.Bottom = 10
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitTop = 14
+    ExplicitHeight = 539
+  end
+  object SQL_DocumentosaReceber: TFDQuery
+    SQL.Strings = (
+      'select * from DOC_RECEBER')
+    Left = 540
+    Top = 192
+  end
+  object DS_DocumentosaReceber: TDataSource
+    DataSet = SQL_DocumentosaReceber
+    Left = 542
+    Top = 110
+  end
+end

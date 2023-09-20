@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.DBCtrls;
+  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.DBCtrls, Datasnap.DBClient;
 
 type
   TFrm_Vendas = class(TForm)
@@ -57,5 +57,6 @@ var
 implementation
 
 {$R *.dfm}
+
 
 end.

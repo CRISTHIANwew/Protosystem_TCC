@@ -19,16 +19,16 @@ type
     TabOperacao: TTabSheet;
     pnl_dados_user: TPanel;
     edtID: TDBLabeledEdit;
-    edtUsuario: TDBLabeledEdit;
-    edtSenha: TDBLabeledEdit;
-    DBLabeledEdit1: TDBLabeledEdit;
-    DBLabeledEdit2: TDBLabeledEdit;
-    DBLabeledEdit3: TDBLabeledEdit;
-    DBLabeledEdit4: TDBLabeledEdit;
-    DBLabeledEdit5: TDBLabeledEdit;
-    DBLabeledEdit6: TDBLabeledEdit;
-    DBLabeledEdit7: TDBLabeledEdit;
-    DBLabeledEdit8: TDBLabeledEdit;
+    edtNome: TDBLabeledEdit;
+    edtBairro: TDBLabeledEdit;
+    edtCelular: TDBLabeledEdit;
+    edtCep: TDBLabeledEdit;
+    edtCidade: TDBLabeledEdit;
+    edtCpfCnpj: TDBLabeledEdit;
+    edtEmail: TDBLabeledEdit;
+    editEndereco: TDBLabeledEdit;
+    edtNumero: TDBLabeledEdit;
+    edtRgIe: TDBLabeledEdit;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
     Shpeditar: TShape;
@@ -49,12 +49,14 @@ type
     Panel1: TPanel;
     DBGrid1: TDBGrid;
     edtPesquisa: TEdit;
+    DBImage1: TDBImage;
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -147,6 +149,11 @@ procedure TFrm_CadCliente.DBGrid1DblClick(Sender: TObject);
 begin
   TabOperacao.Visible := true;
   TabPesquisa.Visible := false;
+end;
+
+procedure TFrm_CadCliente.FormCreate(Sender: TObject);
+begin
+         QueryCLIENTE.Active := true;
 end;
 
 end.

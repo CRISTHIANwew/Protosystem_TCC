@@ -21,7 +21,7 @@ Coordinates=162,188,47,51
 Coordinates=327,188,56,33
 
 []
-Coordinates=584,198,99,33
+Coordinates=93,180,68,51
 Visible=True
 
 [TabOperacao]
@@ -29,54 +29,6 @@ Coordinates=401,188,80,33
 
 [TabPesquisa]
 Coordinates=113,256,77,33
-
-[btnEditar]
-Coordinates=235,141,59,33
-
-[btnCadastrar]
-Coordinates=346,71,78,33
-
-[pnlExcluir]
-Coordinates=235,1,64,51
-
-[ShpCancelar]
-Coordinates=346,123,77,33
-
-[Shpeditar]
-Coordinates=346,240,61,33
-
-[pnlCancelar]
-Coordinates=235,71,73,51
-
-[pnlSalvar]
-Coordinates=346,1,60,51
-
-[btnSalvar]
-Coordinates=519,198,61,33
-
-[pnlCadastrar]
-Coordinates=14,180,77,51
-
-[btnExcluir]
-Coordinates=519,329,64,33
-
-[shpSalvar]
-Coordinates=450,348,63,33
-
-[btnCancelar]
-Coordinates=371,348,73,33
-
-[pnlButtons]
-Coordinates=93,180,68,51
-
-[pnlEditar]
-Coordinates=61,52,58,51
-
-[ShpCadastrar]
-Coordinates=584,250,81,33
-
-[shpExcluir]
-Coordinates=302,348,66,33
 
 [edtId]
 Coordinates=780,60,40,33

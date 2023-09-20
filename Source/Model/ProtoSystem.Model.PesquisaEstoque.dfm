@@ -12,6 +12,7 @@ object Frm_PesEstoque: TFrm_PesEstoque
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object Panel1: TPanel
@@ -78,7 +79,6 @@ object Frm_PesEstoque: TFrm_PesEstoque
     Top = 180
   end
   object Query_PesProd: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'Select descricao, estoque from produto ')

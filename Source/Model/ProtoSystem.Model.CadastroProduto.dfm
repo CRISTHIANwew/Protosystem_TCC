@@ -3,8 +3,8 @@ object Frm_CadProd: TFrm_CadProd
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Cadastro de produtos'
-  ClientHeight = 311
-  ClientWidth = 971
+  ClientHeight = 403
+  ClientWidth = 1252
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -137,13 +137,14 @@ object Frm_CadProd: TFrm_CadProd
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 971
-    Height = 311
+    Width = 1252
+    Height = 403
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -151,8 +152,6 @@ object Frm_CadProd: TFrm_CadProd
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 538
-    ExplicitHeight = 251
     object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -162,254 +161,20 @@ object Frm_CadProd: TFrm_CadProd
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 963
-        Height = 276
+        Width = 1244
+        Height = 368
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
         Align = alClient
         Color = 14079702
+        Padding.Left = 10
+        Padding.Top = 10
+        Padding.Right = 10
+        Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 530
-        ExplicitHeight = 216
-        object pnlButtons: TPanel
-          Left = 189
-          Top = 214
-          Width = 532
-          Height = 61
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Color = 14079702
-          Padding.Left = 5
-          Padding.Top = 5
-          Padding.Right = 5
-          Padding.Bottom = 5
-          ParentBackground = False
-          TabOrder = 0
-          object pnlEditar: TPanel
-            Left = 111
-            Top = 6
-            Width = 105
-            Height = 49
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alLeft
-            BevelOuter = bvNone
-            Padding.Right = 6
-            TabOrder = 0
-            object Shpeditar: TShape
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Brush.Color = 8618369
-              Pen.Style = psClear
-              Shape = stRoundRect
-            end
-            object btnEditar: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Caption = 'Editar'
-              Flat = True
-              OnClick = btnEditarClick
-            end
-          end
-          object pnlCadastrar: TPanel
-            Left = 6
-            Top = 6
-            Width = 105
-            Height = 49
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alLeft
-            BevelOuter = bvNone
-            Padding.Right = 6
-            TabOrder = 1
-            object ShpCadastrar: TShape
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Brush.Color = 8618369
-              Pen.Style = psClear
-              Shape = stRoundRect
-            end
-            object btnCadastrar: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Caption = 'Cadastrar'
-              Flat = True
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = clBlack
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentFont = False
-              OnClick = btnCadastrarClick
-            end
-          end
-          object pnlSalvar: TPanel
-            Left = 216
-            Top = 6
-            Width = 105
-            Height = 49
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alLeft
-            BevelOuter = bvNone
-            Padding.Right = 6
-            TabOrder = 2
-            object shpSalvar: TShape
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Brush.Color = 14079702
-              Pen.Style = psClear
-              Shape = stRoundRect
-            end
-            object btnSalvar: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Caption = 'Salvar'
-              Enabled = False
-              Flat = True
-              OnClick = btnSalvarClick
-            end
-          end
-          object pnlCancelar: TPanel
-            Left = 321
-            Top = 6
-            Width = 105
-            Height = 49
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alLeft
-            BevelOuter = bvNone
-            Padding.Right = 6
-            TabOrder = 3
-            object ShpCancelar: TShape
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Brush.Color = 14079702
-              Pen.Style = psClear
-              Shape = stRoundRect
-            end
-            object btnCancelar: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Caption = 'Cancelar'
-              Enabled = False
-              Flat = True
-              OnClick = btnCancelarClick
-            end
-          end
-          object pnlExcluir: TPanel
-            Left = 426
-            Top = 6
-            Width = 105
-            Height = 49
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alLeft
-            BevelOuter = bvNone
-            Padding.Right = 6
-            TabOrder = 4
-            object shpExcluir: TShape
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Brush.Color = 8618369
-              Pen.Style = psClear
-              Shape = stRoundRect
-            end
-            object btnExcluir: TSpeedButton
-              Left = 0
-              Top = 0
-              Width = 99
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Align = alClient
-              Caption = 'Excluir'
-              Flat = True
-              OnClick = btnExcluirClick
-              ExplicitLeft = 2
-            end
-          end
-        end
         object edtId: TDBLabeledEdit
           Left = 26
           Top = 30
@@ -422,7 +187,7 @@ object Frm_CadProd: TFrm_CadProd
           DataField = 'ID'
           DataSource = DataSource1
           Enabled = False
-          TabOrder = 1
+          TabOrder = 4
           EditLabel.Width = 13
           EditLabel.Height = 20
           EditLabel.Margins.Left = 4
@@ -432,7 +197,7 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Caption = 'Id'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit1: TDBLabeledEdit
+        object edtDescricao: TDBLabeledEdit
           Left = 78
           Top = 30
           Width = 573
@@ -443,7 +208,7 @@ object Frm_CadProd: TFrm_CadProd
           Margins.Bottom = 4
           DataField = 'DESCRICAO'
           DataSource = DataSource1
-          TabOrder = 2
+          TabOrder = 0
           EditLabel.Width = 65
           EditLabel.Height = 20
           EditLabel.Margins.Left = 4
@@ -453,10 +218,10 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Caption = 'Descri'#231#227'o'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit2: TDBLabeledEdit
-          Left = 659
-          Top = 30
-          Width = 74
+        object edtEstoque: TDBLabeledEdit
+          Left = 26
+          Top = 90
+          Width = 89
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
@@ -464,7 +229,7 @@ object Frm_CadProd: TFrm_CadProd
           Margins.Bottom = 4
           DataField = 'ESTOQUE'
           DataSource = DataSource1
-          TabOrder = 3
+          TabOrder = 1
           EditLabel.Width = 53
           EditLabel.Height = 20
           EditLabel.Margins.Left = 4
@@ -474,9 +239,9 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Caption = 'Estoque'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit3: TDBLabeledEdit
-          Left = 741
-          Top = 30
+        object edtCusto: TDBLabeledEdit
+          Left = 26
+          Top = 150
           Width = 89
           Height = 28
           Margins.Left = 4
@@ -485,7 +250,7 @@ object Frm_CadProd: TFrm_CadProd
           Margins.Bottom = 4
           DataField = 'CUSTO'
           DataSource = DataSource1
-          TabOrder = 4
+          TabOrder = 2
           EditLabel.Width = 37
           EditLabel.Height = 20
           EditLabel.Margins.Left = 4
@@ -495,10 +260,10 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Caption = 'Custo'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit4: TDBLabeledEdit
-          Left = 838
-          Top = 30
-          Width = 99
+        object edtPreco: TDBLabeledEdit
+          Left = 26
+          Top = 210
+          Width = 89
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
@@ -506,7 +271,7 @@ object Frm_CadProd: TFrm_CadProd
           Margins.Bottom = 4
           DataField = 'PRECO'
           DataSource = DataSource1
-          TabOrder = 5
+          TabOrder = 3
           EditLabel.Width = 37
           EditLabel.Height = 20
           EditLabel.Margins.Left = 4
@@ -515,6 +280,281 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Margins.Bottom = 4
           EditLabel.Caption = 'Pre'#231'o'
           EditLabel.Layout = tlCenter
+        end
+        object Panel3: TPanel
+          Left = 11
+          Top = 295
+          Width = 1222
+          Height = 62
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alBottom
+          TabOrder = 5
+          object pnlButtons: TPanel
+            Left = 269
+            Top = 1
+            Width = 532
+            Height = 61
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Color = 14079702
+            Padding.Left = 5
+            Padding.Top = 5
+            Padding.Right = 5
+            Padding.Bottom = 5
+            ParentBackground = False
+            TabOrder = 0
+            object pnlEditar: TPanel
+              Left = 111
+              Top = 6
+              Width = 105
+              Height = 49
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
+              Align = alLeft
+              BevelOuter = bvNone
+              Padding.Right = 6
+              TabOrder = 0
+              object Shpeditar: TShape
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Brush.Color = 8618369
+                Pen.Style = psClear
+                Shape = stRoundRect
+              end
+              object btnEditar: TSpeedButton
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Caption = 'Editar'
+                Flat = True
+                OnClick = btnEditarClick
+              end
+            end
+            object pnlCadastrar: TPanel
+              Left = 6
+              Top = 6
+              Width = 105
+              Height = 49
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
+              Align = alLeft
+              BevelOuter = bvNone
+              Padding.Right = 6
+              TabOrder = 1
+              object ShpCadastrar: TShape
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Brush.Color = 8618369
+                Pen.Style = psClear
+                Shape = stRoundRect
+              end
+              object btnCadastrar: TSpeedButton
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Caption = 'Cadastrar'
+                Flat = True
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clBlack
+                Font.Height = -15
+                Font.Name = 'Segoe UI'
+                Font.Style = []
+                ParentFont = False
+                OnClick = btnCadastrarClick
+              end
+            end
+            object pnlSalvar: TPanel
+              Left = 216
+              Top = 6
+              Width = 105
+              Height = 49
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
+              Align = alLeft
+              BevelOuter = bvNone
+              Padding.Right = 6
+              TabOrder = 2
+              object shpSalvar: TShape
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Brush.Color = 14079702
+                Pen.Style = psClear
+                Shape = stRoundRect
+              end
+              object btnSalvar: TSpeedButton
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Caption = 'Salvar'
+                Enabled = False
+                Flat = True
+                OnClick = btnSalvarClick
+              end
+            end
+            object pnlCancelar: TPanel
+              Left = 321
+              Top = 6
+              Width = 105
+              Height = 49
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
+              Align = alLeft
+              BevelOuter = bvNone
+              Padding.Right = 6
+              TabOrder = 3
+              object ShpCancelar: TShape
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Brush.Color = 14079702
+                Pen.Style = psClear
+                Shape = stRoundRect
+              end
+              object btnCancelar: TSpeedButton
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Caption = 'Cancelar'
+                Enabled = False
+                Flat = True
+                OnClick = btnCancelarClick
+              end
+            end
+            object pnlExcluir: TPanel
+              Left = 426
+              Top = 6
+              Width = 105
+              Height = 49
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
+              Align = alLeft
+              BevelOuter = bvNone
+              Padding.Right = 6
+              TabOrder = 4
+              object shpExcluir: TShape
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Brush.Color = 8618369
+                Pen.Style = psClear
+                Shape = stRoundRect
+              end
+              object btnExcluir: TSpeedButton
+                Left = 0
+                Top = 0
+                Width = 99
+                Height = 49
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alClient
+                Caption = 'Excluir'
+                Flat = True
+                OnClick = btnExcluirClick
+                ExplicitLeft = 2
+              end
+            end
+          end
+        end
+        object Panel4: TPanel
+          Left = 840
+          Top = 0
+          Width = 403
+          Height = 291
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Padding.Left = 10
+          Padding.Top = 10
+          Padding.Right = 10
+          Padding.Bottom = 10
+          TabOrder = 6
+          object DBImage1: TDBImage
+            Left = 11
+            Top = 11
+            Width = 381
+            Height = 269
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            TabOrder = 0
+          end
         end
       end
     end
@@ -528,8 +568,8 @@ object Frm_CadProd: TFrm_CadProd
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 963
-        Height = 276
+        Width = 1244
+        Height = 368
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -545,8 +585,8 @@ object Frm_CadProd: TFrm_CadProd
         object DBGrid1: TDBGrid
           Left = 6
           Top = 6
-          Width = 951
-          Height = 264
+          Width = 1232
+          Height = 356
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -588,15 +628,14 @@ object Frm_CadProd: TFrm_CadProd
   end
   object DataSource1: TDataSource
     DataSet = Query_Produto
-    Left = 479
+    Left = 579
     Top = 106
   end
   object Query_Produto: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 383
+    Left = 473
     Top = 106
   end
 end

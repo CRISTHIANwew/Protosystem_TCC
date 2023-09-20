@@ -23,6 +23,12 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     DBGrid1: TDBGrid;
+    edtId: TDBLabeledEdit;
+    edtDescricao: TDBLabeledEdit;
+    edtEstoque: TDBLabeledEdit;
+    edtCusto: TDBLabeledEdit;
+    edtPreco: TDBLabeledEdit;
+    Panel3: TPanel;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
     Shpeditar: TShape;
@@ -39,11 +45,8 @@ type
     pnlExcluir: TPanel;
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
-    edtId: TDBLabeledEdit;
-    DBLabeledEdit1: TDBLabeledEdit;
-    DBLabeledEdit2: TDBLabeledEdit;
-    DBLabeledEdit3: TDBLabeledEdit;
-    DBLabeledEdit4: TDBLabeledEdit;
+    Panel4: TPanel;
+    DBImage1: TDBImage;
     procedure Button1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
@@ -51,6 +54,7 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,11 +73,13 @@ uses ProtoSystem.Controller.Dm;
 procedure TFrm_CadProd.btnCadastrarClick(Sender: TObject);
 begin
   Query_Produto.Insert;
-  // desabilita editar, excluir.
+  // desabilita editar, excluir, cadastrar.
   btnEditar.Enabled := false;
   Shpeditar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
   shpExcluir.Brush.Color := $00D6D6D6;
+  btnCadastrar.Enabled := false;
+  ShpCadastrar.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
   shpSalvar.Brush.Color := $00838181;
@@ -104,11 +110,13 @@ begin
   TabOperacao.Visible := false;
   TabPesquisa.Visible := true;
   Query_Produto.Edit;
-  // desabilitar cadastar, excluir.
+  // desabilitar cadastar, excluir, editar.
   btnCadastrar.Enabled := false;
   ShpCadastrar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
   shpExcluir.Brush.Color := $00D6D6D6;
+  btnEditar.Enabled := false;
+  Shpeditar.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
   shpSalvar.Brush.Color := $00838181;
@@ -151,6 +159,11 @@ procedure TFrm_CadProd.DBGrid1DblClick(Sender: TObject);
 begin
   TabOperacao.Visible := true;
   TabPesquisa.Visible := false;
+end;
+
+procedure TFrm_CadProd.FormCreate(Sender: TObject);
+begin
+      Query_Produto.Active := true;
 end;
 
 end.

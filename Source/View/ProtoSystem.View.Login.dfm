@@ -732,20 +732,19 @@ object Frm_Login: TFrm_Login
               C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
           end>
       end>
-    Left = 106
-    Top = 61
+    Left = 153
+    Top = 56
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 308
-    Top = 90
+    Left = 324
+    Top = 116
   end
   object Query_usuario: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 220
-    Top = 80
+    Left = 245
+    Top = 130
   end
 end

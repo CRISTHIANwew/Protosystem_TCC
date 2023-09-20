@@ -3,8 +3,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
   Top = 360
   BorderStyle = bsDialog
   Caption = 'Cadastro de usu'#225'rio'
-  ClientHeight = 179
-  ClientWidth = 543
+  ClientHeight = 253
+  ClientWidth = 540
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,13 +12,14 @@ object Frm_CadUsuario: TFrm_CadUsuario
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object PgcUsuario: TPageControl
     Left = 0
     Top = 0
-    Width = 543
-    Height = 179
+    Width = 540
+    Height = 253
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -26,6 +27,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 543
     object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -35,8 +37,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
       object pnl_dados_user: TPanel
         Left = 0
         Top = 0
-        Width = 535
-        Height = 83
+        Width = 532
+        Height = 157
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -49,39 +51,45 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 535
         object edtID: TDBLabeledEdit
-          Left = 86
+          Left = 26
           Top = 33
-          Width = 35
+          Width = 45
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
+          BiDiMode = bdLeftToRight
           BorderStyle = bsNone
           Color = clWhite
           DataField = 'id'
           DataSource = DS_user
           Enabled = False
+          ParentBiDiMode = False
           TabOrder = 2
-          EditLabel.Width = 13
+          EditLabel.Width = 37
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
           EditLabel.Margins.Top = 5
           EditLabel.Margins.Right = 5
           EditLabel.Margins.Bottom = 5
+          EditLabel.BiDiMode = bdLeftToRight
+          EditLabel.ParentBiDiMode = False
           EditLabel.Layout = tlCenter
         end
         object edtUsuario: TDBLabeledEdit
-          Left = 129
+          Left = 89
           Top = 33
-          Width = 151
+          Width = 252
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
           BorderStyle = bsNone
+          CharCase = ecUpperCase
           Color = clWhite
           DataField = 'username'
           DataSource = DS_user
@@ -96,8 +104,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
           EditLabel.Layout = tlCenter
         end
         object edtSenha: TDBLabeledEdit
-          Left = 288
-          Top = 33
+          Left = 26
+          Top = 103
           Width = 151
           Height = 28
           Margins.Left = 4
@@ -105,6 +113,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Margins.Right = 4
           Margins.Bottom = 4
           BorderStyle = bsNone
+          CharCase = ecUpperCase
           Color = clWhite
           DataField = 'password'
           DataSource = DS_user
@@ -121,8 +130,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
       end
       object pnlButtons: TPanel
         Left = 0
-        Top = 83
-        Width = 535
+        Top = 157
+        Width = 532
         Height = 61
         Margins.Left = 4
         Margins.Top = 4
@@ -136,6 +145,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
+        ExplicitWidth = 535
         object pnlEditar: TPanel
           Left = 111
           Top = 6
@@ -368,8 +378,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 535
-        Height = 144
+        Width = 532
+        Height = 218
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -382,11 +392,12 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 663
         object DBGrid1: TDBGrid
           Left = 6
           Top = 34
-          Width = 523
-          Height = 104
+          Width = 520
+          Height = 178
           Hint = 'Clique duas vezes para selecionar'
           Margins.Left = 4
           Margins.Top = 4
@@ -408,7 +419,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
         object edtPesquisa: TEdit
           Left = 6
           Top = 6
-          Width = 523
+          Width = 520
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
@@ -417,17 +428,17 @@ object Frm_CadUsuario: TFrm_CadUsuario
           Align = alTop
           TabOrder = 1
           OnChange = edtPesquisaChange
+          ExplicitWidth = 651
         end
       end
     end
   end
   object Query_user: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 10
-    Top = 36
+    Left = 400
+    Top = 61
     object Query_userid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -447,8 +458,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
   end
   object DS_user: TDataSource
     DataSet = Query_user
-    Left = 9
-    Top = 35
+    Left = 334
+    Top = 104
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = Query_user
@@ -460,6 +471,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Methods = <>
     OutputConverters = <>
     Left = 488
-    Top = 65530
+    Top = 14
   end
 end

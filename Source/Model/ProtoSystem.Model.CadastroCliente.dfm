@@ -3,8 +3,8 @@ object Frm_CadCliente: TFrm_CadCliente
   Top = 262
   BorderStyle = bsDialog
   Caption = 'Cadastro de clientes'
-  ClientHeight = 294
-  ClientWidth = 949
+  ClientHeight = 771
+  ClientWidth = 831
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -137,13 +137,14 @@ object Frm_CadCliente: TFrm_CadCliente
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object PgcUsuario: TPageControl
     Left = 0
     Top = 0
-    Width = 949
-    Height = 294
+    Width = 831
+    Height = 771
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -151,10 +152,6 @@ object Frm_CadCliente: TFrm_CadCliente
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 10
-    ExplicitTop = 10
-    ExplicitWidth = 950
-    ExplicitHeight = 295
     object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -164,8 +161,8 @@ object Frm_CadCliente: TFrm_CadCliente
       object pnl_dados_user: TPanel
         Left = 0
         Top = 0
-        Width = 941
-        Height = 259
+        Width = 823
+        Height = 736
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -178,8 +175,6 @@ object Frm_CadCliente: TFrm_CadCliente
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 942
-        ExplicitHeight = 260
         object edtID: TDBLabeledEdit
           Left = 26
           Top = 33
@@ -194,7 +189,7 @@ object Frm_CadCliente: TFrm_CadCliente
           DataField = 'ID'
           DataSource = DataSource1
           Enabled = False
-          TabOrder = 2
+          TabOrder = 10
           EditLabel.Width = 13
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -204,7 +199,7 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Id'
           EditLabel.Layout = tlCenter
         end
-        object edtUsuario: TDBLabeledEdit
+        object edtNome: TDBLabeledEdit
           Left = 69
           Top = 33
           Width = 403
@@ -227,9 +222,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Nome'
           EditLabel.Layout = tlCenter
         end
-        object edtSenha: TDBLabeledEdit
-          Left = 218
-          Top = 86
+        object edtBairro: TDBLabeledEdit
+          Left = 26
+          Top = 276
           Width = 151
           Height = 28
           Margins.Left = 4
@@ -240,7 +235,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'BAIRRO'
           DataSource = DataSource1
-          TabOrder = 1
+          TabOrder = 4
           EditLabel.Width = 40
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -250,9 +245,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Bairro'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit1: TDBLabeledEdit
-          Left = 569
-          Top = 136
+        object edtCelular: TDBLabeledEdit
+          Left = 26
+          Top = 586
           Width = 182
           Height = 28
           Margins.Left = 4
@@ -263,7 +258,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'CELULAR'
           DataSource = DataSource1
-          TabOrder = 3
+          TabOrder = 9
           EditLabel.Width = 46
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -273,9 +268,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Celular'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit2: TDBLabeledEdit
-          Left = 569
-          Top = 86
+        object edtCep: TDBLabeledEdit
+          Left = 26
+          Top = 396
           Width = 121
           Height = 28
           Margins.Left = 4
@@ -286,7 +281,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'CEP'
           DataSource = DataSource1
-          TabOrder = 4
+          TabOrder = 6
           EditLabel.Width = 26
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -296,9 +291,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Cep'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit3: TDBLabeledEdit
-          Left = 698
-          Top = 86
+        object edtCidade: TDBLabeledEdit
+          Left = 26
+          Top = 466
           Width = 223
           Height = 28
           Margins.Left = 4
@@ -309,7 +304,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'CIDADE'
           DataSource = DataSource1
-          TabOrder = 5
+          TabOrder = 7
           EditLabel.Width = 47
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -319,9 +314,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Cidade'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit4: TDBLabeledEdit
-          Left = 480
-          Top = 33
+        object edtCpfCnpj: TDBLabeledEdit
+          Left = 26
+          Top = 93
           Width = 210
           Height = 28
           Margins.Left = 4
@@ -332,7 +327,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'CPFCNPJ'
           DataSource = DataSource1
-          TabOrder = 6
+          TabOrder = 1
           EditLabel.Width = 59
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -342,9 +337,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Cpf/Cnpj'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit5: TDBLabeledEdit
+        object edtEmail: TDBLabeledEdit
           Left = 26
-          Top = 136
+          Top = 526
           Width = 535
           Height = 28
           Margins.Left = 4
@@ -355,7 +350,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'EMAIL'
           DataSource = DataSource1
-          TabOrder = 7
+          TabOrder = 8
           EditLabel.Width = 37
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -365,9 +360,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Email'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit6: TDBLabeledEdit
+        object editEndereco: TDBLabeledEdit
           Left = 26
-          Top = 86
+          Top = 216
           Width = 184
           Height = 28
           Margins.Left = 4
@@ -378,7 +373,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'ENDERECO'
           DataSource = DataSource1
-          TabOrder = 8
+          TabOrder = 3
           EditLabel.Width = 62
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -388,9 +383,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Endereco'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit7: TDBLabeledEdit
-          Left = 377
-          Top = 86
+        object edtNumero: TDBLabeledEdit
+          Left = 26
+          Top = 336
           Width = 184
           Height = 28
           Margins.Left = 4
@@ -401,7 +396,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'NUMERO'
           DataSource = DataSource1
-          TabOrder = 9
+          TabOrder = 5
           EditLabel.Width = 54
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -411,9 +406,9 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'Numero'
           EditLabel.Layout = tlCenter
         end
-        object DBLabeledEdit8: TDBLabeledEdit
-          Left = 698
-          Top = 33
+        object edtRgIe: TDBLabeledEdit
+          Left = 26
+          Top = 153
           Width = 223
           Height = 28
           Margins.Left = 4
@@ -424,7 +419,7 @@ object Frm_CadCliente: TFrm_CadCliente
           Color = clWhite
           DataField = 'RGIE'
           DataSource = DataSource1
-          TabOrder = 10
+          TabOrder = 2
           EditLabel.Width = 37
           EditLabel.Height = 20
           EditLabel.Margins.Left = 5
@@ -434,10 +429,21 @@ object Frm_CadCliente: TFrm_CadCliente
           EditLabel.Caption = 'RG/IE'
           EditLabel.Layout = tlCenter
         end
+        object DBImage1: TDBImage
+          Left = 550
+          Top = 23
+          Width = 251
+          Height = 248
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          TabOrder = 11
+        end
       end
       object pnlButtons: TPanel
-        Left = 187
-        Top = 199
+        Left = 149
+        Top = 671
         Width = 531
         Height = 61
         Margins.Left = 4
@@ -682,8 +688,8 @@ object Frm_CadCliente: TFrm_CadCliente
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 941
-        Height = 259
+        Width = 823
+        Height = 736
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -696,12 +702,11 @@ object Frm_CadCliente: TFrm_CadCliente
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 949
         object DBGrid1: TDBGrid
           Left = 6
           Top = 34
-          Width = 929
-          Height = 219
+          Width = 811
+          Height = 696
           Hint = 'Clique duas vezes para selecionar'
           Margins.Left = 4
           Margins.Top = 4
@@ -729,20 +734,20 @@ object Frm_CadCliente: TFrm_CadCliente
             item
               Expanded = False
               FieldName = 'NOME'
-              Width = 599
+              Width = 338
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'CPFCNPJ'
-              Width = 259
+              Width = 236
               Visible = True
             end>
         end
         object edtPesquisa: TEdit
           Left = 6
           Top = 6
-          Width = 929
+          Width = 811
           Height = 28
           Margins.Left = 4
           Margins.Top = 4
@@ -750,22 +755,20 @@ object Frm_CadCliente: TFrm_CadCliente
           Margins.Bottom = 4
           Align = alTop
           TabOrder = 1
-          ExplicitWidth = 937
         end
       end
     end
   end
   object DataSource1: TDataSource
     DataSet = QueryCLIENTE
-    Left = 875
-    Top = 168
+    Left = 505
+    Top = 89
   end
   object QueryCLIENTE: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
-    Left = 775
-    Top = 165
+    Left = 311
+    Top = 113
   end
 end

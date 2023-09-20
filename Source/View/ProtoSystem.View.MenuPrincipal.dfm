@@ -162,8 +162,6 @@ object Frm_Principal: TFrm_Principal
     ParentFont = False
     TabOrder = 0
     StyleName = 'Windows'
-    ExplicitWidth = 996
-    ExplicitHeight = 478
     object TabSheet1: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -191,7 +189,6 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 988
       end
     end
     object TabSheet2: TTabSheet
@@ -210,7 +207,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet8
+        ActivePage = TabSheet10
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -219,8 +216,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = -4
-        ExplicitTop = -4
         object TabSheet8: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -244,10 +239,6 @@ object Frm_Principal: TFrm_Principal
             Padding.Bottom = 10
             ParentBackground = False
             TabOrder = 0
-            ExplicitLeft = 220
-            ExplicitTop = 150
-            ExplicitWidth = 231
-            ExplicitHeight = 51
             object PnlCadastroProdutos: TPanel
               Left = 14
               Top = 16
@@ -277,7 +268,7 @@ object Frm_Principal: TFrm_Principal
                 Margins.Right = 4
                 Margins.Bottom = 4
                 Align = alClient
-                Brush.Color = clBlack
+                Brush.Color = clSilver
                 Shape = stRoundRect
                 ExplicitHeight = 55
               end
@@ -361,7 +352,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet16
+        ActivePage = TabSheet14
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -432,7 +423,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet20
+        ActivePage = TabSheet17
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -490,7 +481,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet24
+        ActivePage = TabSheet21
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -548,7 +539,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet28
+        ActivePage = TabSheet25
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -564,8 +555,8 @@ object Frm_Principal: TFrm_Principal
           Margins.Bottom = 4
           Caption = 'Cadastros'
           object BTN_CAD_CLIENTE: TButton
-            Left = 25
-            Top = 25
+            Left = 4
+            Top = 4
             Width = 213
             Height = 75
             Margins.Left = 4
@@ -574,6 +565,19 @@ object Frm_Principal: TFrm_Principal
             Margins.Bottom = 4
             Caption = 'Cadastro de clientes'
             TabOrder = 0
+            OnClick = BTN_CAD_CLIENTEClick
+          end
+          object btnCadReceber: TButton
+            Left = 225
+            Top = 4
+            Width = 213
+            Height = 75
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Caption = 'Cadastro de contas a receber'
+            TabOrder = 1
             OnClick = BTN_CAD_CLIENTEClick
           end
         end
@@ -619,7 +623,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet32
+        ActivePage = TabSheet29
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -690,7 +694,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet33
+        ActivePage = TabSheet34
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -794,8 +798,6 @@ object Frm_Principal: TFrm_Principal
         Text = 'Data e Hora'
         Width = 63
       end>
-    ExplicitTop = 478
-    ExplicitWidth = 996
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>

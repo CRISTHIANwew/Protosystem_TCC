@@ -135,7 +135,6 @@ begin
       result := false
     end;
   end;
-
 end;
 
 procedure TFrm_Login.SpeedButton1Click(Sender: TObject);
