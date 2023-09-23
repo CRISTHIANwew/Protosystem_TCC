@@ -207,7 +207,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet10
+        ActivePage = TabSheet8
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
@@ -694,7 +694,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet34
+        ActivePage = TabSheet33
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText

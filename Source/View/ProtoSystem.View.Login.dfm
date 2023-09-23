@@ -737,8 +737,8 @@ object Frm_Login: TFrm_Login
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 324
-    Top = 116
+    Left = 315
+    Top = 115
   end
   object Query_usuario: TFDQuery
     Connection = DM.conexao

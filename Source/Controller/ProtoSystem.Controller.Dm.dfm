@@ -1,7 +1,7 @@
 object DM: TDM
   OnCreate = DataModuleCreate
-  Height = 556
-  Width = 525
+  Height = 403
+  Width = 511
   PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
@@ -17,7 +17,7 @@ object DM: TDM
       'LockingMode=Normal'
       
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\bin\Database\ProtoSystem.s3db'
+        'CC\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False

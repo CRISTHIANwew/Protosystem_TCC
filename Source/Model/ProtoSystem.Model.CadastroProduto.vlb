@@ -1,35 +1,104 @@
 ﻿[DataSource1]
-Coordinates=120,1,77,33
+Coordinates=120,1,89,36
 
 [DM.FDQuery]
-Coordinates=227,188,76,51
+Coordinates=227,188,90,58
 
 [Query_Produto]
-Coordinates=619,30,89,141
+Coordinates=619,30,101,58
 
 [Panel1]
-Coordinates=121,10,47,51
+Coordinates=121,10,55,58
 Visible=True
 
 [PageControl1]
-Coordinates=10,256,81,33
+Coordinates=10,256,93,36
 
 [Panel2]
-Coordinates=162,188,47,51
+Coordinates=162,188,55,58
 
 [DBGrid1]
-Coordinates=327,188,56,33
+Coordinates=327,188,64,36
 
 []
-Coordinates=93,180,68,51
+Coordinates=337,358,81,36
 Visible=True
 
 [TabOperacao]
-Coordinates=401,188,80,33
+Coordinates=401,188,93,36
 
 [TabPesquisa]
-Coordinates=113,256,77,33
+Coordinates=113,256,89,36
 
 [edtId]
-Coordinates=780,60,40,33
+Coordinates=780,60,43,36
+
+[ShpCadastrar]
+Coordinates=304,1,94,36
+
+[edtDescricao]
+Coordinates=436,1,90,36
+
+[Shpeditar]
+Coordinates=436,56,70,36
+
+[pnlSalvar]
+Coordinates=93,173,68,58
+
+[Panel3]
+Coordinates=90,1,55,58
+
+[btnSalvar]
+Coordinates=436,111,69,36
+
+[pnlCadastrar]
+Coordinates=247,78,88,58
+
+[pnlEditar]
+Coordinates=71,77,66,58
+
+[btnEditar]
+Coordinates=436,243,66,36
+
+[btnCancelar]
+Coordinates=417,284,84,36
+
+[pnlCancelar]
+Coordinates=183,1,83,58
+
+[edtEstoque]
+Coordinates=328,284,79,36
+
+[Panel4]
+Coordinates=12,77,55,58
+
+[DBImage1]
+Coordinates=249,284,75,36
+
+[shpSalvar]
+Coordinates=564,107,72,36
+
+[ShpCancelar]
+Coordinates=564,162,89,36
+
+[shpExcluir]
+Coordinates=564,217,74,36
+
+[btnExcluir]
+Coordinates=564,272,71,36
+
+[btnCadastrar]
+Coordinates=564,327,89,36
+
+[edtPreco]
+Coordinates=495,358,66,36
+
+[edtCusto]
+Coordinates=426,358,66,36
+
+[pnlButtons]
+Coordinates=14,173,75,58
+
+[pnlExcluir]
+Coordinates=0,0,71,58
 

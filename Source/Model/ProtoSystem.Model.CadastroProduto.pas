@@ -47,6 +47,17 @@ type
     btnExcluir: TSpeedButton;
     Panel4: TPanel;
     DBImage1: TDBImage;
+    Query_ProdutoID: TFDAutoIncField;
+    Query_ProdutoDESCRICAO: TStringField;
+    Query_ProdutoESTOQUE: TIntegerField;
+    Query_ProdutoCUSTO: TFloatField;
+    Query_ProdutoPRECO: TFloatField;
+    Query_ProdutoDATAHORACADASTRO: TDateTimeField;
+    Query_ProdutoDATAHORAALTERACAO: TDateTimeField;
+    Query_ProdutoIMAGEM: TBlobField;
+    dlgImagens: TOpenDialog;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
     procedure Button1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
@@ -55,6 +66,7 @@ type
     procedure btnExcluirClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure DBImage1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -122,13 +134,15 @@ begin
   shpSalvar.Brush.Color := $00838181;
   btnCancelar.Enabled := true;
   ShpCancelar.Brush.Color := $00838181;
-
 end;
 
 procedure TFrm_CadProd.btnExcluirClick(Sender: TObject);
 begin
-  Query_Produto.Delete;
-  Query_Produto.Refresh;
+  if not Query_Produto.IsEmpty then
+  begin
+    Query_Produto.Delete;
+    Query_Produto.Refresh;
+  end;
 end;
 
 procedure TFrm_CadProd.btnSalvarClick(Sender: TObject);
@@ -161,9 +175,24 @@ begin
   TabPesquisa.Visible := false;
 end;
 
+procedure TFrm_CadProd.DBImage1DblClick(Sender: TObject);
+begin
+  if dlgImagens.Execute then
+  begin
+    var
+    Stream := TMemoryStream.Create;
+    try
+      Stream.LoadFromFile(dlgImagens.FileName);
+      TBlobField(Query_ProdutoIMAGEM).LoadFromStream(Stream)
+    finally
+      Stream.Free
+    end;
+  end;
+end;
+
 procedure TFrm_CadProd.FormCreate(Sender: TObject);
 begin
-      Query_Produto.Active := true;
+  Query_Produto.Active := true;
 end;
 
 end.

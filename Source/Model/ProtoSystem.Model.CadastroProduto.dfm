@@ -175,6 +175,7 @@ object Frm_CadProd: TFrm_CadProd
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 4
         object edtId: TDBLabeledEdit
           Left = 26
           Top = 30
@@ -439,6 +440,7 @@ object Frm_CadProd: TFrm_CadProd
                 Enabled = False
                 Flat = True
                 OnClick = btnSalvarClick
+                ExplicitLeft = -2
               end
             end
             object pnlCancelar: TPanel
@@ -553,8 +555,55 @@ object Frm_CadProd: TFrm_CadProd
             Margins.Right = 4
             Margins.Bottom = 4
             Align = alClient
+            DataField = 'IMAGEM'
+            DataSource = DataSource1
             TabOrder = 0
+            OnDblClick = DBImage1DblClick
           end
+        end
+        object DBLabeledEdit1: TDBLabeledEdit
+          Left = 326
+          Top = 210
+          Width = 170
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          DataField = 'DATAHORACADASTRO'
+          DataSource = DataSource1
+          Enabled = False
+          TabOrder = 7
+          EditLabel.Width = 95
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 4
+          EditLabel.Margins.Top = 4
+          EditLabel.Margins.Right = 4
+          EditLabel.Margins.Bottom = 4
+          EditLabel.Caption = 'Data Cadastro'
+          EditLabel.Layout = tlCenter
+        end
+        object DBLabeledEdit2: TDBLabeledEdit
+          Left = 504
+          Top = 210
+          Width = 170
+          Height = 28
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          DataField = 'DATAHORAALTERACAO'
+          DataSource = DataSource1
+          Enabled = False
+          TabOrder = 8
+          EditLabel.Width = 110
+          EditLabel.Height = 20
+          EditLabel.Margins.Left = 4
+          EditLabel.Margins.Top = 4
+          EditLabel.Margins.Right = 4
+          EditLabel.Margins.Bottom = 4
+          EditLabel.Caption = 'Ultima altera'#231#227'o'
+          EditLabel.Layout = tlCenter
         end
       end
     end
@@ -615,11 +664,13 @@ object Frm_CadProd: TFrm_CadProd
             item
               Expanded = False
               FieldName = 'CUSTO'
+              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'PRECO'
+              Width = 64
               Visible = True
             end>
         end
@@ -637,5 +688,36 @@ object Frm_CadProd: TFrm_CadProd
       'select * from produto')
     Left = 473
     Top = 106
+    object Query_ProdutoID: TFDAutoIncField
+      FieldName = 'ID'
+      AutoIncrementStep = 1
+    end
+    object Query_ProdutoDESCRICAO: TStringField
+      FieldName = 'DESCRICAO'
+      Size = 90
+    end
+    object Query_ProdutoESTOQUE: TIntegerField
+      FieldName = 'ESTOQUE'
+    end
+    object Query_ProdutoCUSTO: TFloatField
+      FieldName = 'CUSTO'
+    end
+    object Query_ProdutoPRECO: TFloatField
+      FieldName = 'PRECO'
+    end
+    object Query_ProdutoDATAHORACADASTRO: TDateTimeField
+      FieldName = 'DATAHORACADASTRO'
+    end
+    object Query_ProdutoDATAHORAALTERACAO: TDateTimeField
+      FieldName = 'DATAHORAALTERACAO'
+    end
+    object Query_ProdutoIMAGEM: TBlobField
+      FieldName = 'IMAGEM'
+      Origin = 'IMAGEM'
+    end
+  end
+  object dlgImagens: TOpenDialog
+    Left = 681
+    Top = 107
   end
 end
