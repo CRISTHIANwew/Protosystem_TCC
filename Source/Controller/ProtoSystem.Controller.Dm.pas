@@ -18,6 +18,8 @@ type
     FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     conexao: TFDConnection;
     FDQuery: TFDQuery;
+    Tb_venda: TFDTable;
+    SQL_vendas: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -29,7 +31,7 @@ type
   end;
 
 var
-  DM: TDM;
+  Dm: TDM;
   caminho: string;
 
 implementation
@@ -91,10 +93,16 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS CLIENTE (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'NOME VARCHAR(60),' +
-      'CPFCNPJ VARCHAR(14),' + 'RGIE VARCHAR (20),' + 'ENDERECO VARCHAR (60) ,'
-      + 'BAIRRO VARCHAR (60) ,' + 'CIDADE VARCHAR (60) ,' + 'CEP VARCHAR (20) ,'
-      + 'NUMERO VARCHAR(10) ,' + 'CELULAR VARCHAR(20) ,' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'NOME VARCHAR(60),' +
+      'CPFCNPJ VARCHAR(14),' +
+      'RGIE VARCHAR (20),' +
+      'ENDERECO VARCHAR (60) ,' +
+      'BAIRRO VARCHAR (60) ,' +
+      'CIDADE VARCHAR (60) ,' +
+      'CEP VARCHAR (20) ,' +
+      'NUMERO VARCHAR(10) ,' +
+      'CELULAR VARCHAR(20) ,' +
       'EMAIL VARCHAR(60));');
   end;
 
@@ -135,29 +143,54 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS PRODUTO (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
-      'DESCRICAO VARCHAR(90),' +
-      'ESTOQUE INTEGER,' +
-      'CUSTO REAL,' +
-      'PRECO REAL,' +
-      'IMAGEM BLOB,' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'DESCRICAO VARCHAR(90),' +
+      'ESTOQUE INTEGER,' + 'CUSTO REAL,' + 'PRECO REAL,' + 'IMAGEM BLOB,' +
       'DATAHORACADASTRO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
       'DATAHORAALTERACAO DATETIME);');
 
     FDQuery.ExecSQL('CREATE TRIGGER UpdateDataHoraCadastro ' +
-      'AFTER INSERT ON PRODUTO ' +
-      'BEGIN ' +
-      '  UPDATE PRODUTO ' +
-      '  SET DATAHORACADASTRO = CURRENT_TIMESTAMP; ' +
-      'END;');
-
-     {FDQuery.ExecSQL('CREATE TRIGGER UpdateDataHoraAlteracao ' +
-      'AFTER UPDATE ON PRODUTO ' +
-      'BEGIN ' +
-      '  UPDATE PRODUTO ' +
-      '  SET DATAHORAALTERACAO = CURRENT_TIMESTAMP; ' +
-      'END;');   }
+      'AFTER INSERT ON PRODUTO ' + 'BEGIN ' + '  UPDATE PRODUTO ' +
+      '  SET DATAHORACADASTRO = CURRENT_TIMESTAMP; ' + 'END;');
   end;
+
+  //-------------------------------------------------------------------
+
+  Result := false;
+  Result := TableNames.IndexOf('VENDA_PEDIDOS') >= 0;
+
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PEDIDOS (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'ID_CLIENTE INTEGER,' +
+      'NOME_CLIENTE VARCHAR(50),' +
+      'DATA DATE DEFAULT TODAY ,'+
+      'HORA TIME DEFAULT NOW,'+
+      'ENDERECO_CLIENTE VARCHAR(50),'+
+      'CONDICAOPAGTO VARCHAR(50),'+
+      'VALOR REAL,' +
+      'VALORDESCONTO REAL,'+
+      'STATUS VARCHAR(50),'+
+      'USUARIO VARCHAR(20),'+
+      'FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID));');
+  end;
+
+  Result := false;
+  Result := TableNames.IndexOf('VENDA_GRID') >= 0;
+
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_GRID (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'VALOR REAL,' +
+      'ID_CLIENTE INTEGER,' +
+      'NOME_CLIENTE,' +
+      'CPF_CNPJ_CLIENTE,' +
+      'DATAHORAVENDA DATETIME DEFAULT CURRENT_TIMESTAMP,' +
+      'FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID));');
+  end;
+
+  //-------------------------------------------------------------------
 
   Result := false;
   Result := TableNames.IndexOf('USUARIO') >= 0;
@@ -165,7 +198,8 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS USUARIO (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'USERNAME VARCHAR(100),' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'USERNAME VARCHAR(100),' +
       'PASSWORD VARCHAR(100));');
 
     FDQuery.SQL.Text :=

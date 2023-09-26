@@ -175,7 +175,6 @@ object Frm_CadProd: TFrm_CadProd
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 4
         object edtId: TDBLabeledEdit
           Left = 26
           Top = 30
@@ -664,13 +663,11 @@ object Frm_CadProd: TFrm_CadProd
             item
               Expanded = False
               FieldName = 'CUSTO'
-              Width = 64
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'PRECO'
-              Width = 64
               Visible = True
             end>
         end
@@ -690,6 +687,7 @@ object Frm_CadProd: TFrm_CadProd
     Top = 106
     object Query_ProdutoID: TFDAutoIncField
       FieldName = 'ID'
+      ReadOnly = True
       AutoIncrementStep = 1
     end
     object Query_ProdutoDESCRICAO: TStringField
@@ -717,7 +715,7 @@ object Frm_CadProd: TFrm_CadProd
     end
   end
   object dlgImagens: TOpenDialog
-    Left = 681
-    Top = 107
+    Left = 731
+    Top = 204
   end
 end

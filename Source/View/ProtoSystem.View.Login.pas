@@ -15,26 +15,27 @@ uses
 
 type
   TFrm_Login = class(TForm)
-    Panel2: TPanel;
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
-    Pnl_comfirmar: TPanel;
-    edit_usuario: TLabeledEdit;
-    VirtualImage1: TVirtualImage;
-    VirtualImage2: TVirtualImage;
     DS_usuario: TDataSource;
     Query_usuario: TFDQuery;
-    box_senha: TCheckBox;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    VirtualImage1: TVirtualImage;
+    VirtualImage2: TVirtualImage;
     Button1: TButton;
+    Pnl_comfirmar: TPanel;
     Shape1: TShape;
     SpeedButton2: TSpeedButton;
-    Panel1: TPanel;
+    box_senha: TCheckBox;
+    Panel3: TPanel;
+    VirtualImage3: TVirtualImage;
+    lb_logo: TLabel;
     Pnl_sair: TPanel;
     Shape2: TShape;
     SpeedButton1: TSpeedButton;
-    VirtualImage3: TVirtualImage;
-    lb_logo: TLabel;
     edit_senha: TLabeledEdit;
+    edit_usuario: TLabeledEdit;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -85,8 +86,6 @@ begin
     if Query_usuario.Fields[0].AsInteger > 0 then
     begin
       // ShowMessage('Login realizado com sucesso.');
-
-
       Modalresult := mrok;
     end
     else
@@ -122,6 +121,7 @@ begin
   box_senha.Checked := true;
   edit_senha.PasswordChar := '*';
   Query_usuario.active := true;
+
 end;
 
 class function TFrm_Login.Login: Boolean;

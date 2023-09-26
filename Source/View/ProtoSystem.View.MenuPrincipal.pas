@@ -20,65 +20,67 @@ type
   TFrm_Principal = class(TForm)
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
-    PGC_MENU: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
-    TabSheet3: TTabSheet;
-    TabSheet4: TTabSheet;
-    TabSheet5: TTabSheet;
-    TabSheet6: TTabSheet;
-    TabSheet7: TTabSheet;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
+    pnlBarraSuperior: TPanel;
+    Panel1: TPanel;
+    PGC_MENU: TPageControl;
+    TabSheet1: TTabSheet;
+    pnl_boasvindas: TPanel;
+    TabSheet2: TTabSheet;
     PGC_ESTOQUE: TPageControl;
     TabSheet8: TTabSheet;
+    Panel2: TPanel;
+    PnlCadastroProdutos: TPanel;
+    shpCadastroProdutos: TShape;
+    btnCadastroProdutos: TSpeedButton;
     TabSheet9: TTabSheet;
     TabSheet10: TTabSheet;
-    TabSheet11: TTabSheet;
-    TabSheet12: TTabSheet;
     BTN_PES_ESTOQUE: TButton;
+    TabSheet11: TTabSheet;
+    TabSheet3: TTabSheet;
     PGC_VENDAS: TPageControl;
     TabSheet13: TTabSheet;
     TabSheet14: TTabSheet;
     BTN_VENDAS: TButton;
     TabSheet15: TTabSheet;
     TabSheet16: TTabSheet;
+    TabSheet4: TTabSheet;
     PGC_CAIXA: TPageControl;
     TabSheet17: TTabSheet;
     TabSheet18: TTabSheet;
     TabSheet19: TTabSheet;
     TabSheet20: TTabSheet;
+    TabSheet5: TTabSheet;
     PGC_BANCO: TPageControl;
     TabSheet21: TTabSheet;
     TabSheet22: TTabSheet;
     TabSheet23: TTabSheet;
     TabSheet24: TTabSheet;
+    TabSheet6: TTabSheet;
     PGC_RECEBER: TPageControl;
     TabSheet25: TTabSheet;
     BTN_CAD_CLIENTE: TButton;
+    btnCadReceber: TButton;
     TabSheet26: TTabSheet;
     TabSheet27: TTabSheet;
     TabSheet28: TTabSheet;
+    TabSheet7: TTabSheet;
     PGC_PAGAR: TPageControl;
     TabSheet29: TTabSheet;
     BTN_CAD_FORNECEDOR: TButton;
     TabSheet30: TTabSheet;
     TabSheet31: TTabSheet;
     TabSheet32: TTabSheet;
+    TabSheet12: TTabSheet;
     PGC_CONFIGURACAO: TPageControl;
     TabSheet33: TTabSheet;
     BTN_CAD_USUARIO: TButton;
     TabSheet34: TTabSheet;
-    TabSheet35: TTabSheet;
-    TabSheet36: TTabSheet;
     CB_STYLES: TComboBox;
     ComboBox1: TComboBox;
-    pnl_boasvindas: TPanel;
-    Panel1: TPanel;
-    PnlCadastroProdutos: TPanel;
-    shpCadastroProdutos: TShape;
-    btnCadastroProdutos: TSpeedButton;
-    btnCadReceber: TButton;
+    TabSheet35: TTabSheet;
+    TabSheet36: TTabSheet;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -99,9 +101,6 @@ type
 
 var
   Frm_Principal: TFrm_Principal;
-  msg: string;
-  user2: string;
-
 implementation
 
 {$R *.dfm}
@@ -110,17 +109,13 @@ uses
   ProtoSystem.Controller.Dm, ProtoSystem.Model.CadastroProduto,
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
   ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
-  ProtoSystem.Model.CadastroFornecedor;
+  ProtoSystem.Model.CadastroFornecedor, ProtoSystem.View.Login;
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);
 begin
-
-  msg := 'Bem vindo (a) ';
-
   Timer1.Enabled := True; // Iniciar o timer quando o formulário for criado
   PreencheEstilos(CB_STYLES);
   // --------------------------------------------------------------------------//
-  pnl_boasvindas.Caption := msg;
 end;
 
 procedure TFrm_Principal.btnCadastroProdutosClick(Sender: TObject);

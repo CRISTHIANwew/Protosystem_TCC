@@ -2,15 +2,14 @@ object Frm_Principal: TFrm_Principal
   Left = 258
   Top = 213
   Align = alClient
-  BorderStyle = bsSingle
   Caption = '  ProtoSystem'
-  ClientHeight = 642
-  ClientWidth = 1264
+  ClientHeight = 404
+  ClientWidth = 783
   Color = clBtnFace
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -15
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -141,669 +140,461 @@ object Frm_Principal: TFrm_Principal
   Position = poDesigned
   WindowState = wsMaximized
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 20
-  object PGC_MENU: TPageControl
-    Left = 0
-    Top = 0
-    Width = 1264
-    Height = 617
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    ActivePage = TabSheet1
-    Align = alClient
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -16
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    StyleName = 'Windows'
-    object TabSheet1: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Tela inicial'
-      object pnl_boasvindas: TPanel
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 41
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alTop
-        Caption = 'Bem vindo (a) User'
-        Color = clBlack
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindow
-        Font.Height = -18
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Font.Quality = fqClearTypeNatural
-        ParentBackground = False
-        ParentFont = False
-        TabOrder = 0
-      end
-    end
-    object TabSheet2: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Estoque'
-      ImageIndex = 1
-      object PGC_ESTOQUE: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet8
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet8: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-          object Panel1: TPanel
-            Left = 0
-            Top = 0
-            Width = 1248
-            Height = 545
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Align = alClient
-            Color = clSilver
-            Padding.Left = 10
-            Padding.Top = 10
-            Padding.Right = 10
-            Padding.Bottom = 10
-            ParentBackground = False
-            TabOrder = 0
-            object PnlCadastroProdutos: TPanel
-              Left = 14
-              Top = 16
-              Width = 290
-              Height = 58
-              Cursor = crHandPoint
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
-              Color = clSilver
-              Font.Charset = DEFAULT_CHARSET
-              Font.Color = 2302755
-              Font.Height = -15
-              Font.Name = 'Segoe UI'
-              Font.Style = []
-              ParentBackground = False
-              ParentFont = False
-              TabOrder = 0
-              object shpCadastroProdutos: TShape
-                Left = 1
-                Top = 1
-                Width = 288
-                Height = 56
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                Align = alClient
-                Brush.Color = clSilver
-                Shape = stRoundRect
-                ExplicitHeight = 55
-              end
-              object btnCadastroProdutos: TSpeedButton
-                Left = 1
-                Top = 1
-                Width = 288
-                Height = 56
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                Align = alClient
-                Caption = 'Cadastro de Produtos'
-                Flat = True
-                Font.Charset = DEFAULT_CHARSET
-                Font.Color = clWindow
-                Font.Height = -15
-                Font.Name = 'Segoe UI'
-                Font.Style = [fsBold]
-                Font.Quality = fqClearTypeNatural
-                ParentFont = False
-                OnClick = btnCadastroProdutosClick
-                ExplicitHeight = 55
-              end
-            end
-          end
-        end
-        object TabSheet9: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-        end
-        object TabSheet10: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-          object BTN_PES_ESTOQUE: TButton
-            Left = 25
-            Top = 25
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Pesquisa de estoque'
-            TabOrder = 0
-            OnClick = BTN_PES_ESTOQUEClick
-          end
-        end
-        object TabSheet11: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet3: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Vendas'
-      ImageIndex = 2
-      object PGC_VENDAS: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet14
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet13: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-        end
-        object TabSheet14: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-          object BTN_VENDAS: TButton
-            Left = 25
-            Top = 25
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Vendas'
-            TabOrder = 0
-            OnClick = BTN_VENDASClick
-          end
-        end
-        object TabSheet15: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet16: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet4: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Caixa'
-      ImageIndex = 3
-      object PGC_CAIXA: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet17
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet17: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-        end
-        object TabSheet18: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-        end
-        object TabSheet19: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet20: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet5: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Banco'
-      ImageIndex = 4
-      object PGC_BANCO: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet21
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet21: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-        end
-        object TabSheet22: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-        end
-        object TabSheet23: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet24: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet6: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Contas a receber'
-      ImageIndex = 5
-      object PGC_RECEBER: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet25
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet25: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-          object BTN_CAD_CLIENTE: TButton
-            Left = 4
-            Top = 4
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Cadastro de clientes'
-            TabOrder = 0
-            OnClick = BTN_CAD_CLIENTEClick
-          end
-          object btnCadReceber: TButton
-            Left = 225
-            Top = 4
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Cadastro de contas a receber'
-            TabOrder = 1
-            OnClick = BTN_CAD_CLIENTEClick
-          end
-        end
-        object TabSheet26: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-        end
-        object TabSheet27: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet28: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet7: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Contas a pagar'
-      ImageIndex = 6
-      object PGC_PAGAR: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet29
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet29: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-          object BTN_CAD_FORNECEDOR: TButton
-            Left = 25
-            Top = 25
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Cadastro de fornecedor'
-            TabOrder = 0
-            OnClick = BTN_CAD_FORNECEDORClick
-          end
-        end
-        object TabSheet30: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-        end
-        object TabSheet31: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet32: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-    object TabSheet12: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Configura'#231#245'es'
-      ImageIndex = 7
-      object PGC_CONFIGURACAO: TPageControl
-        Left = 0
-        Top = 0
-        Width = 1256
-        Height = 581
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ActivePage = TabSheet33
-        Align = alClient
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        object TabSheet33: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Cadastros'
-          object BTN_CAD_USUARIO: TButton
-            Left = 25
-            Top = 25
-            Width = 213
-            Height = 75
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Caption = 'Cadastro de usuarios'
-            TabOrder = 0
-            OnClick = BTN_CAD_USUARIOClick
-          end
-        end
-        object TabSheet34: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Digita'#231#245'es'
-          ImageIndex = 1
-          object CB_STYLES: TComboBox
-            Left = 270
-            Top = 46
-            Width = 331
-            Height = 29
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Style = csDropDownList
-            TabOrder = 0
-            OnChange = CB_STYLESChange
-          end
-          object ComboBox1: TComboBox
-            Left = 690
-            Top = 46
-            Width = 301
-            Height = 29
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
-            Style = csDropDownList
-            TabOrder = 1
-            OnSelect = ComboBox1Select
-            Items.Strings = (
-              'Windows'
-              'Luna'
-              'Lavender Classico')
-          end
-        end
-        object TabSheet35: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Pesquisas'
-          ImageIndex = 2
-        end
-        object TabSheet36: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Caption = 'Relatorios'
-          ImageIndex = 3
-        end
-      end
-    end
-  end
+  TextHeight = 15
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 617
-    Width = 1264
-    Height = 25
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    Color = clMedGray
+    Top = 384
+    Width = 783
+    Height = 20
+    Color = clHighlight
     Panels = <
       item
         Alignment = taCenter
+        Bevel = pbNone
         BiDiMode = bdLeftToRight
         ParentBiDiMode = False
         Text = 'Data e Hora'
-        Width = 63
+        Width = 50
       end>
+    ParentShowHint = False
+    ShowHint = False
+  end
+  object pnlBarraSuperior: TPanel
+    Left = 0
+    Top = 0
+    Width = 783
+    Height = 18
+    Align = alTop
+    Color = clHighlight
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 18
+    Width = 783
+    Height = 366
+    Align = alClient
+    Color = clHighlight
+    Padding.Left = 4
+    Padding.Top = 4
+    Padding.Right = 4
+    Padding.Bottom = 4
+    ParentBackground = False
+    TabOrder = 2
+    object PGC_MENU: TPageControl
+      Left = 5
+      Top = 5
+      Width = 773
+      Height = 356
+      ActivePage = TabSheet1
+      Align = alClient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      StyleName = 'Windows'
+      object TabSheet1: TTabSheet
+        Caption = 'Tela inicial'
+        object pnl_boasvindas: TPanel
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 25
+          Align = alTop
+          Caption = 'Bem vindo (a) User'
+          Color = clHighlight
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          Font.Quality = fqClearTypeNatural
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 0
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'Estoque'
+        ImageIndex = 1
+        object PGC_ESTOQUE: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet8
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet8: TTabSheet
+            Caption = 'Cadastros'
+            object Panel2: TPanel
+              Left = 0
+              Top = 0
+              Width = 757
+              Height = 292
+              Align = alClient
+              Color = clSilver
+              Padding.Left = 8
+              Padding.Top = 8
+              Padding.Right = 8
+              Padding.Bottom = 8
+              ParentBackground = False
+              TabOrder = 0
+              object PnlCadastroProdutos: TPanel
+                Left = 11
+                Top = 13
+                Width = 232
+                Height = 46
+                Cursor = crHandPoint
+                Color = clSilver
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = 2302755
+                Font.Height = -12
+                Font.Name = 'Segoe UI'
+                Font.Style = []
+                ParentBackground = False
+                ParentFont = False
+                TabOrder = 0
+                object shpCadastroProdutos: TShape
+                  Left = 1
+                  Top = 1
+                  Width = 230
+                  Height = 44
+                  Align = alClient
+                  Brush.Color = clSilver
+                  Shape = stRoundRect
+                  ExplicitHeight = 45
+                end
+                object btnCadastroProdutos: TSpeedButton
+                  Left = 1
+                  Top = 1
+                  Width = 230
+                  Height = 44
+                  Align = alClient
+                  Caption = 'Cadastro de Produtos'
+                  Flat = True
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindow
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  Font.Quality = fqClearTypeNatural
+                  ParentFont = False
+                  OnClick = btnCadastroProdutosClick
+                  ExplicitHeight = 45
+                end
+              end
+            end
+          end
+          object TabSheet9: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+          end
+          object TabSheet10: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+            object BTN_PES_ESTOQUE: TButton
+              Left = 20
+              Top = 20
+              Width = 170
+              Height = 60
+              Caption = 'Pesquisa de estoque'
+              TabOrder = 0
+              OnClick = BTN_PES_ESTOQUEClick
+            end
+          end
+          object TabSheet11: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = 'Vendas'
+        ImageIndex = 2
+        object PGC_VENDAS: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet14
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet13: TTabSheet
+            Caption = 'Cadastros'
+          end
+          object TabSheet14: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+            object BTN_VENDAS: TButton
+              Left = 20
+              Top = 20
+              Width = 170
+              Height = 60
+              Caption = 'Vendas'
+              TabOrder = 0
+              OnClick = BTN_VENDASClick
+            end
+          end
+          object TabSheet15: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet16: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet4: TTabSheet
+        Caption = 'Caixa'
+        ImageIndex = 3
+        object PGC_CAIXA: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet17
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet17: TTabSheet
+            Caption = 'Cadastros'
+          end
+          object TabSheet18: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+          end
+          object TabSheet19: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet20: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet5: TTabSheet
+        Caption = 'Banco'
+        ImageIndex = 4
+        object PGC_BANCO: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet21
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet21: TTabSheet
+            Caption = 'Cadastros'
+          end
+          object TabSheet22: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+          end
+          object TabSheet23: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet24: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet6: TTabSheet
+        Caption = 'Contas a receber'
+        ImageIndex = 5
+        object PGC_RECEBER: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet25
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet25: TTabSheet
+            Caption = 'Cadastros'
+            object BTN_CAD_CLIENTE: TButton
+              Left = 3
+              Top = 3
+              Width = 171
+              Height = 60
+              Caption = 'Cadastro de clientes'
+              TabOrder = 0
+              OnClick = BTN_CAD_CLIENTEClick
+            end
+            object btnCadReceber: TButton
+              Left = 180
+              Top = 3
+              Width = 170
+              Height = 60
+              Caption = 'Cadastro de contas a receber'
+              TabOrder = 1
+              OnClick = BTN_CAD_CLIENTEClick
+            end
+          end
+          object TabSheet26: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+          end
+          object TabSheet27: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet28: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet7: TTabSheet
+        Caption = 'Contas a pagar'
+        ImageIndex = 6
+        object PGC_PAGAR: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet29
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet29: TTabSheet
+            Caption = 'Cadastros'
+            object BTN_CAD_FORNECEDOR: TButton
+              Left = 20
+              Top = 20
+              Width = 170
+              Height = 60
+              Caption = 'Cadastro de fornecedor'
+              TabOrder = 0
+              OnClick = BTN_CAD_FORNECEDORClick
+            end
+          end
+          object TabSheet30: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+          end
+          object TabSheet31: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet32: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+      object TabSheet12: TTabSheet
+        Caption = 'Configura'#231#245'es'
+        ImageIndex = 7
+        object PGC_CONFIGURACAO: TPageControl
+          Left = 0
+          Top = 0
+          Width = 765
+          Height = 324
+          ActivePage = TabSheet33
+          Align = alClient
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          object TabSheet33: TTabSheet
+            Caption = 'Cadastros'
+            object BTN_CAD_USUARIO: TButton
+              Left = 20
+              Top = 20
+              Width = 170
+              Height = 60
+              Caption = 'Cadastro de usuarios'
+              TabOrder = 0
+              OnClick = BTN_CAD_USUARIOClick
+            end
+          end
+          object TabSheet34: TTabSheet
+            Caption = 'Digita'#231#245'es'
+            ImageIndex = 1
+            object CB_STYLES: TComboBox
+              Left = 216
+              Top = 37
+              Width = 265
+              Height = 25
+              Style = csDropDownList
+              TabOrder = 0
+              OnChange = CB_STYLESChange
+            end
+            object ComboBox1: TComboBox
+              Left = 552
+              Top = 37
+              Width = 241
+              Height = 25
+              Style = csDropDownList
+              TabOrder = 1
+              OnSelect = ComboBox1Select
+              Items.Strings = (
+                'Windows'
+                'Luna'
+                'Lavender Classico')
+            end
+          end
+          object TabSheet35: TTabSheet
+            Caption = 'Pesquisas'
+            ImageIndex = 2
+          end
+          object TabSheet36: TTabSheet
+            Caption = 'Relatorios'
+            ImageIndex = 3
+          end
+        end
+      end
+    end
   end
   object VirtualImageList1: TVirtualImageList
     Images = <>
     ImageCollection = ImageCollection1
-    Width = 20
-    Height = 20
     Left = 1320
     Top = 120
   end

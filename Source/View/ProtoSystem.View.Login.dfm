@@ -142,7 +142,7 @@ object Frm_Login: TFrm_Login
   OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
-  object Panel2: TPanel
+  object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 425
@@ -152,300 +152,327 @@ object Frm_Login: TFrm_Login
     Margins.Right = 4
     Margins.Bottom = 4
     Align = alClient
-    BevelOuter = bvNone
-    BorderWidth = 10
-    Color = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
-    Font.Height = -15
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    Padding.Left = 10
-    Padding.Top = 10
-    Padding.Right = 10
-    Padding.Bottom = 10
+    Color = clHighlight
+    Padding.Left = 5
+    Padding.Top = 5
+    Padding.Right = 5
+    Padding.Bottom = 5
     ParentBackground = False
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = False
     TabOrder = 0
-    object VirtualImage1: TVirtualImage
-      Left = 20
-      Top = 269
-      Width = 58
-      Height = 50
+    ExplicitLeft = 69
+    ExplicitTop = 230
+    ExplicitWidth = 231
+    ExplicitHeight = 51
+    object Panel2: TPanel
+      Left = 6
+      Top = 6
+      Width = 413
+      Height = 479
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'senha'
-    end
-    object VirtualImage2: TVirtualImage
-      Left = 20
-      Top = 183
-      Width = 58
-      Height = 50
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 1
-      ImageName = 'usuario'
-    end
-    object Button1: TButton
-      Left = 160
-      Top = 426
-      Width = 111
-      Height = 32
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Caption = 'Comfirmar'
-      Default = True
-      TabOrder = 3
-      StyleName = 'Windows'
-      OnClick = Button1Click
-    end
-    object Pnl_comfirmar: TPanel
-      Left = 71
-      Top = 411
-      Width = 290
-      Height = 58
-      Cursor = crHandPoint
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Align = alClient
+      BevelOuter = bvNone
+      BorderWidth = 10
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = 2302755
+      Font.Color = clBlack
       Font.Height = -15
       Font.Name = 'Segoe UI'
       Font.Style = []
+      Padding.Left = 10
+      Padding.Top = 10
+      Padding.Right = 10
+      Padding.Bottom = 10
       ParentBackground = False
       ParentFont = False
-      TabOrder = 5
-      object Shape1: TShape
-        Left = 1
-        Top = 1
-        Width = 288
-        Height = 56
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 0
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 425
+      ExplicitHeight = 491
+      object VirtualImage1: TVirtualImage
+        Left = 20
+        Top = 269
+        Width = 58
+        Height = 50
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        Align = alClient
-        Brush.Color = clBlack
-        Shape = stRoundRect
-        ExplicitHeight = 55
-      end
-      object SpeedButton2: TSpeedButton
-        Left = 1
-        Top = 1
-        Width = 288
-        Height = 56
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alClient
-        Caption = 'Comfirmar'
-        Flat = True
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clScrollBar
-        Font.Height = -15
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        OnClick = SpeedButton2Click
-        ExplicitHeight = 55
-      end
-    end
-    object box_senha: TCheckBox
-      Left = 370
-      Top = 295
-      Width = 21
-      Height = 21
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      TabOrder = 2
-      OnClick = box_senhaClick
-    end
-    object Panel1: TPanel
-      Left = 20
-      Top = 20
-      Width = 385
-      Height = 110
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Align = alTop
-      BevelOuter = bvNone
-      Color = clWhite
-      Padding.Left = 5
-      Padding.Top = 5
-      Padding.Right = 5
-      Padding.Bottom = 5
-      ParentBackground = False
-      TabOrder = 4
-      object VirtualImage3: TVirtualImage
-        Left = 5
-        Top = 5
-        Width = 375
-        Height = 56
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alTop
         ImageCollection = ImageCollection1
         ImageWidth = 0
         ImageHeight = 0
-        ImageIndex = 0
-        ImageName = 'cat-black-face'
-        ExplicitWidth = 370
+        ImageIndex = 2
+        ImageName = 'senha'
       end
-      object lb_logo: TLabel
-        Left = 5
-        Top = 61
-        Width = 375
-        Height = 55
+      object VirtualImage2: TVirtualImage
+        Left = 20
+        Top = 183
+        Width = 58
+        Height = 50
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 1
+        ImageName = 'usuario'
+      end
+      object Button1: TButton
+        Left = 160
+        Top = 426
+        Width = 111
+        Height = 32
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Caption = 'Comfirmar'
+        Default = True
+        TabOrder = 3
+        StyleName = 'Windows'
+        OnClick = Button1Click
+      end
+      object Pnl_comfirmar: TPanel
+        Left = 53
+        Top = 407
+        Width = 290
+        Height = 58
+        Cursor = crHandPoint
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Color = clWhite
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 2302755
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 5
+        object Shape1: TShape
+          Left = 1
+          Top = 1
+          Width = 288
+          Height = 56
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Brush.Color = clHighlight
+          Shape = stRoundRect
+          ExplicitHeight = 55
+        end
+        object SpeedButton2: TSpeedButton
+          Left = 1
+          Top = 1
+          Width = 288
+          Height = 56
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          Caption = 'Comfirmar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clScrollBar
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          OnClick = SpeedButton2Click
+          ExplicitHeight = 55
+        end
+      end
+      object box_senha: TCheckBox
+        Left = 370
+        Top = 295
+        Width = 21
+        Height = 21
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        TabOrder = 2
+        OnClick = box_senhaClick
+      end
+      object Panel3: TPanel
+        Left = 20
+        Top = 20
+        Width = 373
+        Height = 110
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
         Align = alTop
-        Alignment = taCenter
-        Caption = 'ProtoSystem'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -41
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Font.Quality = fqClearTypeNatural
-        ParentFont = False
-        ExplicitWidth = 227
-      end
-      object Pnl_sair: TPanel
-        Left = 314
-        Top = 1
-        Width = 71
-        Height = 62
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
         BevelOuter = bvNone
-        Padding.Right = 6
-        TabOrder = 0
-        object Shape2: TShape
-          Left = 0
-          Top = 0
-          Width = 65
-          Height = 62
+        Color = clWhite
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
+        ParentBackground = False
+        TabOrder = 4
+        ExplicitWidth = 363
+        object VirtualImage3: TVirtualImage
+          Left = 5
+          Top = 5
+          Width = 363
+          Height = 56
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Align = alClient
-          Brush.Color = clDefault
-          Pen.Style = psClear
-          Shape = stRoundRect
-          ExplicitHeight = 61
+          Align = alTop
+          ImageCollection = ImageCollection1
+          ImageWidth = 0
+          ImageHeight = 0
+          ImageIndex = 0
+          ImageName = 'cat-black-face'
+          ExplicitWidth = 370
         end
-        object SpeedButton1: TSpeedButton
-          Left = 0
-          Top = 0
-          Width = 65
-          Height = 62
-          Cursor = crHandPoint
+        object lb_logo: TLabel
+          Left = 5
+          Top = 61
+          Width = 363
+          Height = 55
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
           Margins.Bottom = 4
-          Align = alClient
-          Caption = 'X'
-          Flat = True
+          Align = alTop
+          Alignment = taCenter
+          Caption = 'ProtoSystem'
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clScrollBar
-          Font.Height = -16
+          Font.Color = clWindowText
+          Font.Height = -41
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
           ParentFont = False
-          OnClick = SpeedButton1Click
-          ExplicitHeight = 61
+          ExplicitWidth = 227
+        end
+        object Pnl_sair: TPanel
+          Left = 293
+          Top = 1
+          Width = 71
+          Height = 62
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          BevelOuter = bvNone
+          Padding.Right = 6
+          TabOrder = 0
+          object Shape2: TShape
+            Left = 0
+            Top = 0
+            Width = 65
+            Height = 62
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Brush.Color = clHighlight
+            Pen.Style = psClear
+            Shape = stRoundRect
+            ExplicitHeight = 61
+          end
+          object SpeedButton1: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 65
+            Height = 62
+            Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Align = alClient
+            Caption = 'X'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clScrollBar
+            Font.Height = -16
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            Font.Quality = fqClearTypeNatural
+            ParentFont = False
+            OnClick = SpeedButton1Click
+            ExplicitHeight = 61
+          end
         end
       end
-    end
-    object edit_senha: TLabeledEdit
-      Left = 74
-      Top = 291
-      Width = 274
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      EditLabel.Width = 40
-      EditLabel.Height = 20
-      EditLabel.Margins.Left = 5
-      EditLabel.Margins.Top = 5
-      EditLabel.Margins.Right = 5
-      EditLabel.Margins.Bottom = 5
-      EditLabel.Caption = 'Senha'
-      EditLabel.Color = -1
-      EditLabel.ParentColor = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      NumbersOnly = True
-      ParentFont = False
-      TabOrder = 1
-      Text = ''
-      OnKeyPress = edit_usuarioKeyPress
-    end
-    object edit_usuario: TLabeledEdit
-      Left = 74
-      Top = 205
-      Width = 274
-      Height = 28
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Color = clWhite
-      EditLabel.Width = 50
-      EditLabel.Height = 20
-      EditLabel.Margins.Left = 5
-      EditLabel.Margins.Top = 5
-      EditLabel.Margins.Right = 5
-      EditLabel.Margins.Bottom = 5
-      EditLabel.Caption = 'Usuario'
-      EditLabel.Color = clBlack
-      EditLabel.ParentColor = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentFont = False
-      TabOrder = 0
-      Text = ''
-      OnKeyPress = edit_usuarioKeyPress
+      object edit_senha: TLabeledEdit
+        Left = 74
+        Top = 291
+        Width = 274
+        Height = 28
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        EditLabel.Width = 40
+        EditLabel.Height = 20
+        EditLabel.Margins.Left = 6
+        EditLabel.Margins.Top = 6
+        EditLabel.Margins.Right = 6
+        EditLabel.Margins.Bottom = 6
+        EditLabel.Caption = 'Senha'
+        EditLabel.Color = -1
+        EditLabel.ParentColor = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        NumbersOnly = True
+        ParentFont = False
+        TabOrder = 1
+        Text = ''
+        OnKeyPress = edit_usuarioKeyPress
+      end
+      object edit_usuario: TLabeledEdit
+        Left = 74
+        Top = 205
+        Width = 274
+        Height = 28
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Color = clWhite
+        EditLabel.Width = 50
+        EditLabel.Height = 20
+        EditLabel.Margins.Left = 6
+        EditLabel.Margins.Top = 6
+        EditLabel.Margins.Right = 6
+        EditLabel.Margins.Bottom = 6
+        EditLabel.Caption = 'Usuario'
+        EditLabel.Color = clBlack
+        EditLabel.ParentColor = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        Text = ''
+        OnKeyPress = edit_usuarioKeyPress
+      end
     end
   end
   object VirtualImageList1: TVirtualImageList
