@@ -18,6 +18,7 @@ object DM: TDM
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
         'CC\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
+    Connected = True
     LoginPrompt = False
     Left = 58
     Top = 6
@@ -29,12 +30,12 @@ object DM: TDM
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 824
-    Top = 16
+    Left = 792
+    Top = 88
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 824
+    Left = 792
     Top = 160
   end
 end
