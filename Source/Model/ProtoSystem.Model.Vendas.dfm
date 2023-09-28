@@ -3,8 +3,8 @@ object Frm_Vendas: TFrm_Vendas
   Top = 228
   BorderStyle = bsDialog
   Caption = 'Vendas'
-  ClientHeight = 629
-  ClientWidth = 1736
+  ClientHeight = 717
+  ClientWidth = 1092
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -136,19 +136,20 @@ object Frm_Vendas: TFrm_Vendas
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poDesigned
+  Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1736
-    Height = 629
+    Width = 1092
+    Height = 717
     Align = alClient
     TabOrder = 0
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
-      Width = 1734
+      Width = 1090
       Height = 62
       Align = alTop
       BevelOuter = bvNone
@@ -165,8 +166,8 @@ object Frm_Vendas: TFrm_Vendas
     end
     object PNL_BUTTONS: TPanel
       Left = 1
-      Top = 558
-      Width = 1734
+      Top = 646
+      Width = 1090
       Height = 70
       Align = alBottom
       Color = clHighlight
@@ -177,7 +178,7 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       TabOrder = 1
       object Panel1: TPanel
-        Left = 719
+        Left = 539
         Top = 11
         Width = 178
         Height = 48
@@ -196,14 +197,14 @@ object Frm_Vendas: TFrm_Vendas
           ExplicitWidth = 174
           ExplicitHeight = 47
         end
-        object BTN_CANCELAR: TSpeedButton
+        object btnCancelaVenda: TSpeedButton
           Left = 0
           Top = 0
           Width = 173
           Height = 48
           Align = alClient
           BiDiMode = bdLeftToRight
-          Caption = 'Cancelar Opera'#231#227'o'
+          Caption = 'Cancelar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -212,8 +213,9 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = [fsBold]
           ParentFont = False
           ParentBiDiMode = False
-          ExplicitWidth = 174
-          ExplicitHeight = 47
+          OnClick = btnCancelaVendaClick
+          ExplicitLeft = -1
+          ExplicitTop = -5
         end
       end
       object pnlPesquisaProduto: TPanel
@@ -291,7 +293,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object pnlFinalizarVenda: TPanel
-        Left = 364
+        Left = 717
         Top = 11
         Width = 180
         Height = 48
@@ -330,7 +332,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object Panel5: TPanel
-        Left = 544
+        Left = 364
         Top = 11
         Width = 175
         Height = 48
@@ -363,6 +365,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = BTN_CancelarItemClick
           ExplicitWidth = 175
         end
       end
@@ -399,7 +402,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = -2
+          ExplicitLeft = 1
           ExplicitTop = -5
         end
       end
@@ -407,8 +410,8 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_PRINCIPAL_MAIN: TPanel
       Left = 1
       Top = 63
-      Width = 1734
-      Height = 495
+      Width = 1090
+      Height = 583
       Align = alClient
       Color = clHighlight
       Padding.Left = 10
@@ -417,11 +420,113 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
+      object pnl2PesquisaProduto: TPanel
+        Left = 41
+        Top = 74
+        Width = 645
+        Height = 30
+        Align = alCustom
+        BevelOuter = bvNone
+        Padding.Right = 5
+        TabOrder = 3
+        object shp2PesquisaProduto: TShape
+          Left = 0
+          Top = 0
+          Width = 640
+          Height = 30
+          Align = alClient
+          Pen.Style = psClear
+          Shape = stRoundRect
+          ExplicitWidth = 174
+          ExplicitHeight = 47
+        end
+        object edtPesquisaProduto: TEdit
+          Left = 6
+          Top = 2
+          Width = 625
+          Height = 28
+          HelpType = htKeyword
+          Alignment = taCenter
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 0
+          TextHint = 'Pesquisa Por Nome do Produto'
+          OnChange = edtPesquisaProdutoChange
+        end
+      end
+      object gridTabelaProduto: TDBGrid
+        Left = 7
+        Top = 104
+        Width = 713
+        Height = 385
+        DataSource = DS_produtos
+        GradientEndColor = clSkyBlue
+        ReadOnly = True
+        TabOrder = 2
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'Segoe UI'
+        TitleFont.Style = []
+        OnCellClick = gridTabelaProdutoCellClick
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'ID'
+            Title.Caption = 'C'#243'digo'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 47
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'DESCRICAO'
+            Title.Caption = 'Descri'#231#227'o'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 417
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'ESTOQUE'
+            Title.Caption = 'Estoque'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PRECO'
+            Title.Caption = 'Valor Unitario'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Visible = True
+          end>
+      end
       object gridCarrinhoVendas: TDBGrid
-        Left = 657
-        Top = 4
+        Left = 7
+        Top = 11
         Width = 714
-        Height = 483
+        Height = 478
         DataSource = ds_Carrinho
         Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
         ReadOnly = True
@@ -490,13 +595,12 @@ object Frm_Vendas: TFrm_Vendas
           end>
       end
       object PNL_OPERACOES: TPanel
-        Left = 1371
+        Left = 727
         Top = 11
         Width = 352
-        Height = 473
+        Height = 561
         Align = alRight
         BevelOuter = bvNone
-        BorderStyle = bsSingle
         Color = clWhite
         Padding.Left = 8
         Padding.Top = 8
@@ -506,8 +610,8 @@ object Frm_Vendas: TFrm_Vendas
         TabOrder = 1
         object GB_Total: TGroupBox
           Left = 8
-          Top = 405
-          Width = 332
+          Top = 497
+          Width = 336
           Height = 56
           Align = alBottom
           Caption = 'Total da Compra'
@@ -530,7 +634,7 @@ object Frm_Vendas: TFrm_Vendas
           object Sh_Total: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 33
             Align = alClient
             Shape = stRoundRect
@@ -559,8 +663,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_QTD: TGroupBox
           Left = 8
-          Top = 291
-          Width = 332
+          Top = 383
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Quantidade'
@@ -583,7 +687,7 @@ object Frm_Vendas: TFrm_Vendas
           object Shape7: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -612,8 +716,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_SUBTOTAL: TGroupBox
           Left = 8
-          Top = 348
-          Width = 332
+          Top = 440
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Sub Total'
@@ -636,7 +740,7 @@ object Frm_Vendas: TFrm_Vendas
           object Shape8: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -665,8 +769,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRECO: TGroupBox
           Left = 8
-          Top = 234
-          Width = 332
+          Top = 326
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Pre'#231'o'
@@ -686,12 +790,10 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 3
-          ExplicitLeft = 4
-          ExplicitTop = 238
           object Shape9: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -720,8 +822,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRODUTO: TGroupBox
           Left = 8
-          Top = 177
-          Width = 332
+          Top = 269
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Produto'
@@ -744,12 +846,13 @@ object Frm_Vendas: TFrm_Vendas
           object Shape10: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
             ExplicitLeft = -4
             ExplicitTop = 20
+            ExplicitWidth = 328
           end
           object edtCodigoProduto: TEdit
             Left = 11
@@ -773,8 +876,8 @@ object Frm_Vendas: TFrm_Vendas
         object PNL_IMAGEM: TPanel
           Left = 8
           Top = 8
-          Width = 332
-          Height = 169
+          Width = 336
+          Height = 261
           Align = alClient
           Color = clHighlight
           Padding.Left = 4
@@ -786,116 +889,14 @@ object Frm_Vendas: TFrm_Vendas
           object DBImage1: TDBImage
             Left = 5
             Top = 5
-            Width = 322
-            Height = 159
+            Width = 326
+            Height = 251
             Align = alClient
             DataField = 'IMAGEM'
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
           end
-        end
-      end
-      object gridTabelaProduto: TDBGrid
-        Left = 6
-        Top = 38
-        Width = 645
-        Height = 447
-        DataSource = DS_produtos
-        GradientEndColor = clSkyBlue
-        ReadOnly = True
-        TabOrder = 2
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        OnCellClick = gridTabelaProdutoCellClick
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'ID'
-            Title.Caption = 'C'#243'digo'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 47
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'DESCRICAO'
-            Title.Caption = 'Descri'#231#227'o'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 417
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'ESTOQUE'
-            Title.Caption = 'Estoque'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 60
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'PRECO'
-            Title.Caption = 'Valor Unitario'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Visible = True
-          end>
-      end
-      object pnl2PesquisaProduto: TPanel
-        Left = 10
-        Top = 6
-        Width = 645
-        Height = 30
-        Align = alCustom
-        BevelOuter = bvNone
-        Padding.Right = 5
-        TabOrder = 3
-        object shp2PesquisaProduto: TShape
-          Left = 0
-          Top = 0
-          Width = 640
-          Height = 30
-          Align = alClient
-          Pen.Style = psClear
-          Shape = stRoundRect
-          ExplicitWidth = 174
-          ExplicitHeight = 47
-        end
-        object edtPesquisaProduto: TEdit
-          Left = 8
-          Top = 3
-          Width = 625
-          Height = 23
-          HelpType = htKeyword
-          Alignment = taCenter
-          BorderStyle = bsNone
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -15
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
-          TabOrder = 0
-          TextHint = 'Pesquisa Por Nome do Produto'
         end
       end
     end
@@ -935,8 +936,8 @@ object Frm_Vendas: TFrm_Vendas
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 1113
-    Top = 241
+    Left = 537
+    Top = 361
     object cdsCarrinhoID: TIntegerField
       FieldName = 'ID'
     end
@@ -958,8 +959,8 @@ object Frm_Vendas: TFrm_Vendas
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 561
-    Top = 273
+    Left = 73
+    Top = 361
     object SQL_ProdutosID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -998,12 +999,12 @@ object Frm_Vendas: TFrm_Vendas
   end
   object DS_produtos: TDataSource
     DataSet = SQL_Produtos
-    Left = 481
-    Top = 273
+    Left = 73
+    Top = 409
   end
   object ds_Carrinho: TDataSource
     DataSet = cdsCarrinho
-    Left = 1041
-    Top = 241
+    Left = 540
+    Top = 409
   end
 end

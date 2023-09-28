@@ -3,12 +3,12 @@ object Frm_CadProd: TFrm_CadProd
   Top = 147
   BorderStyle = bsDialog
   Caption = 'Cadastro de produtos'
-  ClientHeight = 403
-  ClientWidth = 1252
+  ClientHeight = 322
+  ClientWidth = 1002
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -15
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -138,58 +138,41 @@ object Frm_CadProd: TFrm_CadProd
     240000000049454E44AE426082}
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 20
+  TextHeight = 15
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1252
-    Height = 403
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 1002
+    Height = 322
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
     object TabOperacao: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = 'Opera'#231#227'o'
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 1244
-        Height = 368
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 994
+        Height = 292
         Align = alClient
         Color = 14079702
-        Padding.Left = 10
-        Padding.Top = 10
-        Padding.Right = 10
-        Padding.Bottom = 10
+        Padding.Left = 8
+        Padding.Top = 8
+        Padding.Right = 8
+        Padding.Bottom = 8
         ParentBackground = False
         TabOrder = 0
         object edtId: TDBLabeledEdit
-          Left = 26
-          Top = 30
-          Width = 44
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 21
+          Top = 24
+          Width = 35
+          Height = 23
           DataField = 'ID'
           DataSource = DataSource1
           Enabled = False
           TabOrder = 4
-          EditLabel.Width = 13
-          EditLabel.Height = 20
+          EditLabel.Width = 10
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -198,19 +181,15 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object edtDescricao: TDBLabeledEdit
-          Left = 78
-          Top = 30
-          Width = 573
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 62
+          Top = 24
+          Width = 459
+          Height = 23
           DataField = 'DESCRICAO'
           DataSource = DataSource1
           TabOrder = 0
-          EditLabel.Width = 65
-          EditLabel.Height = 20
+          EditLabel.Width = 51
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -219,19 +198,15 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object edtEstoque: TDBLabeledEdit
-          Left = 26
-          Top = 90
-          Width = 89
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 21
+          Top = 72
+          Width = 71
+          Height = 23
           DataField = 'ESTOQUE'
           DataSource = DataSource1
           TabOrder = 1
-          EditLabel.Width = 53
-          EditLabel.Height = 20
+          EditLabel.Width = 42
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -240,19 +215,15 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object edtCusto: TDBLabeledEdit
-          Left = 26
-          Top = 150
-          Width = 89
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 21
+          Top = 120
+          Width = 71
+          Height = 23
           DataField = 'CUSTO'
           DataSource = DataSource1
           TabOrder = 2
-          EditLabel.Width = 37
-          EditLabel.Height = 20
+          EditLabel.Width = 31
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -261,19 +232,15 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object edtPreco: TDBLabeledEdit
-          Left = 26
-          Top = 210
-          Width = 89
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 21
+          Top = 168
+          Width = 71
+          Height = 23
           DataField = 'PRECO'
           DataSource = DataSource1
           TabOrder = 3
-          EditLabel.Width = 37
-          EditLabel.Height = 20
+          EditLabel.Width = 30
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -282,54 +249,38 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object Panel3: TPanel
-          Left = 11
-          Top = 295
-          Width = 1222
-          Height = 62
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 9
+          Top = 233
+          Width = 976
+          Height = 50
           Align = alBottom
           TabOrder = 5
           object pnlButtons: TPanel
-            Left = 269
+            Left = 215
             Top = 1
-            Width = 532
-            Height = 61
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 426
+            Height = 49
             Color = 14079702
-            Padding.Left = 5
-            Padding.Top = 5
-            Padding.Right = 5
-            Padding.Bottom = 5
+            Padding.Left = 4
+            Padding.Top = 4
+            Padding.Right = 4
+            Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
             object pnlEditar: TPanel
-              Left = 111
-              Top = 6
-              Width = 105
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 89
+              Top = 5
+              Width = 84
+              Height = 39
               Align = alLeft
               BevelOuter = bvNone
-              Padding.Right = 6
+              Padding.Right = 5
               TabOrder = 0
               object Shpeditar: TShape
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Brush.Color = 8618369
                 Pen.Style = psClear
@@ -338,12 +289,8 @@ object Frm_CadProd: TFrm_CadProd
               object btnEditar: TSpeedButton
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Caption = 'Editar'
                 Flat = True
@@ -351,27 +298,19 @@ object Frm_CadProd: TFrm_CadProd
               end
             end
             object pnlCadastrar: TPanel
-              Left = 6
-              Top = 6
-              Width = 105
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 5
+              Top = 5
+              Width = 84
+              Height = 39
               Align = alLeft
               BevelOuter = bvNone
-              Padding.Right = 6
+              Padding.Right = 5
               TabOrder = 1
               object ShpCadastrar: TShape
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Brush.Color = 8618369
                 Pen.Style = psClear
@@ -380,18 +319,14 @@ object Frm_CadProd: TFrm_CadProd
               object btnCadastrar: TSpeedButton
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Caption = 'Cadastrar'
                 Flat = True
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = clBlack
-                Font.Height = -15
+                Font.Height = -12
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 ParentFont = False
@@ -399,27 +334,19 @@ object Frm_CadProd: TFrm_CadProd
               end
             end
             object pnlSalvar: TPanel
-              Left = 216
-              Top = 6
-              Width = 105
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 173
+              Top = 5
+              Width = 84
+              Height = 39
               Align = alLeft
               BevelOuter = bvNone
-              Padding.Right = 6
+              Padding.Right = 5
               TabOrder = 2
               object shpSalvar: TShape
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Brush.Color = 14079702
                 Pen.Style = psClear
@@ -428,42 +355,29 @@ object Frm_CadProd: TFrm_CadProd
               object btnSalvar: TSpeedButton
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Caption = 'Salvar'
                 Enabled = False
                 Flat = True
                 OnClick = btnSalvarClick
-                ExplicitLeft = -2
               end
             end
             object pnlCancelar: TPanel
-              Left = 321
-              Top = 6
-              Width = 105
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 257
+              Top = 5
+              Width = 84
+              Height = 39
               Align = alLeft
               BevelOuter = bvNone
-              Padding.Right = 6
+              Padding.Right = 5
               TabOrder = 3
               object ShpCancelar: TShape
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Brush.Color = 14079702
                 Pen.Style = psClear
@@ -472,12 +386,8 @@ object Frm_CadProd: TFrm_CadProd
               object btnCancelar: TSpeedButton
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Caption = 'Cancelar'
                 Enabled = False
@@ -486,27 +396,19 @@ object Frm_CadProd: TFrm_CadProd
               end
             end
             object pnlExcluir: TPanel
-              Left = 426
-              Top = 6
-              Width = 105
-              Height = 49
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 341
+              Top = 5
+              Width = 84
+              Height = 39
               Align = alLeft
               BevelOuter = bvNone
-              Padding.Right = 6
+              Padding.Right = 5
               TabOrder = 4
               object shpExcluir: TShape
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Brush.Color = 8618369
                 Pen.Style = psClear
@@ -515,44 +417,31 @@ object Frm_CadProd: TFrm_CadProd
               object btnExcluir: TSpeedButton
                 Left = 0
                 Top = 0
-                Width = 99
-                Height = 49
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Width = 79
+                Height = 39
                 Align = alClient
                 Caption = 'Excluir'
                 Flat = True
                 OnClick = btnExcluirClick
-                ExplicitLeft = 2
               end
             end
           end
         end
         object Panel4: TPanel
-          Left = 840
+          Left = 672
           Top = 0
-          Width = 403
-          Height = 291
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Padding.Left = 10
-          Padding.Top = 10
-          Padding.Right = 10
-          Padding.Bottom = 10
+          Width = 322
+          Height = 233
+          Padding.Left = 8
+          Padding.Top = 8
+          Padding.Right = 8
+          Padding.Bottom = 8
           TabOrder = 6
           object DBImage1: TDBImage
-            Left = 11
-            Top = 11
-            Width = 381
-            Height = 269
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 9
+            Top = 9
+            Width = 304
+            Height = 215
             Align = alClient
             DataField = 'IMAGEM'
             DataSource = DataSource1
@@ -561,20 +450,16 @@ object Frm_CadProd: TFrm_CadProd
           end
         end
         object DBLabeledEdit1: TDBLabeledEdit
-          Left = 326
-          Top = 210
-          Width = 170
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 261
+          Top = 168
+          Width = 136
+          Height = 23
           DataField = 'DATAHORACADASTRO'
           DataSource = DataSource1
           Enabled = False
           TabOrder = 7
-          EditLabel.Width = 95
-          EditLabel.Height = 20
+          EditLabel.Width = 74
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -583,20 +468,16 @@ object Frm_CadProd: TFrm_CadProd
           EditLabel.Layout = tlCenter
         end
         object DBLabeledEdit2: TDBLabeledEdit
-          Left = 504
-          Top = 210
-          Width = 170
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 403
+          Top = 168
+          Width = 136
+          Height = 23
           DataField = 'DATAHORAALTERACAO'
           DataSource = DataSource1
           Enabled = False
           TabOrder = 8
-          EditLabel.Width = 110
-          EditLabel.Height = 20
+          EditLabel.Width = 86
+          EditLabel.Height = 15
           EditLabel.Margins.Left = 4
           EditLabel.Margins.Top = 4
           EditLabel.Margins.Right = 4
@@ -607,44 +488,32 @@ object Frm_CadProd: TFrm_CadProd
       end
     end
     object TabPesquisa: TTabSheet
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Caption = 'Pesquisa'
       ImageIndex = 1
       object Panel2: TPanel
         Left = 0
         Top = 0
-        Width = 1244
-        Height = 368
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 994
+        Height = 292
         Align = alClient
         Color = 14079702
-        Padding.Left = 5
-        Padding.Top = 5
-        Padding.Right = 5
-        Padding.Bottom = 5
+        Padding.Left = 4
+        Padding.Top = 4
+        Padding.Right = 4
+        Padding.Bottom = 4
         ParentBackground = False
         TabOrder = 0
         object DBGrid1: TDBGrid
-          Left = 6
-          Top = 6
-          Width = 1232
-          Height = 356
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 5
+          Top = 5
+          Width = 984
+          Height = 282
           Align = alClient
           DataSource = DataSource1
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -15
+          TitleFont.Height = -12
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
           OnDblClick = DBGrid1DblClick
@@ -652,22 +521,25 @@ object Frm_CadProd: TFrm_CadProd
             item
               Expanded = False
               FieldName = 'ID'
+              Width = 67
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'DESCRICAO'
-              Width = 658
+              Width = 526
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'CUSTO'
+              Width = 67
               Visible = True
             end
             item
               Expanded = False
               FieldName = 'PRECO'
+              Width = 67
               Visible = True
             end>
         end

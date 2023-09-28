@@ -39,7 +39,7 @@ procedure TFrm_PesEstoque.Edit_pesquisaChange(Sender: TObject);
 begin
   // Verifique se o critério de pesquisa não está vazio
   if Edit_pesquisa.Text <> '' then
-  begin
+    begin
     // Atualize o filtro do DataSet ligado ao DBGrid
     // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
     Query_PesProd.Filtered := False;
@@ -47,7 +47,6 @@ begin
       QuotedStr('%' + Edit_pesquisa.Text + '%');
     Query_PesProd.Filtered := True;
   end
-
   else
     // Se o critério de pesquisa estiver vazio, remova o filtro
     Query_PesProd.Filtered := False;

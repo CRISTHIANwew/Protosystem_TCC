@@ -4,11 +4,11 @@ object DM: TDM
   Width = 883
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 58
+    Left = 66
     Top = 109
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 58
+    Left = 66
     Top = 58
   end
   object conexao: TFDConnection
@@ -20,13 +20,13 @@ object DM: TDM
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
-    Left = 58
+    Left = 66
     Top = 6
   end
   object FDQuery: TFDQuery
     Connection = conexao
-    Left = 56
-    Top = 166
+    Left = 67
+    Top = 158
   end
   object Tb_venda: TFDTable
     Connection = conexao
@@ -36,6 +36,6 @@ object DM: TDM
   object SQL_vendas: TFDQuery
     Connection = conexao
     Left = 792
-    Top = 160
+    Top = 136
   end
 end

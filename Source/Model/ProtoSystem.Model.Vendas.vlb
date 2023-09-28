@@ -73,9 +73,6 @@ Coordinates=127,436,117,33
 [BTN_AbrirCaixa]
 Coordinates=10,436,93,33
 
-[BTN_CANCELAR]
-Coordinates=805,390,99,33
-
 [shpFinalizarVenda]
 Coordinates=674,390,105,33
 
@@ -155,4 +152,7 @@ Coordinates=901,386,125,33
 
 []
 Coordinates=154,80,82,33
+
+[btnCancelaVenda]
+Coordinates=805,390,99,33
 

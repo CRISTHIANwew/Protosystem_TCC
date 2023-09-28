@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Mask;
+  Vcl.Mask, CommCtrl;
 
 type
   TFrm_Vendas = class(TForm)
@@ -19,7 +19,7 @@ type
     PNL_PRINCIPAL_MAIN: TPanel;
     Panel1: TPanel;
     Shape1: TShape;
-    BTN_CANCELAR: TSpeedButton;
+    btnCancelaVenda: TSpeedButton;
     pnlPesquisaProduto: TPanel;
     shpPesquisaProduto: TShape;
     btnPesquisaProduto: TSpeedButton;
@@ -78,10 +78,16 @@ type
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
+    procedure FormCreate(Sender: TObject);
+    procedure edtPesquisaProdutoChange(Sender: TObject);
+    procedure BTN_CancelarItemClick(Sender: TObject);
+    procedure btnCancelaVendaClick(Sender: TObject);
   private
     { Private declarations }
     TotalAmount: double;
+    procedure InicializaComponentes;
     procedure AtualizaTotais;
+    procedure TransfereInformacoes;
     var
       SubTotalFLT: Double;
       QuantidadeProdINT: Integer;
@@ -100,32 +106,109 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
+procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
+var TaskDialog: TTaskDialog;
+begin
+  TaskMessageDlg ( 'Error' ,  'Ocorreu um erro' ,  mtError ,  mbAbortRetryIgnore ,  0 );
+  if not cdsCarrinho.IsEmpty then
+    begin
+    TaskDialog := TTaskDialog.Create(nil);
+  try
+    TaskDialog.Caption := 'Cancelamento';
+    TaskDialog.Text:= 'Deseja realmente cancelar a venda?';
+    TaskDialog.CommonButtons := [tcbYes, tcbNo];
+    TaskDialog.DefaultButton := tcbNo;
+
+    if TaskDialog.Execute then
+    begin
+      //Cancela Venda
+      while not cdsCarrinho.IsEmpty do
+      begin
+        cdsCarrinho.Delete;
+      end;
+      AtualizaTotais;
+      //Limpa registros
+      edtCodigoProduto.Text:='';
+      edtPrecoProduto.Text:='';
+      edtPrecoProduto.Text:='';
+      edtQuantidadeProduto.Text:='';
+      edtSubTotalProduto.Text:='';
+      edtTotalVenda.Text:='';
+      ShowMessage('Venda cancelada com sucesso.');
+    end
+
+//    else if TaskDialog.ModalResult = mrNo then
+//    begin
+//        // O usuário clicou em "Não", lide com isso, se necessário
+//        TaskDialog.Free;
+//    end;
+
+    finally
+      TaskDialog.Free;
+    end;
+  end;
+end;
 
 procedure TFrm_Vendas.btnPesquisaProdutoClick(Sender: TObject);
 begin
-         // Pesquisa Produto
+  // Pesquisa Produto
+  gridCarrinhoVendas.Visible:=false;
+  gridTabelaProduto.Visible:=true;
+  pnl2PesquisaProduto.Visible:=true;
+end;
+
+procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
+begin
+  //Cancela item
+  cdsCarrinho.Delete;
+  AtualizaTotais;
 end;
 
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
 begin
-         // Finalizar Venda
+  // Finalizar Venda
+  Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
+  frmVendasFechamento.ShowModal;
+end;
+
+procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);
+begin
+  if edtPesquisaProduto.Text <> '' then
+  begin
+    SQL_Produtos.Filtered := False;
+    SQL_Produtos.Filter := 'DESCRICAO LIKE ' +
+      QuotedStr('%' + edtPesquisaProduto.Text + '%');
+    SQL_Produtos.Filtered := True;
+  end
+  else
+    SQL_Produtos.Filtered := False;
+end;
+
+procedure TFrm_Vendas.FormCreate(Sender: TObject);
+begin
+  InicializaComponentes;
 end;
 
 procedure TFrm_Vendas.gridTabelaProdutoCellClick(Column: TColumn);
+begin
+  TransfereInformacoes;
+  AtualizaTotais;
+end;
+
+procedure TFrm_Vendas.TransfereInformacoes;
 var
-  CellProd: Integer;
   DescricaoProd: string;
   EstoqueProd: Integer;
 begin
-  //transferencia da celula de pesquisa selecionada
-  CellProd := gridTabelaProduto.DataSource.DataSet.RecNo;
+  //Transferencia da celula de pesquisa selecionada
+ var CellProd := gridTabelaProduto.DataSource.DataSet.RecNo;
   //Obtém os dados da linha selecionada no DBGrid
-  IdProd := gridTabelaProduto.DataSource.DataSet.FieldByName('ID').AsInteger;
-  DescricaoProd := gridTabelaProduto.DataSource.DataSet.FieldByName('DESCRICAO').AsString;
-  PrecoProd := gridTabelaProduto.DataSource.DataSet.FieldByName('PRECO').AsFloat;
-  EstoqueProd := gridTabelaProduto.DataSource.DataSet.FieldByName('ESTOQUE').AsInteger;
+  IdProd := SQL_Produtos.FieldByName('ID').AsInteger;
+  DescricaoProd := SQL_Produtos.FieldByName('DESCRICAO').AsString;
+  PrecoProd := SQL_Produtos.FieldByName('PRECO').AsFloat;
+  EstoqueProd := SQL_Produtos.FieldByName('ESTOQUE').AsInteger;
   //Solicita ao usuário que insira a quantidade desejada
   QuantidadeProdSTR := InputBox('Quantidade', 'Informe a quantidade:', '');
   //Converte a string inserida pelo usuário em um valor inteiro
@@ -138,7 +221,6 @@ begin
   cdsCarrinho.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
   cdsCarrinho.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
   cdsCarrinho.Post;
-  AtualizaTotais;
 end;
 
 procedure TFrm_Vendas.AtualizaTotais;
@@ -176,7 +258,24 @@ begin
     edtQuantidadeProduto.Text:= QuantidadeProdSTR;
     edtSubTotalProduto.Text:= SubTotalSTR;
     edtTotalVenda.Text:= TotalGeralSTR;
+    // teste
+    gridCarrinhoVendas.Visible:=true;
+    gridTabelaProduto.Visible:=false;
+    pnl2PesquisaProduto.Visible:=false;
 end;
 
+procedure TFrm_Vendas.InicializaComponentes;
+begin
+  //inicialização de componentes
+  DS_produtos.dataset:=SQL_Produtos;
+  DS_produtos.enabled:=true;
+  SQL_Produtos.connection:=DM.conexao;
+  SQL_Produtos.Active:=true;
+  ds_Carrinho.dataset:=cdsCarrinho;
+  ds_Carrinho.Enabled:=true;
+  gridCarrinhoVendas.Visible:=true;
+  gridTabelaProduto.Visible:=false;
+  pnl2PesquisaProduto.Visible:=false;
+end;
 
 end.

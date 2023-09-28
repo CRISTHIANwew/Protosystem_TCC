@@ -141,6 +141,10 @@
             <Form>Fom_CadastroContasReceber</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.VendasFechamento.pas">
+            <Form>frmVendasFechamento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
