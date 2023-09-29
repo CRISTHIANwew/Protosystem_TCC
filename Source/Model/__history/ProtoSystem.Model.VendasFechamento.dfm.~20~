@@ -701,10 +701,9 @@ object frmVendasFechamento: TfrmVendasFechamento
         end
         object RadioGroup1: TRadioGroup
           Left = 16
-          Top = 65
+          Top = 62
           Width = 241
           Height = 313
-          Color = clHighlight
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -712,7 +711,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindow
+          HeaderFont.Color = clWindowText
           HeaderFont.Height = -12
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = []
@@ -721,11 +720,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             '02 - Cart'#227'o Debito'
             '03 - Cart'#227'o Credito'
             '04 -'#160'Pix/Deposito')
-          ParentBackground = False
-          ParentColor = False
           ParentFont = False
-          ParentShowHint = False
-          ShowHint = False
           TabOrder = 1
         end
       end
