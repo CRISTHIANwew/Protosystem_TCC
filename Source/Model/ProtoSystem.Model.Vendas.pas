@@ -134,10 +134,6 @@ with TTaskDialog.Create(Self) do
         edtTotalVenda.Text:='';
         ShowMessage('Venda cancelada com sucesso.');
       end
-    else if ModalResult = mrNo then
-    begin
-
-    end;
   finally
     Free;
   end;
@@ -149,6 +145,7 @@ begin
   gridCarrinhoVendas.Visible:=false;
   gridTabelaProduto.Visible:=true;
   pnl2PesquisaProduto.Visible:=true;
+  edtPesquisaProduto.SetFocus;
 end;
 
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
@@ -254,6 +251,7 @@ begin
     gridCarrinhoVendas.Visible:=true;
     gridTabelaProduto.Visible:=false;
     pnl2PesquisaProduto.Visible:=false;
+    gridCarrinhoVendas.SetFocus;
 end;
 
 procedure TFrm_Vendas.InicializaComponentes;

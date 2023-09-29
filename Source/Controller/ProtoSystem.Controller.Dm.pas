@@ -104,6 +104,19 @@ begin
       'NUMERO VARCHAR(10) ,' +
       'CELULAR VARCHAR(20) ,' +
       'EMAIL VARCHAR(60));');
+
+      FDQuery.SQL.Text :=
+      'INSERT INTO CLIENTE (ID, NOME, CPFCNPJ, RGIE, ENDERECO, BAIRRO, CIDADE, CEP) VALUES (:ID, :NOME, :CPFCNPJ, :RGIE, :ENDERECO, :BAIRRO, :CIDADE, :CEP)';
+    FDQuery.ParamByName('ID').AsString := '01';
+    FDQuery.ParamByName('NOME').AsString := 'CONSUMIDOR';
+    FDQuery.ParamByName('CPFCNPJ').AsString := '00000000000';
+    FDQuery.ParamByName('RGIE').AsString := '00000000000';
+    FDQuery.ParamByName('ENDERECO').AsString := 'ENDERECO';
+    FDQuery.ParamByName('BAIRRO').AsString := 'BAIRRO';
+    FDQuery.ParamByName('CIDADE').AsString := 'CIDADE';
+    FDQuery.ParamByName('CEP').AsString := '68193000';
+    FDQuery.ExecSQL;
+
   end;
 
   Result := false;

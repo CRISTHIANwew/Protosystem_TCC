@@ -4,7 +4,7 @@ object Frm_Vendas: TFrm_Vendas
   BorderStyle = bsDialog
   Caption = 'Vendas'
   ClientHeight = 717
-  ClientWidth = 1092
+  ClientWidth = 1091
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -142,14 +142,14 @@ object Frm_Vendas: TFrm_Vendas
   object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1092
+    Width = 1091
     Height = 717
     Align = alClient
     TabOrder = 0
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
-      Width = 1090
+      Width = 1089
       Height = 62
       Align = alTop
       BevelOuter = bvNone
@@ -167,7 +167,7 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_BUTTONS: TPanel
       Left = 1
       Top = 646
-      Width = 1090
+      Width = 1089
       Height = 70
       Align = alBottom
       Color = clHighlight
@@ -413,7 +413,7 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_PRINCIPAL_MAIN: TPanel
       Left = 1
       Top = 63
-      Width = 1090
+      Width = 1089
       Height = 583
       Align = alClient
       Color = clHighlight
@@ -431,7 +431,7 @@ object Frm_Vendas: TFrm_Vendas
         Align = alCustom
         BevelOuter = bvNone
         Padding.Right = 5
-        TabOrder = 3
+        TabOrder = 2
         object shp2PesquisaProduto: TShape
           Left = 0
           Top = 0
@@ -450,6 +450,7 @@ object Frm_Vendas: TFrm_Vendas
           Height = 28
           HelpType = htKeyword
           Alignment = taCenter
+          BorderStyle = bsNone
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -15
@@ -469,7 +470,7 @@ object Frm_Vendas: TFrm_Vendas
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
         ReadOnly = True
-        TabOrder = 2
+        TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -12
@@ -526,7 +527,7 @@ object Frm_Vendas: TFrm_Vendas
           end>
       end
       object PNL_OPERACOES: TPanel
-        Left = 727
+        Left = 726
         Top = 11
         Width = 352
         Height = 561
@@ -538,7 +539,7 @@ object Frm_Vendas: TFrm_Vendas
         Padding.Right = 8
         Padding.Bottom = 8
         ParentBackground = False
-        TabOrder = 1
+        TabOrder = 0
         object GB_Total: TGroupBox
           Left = 8
           Top = 497
@@ -827,20 +828,18 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
-            ExplicitWidth = 244
-            ExplicitHeight = 148
           end
         end
       end
       object gridCarrinhoVendas: TDBGrid
         Left = 7
-        Top = 10
-        Width = 714
-        Height = 569
+        Top = 9
+        Width = 712
+        Height = 563
         DataSource = ds_Carrinho
         Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
         ReadOnly = True
-        TabOrder = 0
+        TabOrder = 3
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -12
@@ -963,8 +962,8 @@ object Frm_Vendas: TFrm_Vendas
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 73
-    Top = 361
+    Left = 105
+    Top = 305
     object SQL_ProdutosID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
