@@ -146,8 +146,6 @@ object Frm_Vendas: TFrm_Vendas
     Height = 717
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1736
-    ExplicitHeight = 629
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -165,7 +163,6 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1734
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -180,10 +177,8 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 558
-      ExplicitWidth = 1734
       object Panel1: TPanel
-        Left = 719
+        Left = 539
         Top = 11
         Width = 178
         Height = 48
@@ -202,14 +197,14 @@ object Frm_Vendas: TFrm_Vendas
           ExplicitWidth = 174
           ExplicitHeight = 47
         end
-        object BTN_CANCELAR: TSpeedButton
+        object btnCancelaVenda: TSpeedButton
           Left = 0
           Top = 0
           Width = 173
           Height = 48
           Align = alClient
           BiDiMode = bdLeftToRight
-          Caption = 'Cancelar Opera'#231#227'o'
+          Caption = 'Cancelar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -218,8 +213,9 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = [fsBold]
           ParentFont = False
           ParentBiDiMode = False
-          ExplicitWidth = 174
-          ExplicitHeight = 47
+          OnClick = btnCancelaVendaClick
+          ExplicitLeft = -1
+          ExplicitTop = -5
         end
       end
       object pnlPesquisaProduto: TPanel
@@ -297,7 +293,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object pnlFinalizarVenda: TPanel
-        Left = 364
+        Left = 717
         Top = 11
         Width = 180
         Height = 48
@@ -336,7 +332,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object Panel5: TPanel
-        Left = 544
+        Left = 364
         Top = 11
         Width = 175
         Height = 48
@@ -369,6 +365,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = BTN_CancelarItemClick
           ExplicitWidth = 175
         end
       end
@@ -405,7 +402,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = -2
+          ExplicitLeft = 1
           ExplicitTop = -5
         end
       end
@@ -423,8 +420,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1734
-      ExplicitHeight = 495
       object pnl2PesquisaProduto: TPanel
         Left = 41
         Top = 74
@@ -531,7 +526,7 @@ object Frm_Vendas: TFrm_Vendas
         Left = 7
         Top = 11
         Width = 714
-        Height = 483
+        Height = 478
         DataSource = ds_Carrinho
         Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
         ReadOnly = True
@@ -606,7 +601,6 @@ object Frm_Vendas: TFrm_Vendas
         Height = 561
         Align = alRight
         BevelOuter = bvNone
-        BorderStyle = bsSingle
         Color = clWhite
         Padding.Left = 8
         Padding.Top = 8
@@ -614,12 +608,10 @@ object Frm_Vendas: TFrm_Vendas
         Padding.Bottom = 8
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 730
-        ExplicitHeight = 473
         object GB_Total: TGroupBox
           Left = 8
-          Top = 493
-          Width = 332
+          Top = 497
+          Width = 336
           Height = 56
           Align = alBottom
           Caption = 'Total da Compra'
@@ -639,11 +631,10 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 0
-          ExplicitTop = 405
           object Sh_Total: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 33
             Align = alClient
             Shape = stRoundRect
@@ -672,8 +663,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_QTD: TGroupBox
           Left = 8
-          Top = 379
-          Width = 332
+          Top = 383
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Quantidade'
@@ -693,11 +684,10 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 1
-          ExplicitTop = 291
           object Shape7: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -726,8 +716,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_SUBTOTAL: TGroupBox
           Left = 8
-          Top = 436
-          Width = 332
+          Top = 440
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Sub Total'
@@ -747,11 +737,10 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 2
-          ExplicitTop = 348
           object Shape8: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -780,8 +769,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRECO: TGroupBox
           Left = 8
-          Top = 322
-          Width = 332
+          Top = 326
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Pre'#231'o'
@@ -801,11 +790,10 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 3
-          ExplicitTop = 234
           object Shape9: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
@@ -834,8 +822,8 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRODUTO: TGroupBox
           Left = 8
-          Top = 265
-          Width = 332
+          Top = 269
+          Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Produto'
@@ -855,16 +843,16 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 4
-          ExplicitTop = 177
           object Shape10: TShape
             Left = 2
             Top = 21
-            Width = 328
+            Width = 332
             Height = 34
             Align = alClient
             Shape = stRoundRect
             ExplicitLeft = -4
             ExplicitTop = 20
+            ExplicitWidth = 328
           end
           object edtCodigoProduto: TEdit
             Left = 11
@@ -888,8 +876,8 @@ object Frm_Vendas: TFrm_Vendas
         object PNL_IMAGEM: TPanel
           Left = 8
           Top = 8
-          Width = 332
-          Height = 257
+          Width = 336
+          Height = 261
           Align = alClient
           Color = clHighlight
           Padding.Left = 4
@@ -898,18 +886,16 @@ object Frm_Vendas: TFrm_Vendas
           Padding.Bottom = 4
           ParentBackground = False
           TabOrder = 5
-          ExplicitHeight = 169
           object DBImage1: TDBImage
             Left = 5
             Top = 5
-            Width = 322
-            Height = 247
+            Width = 326
+            Height = 251
             Align = alClient
             DataField = 'IMAGEM'
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
-            ExplicitHeight = 159
           end
         end
       end

@@ -146,8 +146,6 @@ object Frm_Vendas: TFrm_Vendas
     Height = 717
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1736
-    ExplicitHeight = 629
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -165,7 +163,6 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1734
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -180,10 +177,8 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 558
-      ExplicitWidth = 1734
       object Panel1: TPanel
-        Left = 719
+        Left = 539
         Top = 11
         Width = 178
         Height = 48
@@ -202,14 +197,14 @@ object Frm_Vendas: TFrm_Vendas
           ExplicitWidth = 174
           ExplicitHeight = 47
         end
-        object BTN_CANCELAR: TSpeedButton
+        object btnCancelaVenda: TSpeedButton
           Left = 0
           Top = 0
           Width = 173
           Height = 48
           Align = alClient
           BiDiMode = bdLeftToRight
-          Caption = 'Cancelar Opera'#231#227'o'
+          Caption = '&Cancelar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -218,8 +213,9 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = [fsBold]
           ParentFont = False
           ParentBiDiMode = False
-          ExplicitWidth = 174
-          ExplicitHeight = 47
+          OnClick = btnCancelaVendaClick
+          ExplicitLeft = 1
+          ExplicitTop = -5
         end
       end
       object pnlPesquisaProduto: TPanel
@@ -246,8 +242,9 @@ object Frm_Vendas: TFrm_Vendas
           Top = 0
           Width = 174
           Height = 48
+          Hint = 'F2'
           Align = alClient
-          Caption = 'Pesquisar Produto'
+          Caption = '&Pesquisar Produto'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -255,6 +252,8 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           OnClick = btnPesquisaProdutoClick
           ExplicitLeft = -1
           ExplicitTop = -5
@@ -285,7 +284,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 174
           Height = 48
           Align = alClient
-          Caption = 'Abrir Caixa'
+          Caption = '&Abrir Caixa'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -297,7 +296,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object pnlFinalizarVenda: TPanel
-        Left = 364
+        Left = 717
         Top = 11
         Width = 180
         Height = 48
@@ -322,7 +321,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 175
           Height = 48
           Align = alClient
-          Caption = 'Finalizar Venda'
+          Caption = '&Finalizar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -336,7 +335,7 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object Panel5: TPanel
-        Left = 544
+        Left = 364
         Top = 11
         Width = 175
         Height = 48
@@ -361,7 +360,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 170
           Height = 48
           Align = alClient
-          Caption = 'Cancelar Item'
+          Caption = '&Excluir Item'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -369,6 +368,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          OnClick = BTN_CancelarItemClick
           ExplicitWidth = 175
         end
       end
@@ -397,7 +397,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 174
           Height = 48
           Align = alClient
-          Caption = 'Menu'
+          Caption = '&Menu'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -405,7 +405,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitLeft = -2
+          ExplicitLeft = 1
           ExplicitTop = -5
         end
       end
@@ -423,8 +423,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1734
-      ExplicitHeight = 495
       object pnl2PesquisaProduto: TPanel
         Left = 41
         Top = 74
@@ -465,9 +463,9 @@ object Frm_Vendas: TFrm_Vendas
       end
       object gridTabelaProduto: TDBGrid
         Left = 7
-        Top = 104
+        Top = 107
         Width = 713
-        Height = 385
+        Height = 465
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
         ReadOnly = True
@@ -527,11 +525,318 @@ object Frm_Vendas: TFrm_Vendas
             Visible = True
           end>
       end
+      object PNL_OPERACOES: TPanel
+        Left = 727
+        Top = 11
+        Width = 352
+        Height = 561
+        Align = alRight
+        BevelOuter = bvNone
+        Color = clWhite
+        Padding.Left = 8
+        Padding.Top = 8
+        Padding.Right = 8
+        Padding.Bottom = 8
+        ParentBackground = False
+        TabOrder = 1
+        object GB_Total: TGroupBox
+          Left = 8
+          Top = 497
+          Width = 336
+          Height = 56
+          Align = alBottom
+          Caption = 'Total da Compra'
+          Color = clHighlightText
+          DefaultHeaderFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindow
+          HeaderFont.Height = -14
+          HeaderFont.Name = 'Segoe UI'
+          HeaderFont.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 0
+          object Sh_Total: TShape
+            Left = 2
+            Top = 21
+            Width = 332
+            Height = 33
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitTop = 20
+            ExplicitWidth = 329
+            ExplicitHeight = 35
+          end
+          object edtTotalVenda: TEdit
+            Left = 11
+            Top = 26
+            Width = 310
+            Height = 27
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -17
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ParentShowHint = False
+            ReadOnly = True
+            ShowHint = False
+            TabOrder = 0
+            TextHint = 'Total da Venda'
+          end
+        end
+        object GB_QTD: TGroupBox
+          Left = 8
+          Top = 383
+          Width = 336
+          Height = 57
+          Align = alBottom
+          Caption = 'Quantidade'
+          Color = clHighlightText
+          DefaultHeaderFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindow
+          HeaderFont.Height = -14
+          HeaderFont.Name = 'Segoe UI'
+          HeaderFont.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 1
+          object Shape7: TShape
+            Left = 2
+            Top = 21
+            Width = 332
+            Height = 34
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitTop = 20
+            ExplicitWidth = 329
+            ExplicitHeight = 35
+          end
+          object edtQuantidadeProduto: TEdit
+            Left = 11
+            Top = 24
+            Width = 310
+            Height = 27
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -17
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ParentShowHint = False
+            ReadOnly = True
+            ShowHint = False
+            TabOrder = 0
+            TextHint = 'Quantidade do produto'
+          end
+        end
+        object GB_SUBTOTAL: TGroupBox
+          Left = 8
+          Top = 440
+          Width = 336
+          Height = 57
+          Align = alBottom
+          Caption = 'Sub Total'
+          Color = clHighlightText
+          DefaultHeaderFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindow
+          HeaderFont.Height = -14
+          HeaderFont.Name = 'Segoe UI'
+          HeaderFont.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 2
+          object Shape8: TShape
+            Left = 2
+            Top = 21
+            Width = 332
+            Height = 34
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitTop = 20
+            ExplicitWidth = 329
+            ExplicitHeight = 35
+          end
+          object edtSubTotalProduto: TEdit
+            Left = 11
+            Top = 24
+            Width = 310
+            Height = 27
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -17
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ParentShowHint = False
+            ReadOnly = True
+            ShowHint = False
+            TabOrder = 0
+            TextHint = 'Sub Total do Produto'
+          end
+        end
+        object GB_PRECO: TGroupBox
+          Left = 8
+          Top = 326
+          Width = 336
+          Height = 57
+          Align = alBottom
+          Caption = 'Pre'#231'o'
+          Color = clHighlightText
+          DefaultHeaderFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindow
+          HeaderFont.Height = -14
+          HeaderFont.Name = 'Segoe UI'
+          HeaderFont.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 3
+          object Shape9: TShape
+            Left = 2
+            Top = 21
+            Width = 332
+            Height = 34
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitTop = 20
+            ExplicitWidth = 329
+            ExplicitHeight = 35
+          end
+          object edtPrecoProduto: TEdit
+            Left = 11
+            Top = 24
+            Width = 310
+            Height = 27
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -17
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ParentShowHint = False
+            ReadOnly = True
+            ShowHint = False
+            TabOrder = 0
+            TextHint = 'Pre'#231'o do produto'
+          end
+        end
+        object GB_PRODUTO: TGroupBox
+          Left = 8
+          Top = 269
+          Width = 336
+          Height = 57
+          Align = alBottom
+          Caption = 'Produto'
+          Color = clHighlightText
+          DefaultHeaderFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindow
+          Font.Height = -14
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          HeaderFont.Charset = DEFAULT_CHARSET
+          HeaderFont.Color = clWindowText
+          HeaderFont.Height = -14
+          HeaderFont.Name = 'Segoe UI'
+          HeaderFont.Style = [fsBold]
+          ParentBackground = False
+          ParentColor = False
+          ParentFont = False
+          TabOrder = 4
+          object Shape10: TShape
+            Left = 2
+            Top = 21
+            Width = 332
+            Height = 34
+            Align = alClient
+            Shape = stRoundRect
+            ExplicitLeft = -4
+            ExplicitTop = 20
+            ExplicitWidth = 328
+          end
+          object edtCodigoProduto: TEdit
+            Left = 11
+            Top = 24
+            Width = 310
+            Height = 27
+            BorderStyle = bsNone
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -17
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentFont = False
+            ParentShowHint = False
+            ReadOnly = True
+            ShowHint = False
+            TabOrder = 0
+            TextHint = 'Codigo do produto'
+          end
+        end
+        object PNL_IMAGEM: TPanel
+          Left = 8
+          Top = 8
+          Width = 336
+          Height = 261
+          Align = alClient
+          Color = clHighlight
+          Padding.Left = 4
+          Padding.Top = 4
+          Padding.Right = 4
+          Padding.Bottom = 4
+          ParentBackground = False
+          TabOrder = 5
+          object DBImage1: TDBImage
+            Left = 5
+            Top = 5
+            Width = 326
+            Height = 251
+            Align = alClient
+            DataField = 'IMAGEM'
+            DataSource = DS_produtos
+            Proportional = True
+            TabOrder = 0
+            ExplicitWidth = 244
+            ExplicitHeight = 148
+          end
+        end
+      end
       object gridCarrinhoVendas: TDBGrid
         Left = 7
-        Top = 6
+        Top = 10
         Width = 714
-        Height = 483
+        Height = 569
         DataSource = ds_Carrinho
         Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
         ReadOnly = True
@@ -598,320 +903,6 @@ object Frm_Vendas: TFrm_Vendas
             Width = 72
             Visible = True
           end>
-      end
-      object PNL_OPERACOES: TPanel
-        Left = 727
-        Top = 11
-        Width = 352
-        Height = 561
-        Align = alRight
-        BevelOuter = bvNone
-        BorderStyle = bsSingle
-        Color = clWhite
-        Padding.Left = 8
-        Padding.Top = 8
-        Padding.Right = 8
-        Padding.Bottom = 8
-        ParentBackground = False
-        TabOrder = 1
-        ExplicitLeft = 730
-        ExplicitHeight = 473
-        object GB_Total: TGroupBox
-          Left = 8
-          Top = 493
-          Width = 332
-          Height = 56
-          Align = alBottom
-          Caption = 'Total da Compra'
-          Color = clHighlightText
-          DefaultHeaderFont = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindow
-          HeaderFont.Height = -14
-          HeaderFont.Name = 'Segoe UI'
-          HeaderFont.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 0
-          ExplicitTop = 405
-          object Sh_Total: TShape
-            Left = 2
-            Top = 21
-            Width = 328
-            Height = 33
-            Align = alClient
-            Shape = stRoundRect
-            ExplicitTop = 20
-            ExplicitWidth = 329
-            ExplicitHeight = 35
-          end
-          object edtTotalVenda: TEdit
-            Left = 11
-            Top = 26
-            Width = 310
-            Height = 27
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -17
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ReadOnly = True
-            ShowHint = False
-            TabOrder = 0
-            TextHint = 'Total da Venda'
-          end
-        end
-        object GB_QTD: TGroupBox
-          Left = 8
-          Top = 379
-          Width = 332
-          Height = 57
-          Align = alBottom
-          Caption = 'Quantidade'
-          Color = clHighlightText
-          DefaultHeaderFont = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindow
-          HeaderFont.Height = -14
-          HeaderFont.Name = 'Segoe UI'
-          HeaderFont.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 1
-          ExplicitTop = 291
-          object Shape7: TShape
-            Left = 2
-            Top = 21
-            Width = 328
-            Height = 34
-            Align = alClient
-            Shape = stRoundRect
-            ExplicitTop = 20
-            ExplicitWidth = 329
-            ExplicitHeight = 35
-          end
-          object edtQuantidadeProduto: TEdit
-            Left = 11
-            Top = 24
-            Width = 310
-            Height = 27
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -17
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ReadOnly = True
-            ShowHint = False
-            TabOrder = 0
-            TextHint = 'Quantidade do produto'
-          end
-        end
-        object GB_SUBTOTAL: TGroupBox
-          Left = 8
-          Top = 436
-          Width = 332
-          Height = 57
-          Align = alBottom
-          Caption = 'Sub Total'
-          Color = clHighlightText
-          DefaultHeaderFont = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindow
-          HeaderFont.Height = -14
-          HeaderFont.Name = 'Segoe UI'
-          HeaderFont.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 2
-          ExplicitTop = 348
-          object Shape8: TShape
-            Left = 2
-            Top = 21
-            Width = 328
-            Height = 34
-            Align = alClient
-            Shape = stRoundRect
-            ExplicitTop = 20
-            ExplicitWidth = 329
-            ExplicitHeight = 35
-          end
-          object edtSubTotalProduto: TEdit
-            Left = 11
-            Top = 24
-            Width = 310
-            Height = 27
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -17
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ReadOnly = True
-            ShowHint = False
-            TabOrder = 0
-            TextHint = 'Sub Total do Produto'
-          end
-        end
-        object GB_PRECO: TGroupBox
-          Left = 8
-          Top = 322
-          Width = 332
-          Height = 57
-          Align = alBottom
-          Caption = 'Pre'#231'o'
-          Color = clHighlightText
-          DefaultHeaderFont = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindow
-          HeaderFont.Height = -14
-          HeaderFont.Name = 'Segoe UI'
-          HeaderFont.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 3
-          ExplicitTop = 234
-          object Shape9: TShape
-            Left = 2
-            Top = 21
-            Width = 328
-            Height = 34
-            Align = alClient
-            Shape = stRoundRect
-            ExplicitTop = 20
-            ExplicitWidth = 329
-            ExplicitHeight = 35
-          end
-          object edtPrecoProduto: TEdit
-            Left = 11
-            Top = 24
-            Width = 310
-            Height = 27
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -17
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ReadOnly = True
-            ShowHint = False
-            TabOrder = 0
-            TextHint = 'Pre'#231'o do produto'
-          end
-        end
-        object GB_PRODUTO: TGroupBox
-          Left = 8
-          Top = 265
-          Width = 332
-          Height = 57
-          Align = alBottom
-          Caption = 'Produto'
-          Color = clHighlightText
-          DefaultHeaderFont = False
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindowText
-          HeaderFont.Height = -14
-          HeaderFont.Name = 'Segoe UI'
-          HeaderFont.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 4
-          ExplicitTop = 177
-          object Shape10: TShape
-            Left = 2
-            Top = 21
-            Width = 328
-            Height = 34
-            Align = alClient
-            Shape = stRoundRect
-            ExplicitLeft = -4
-            ExplicitTop = 20
-          end
-          object edtCodigoProduto: TEdit
-            Left = 11
-            Top = 24
-            Width = 310
-            Height = 27
-            BorderStyle = bsNone
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -17
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            ParentShowHint = False
-            ReadOnly = True
-            ShowHint = False
-            TabOrder = 0
-            TextHint = 'Codigo do produto'
-          end
-        end
-        object PNL_IMAGEM: TPanel
-          Left = 8
-          Top = 8
-          Width = 332
-          Height = 257
-          Align = alClient
-          Color = clHighlight
-          Padding.Left = 4
-          Padding.Top = 4
-          Padding.Right = 4
-          Padding.Bottom = 4
-          ParentBackground = False
-          TabOrder = 5
-          ExplicitHeight = 169
-          object DBImage1: TDBImage
-            Left = 5
-            Top = 5
-            Width = 322
-            Height = 247
-            Align = alClient
-            DataField = 'IMAGEM'
-            DataSource = DS_produtos
-            Proportional = True
-            TabOrder = 0
-            ExplicitHeight = 159
-          end
-        end
       end
     end
   end

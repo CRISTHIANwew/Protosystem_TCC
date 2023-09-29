@@ -109,45 +109,37 @@ implementation
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
-var TaskDialog: TTaskDialog;
 begin
-  TaskMessageDlg ( 'Error' ,  'Ocorreu um erro' ,  mtError ,  mbAbortRetryIgnore ,  0 );
-  if not cdsCarrinho.IsEmpty then
-    begin
-    TaskDialog := TTaskDialog.Create(nil);
+if not cdsCarrinho.IsEmpty then
+with TTaskDialog.Create(Self) do
   try
-    TaskDialog.Caption := 'Cancelamento';
-    TaskDialog.Text:= 'Deseja realmente cancelar a venda?';
-    TaskDialog.CommonButtons := [tcbYes, tcbNo];
-    TaskDialog.DefaultButton := tcbNo;
-
-    if TaskDialog.Execute then
+    Caption := 'Cancelamento';
+    Title := 'Deseja realmente cancelar esta venda ?';
+    CommonButtons := [tcbYes, tcbNo];
+    MainIcon := tdiInformation;
+    if Execute then
+      if ModalResult = mrYes then
+        begin
+          while not cdsCarrinho.IsEmpty do
+            begin
+            cdsCarrinho.Delete;
+            end;
+            AtualizaTotais;
+        //Limpa registros
+        edtCodigoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtQuantidadeProduto.Text:='';
+        edtSubTotalProduto.Text:='';
+        edtTotalVenda.Text:='';
+        ShowMessage('Venda cancelada com sucesso.');
+      end
+    else if ModalResult = mrNo then
     begin
-      //Cancela Venda
-      while not cdsCarrinho.IsEmpty do
-      begin
-        cdsCarrinho.Delete;
-      end;
-      AtualizaTotais;
-      //Limpa registros
-      edtCodigoProduto.Text:='';
-      edtPrecoProduto.Text:='';
-      edtPrecoProduto.Text:='';
-      edtQuantidadeProduto.Text:='';
-      edtSubTotalProduto.Text:='';
-      edtTotalVenda.Text:='';
-      ShowMessage('Venda cancelada com sucesso.');
-    end
 
-//    else if TaskDialog.ModalResult = mrNo then
-//    begin
-//        // O usuário clicou em "Não", lide com isso, se necessário
-//        TaskDialog.Free;
-//    end;
-
-    finally
-      TaskDialog.Free;
     end;
+  finally
+    Free;
   end;
 end;
 

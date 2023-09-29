@@ -204,7 +204,7 @@ object Frm_Vendas: TFrm_Vendas
           Height = 48
           Align = alClient
           BiDiMode = bdLeftToRight
-          Caption = 'Cancelar Venda'
+          Caption = '&Cancelar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -214,7 +214,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentFont = False
           ParentBiDiMode = False
           OnClick = btnCancelaVendaClick
-          ExplicitLeft = -1
+          ExplicitLeft = 1
           ExplicitTop = -5
         end
       end
@@ -242,8 +242,9 @@ object Frm_Vendas: TFrm_Vendas
           Top = 0
           Width = 174
           Height = 48
+          Hint = 'F2'
           Align = alClient
-          Caption = 'Pesquisar Produto'
+          Caption = '&Pesquisar Produto'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -251,6 +252,8 @@ object Frm_Vendas: TFrm_Vendas
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           OnClick = btnPesquisaProdutoClick
           ExplicitLeft = -1
           ExplicitTop = -5
@@ -281,7 +284,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 174
           Height = 48
           Align = alClient
-          Caption = 'Abrir Caixa'
+          Caption = '&Abrir Caixa'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -318,7 +321,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 175
           Height = 48
           Align = alClient
-          Caption = 'Finalizar Venda'
+          Caption = '&Finalizar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -357,7 +360,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 170
           Height = 48
           Align = alClient
-          Caption = 'Cancelar Item'
+          Caption = '&Excluir Item'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -394,7 +397,7 @@ object Frm_Vendas: TFrm_Vendas
           Width = 174
           Height = 48
           Align = alClient
-          Caption = 'Menu'
+          Caption = '&Menu'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -460,9 +463,9 @@ object Frm_Vendas: TFrm_Vendas
       end
       object gridTabelaProduto: TDBGrid
         Left = 7
-        Top = 104
+        Top = 107
         Width = 713
-        Height = 385
+        Height = 465
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
         ReadOnly = True
@@ -519,78 +522,6 @@ object Frm_Vendas: TFrm_Vendas
             Title.Font.Height = -12
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
-            Visible = True
-          end>
-      end
-      object gridCarrinhoVendas: TDBGrid
-        Left = 7
-        Top = 11
-        Width = 714
-        Height = 478
-        DataSource = ds_Carrinho
-        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
-        ReadOnly = True
-        TabOrder = 0
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -12
-        TitleFont.Name = 'Segoe UI'
-        TitleFont.Style = []
-        Columns = <
-          item
-            Expanded = False
-            FieldName = 'ID'
-            Title.Caption = 'C'#243'digo'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 53
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Descricao'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 387
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Valor Unitario'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 86
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Quantidade'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 80
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'Valor Total'
-            Title.Font.Charset = DEFAULT_CHARSET
-            Title.Font.Color = clWindowText
-            Title.Font.Height = -12
-            Title.Font.Name = 'Segoe UI'
-            Title.Font.Style = [fsBold]
-            Width = 72
             Visible = True
           end>
       end
@@ -896,8 +827,82 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
+            ExplicitWidth = 244
+            ExplicitHeight = 148
           end
         end
+      end
+      object gridCarrinhoVendas: TDBGrid
+        Left = 7
+        Top = 10
+        Width = 714
+        Height = 569
+        DataSource = ds_Carrinho
+        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
+        ReadOnly = True
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -12
+        TitleFont.Name = 'Segoe UI'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'ID'
+            Title.Caption = 'C'#243'digo'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 53
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Descricao'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 387
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Valor Unitario'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 86
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Quantidade'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'Valor Total'
+            Title.Font.Charset = DEFAULT_CHARSET
+            Title.Font.Color = clWindowText
+            Title.Font.Height = -12
+            Title.Font.Name = 'Segoe UI'
+            Title.Font.Style = [fsBold]
+            Width = 72
+            Visible = True
+          end>
       end
     end
   end
@@ -955,7 +960,6 @@ object Frm_Vendas: TFrm_Vendas
     end
   end
   object SQL_Produtos: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')

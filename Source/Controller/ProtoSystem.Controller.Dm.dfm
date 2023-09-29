@@ -18,7 +18,6 @@ object DM: TDM
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
         'CC\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 66
     Top = 6

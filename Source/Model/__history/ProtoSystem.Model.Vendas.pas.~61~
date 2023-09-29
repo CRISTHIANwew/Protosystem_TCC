@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Mask;
+  Vcl.Mask, CommCtrl;
 
 type
   TFrm_Vendas = class(TForm)
@@ -19,7 +19,7 @@ type
     PNL_PRINCIPAL_MAIN: TPanel;
     Panel1: TPanel;
     Shape1: TShape;
-    BTN_CANCELAR: TSpeedButton;
+    btnCancelaVenda: TSpeedButton;
     pnlPesquisaProduto: TPanel;
     shpPesquisaProduto: TShape;
     btnPesquisaProduto: TSpeedButton;
@@ -80,6 +80,8 @@ type
     procedure gridTabelaProdutoCellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaProdutoChange(Sender: TObject);
+    procedure BTN_CancelarItemClick(Sender: TObject);
+    procedure btnCancelaVendaClick(Sender: TObject);
   private
     { Private declarations }
     TotalAmount: double;
@@ -106,6 +108,80 @@ implementation
 
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
+procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
+begin
+if not cdsCarrinho.IsEmpty then
+with TTaskDialog.Create(Self) do
+  try
+    Caption := 'Cancelamento';
+    Title := 'Deseja realmente cancelar esta venda ?';
+    CommonButtons := [tcbYes, tcbNo];
+    MainIcon := tdiInformation;
+
+    if Execute then
+      if ModalResult = mrYes then
+        begin
+          while not cdsCarrinho.IsEmpty do
+            begin
+            cdsCarrinho.Delete;
+            end;
+            AtualizaTotais;
+        //Limpa registros
+        edtCodigoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtQuantidadeProduto.Text:='';
+        edtSubTotalProduto.Text:='';
+        edtTotalVenda.Text:='';
+        ShowMessage('Venda cancelada com sucesso.');
+      end
+    else if ModalResult = mrNo then
+    begin
+
+    end;
+
+  finally
+    Free;
+  end;
+  end;
+//var TaskDialog: TTaskDialog;
+//begin
+//  if not cdsCarrinho.IsEmpty then
+//    begin
+//    TaskDialog := TTaskDialog.Create(nil);
+//  try
+//    TaskDialog.Caption := 'Cancelamento';
+//    TaskDialog.Text:= 'Deseja realmente cancelar a venda?';
+//    TaskDialog.CommonButtons := [tcbYes, tcbNo];
+//    //TaskDialog.DefaultButton := tcbNo;
+//
+//    if TaskDialog.ModalResult = mrYes then
+//    begin
+//      while not cdsCarrinho.IsEmpty do
+//      begin
+//      cdsCarrinho.Delete;
+//      end;
+//      AtualizaTotais;
+//      //Limpa registros
+//      edtCodigoProduto.Text:='';
+//      edtPrecoProduto.Text:='';
+//      edtPrecoProduto.Text:='';
+//      edtQuantidadeProduto.Text:='';
+//      edtSubTotalProduto.Text:='';
+//      edtTotalVenda.Text:='';
+//      ShowMessage('Venda cancelada com sucesso.');
+//    end
+//
+//    else if TaskDialog.ModalResult = mrNo then
+//    begin
+//        ShowMessage('teste');
+//    end;
+//
+//    finally
+//      TaskDialog.Free;
+//    end;
+//  end;
+
 
 procedure TFrm_Vendas.btnPesquisaProdutoClick(Sender: TObject);
 begin
@@ -113,6 +189,13 @@ begin
   gridCarrinhoVendas.Visible:=false;
   gridTabelaProduto.Visible:=true;
   pnl2PesquisaProduto.Visible:=true;
+end;
+
+procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
+begin
+  //Cancela item
+  cdsCarrinho.Delete;
+  AtualizaTotais;
 end;
 
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
