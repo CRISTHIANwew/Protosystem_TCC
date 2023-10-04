@@ -26,6 +26,8 @@ object frmVendasFechamento: TfrmVendasFechamento
     Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 1065
+    ExplicitHeight = 609
     object pnl2: TPanel
       Left = 11
       Top = 11
@@ -39,6 +41,8 @@ object frmVendasFechamento: TfrmVendasFechamento
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 1043
+      ExplicitHeight = 587
       object pnlCondicao: TPanel
         Left = 710
         Top = 3
@@ -52,6 +56,8 @@ object frmVendasFechamento: TfrmVendasFechamento
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 784
+        ExplicitHeight = 581
         object GB_Total: TGroupBox
           Left = 3
           Top = 322
@@ -96,7 +102,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -17
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -151,7 +157,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -17
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             NumbersOnly = True
@@ -207,7 +213,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -17
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             NumbersOnly = True
@@ -263,7 +269,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -17
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             NumbersOnly = True
@@ -319,7 +325,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -15
+            Font.Height = -17
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             NumbersOnly = True
@@ -381,6 +387,8 @@ object frmVendasFechamento: TfrmVendasFechamento
         Color = clHighlight
         ParentBackground = False
         TabOrder = 1
+        ExplicitLeft = 4
+        ExplicitHeight = 567
         object gridTabelaCliente: TDBGrid
           Left = 11
           Top = 35
@@ -634,7 +642,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -696,11 +704,11 @@ object frmVendasFechamento: TfrmVendasFechamento
           Top = 65
           Width = 241
           Height = 313
-          Color = clWhite
+          Color = clHighlight
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -15
+          Font.Height = -20
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -724,6 +732,7 @@ object frmVendasFechamento: TfrmVendasFechamento
     end
   end
   object sqlCliente: TFDQuery
+    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from cliente')
