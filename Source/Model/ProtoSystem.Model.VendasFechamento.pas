@@ -20,16 +20,16 @@ type
     edtTotalVenda: TEdit;
     GroupBox1: TGroupBox;
     Shape1: TShape;
-    Edit1: TEdit;
+    edtDespesas: TEdit;
     GroupBox2: TGroupBox;
     Shape2: TShape;
-    Edit2: TEdit;
+    edtFrete: TEdit;
     GroupBox3: TGroupBox;
     Shape3: TShape;
-    Edit3: TEdit;
+    edtPorcDesconto: TEdit;
     GroupBox4: TGroupBox;
     Shape4: TShape;
-    Edit4: TEdit;
+    edtValorDesconto: TEdit;
     Panel1: TPanel;
     Shape5: TShape;
     Label1: TLabel;
@@ -61,6 +61,14 @@ type
     Label2: TLabel;
     RadioGroup1: TRadioGroup;
     procedure gridTabelaClienteCellClick(Column: TColumn);
+    procedure FormCreate(Sender: TObject);
+    procedure edtPesquisaClienteChange(Sender: TObject);
+    procedure edtDespesasExit(Sender: TObject);
+    procedure edtFreteExit(Sender: TObject);
+    procedure edtValorDescontoExit(Sender: TObject);
+    procedure edtDespesasKeyPress(Sender: TObject; var Key: Char);
+    procedure edtFreteKeyPress(Sender: TObject; var Key: Char);
+    procedure edtValorDescontoKeyPress(Sender: TObject; var Key: Char);
   private
     var
       idClienteINT: Integer;
@@ -70,9 +78,20 @@ type
       cpfcnpjSTR: string;
       rgieSTR: string;
       NomeClienteSTR: string;
+      DespesasFLT: double;
+      DespesasSTR: string;
+      FreteFLT: double;
+      FreteSTR: string;
+      ValorDescontoFLT: double;
+      ValorDescontoSTR: string;
+      PorcentagemDescontoSTR: string;
   procedure TransfereInformacoes;
+  procedure IniciaComponentes;
+  procedure AtualizaTotais;
   public
     { Public declarations }
+    var
+      TotalGeralFLT: double;
   end;
 
 var
@@ -84,6 +103,73 @@ implementation
 
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.Vendas;
 
+procedure TfrmVendasFechamento.edtDespesasExit(Sender: TObject);
+begin
+if edtDespesas.Text = '' then
+begin
+edtDespesas.Text:='0';
+end;
+  AtualizaTotais;
+end;
+
+procedure TfrmVendasFechamento.edtDespesasKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+   if not (Key in ['0'..'9', ',', #8]) then
+    Key := #0;
+end;
+
+procedure TfrmVendasFechamento.edtFreteExit(Sender: TObject);
+begin
+if edtFrete.Text = '' then
+begin
+edtFrete.Text:='0';
+end;
+  AtualizaTotais;
+end;
+
+procedure TfrmVendasFechamento.edtFreteKeyPress(Sender: TObject; var Key: Char);
+begin
+    if not (Key in ['0'..'9', ',', #8]) then
+    Key := #0;
+end;
+
+procedure TfrmVendasFechamento.edtPesquisaClienteChange(Sender: TObject);
+begin
+  sqlCliente.Filtered := true;
+  if edtPesquisaCliente.Text <> '' then
+    begin
+    sqlCliente.Filtered := False;
+    sqlCliente.Filter := 'NOME LIKE ' +
+      QuotedStr('%' + edtPesquisaCliente.Text + '%');
+    sqlCliente.Filtered := True;
+  end
+  else
+    sqlCliente.Filtered := False;
+end;
+
+procedure TfrmVendasFechamento.edtValorDescontoExit(Sender: TObject);
+begin
+if edtValorDesconto.Text = '' then
+begin
+edtValorDesconto.Text:='0';
+end;
+  AtualizaTotais;
+end;
+
+procedure TfrmVendasFechamento.edtValorDescontoKeyPress(Sender: TObject;
+  var Key: Char);
+begin
+   if not (Key in ['0'..'9', ',', #8]) then
+    Key := #0;
+end;
+
+procedure TfrmVendasFechamento.FormCreate(Sender: TObject);
+begin
+  IniciaComponentes;
+  AtualizaTotais;
+end;
+
 procedure TfrmVendasFechamento.gridTabelaClienteCellClick(Column: TColumn);
 begin
    TransfereInformacoes;
@@ -94,17 +180,43 @@ begin
  var CellClient := gridTabelaCliente.DataSource.DataSet.RecNo;
   idClienteINT := sqlCliente.FieldByName('ID').AsInteger;
   NomeClienteSTR := sqlCliente.FieldByName('NOME').AsString;
-  cpfcnpjINT := sqlCliente.FieldByName('CPFCNPJ').AsInteger;
-  rgieINT := sqlCliente.FieldByName('RGIE').AsInteger;
-
+  cpfcnpjSTR := sqlCliente.FieldByName('CPFCNPJ').AsString;
+  rgieSTR := sqlCliente.FieldByName('RGIE').AsString;
   idClienteSTR := IntToStr(idClienteINT);
-  cpfcnpjSTR := IntToStr(cpfcnpjINT);
-  rgieSTR := IntToStr(rgieINT);
-
   edtIdCliente.Text := idClienteSTR;
   edtNomeCliente.Text := NomeClienteSTR;
   edtCPFCNPJ.Text := cpfcnpjSTR;
   edtRGIE.Text := rgieSTR;
+end;
+
+procedure TfrmVendasFechamento.IniciaComponentes;
+begin
+    sqlCliente.Connection:=DM.conexao;
+    sqlCliente.Active:=true;
+    dsClientes.DataSet:=sqlCliente;
+    dsClientes.Enabled:=true;
+    gridTabelaCliente.DataSource:=dsClientes;
+    edtDespesas.Text:='0';
+    edtFrete.Text:='0';
+    edtValorDesconto.Text:='0';
+end;
+
+procedure TfrmVendasFechamento.AtualizaTotais;
+var TotalGeralSTR: string;
+begin
+  TotalGeralFLT:= dm.TotalGeralFLT;
+     DespesasSTR:=edtDespesas.Text;
+     FreteSTR:=edtFrete.Text;
+     ValorDescontoSTR:=edtValorDesconto.Text;
+
+     DespesasFLT:= StrToFloat(DespesasSTR);
+     FreteFLT:= StrToFloat(FreteSTR);
+     ValorDescontoFLT:= StrToFloat(ValorDescontoSTR); 
+
+     TotalGeralFLT:= TotalGeralFLT + DespesasFLT + FreteFLT - ValorDescontoFLT;
+     edtTotalVenda.Text:='';;     
+     TotalGeralSTR:= FloatToStr(TotalGeralFLT);
+     edtTotalVenda.Text:=TotalGeralSTR;
 end;
 
 end.

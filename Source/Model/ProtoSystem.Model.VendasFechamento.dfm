@@ -12,6 +12,7 @@ object frmVendasFechamento: TfrmVendasFechamento
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object pnlPrincipal: TPanel
     Left = 0
@@ -26,6 +27,8 @@ object frmVendasFechamento: TfrmVendasFechamento
     Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 985
+    ExplicitHeight = 417
     object pnl2: TPanel
       Left = 11
       Top = 11
@@ -39,6 +42,8 @@ object frmVendasFechamento: TfrmVendasFechamento
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 963
+      ExplicitHeight = 395
       object pnlCondicao: TPanel
         Left = 710
         Top = 3
@@ -52,6 +57,8 @@ object frmVendasFechamento: TfrmVendasFechamento
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 704
+        ExplicitHeight = 389
         object GB_Total: TGroupBox
           Left = 3
           Top = 322
@@ -143,9 +150,9 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit1: TEdit
-            Left = 11
-            Top = 26
+          object edtDespesas: TEdit
+            Left = 10
+            Top = 25
             Width = 174
             Height = 27
             BorderStyle = bsNone
@@ -154,13 +161,14 @@ object frmVendasFechamento: TfrmVendasFechamento
             Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0'
+            TextHint = '0,00'
+            OnExit = edtDespesasExit
+            OnKeyPress = edtDespesasKeyPress
           end
         end
         object GroupBox2: TGroupBox
@@ -199,7 +207,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit2: TEdit
+          object edtFrete: TEdit
             Left = 11
             Top = 26
             Width = 174
@@ -210,13 +218,14 @@ object frmVendasFechamento: TfrmVendasFechamento
             Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0'
+            TextHint = '0,00'
+            OnExit = edtFreteExit
+            OnKeyPress = edtFreteKeyPress
           end
         end
         object GroupBox3: TGroupBox
@@ -255,7 +264,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit3: TEdit
+          object edtPorcDesconto: TEdit
             Left = 16
             Top = 23
             Width = 169
@@ -311,7 +320,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit4: TEdit
+          object edtValorDesconto: TEdit
             Left = 11
             Top = 26
             Width = 174
@@ -322,13 +331,14 @@ object frmVendasFechamento: TfrmVendasFechamento
             Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0'
+            TextHint = '0,00'
+            OnExit = edtValorDescontoExit
+            OnKeyPress = edtValorDescontoKeyPress
           end
         end
         object Panel1: TPanel
@@ -381,6 +391,7 @@ object frmVendasFechamento: TfrmVendasFechamento
         Color = clHighlight
         ParentBackground = False
         TabOrder = 1
+        ExplicitHeight = 389
         object gridTabelaCliente: TDBGrid
           Left = 11
           Top = 35
@@ -528,6 +539,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ParentFont = False
             TabOrder = 0
             TextHint = 'Pesquisa Cliente'
+            OnChange = edtPesquisaClienteChange
           end
         end
         object pnlCPFCNPJ: TPanel

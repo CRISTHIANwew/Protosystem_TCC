@@ -83,7 +83,6 @@ type
     procedure BTN_CancelarItemClick(Sender: TObject);
     procedure btnCancelaVendaClick(Sender: TObject);
   private
-    { Private declarations }
     TotalAmount: double;
     procedure InicializaComponentes;
     procedure AtualizaTotais;
@@ -94,9 +93,10 @@ type
       PrecoProd: Double;
       IdProd: Integer;
       QuantidadeProdSTR: string;
-      TotalGeralFLT: Double;
+
   public
-    { Public declarations }
+    var
+      TotalGeralFLT: Double;
   end;
 
 var
@@ -252,6 +252,7 @@ begin
     gridTabelaProduto.Visible:=false;
     pnl2PesquisaProduto.Visible:=false;
     gridCarrinhoVendas.SetFocus;
+    dm.TotalGeralFLT:=TotalGeralFLT;
 end;
 
 procedure TFrm_Vendas.InicializaComponentes;

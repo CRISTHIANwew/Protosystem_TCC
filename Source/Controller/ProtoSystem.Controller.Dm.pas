@@ -27,7 +27,7 @@ type
     procedure CreateDB;
     function GetTables: TDataSet;
   public
-    { Public declarations }
+    var TotalGeralFLT: double;
   end;
 
 var

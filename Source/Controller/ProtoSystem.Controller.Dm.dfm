@@ -1,15 +1,16 @@
 object DM: TDM
   OnCreate = DataModuleCreate
-  Height = 508
-  Width = 883
+  Height = 635
+  Width = 1104
+  PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 66
-    Top = 109
+    Left = 83
+    Top = 136
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 66
-    Top = 58
+    Left = 83
+    Top = 73
   end
   object conexao: TFDConnection
     Params.Strings = (
@@ -19,22 +20,22 @@ object DM: TDM
         'CC\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     LoginPrompt = False
-    Left = 66
-    Top = 6
+    Left = 83
+    Top = 8
   end
   object FDQuery: TFDQuery
     Connection = conexao
-    Left = 67
-    Top = 158
+    Left = 84
+    Top = 198
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 792
-    Top = 88
+    Left = 990
+    Top = 110
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 792
-    Top = 136
+    Left = 990
+    Top = 170
   end
 end

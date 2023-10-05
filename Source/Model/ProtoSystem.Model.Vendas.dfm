@@ -146,6 +146,8 @@ object Frm_Vendas: TFrm_Vendas
     Height = 717
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 1085
+    ExplicitHeight = 708
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -163,6 +165,7 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1083
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -177,6 +180,8 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 637
+      ExplicitWidth = 1083
       object Panel1: TPanel
         Left = 539
         Top = 11
@@ -423,6 +428,8 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
+      ExplicitWidth = 1083
+      ExplicitHeight = 574
       object pnl2PesquisaProduto: TPanel
         Left = 41
         Top = 74
@@ -540,6 +547,8 @@ object Frm_Vendas: TFrm_Vendas
         Padding.Bottom = 8
         ParentBackground = False
         TabOrder = 0
+        ExplicitLeft = 720
+        ExplicitHeight = 552
         object GB_Total: TGroupBox
           Left = 8
           Top = 497
@@ -563,6 +572,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 0
+          ExplicitTop = 488
           object Sh_Total: TShape
             Left = 2
             Top = 21
@@ -616,6 +626,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 1
+          ExplicitTop = 374
           object Shape7: TShape
             Left = 2
             Top = 21
@@ -669,6 +680,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 2
+          ExplicitTop = 431
           object Shape8: TShape
             Left = 2
             Top = 21
@@ -722,6 +734,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 3
+          ExplicitTop = 317
           object Shape9: TShape
             Left = 2
             Top = 21
@@ -775,6 +788,7 @@ object Frm_Vendas: TFrm_Vendas
           ParentColor = False
           ParentFont = False
           TabOrder = 4
+          ExplicitTop = 260
           object Shape10: TShape
             Left = 2
             Top = 21
@@ -818,6 +832,7 @@ object Frm_Vendas: TFrm_Vendas
           Padding.Bottom = 4
           ParentBackground = False
           TabOrder = 5
+          ExplicitHeight = 252
           object DBImage1: TDBImage
             Left = 5
             Top = 5
@@ -828,6 +843,7 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
+            ExplicitHeight = 242
           end
         end
       end
