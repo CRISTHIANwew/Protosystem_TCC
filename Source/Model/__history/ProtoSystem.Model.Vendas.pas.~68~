@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Mask;
+  Vcl.Mask, CommCtrl;
 
 type
   TFrm_Vendas = class(TForm)
@@ -83,7 +83,6 @@ type
     procedure BTN_CancelarItemClick(Sender: TObject);
     procedure btnCancelaVendaClick(Sender: TObject);
   private
-    { Private declarations }
     TotalAmount: double;
     procedure InicializaComponentes;
     procedure AtualizaTotais;
@@ -94,9 +93,10 @@ type
       PrecoProd: Double;
       IdProd: Integer;
       QuantidadeProdSTR: string;
-      TotalGeralFLT: Double;
+
   public
-    { Public declarations }
+    var
+      TotalGeralFLT: Double;
   end;
 
 var
@@ -108,22 +108,35 @@ implementation
 
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
-
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
-  //Cancela Venda
-  while not cdsCarrinho.IsEmpty do
-  begin
-    cdsCarrinho.Delete;
+if not cdsCarrinho.IsEmpty then
+with TTaskDialog.Create(Self) do
+  try
+    Caption := 'Cancelamento';
+    Title := 'Deseja realmente cancelar esta venda ?';
+    CommonButtons := [tcbYes, tcbNo];
+    MainIcon := tdiInformation;
+    if Execute then
+      if ModalResult = mrYes then
+        begin
+          while not cdsCarrinho.IsEmpty do
+            begin
+            cdsCarrinho.Delete;
+            end;
+            AtualizaTotais;
+        //Limpa registros
+        edtCodigoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtQuantidadeProduto.Text:='';
+        edtSubTotalProduto.Text:='';
+        edtTotalVenda.Text:='';
+        ShowMessage('Venda cancelada com sucesso.');
+      end
+  finally
+    Free;
   end;
-  AtualizaTotais;
-  //Limpa registros
-  edtCodigoProduto.Text:='';
-  edtPrecoProduto.Text:='';
-  edtPrecoProduto.Text:='';
-  edtQuantidadeProduto.Text:='';
-  edtSubTotalProduto.Text:='';
-  edtTotalVenda.Text:='';
 end;
 
 procedure TFrm_Vendas.btnPesquisaProdutoClick(Sender: TObject);
@@ -132,6 +145,7 @@ begin
   gridCarrinhoVendas.Visible:=false;
   gridTabelaProduto.Visible:=true;
   pnl2PesquisaProduto.Visible:=true;
+  edtPesquisaProduto.SetFocus;
 end;
 
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
@@ -144,8 +158,11 @@ end;
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
 begin
   // Finalizar Venda
+  if not cdsCarrinho.IsEmpty then
+  begin
   Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
   frmVendasFechamento.ShowModal;
+  end;
 end;
 
 procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);
@@ -186,7 +203,8 @@ begin
   EstoqueProd := SQL_Produtos.FieldByName('ESTOQUE').AsInteger;
   //Solicita ao usuário que insira a quantidade desejada
   QuantidadeProdSTR := InputBox('Quantidade', 'Informe a quantidade:', '');
-  //Converte a string inserida pelo usuário em um valor inteiro
+  if QuantidadeProdSTR <'0' then
+  begin
   TryStrToInt(QuantidadeProdSTR, QuantidadeProdINT);
   //Insere os dados no TClientDataSet
   cdsCarrinho.Append;
@@ -196,6 +214,11 @@ begin
   cdsCarrinho.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
   cdsCarrinho.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
   cdsCarrinho.Post;
+  end
+  else
+  begin
+    ShowMessage('valor não pode ser 0!!')
+  end;
 end;
 
 procedure TFrm_Vendas.AtualizaTotais;
@@ -237,6 +260,8 @@ begin
     gridCarrinhoVendas.Visible:=true;
     gridTabelaProduto.Visible:=false;
     pnl2PesquisaProduto.Visible:=false;
+    gridCarrinhoVendas.SetFocus;
+    dm.TotalGeralFLT:=TotalGeralFLT;
 end;
 
 procedure TFrm_Vendas.InicializaComponentes;

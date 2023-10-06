@@ -12,6 +12,7 @@ object frmVendasFechamento: TfrmVendasFechamento
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object pnlPrincipal: TPanel
     Left = 0
@@ -26,8 +27,6 @@ object frmVendasFechamento: TfrmVendasFechamento
     Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1065
-    ExplicitHeight = 609
     object pnl2: TPanel
       Left = 11
       Top = 11
@@ -41,8 +40,6 @@ object frmVendasFechamento: TfrmVendasFechamento
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 1043
-      ExplicitHeight = 587
       object pnlCondicao: TPanel
         Left = 710
         Top = 3
@@ -56,8 +53,6 @@ object frmVendasFechamento: TfrmVendasFechamento
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 784
-        ExplicitHeight = 581
         object GB_Total: TGroupBox
           Left = 3
           Top = 322
@@ -82,7 +77,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 0
+          TabOrder = 5
           object Sh_Total: TShape
             Left = 2
             Top = 21
@@ -95,14 +90,14 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitWidth = 599
           end
           object edtTotalVenda: TEdit
-            Left = 11
+            Left = 3
             Top = 26
             Width = 174
             Height = 27
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -17
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -110,6 +105,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ReadOnly = True
             ShowHint = False
             TabOrder = 0
+            Text = '0,00'
             TextHint = 'Total da Venda'
           end
         end
@@ -149,24 +145,25 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit1: TEdit
-            Left = 11
-            Top = 26
+          object edtDespesas: TEdit
+            Left = 10
+            Top = 25
             Width = 174
             Height = 27
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -17
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0,00'
+            TextHint = '0,00'
+            OnExit = edtDespesasExit
+            OnKeyPress = edtDespesasKeyPress
           end
         end
         object GroupBox2: TGroupBox
@@ -205,7 +202,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit2: TEdit
+          object edtFrete: TEdit
             Left = 11
             Top = 26
             Width = 174
@@ -213,16 +210,17 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -17
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0,00'
+            TextHint = '0,00'
+            OnExit = edtFreteExit
+            OnKeyPress = edtFreteKeyPress
           end
         end
         object GroupBox3: TGroupBox
@@ -249,7 +247,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 3
+          TabOrder = 4
           object Shape3: TShape
             Left = 2
             Top = 21
@@ -261,7 +259,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit3: TEdit
+          object edtPorcDesconto: TEdit
             Left = 16
             Top = 23
             Width = 169
@@ -269,7 +267,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -17
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             NumbersOnly = True
@@ -278,6 +276,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ReadOnly = True
             ShowHint = False
             TabOrder = 0
+            Text = 'Em desenvolvimento'
             TextHint = 'Total da Venda'
           end
         end
@@ -305,7 +304,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 4
+          TabOrder = 3
           object Shape4: TShape
             Left = 2
             Top = 21
@@ -317,7 +316,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitTop = 59
             ExplicitWidth = 599
           end
-          object Edit4: TEdit
+          object edtValorDesconto: TEdit
             Left = 11
             Top = 26
             Width = 174
@@ -325,16 +324,17 @@ object frmVendasFechamento: TfrmVendasFechamento
             BorderStyle = bsNone
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -17
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
-            NumbersOnly = True
             ParentFont = False
             ParentShowHint = False
-            ReadOnly = True
             ShowHint = False
             TabOrder = 0
-            TextHint = 'Total da Venda'
+            Text = '0,00'
+            TextHint = '0,00'
+            OnExit = edtValorDescontoExit
+            OnKeyPress = edtValorDescontoKeyPress
           end
         end
         object Panel1: TPanel
@@ -345,7 +345,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 5
+          TabOrder = 0
           object Shape5: TShape
             Left = 0
             Top = 0
@@ -387,8 +387,6 @@ object frmVendasFechamento: TfrmVendasFechamento
         Color = clHighlight
         ParentBackground = False
         TabOrder = 1
-        ExplicitLeft = 4
-        ExplicitHeight = 567
         object gridTabelaCliente: TDBGrid
           Left = 11
           Top = 35
@@ -396,8 +394,9 @@ object frmVendasFechamento: TfrmVendasFechamento
           Height = 195
           DataSource = dsClientes
           GradientEndColor = clSkyBlue
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           ReadOnly = True
-          TabOrder = 0
+          TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -12
@@ -432,7 +431,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 1
+          TabOrder = 2
           object shp2IdCliente: TShape
             Left = 0
             Top = 0
@@ -470,7 +469,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 2
+          TabOrder = 3
           object shpNomeCliente: TShape
             Left = 0
             Top = 0
@@ -508,7 +507,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 3
+          TabOrder = 0
           object shpPesquisaCliente: TShape
             Left = 0
             Top = 0
@@ -536,6 +535,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ParentFont = False
             TabOrder = 0
             TextHint = 'Pesquisa Cliente'
+            OnChange = edtPesquisaClienteChange
           end
         end
         object pnlCPFCNPJ: TPanel
@@ -642,7 +642,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -12
+          Font.Height = -15
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
@@ -704,11 +704,11 @@ object frmVendasFechamento: TfrmVendasFechamento
           Top = 65
           Width = 241
           Height = 313
-          Color = clHighlight
+          Color = clWhite
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -20
+          Font.Height = -15
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -732,7 +732,6 @@ object frmVendasFechamento: TfrmVendasFechamento
     end
   end
   object sqlCliente: TFDQuery
-    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from cliente')

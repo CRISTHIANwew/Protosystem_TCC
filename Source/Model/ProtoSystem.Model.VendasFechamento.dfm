@@ -27,8 +27,6 @@ object frmVendasFechamento: TfrmVendasFechamento
     Padding.Bottom = 10
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 985
-    ExplicitHeight = 417
     object pnl2: TPanel
       Left = 11
       Top = 11
@@ -42,8 +40,6 @@ object frmVendasFechamento: TfrmVendasFechamento
       Padding.Bottom = 2
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 963
-      ExplicitHeight = 395
       object pnlCondicao: TPanel
         Left = 710
         Top = 3
@@ -57,8 +53,6 @@ object frmVendasFechamento: TfrmVendasFechamento
         Padding.Bottom = 10
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 704
-        ExplicitHeight = 389
         object GB_Total: TGroupBox
           Left = 3
           Top = 322
@@ -83,7 +77,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 0
+          TabOrder = 5
           object Sh_Total: TShape
             Left = 2
             Top = 21
@@ -111,6 +105,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ReadOnly = True
             ShowHint = False
             TabOrder = 0
+            Text = '0,00'
             TextHint = 'Total da Venda'
           end
         end
@@ -165,7 +160,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ParentShowHint = False
             ShowHint = False
             TabOrder = 0
-            Text = '0'
+            Text = '0,00'
             TextHint = '0,00'
             OnExit = edtDespesasExit
             OnKeyPress = edtDespesasKeyPress
@@ -208,7 +203,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitWidth = 599
           end
           object edtFrete: TEdit
-            Left = 11
+            Left = 10
             Top = 26
             Width = 174
             Height = 27
@@ -222,7 +217,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ParentShowHint = False
             ShowHint = False
             TabOrder = 0
-            Text = '0'
+            Text = '0,00'
             TextHint = '0,00'
             OnExit = edtFreteExit
             OnKeyPress = edtFreteKeyPress
@@ -252,7 +247,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 3
+          TabOrder = 4
           object Shape3: TShape
             Left = 2
             Top = 21
@@ -265,7 +260,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitWidth = 599
           end
           object edtPorcDesconto: TEdit
-            Left = 16
+            Left = 10
             Top = 23
             Width = 169
             Height = 27
@@ -281,6 +276,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ReadOnly = True
             ShowHint = False
             TabOrder = 0
+            Text = 'Em desenvolvimento'
             TextHint = 'Total da Venda'
           end
         end
@@ -308,7 +304,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentBiDiMode = False
           ParentColor = False
           ParentFont = False
-          TabOrder = 4
+          TabOrder = 3
           object Shape4: TShape
             Left = 2
             Top = 21
@@ -321,7 +317,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ExplicitWidth = 599
           end
           object edtValorDesconto: TEdit
-            Left = 11
+            Left = 10
             Top = 26
             Width = 174
             Height = 27
@@ -335,7 +331,7 @@ object frmVendasFechamento: TfrmVendasFechamento
             ParentShowHint = False
             ShowHint = False
             TabOrder = 0
-            Text = '0'
+            Text = '0,00'
             TextHint = '0,00'
             OnExit = edtValorDescontoExit
             OnKeyPress = edtValorDescontoKeyPress
@@ -349,7 +345,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 5
+          TabOrder = 0
           object Shape5: TShape
             Left = 0
             Top = 0
@@ -391,7 +387,6 @@ object frmVendasFechamento: TfrmVendasFechamento
         Color = clHighlight
         ParentBackground = False
         TabOrder = 1
-        ExplicitHeight = 389
         object gridTabelaCliente: TDBGrid
           Left = 11
           Top = 35
@@ -399,8 +394,9 @@ object frmVendasFechamento: TfrmVendasFechamento
           Height = 195
           DataSource = dsClientes
           GradientEndColor = clSkyBlue
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           ReadOnly = True
-          TabOrder = 0
+          TabOrder = 1
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -12
@@ -435,7 +431,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 1
+          TabOrder = 2
           object shp2IdCliente: TShape
             Left = 0
             Top = 0
@@ -473,7 +469,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 2
+          TabOrder = 3
           object shpNomeCliente: TShape
             Left = 0
             Top = 0
@@ -511,7 +507,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Align = alCustom
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 3
+          TabOrder = 0
           object shpPesquisaCliente: TShape
             Left = 0
             Top = 0

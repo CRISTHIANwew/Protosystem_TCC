@@ -146,7 +146,6 @@ object Frm_Vendas: TFrm_Vendas
     Height = 717
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1092
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -154,7 +153,7 @@ object Frm_Vendas: TFrm_Vendas
       Height = 62
       Align = alTop
       BevelOuter = bvNone
-      Caption = 'Caixa Fechado'
+      Caption = 'Pedido de Venda N'#176
       Color = clHighlight
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -164,7 +163,6 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1090
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -179,7 +177,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 1090
       object Panel1: TPanel
         Left = 539
         Top = 11
@@ -426,7 +423,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1090
       object pnl2PesquisaProduto: TPanel
         Left = 41
         Top = 74
@@ -473,6 +469,7 @@ object Frm_Vendas: TFrm_Vendas
         Height = 465
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -544,7 +541,6 @@ object Frm_Vendas: TFrm_Vendas
         Padding.Bottom = 8
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 727
         object GB_Total: TGroupBox
           Left = 8
           Top = 497
@@ -833,8 +829,6 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
-            ExplicitWidth = 244
-            ExplicitHeight = 148
           end
         end
       end
@@ -844,7 +838,7 @@ object Frm_Vendas: TFrm_Vendas
         Width = 712
         Height = 563
         DataSource = ds_Carrinho
-        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 3
         TitleFont.Charset = DEFAULT_CHARSET
@@ -912,7 +906,7 @@ object Frm_Vendas: TFrm_Vendas
       end
     end
   end
-  object cdsCarrinho: TClientDataSet
+  object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
       810000009619E0BD010000001800000005000000000003000000810002494404
       000100000000000944657363726963616F010049000000010005574944544802
@@ -947,21 +941,21 @@ object Frm_Vendas: TFrm_Vendas
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 537
-    Top = 361
-    object cdsCarrinhoID: TIntegerField
+    Left = 625
+    Top = 313
+    object cdsVendaProdutosID: TIntegerField
       FieldName = 'ID'
     end
-    object cdsCarrinhoDescricao: TStringField
+    object cdsVendaProdutosDescricao: TStringField
       FieldName = 'Descricao'
     end
-    object cdsCarrinhoValorUnitario: TFloatField
+    object cdsVendaProdutosValorUnitario: TFloatField
       FieldName = 'Valor Unitario'
     end
-    object cdsCarrinhoQuantidade: TIntegerField
+    object cdsVendaProdutosQuantidade: TIntegerField
       FieldName = 'Quantidade'
     end
-    object cdsCarrinhoValorTotal: TFloatField
+    object cdsVendaProdutosValorTotal: TFloatField
       FieldName = 'Valor Total'
     end
   end
@@ -969,8 +963,8 @@ object Frm_Vendas: TFrm_Vendas
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 73
-    Top = 361
+    Left = 105
+    Top = 305
     object SQL_ProdutosID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -1009,12 +1003,12 @@ object Frm_Vendas: TFrm_Vendas
   end
   object DS_produtos: TDataSource
     DataSet = SQL_Produtos
-    Left = 73
-    Top = 409
+    Left = 105
+    Top = 361
   end
   object ds_Carrinho: TDataSource
-    DataSet = cdsCarrinho
-    Left = 540
-    Top = 409
+    DataSet = cdsVendaProdutos
+    Left = 628
+    Top = 385
   end
 end

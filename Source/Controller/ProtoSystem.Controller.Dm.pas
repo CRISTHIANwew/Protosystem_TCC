@@ -178,33 +178,31 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PEDIDOS (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'ID INTEGER PRIMARY KEY,' +
       'ID_CLIENTE INTEGER,' +
       'NOME_CLIENTE VARCHAR(50),' +
-      'DATA DATE DEFAULT TODAY ,'+
-      'HORA TIME DEFAULT NOW,'+
-      'ENDERECO_CLIENTE VARCHAR(50),'+
-      'CONDICAOPAGTO VARCHAR(50),'+
-      'VALOR REAL,' +
-      'VALORDESCONTO REAL,'+
-      'STATUS VARCHAR(50),'+
-      'USUARIO VARCHAR(20),'+
+      'CONDICAOPAGTO INTEGER,'+
+      'SUBTOTAL REAL,' +
+      'DESPESAS REAL,'+
+      'FRETE REAL,'+
+      'VALOR_DESCONTO REAL,'+
+      'TOTAL_GERAL REAL,'+
       'FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID));');
   end;
 
   Result := false;
-  Result := TableNames.IndexOf('VENDA_GRID') >= 0;
+  Result := TableNames.IndexOf('VENDA_PRODUTOS') >= 0;
 
   if Result = false then
   begin
-    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_GRID (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
-      'VALOR REAL,' +
-      'ID_CLIENTE INTEGER,' +
-      'NOME_CLIENTE,' +
-      'CPF_CNPJ_CLIENTE,' +
-      'DATAHORAVENDA DATETIME DEFAULT CURRENT_TIMESTAMP,' +
-      'FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID));');
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PRODUTOS (' +
+      'ID_PEDIDO INTEGER PRIMARY KEY,' +
+      'ID_PRODUTO INTEGER,' +
+      'DESCRICAO VARCHAR(50),' +
+      'VALOR_UNIT REAL,' +
+      'QUANTIDADE INTEGER,' +
+      'VALOR_TOTAL REAL,' +
+      'FOREIGN KEY (ID_PEDIDO) REFERENCES VENDA_PEDIDO(ID));');
   end;
 
   //-------------------------------------------------------------------

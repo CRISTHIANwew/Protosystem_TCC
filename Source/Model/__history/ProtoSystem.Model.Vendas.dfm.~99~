@@ -4,7 +4,7 @@ object Frm_Vendas: TFrm_Vendas
   BorderStyle = bsDialog
   Caption = 'Vendas'
   ClientHeight = 717
-  ClientWidth = 1092
+  ClientWidth = 1091
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -142,18 +142,18 @@ object Frm_Vendas: TFrm_Vendas
   object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1092
+    Width = 1091
     Height = 717
     Align = alClient
     TabOrder = 0
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
-      Width = 1090
+      Width = 1089
       Height = 62
       Align = alTop
       BevelOuter = bvNone
-      Caption = 'Caixa Fechado'
+      Caption = 'Pedido de Venda N'#176
       Color = clHighlight
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -167,7 +167,7 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_BUTTONS: TPanel
       Left = 1
       Top = 646
-      Width = 1090
+      Width = 1089
       Height = 70
       Align = alBottom
       Color = clHighlight
@@ -413,7 +413,7 @@ object Frm_Vendas: TFrm_Vendas
     object PNL_PRINCIPAL_MAIN: TPanel
       Left = 1
       Top = 63
-      Width = 1090
+      Width = 1089
       Height = 583
       Align = alClient
       Color = clHighlight
@@ -469,6 +469,7 @@ object Frm_Vendas: TFrm_Vendas
         Height = 465
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -527,7 +528,7 @@ object Frm_Vendas: TFrm_Vendas
           end>
       end
       object PNL_OPERACOES: TPanel
-        Left = 727
+        Left = 726
         Top = 11
         Width = 352
         Height = 561
@@ -828,18 +829,16 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
-            ExplicitWidth = 244
-            ExplicitHeight = 148
           end
         end
       end
       object gridCarrinhoVendas: TDBGrid
         Left = 7
-        Top = 10
-        Width = 714
-        Height = 569
-        DataSource = ds_Carrinho
-        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
+        Top = 9
+        Width = 712
+        Height = 563
+        DataSource = ds_VendaProdutos
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 3
         TitleFont.Charset = DEFAULT_CHARSET
@@ -907,7 +906,7 @@ object Frm_Vendas: TFrm_Vendas
       end
     end
   end
-  object cdsCarrinho: TClientDataSet
+  object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
       810000009619E0BD010000001800000005000000000003000000810002494404
       000100000000000944657363726963616F010049000000010005574944544802
@@ -942,21 +941,21 @@ object Frm_Vendas: TFrm_Vendas
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 537
-    Top = 361
-    object cdsCarrinhoID: TIntegerField
+    Left = 489
+    Top = 305
+    object cdsVendaProdutosID: TIntegerField
       FieldName = 'ID'
     end
-    object cdsCarrinhoDescricao: TStringField
+    object cdsVendaProdutosDescricao: TStringField
       FieldName = 'Descricao'
     end
-    object cdsCarrinhoValorUnitario: TFloatField
+    object cdsVendaProdutosValorUnitario: TFloatField
       FieldName = 'Valor Unitario'
     end
-    object cdsCarrinhoQuantidade: TIntegerField
+    object cdsVendaProdutosQuantidade: TIntegerField
       FieldName = 'Quantidade'
     end
-    object cdsCarrinhoValorTotal: TFloatField
+    object cdsVendaProdutosValorTotal: TFloatField
       FieldName = 'Valor Total'
     end
   end
@@ -964,8 +963,8 @@ object Frm_Vendas: TFrm_Vendas
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
-    Left = 73
-    Top = 361
+    Left = 105
+    Top = 305
     object SQL_ProdutosID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -1004,12 +1003,33 @@ object Frm_Vendas: TFrm_Vendas
   end
   object DS_produtos: TDataSource
     DataSet = SQL_Produtos
-    Left = 73
-    Top = 409
+    Left = 105
+    Top = 361
   end
-  object ds_Carrinho: TDataSource
-    DataSet = cdsCarrinho
-    Left = 540
-    Top = 409
+  object ds_VendaProdutos: TDataSource
+    DataSet = cdsVendaProdutos
+    Left = 492
+    Top = 377
+  end
+  object cdsVendaPedidos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 601
+    Top = 303
+  end
+  object dsVendaPedidos: TDataSource
+    DataSet = cdsVendaPedidos
+    Left = 601
+    Top = 375
+  end
+  object dspVendasProdutos: TDataSetProvider
+    DataSet = cdsVendaProdutos
+    Left = 377
+    Top = 303
+  end
+  object SQLInsertProdutos: TSQLQuery
+    Params = <>
+    Left = 377
+    Top = 384
   end
 end

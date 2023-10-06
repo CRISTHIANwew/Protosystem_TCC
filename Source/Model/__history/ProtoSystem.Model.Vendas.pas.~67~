@@ -83,7 +83,6 @@ type
     procedure BTN_CancelarItemClick(Sender: TObject);
     procedure btnCancelaVendaClick(Sender: TObject);
   private
-    { Private declarations }
     TotalAmount: double;
     procedure InicializaComponentes;
     procedure AtualizaTotais;
@@ -94,9 +93,10 @@ type
       PrecoProd: Double;
       IdProd: Integer;
       QuantidadeProdSTR: string;
-      TotalGeralFLT: Double;
+
   public
-    { Public declarations }
+    var
+      TotalGeralFLT: Double;
   end;
 
 var
@@ -109,43 +109,33 @@ implementation
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
-var TaskDialog: TTaskDialog;
 begin
-  if not cdsCarrinho.IsEmpty then
-    begin
-    TaskDialog := TTaskDialog.Create(nil);
+if not cdsCarrinho.IsEmpty then
+with TTaskDialog.Create(Self) do
   try
-    TaskDialog.Caption := 'Cancelamento';
-    TaskDialog.Text:= 'Deseja realmente cancelar a venda?';
-    TaskDialog.CommonButtons := [tcbYes, tcbNo];
-    TaskDialog.DefaultButton := tcbNo;
-
-    if TaskDialog.ModalResult = mrYes then
-    begin
-      //Cancela Venda
-      while not cdsCarrinho.IsEmpty do
-      begin
-        cdsCarrinho.Delete;
-      end;
-      AtualizaTotais;
-      //Limpa registros
-      edtCodigoProduto.Text:='';
-      edtPrecoProduto.Text:='';
-      edtPrecoProduto.Text:='';
-      edtQuantidadeProduto.Text:='';
-      edtSubTotalProduto.Text:='';
-      edtTotalVenda.Text:='';
-      ShowMessage('Venda cancelada com sucesso.');
-    end
-
-    else if TaskDialog.ModalResult = mrNo then
-    begin
-        // O usuário clicou em "Não", lide com isso, se necessário
-    end;
-
-    finally
-      TaskDialog.Free;
-    end;
+    Caption := 'Cancelamento';
+    Title := 'Deseja realmente cancelar esta venda ?';
+    CommonButtons := [tcbYes, tcbNo];
+    MainIcon := tdiInformation;
+    if Execute then
+      if ModalResult = mrYes then
+        begin
+          while not cdsCarrinho.IsEmpty do
+            begin
+            cdsCarrinho.Delete;
+            end;
+            AtualizaTotais;
+        //Limpa registros
+        edtCodigoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtPrecoProduto.Text:='';
+        edtQuantidadeProduto.Text:='';
+        edtSubTotalProduto.Text:='';
+        edtTotalVenda.Text:='';
+        ShowMessage('Venda cancelada com sucesso.');
+      end
+  finally
+    Free;
   end;
 end;
 
@@ -155,6 +145,7 @@ begin
   gridCarrinhoVendas.Visible:=false;
   gridTabelaProduto.Visible:=true;
   pnl2PesquisaProduto.Visible:=true;
+  edtPesquisaProduto.SetFocus;
 end;
 
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
@@ -167,6 +158,7 @@ end;
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
 begin
   // Finalizar Venda
+  if not cdsCarrinho.IsEmpty then
   Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
   frmVendasFechamento.ShowModal;
 end;
@@ -260,6 +252,8 @@ begin
     gridCarrinhoVendas.Visible:=true;
     gridTabelaProduto.Visible:=false;
     pnl2PesquisaProduto.Visible:=false;
+    gridCarrinhoVendas.SetFocus;
+    dm.TotalGeralFLT:=TotalGeralFLT;
 end;
 
 procedure TFrm_Vendas.InicializaComponentes;

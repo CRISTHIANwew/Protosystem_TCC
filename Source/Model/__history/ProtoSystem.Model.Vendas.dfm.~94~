@@ -146,7 +146,6 @@ object Frm_Vendas: TFrm_Vendas
     Height = 717
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 1092
     object PNL_PRODUTO: TPanel
       Left = 1
       Top = 1
@@ -164,7 +163,6 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1090
     end
     object PNL_BUTTONS: TPanel
       Left = 1
@@ -179,7 +177,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 1090
       object Panel1: TPanel
         Left = 539
         Top = 11
@@ -426,7 +423,6 @@ object Frm_Vendas: TFrm_Vendas
       Padding.Bottom = 10
       ParentBackground = False
       TabOrder = 2
-      ExplicitWidth = 1090
       object pnl2PesquisaProduto: TPanel
         Left = 41
         Top = 74
@@ -473,6 +469,7 @@ object Frm_Vendas: TFrm_Vendas
         Height = 465
         DataSource = DS_produtos
         GradientEndColor = clSkyBlue
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -544,7 +541,6 @@ object Frm_Vendas: TFrm_Vendas
         Padding.Bottom = 8
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 727
         object GB_Total: TGroupBox
           Left = 8
           Top = 497
@@ -833,8 +829,6 @@ object Frm_Vendas: TFrm_Vendas
             DataSource = DS_produtos
             Proportional = True
             TabOrder = 0
-            ExplicitWidth = 244
-            ExplicitHeight = 148
           end
         end
       end
@@ -844,7 +838,7 @@ object Frm_Vendas: TFrm_Vendas
         Width = 712
         Height = 563
         DataSource = ds_Carrinho
-        Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgTitleHotTrack]
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 3
         TitleFont.Charset = DEFAULT_CHARSET

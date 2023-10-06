@@ -49,9 +49,6 @@ Coordinates=398,10,57,51
 [Shape9]
 Coordinates=406,436,50,33
 
-[cdsCarrinho]
-Coordinates=472,322,75,51
-
 [PNL_BUTTONS]
 Coordinates=212,254,90,51
 
@@ -120,17 +117,8 @@ Coordinates=847,322,56,33
 [Shape3]
 Coordinates=778,322,50,33
 
-[cdsCarrinhoID]
-Coordinates=901,166,85,33
-
 [DM.SQL_vendas]
 Coordinates=580,10,95,51
-
-[cdsCarrinhoValorUnitario]
-Coordinates=901,221,139,33
-
-[cdsCarrinhoDescricao]
-Coordinates=901,331,124,33
 
 [DM.Tb_venda]
 Coordinates=475,10,81,51
@@ -144,15 +132,27 @@ Coordinates=10,10,125,195
 [DS_produtos]
 Coordinates=539,386,79,33
 
-[cdsCarrinhoQuantidade]
-Coordinates=1098,1,131,33
-
-[cdsCarrinhoValorTotal]
-Coordinates=901,386,125,33
-
 []
 Coordinates=154,80,82,33
 
 [btnCancelaVenda]
 Coordinates=805,390,99,33
+
+[cdsVendaProdutos]
+Coordinates=472,322,75,51
+
+[cdsVendaProdutosID]
+Coordinates=901,166,85,33
+
+[cdsVendaProdutosDescricao]
+Coordinates=901,331,124,33
+
+[cdsVendaProdutosValorUnitario]
+Coordinates=901,221,139,33
+
+[cdsVendaProdutosQuantidade]
+Coordinates=1098,1,131,33
+
+[cdsVendaProdutosValorTotal]
+Coordinates=901,386,125,33
 

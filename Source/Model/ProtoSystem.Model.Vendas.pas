@@ -9,7 +9,7 @@ uses
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Mask, CommCtrl;
+  Vcl.Mask, CommCtrl, Data.FMTBcd, Data.SqlExpr, Datasnap.Provider;
 
 type
   TFrm_Vendas = class(TForm)
@@ -46,7 +46,7 @@ type
     Shape10: TShape;
     PNL_IMAGEM: TPanel;
     DBImage1: TDBImage;
-    cdsCarrinho: TClientDataSet;
+    cdsVendaProdutos: TClientDataSet;
     gridTabelaProduto: TDBGrid;
     Panel2: TPanel;
     Shape2: TShape;
@@ -56,12 +56,12 @@ type
     edtPesquisaProduto: TEdit;
     SQL_Produtos: TFDQuery;
     DS_produtos: TDataSource;
-    cdsCarrinhoID: TIntegerField;
-    cdsCarrinhoDescricao: TStringField;
-    cdsCarrinhoValorUnitario: TFloatField;
-    cdsCarrinhoQuantidade: TIntegerField;
-    cdsCarrinhoValorTotal: TFloatField;
-    ds_Carrinho: TDataSource;
+    cdsVendaProdutosID: TIntegerField;
+    cdsVendaProdutosDescricao: TStringField;
+    cdsVendaProdutosValorUnitario: TFloatField;
+    cdsVendaProdutosQuantidade: TIntegerField;
+    cdsVendaProdutosValorTotal: TFloatField;
+    ds_VendaProdutos: TDataSource;
     SQL_ProdutosID: TFDAutoIncField;
     SQL_ProdutosDESCRICAO: TStringField;
     SQL_ProdutosESTOQUE: TIntegerField;
@@ -75,6 +75,10 @@ type
     edtQuantidadeProduto: TEdit;
     edtSubTotalProduto: TEdit;
     edtTotalVenda: TEdit;
+    cdsVendaPedidos: TClientDataSet;
+    dsVendaPedidos: TDataSource;
+    dspVendasProdutos: TDataSetProvider;
+    SQLInsertProdutos: TSQLQuery;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -110,7 +114,7 @@ uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
-if not cdsCarrinho.IsEmpty then
+if not cdsVendaProdutos.IsEmpty then
 with TTaskDialog.Create(Self) do
   try
     Caption := 'Cancelamento';
@@ -120,9 +124,9 @@ with TTaskDialog.Create(Self) do
     if Execute then
       if ModalResult = mrYes then
         begin
-          while not cdsCarrinho.IsEmpty do
+          while not cdsVendaProdutos.IsEmpty do
             begin
-            cdsCarrinho.Delete;
+            cdsVendaProdutos.Delete;
             end;
             AtualizaTotais;
         //Limpa registros
@@ -151,15 +155,18 @@ end;
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
 begin
   //Cancela item
-  cdsCarrinho.Delete;
+  cdsVendaProdutos.Delete;
   AtualizaTotais;
 end;
 
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
 begin
   // Finalizar Venda
+  if not cdsVendaProdutos.IsEmpty then
+  begin
   Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
   frmVendasFechamento.ShowModal;
+  end;
 end;
 
 procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);
@@ -200,16 +207,23 @@ begin
   EstoqueProd := SQL_Produtos.FieldByName('ESTOQUE').AsInteger;
   //Solicita ao usuário que insira a quantidade desejada
   QuantidadeProdSTR := InputBox('Quantidade', 'Informe a quantidade:', '');
-  //Converte a string inserida pelo usuário em um valor inteiro
+  if QuantidadeProdSTR = '' then
+  begin
+      ShowMessage('Não é permitido valor zerado! ');
+  end
+  else
+  begin
   TryStrToInt(QuantidadeProdSTR, QuantidadeProdINT);
   //Insere os dados no TClientDataSet
-  cdsCarrinho.Append;
-  cdsCarrinho.FieldByName('ID').AsInteger := IdProd;
-  cdsCarrinho.FieldByName('Descricao').AsString := DescricaoProd;
-  cdsCarrinho.FieldByName('Valor Unitario').AsFloat := PrecoProd;
-  cdsCarrinho.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
-  cdsCarrinho.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
-  cdsCarrinho.Post;
+  cdsVendaProdutos.Append;
+  cdsVendaProdutos.FieldByName('ID').AsInteger := IdProd;
+  cdsVendaProdutos.FieldByName('Descricao').AsString := DescricaoProd;
+  cdsVendaProdutos.FieldByName('Valor Unitario').AsFloat := PrecoProd;
+  cdsVendaProdutos.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
+  cdsVendaProdutos.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
+  cdsVendaProdutos.Post;
+  end
+
 end;
 
 procedure TFrm_Vendas.AtualizaTotais;
@@ -221,11 +235,11 @@ var
 begin
   //Calcula Total Geral da venda
   TotalGeralFLT := 0.0;
-  cdsCarrinho.First;
-    while not cdsCarrinho.Eof do
+  cdsVendaProdutos.First;
+    while not cdsVendaProdutos.Eof do
     begin
-      TotalGeralFLT := TotalGeralFLT + cdsCarrinho.FieldByName('Valor Total').AsFloat;
-      cdsCarrinho.Next;
+      TotalGeralFLT := TotalGeralFLT + cdsVendaProdutos.FieldByName('Valor Total').AsFloat;
+      cdsVendaProdutos.Next;
     end;
     //Limpa registros
     edtCodigoProduto.Text:='';
@@ -262,8 +276,8 @@ begin
   DS_produtos.enabled:=true;
   SQL_Produtos.connection:=DM.conexao;
   SQL_Produtos.Active:=true;
-  ds_Carrinho.dataset:=cdsCarrinho;
-  ds_Carrinho.Enabled:=true;
+  ds_VendaProdutos.dataset:=cdsVendaProdutos;
+  ds_VendaProdutos.Enabled:=true;
   gridCarrinhoVendas.Visible:=true;
   gridTabelaProduto.Visible:=false;
   pnl2PesquisaProduto.Visible:=false;
