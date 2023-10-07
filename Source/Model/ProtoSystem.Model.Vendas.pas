@@ -293,6 +293,7 @@ begin
    finally
      IdPedido:= Result + 1;
      PNL_PRODUTO.Caption:= 'Pedido de Venda n° ' + IntToStr(IdPedido);
+     dm.IdPedido:=IdPedido;
    end;
 end;
 

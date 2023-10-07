@@ -34,7 +34,9 @@ type
     procedure CreateDB;
     function GetTables: TDataSet;
   public
-    var TotalGeralFLT: double;
+    var
+    TotalGeralFLT: double;
+    IdPedido: integer;
   end;
 
 var
@@ -196,18 +198,17 @@ begin
   end;
 
   Result := false;
-  Result := TableNames.IndexOf('VENDA_PRODUTOS') >= 0;
+  Result := TableNames.IndexOf('VENDA_PRODUTO') >= 0;
 
   if Result = false then
   begin
-    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PRODUTOS (' +
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PRODUTO (' +
       'ID_PEDIDO INTEGER PRIMARY KEY,' +
       'ID_PRODUTO INTEGER,' +
       'DESCRICAO VARCHAR(50),' +
       'VALOR_UNIT REAL,' +
       'QUANTIDADE INTEGER,' +
-      'VALOR_TOTAL REAL,' +
-      'FOREIGN KEY (ID_PEDIDO) REFERENCES VENDA_PEDIDOS(ID));');
+      'VALOR_TOTAL REAL);');
   end;
 
   Result := false;

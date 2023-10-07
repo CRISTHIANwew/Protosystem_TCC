@@ -230,15 +230,18 @@ end;
 Procedure TfrmVendasFechamento.FechaVenda;
 begin
   sqlInsertProdutos.Connection:=DM.conexao;
-  sqlInsertProdutos.Active:=true;
   dm.cdsVendaProdutos.First;
   while not dm.cdsVendaProdutos.Eof do
   begin
-    sqlInsertProdutos.SQL.Text := 'INSERT INTO VENDA_PRODUTOS (ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
-    sqlInsertProdutos.ParamByName('ID_PEDIDO').Value := dm.cdsVendaProdutos.FieldByName('IDPEDIDO').Value;
+    //(ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
+    sqlInsertProdutos.SQL.Text := 'INSERT INTO VENDA_PRODUTO (ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
+    sqlInsertProdutos.ParamByName('ID_PEDIDO').Value := Dm.IdPedido;
+    sqlInsertProdutos.ParamByName('ID_PRODUTO').Value := DM.cdsVendaProdutos.FieldByName('ID').Value;
+    sqlInsertProdutos.ParamByName('DESCRICAO').Value := DM.cdsVendaProdutos.FieldByName('Descricao').Value;
+    sqlInsertProdutos.ParamByName('VALOR_UNIT').Value := DM.cdsVendaProdutos.FieldByName('Valor Unitario').Value;
+    sqlInsertProdutos.ParamByName('QUANTIDADE').Value := DM.cdsVendaProdutos.FieldByName('Quantidade').Value;
+    sqlInsertProdutos.ParamByName('VALOR_TOTAL').Value := DM.cdsVendaProdutos.FieldByName('Valor Total').Value;
     sqlInsertProdutos.ExecSQL;
-
-
     dm.cdsVendaProdutos.Next;
   end;
 

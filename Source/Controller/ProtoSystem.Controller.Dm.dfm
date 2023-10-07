@@ -1,16 +1,15 @@
 object DM: TDM
   OnCreate = DataModuleCreate
-  Height = 635
-  Width = 1104
-  PixelsPerInch = 120
+  Height = 508
+  Width = 883
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 83
-    Top = 136
+    Left = 66
+    Top = 109
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 83
-    Top = 73
+    Left = 66
+    Top = 58
   end
   object conexao: TFDConnection
     Params.Strings = (
@@ -20,23 +19,23 @@ object DM: TDM
         'CC\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     LoginPrompt = False
-    Left = 83
-    Top = 8
+    Left = 66
+    Top = 6
   end
   object FDQuery: TFDQuery
     Connection = conexao
-    Left = 84
-    Top = 198
+    Left = 67
+    Top = 158
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 990
-    Top = 110
+    Left = 792
+    Top = 88
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 990
-    Top = 170
+    Left = 792
+    Top = 136
   end
   object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
@@ -73,8 +72,8 @@ object DM: TDM
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 799
-    Top = 97
+    Left = 639
+    Top = 78
     object cdsVendaProdutosIDPEDIDO: TIntegerField
       FieldKind = fkCalculated
       FieldName = 'IDPEDIDO'
