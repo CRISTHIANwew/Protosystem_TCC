@@ -46,7 +46,6 @@ type
     Shape10: TShape;
     PNL_IMAGEM: TPanel;
     DBImage1: TDBImage;
-    cdsVendaProdutos: TClientDataSet;
     gridTabelaProduto: TDBGrid;
     Panel2: TPanel;
     Shape2: TShape;
@@ -56,11 +55,6 @@ type
     edtPesquisaProduto: TEdit;
     SQL_Produtos: TFDQuery;
     DS_produtos: TDataSource;
-    cdsVendaProdutosID: TIntegerField;
-    cdsVendaProdutosDescricao: TStringField;
-    cdsVendaProdutosValorUnitario: TFloatField;
-    cdsVendaProdutosQuantidade: TIntegerField;
-    cdsVendaProdutosValorTotal: TFloatField;
     ds_VendaProdutos: TDataSource;
     SQL_ProdutosID: TFDAutoIncField;
     SQL_ProdutosDESCRICAO: TStringField;
@@ -77,8 +71,6 @@ type
     edtTotalVenda: TEdit;
     cdsVendaPedidos: TClientDataSet;
     dsVendaPedidos: TDataSource;
-    dspVendasProdutos: TDataSetProvider;
-    SQLInsertProdutos: TSQLQuery;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -91,6 +83,7 @@ type
     procedure InicializaComponentes;
     procedure AtualizaTotais;
     procedure TransfereInformacoes;
+    procedure VerificaIdPedido;
     var
       SubTotalFLT: Double;
       QuantidadeProdINT: Integer;
@@ -101,6 +94,7 @@ type
   public
     var
       TotalGeralFLT: Double;
+      IdPedido: integer;
   end;
 
 var
@@ -114,7 +108,7 @@ uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
-if not cdsVendaProdutos.IsEmpty then
+if not dm.cdsVendaProdutos.IsEmpty then
 with TTaskDialog.Create(Self) do
   try
     Caption := 'Cancelamento';
@@ -124,9 +118,9 @@ with TTaskDialog.Create(Self) do
     if Execute then
       if ModalResult = mrYes then
         begin
-          while not cdsVendaProdutos.IsEmpty do
+          while not dm.cdsVendaProdutos.IsEmpty do
             begin
-            cdsVendaProdutos.Delete;
+            dm.cdsVendaProdutos.Delete;
             end;
             AtualizaTotais;
         //Limpa registros
@@ -155,14 +149,14 @@ end;
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
 begin
   //Cancela item
-  cdsVendaProdutos.Delete;
+  dm.cdsVendaProdutos.Delete;
   AtualizaTotais;
 end;
 
 procedure TFrm_Vendas.btn_FinalizarVendaClick(Sender: TObject);
 begin
   // Finalizar Venda
-  if not cdsVendaProdutos.IsEmpty then
+  if not dm.cdsVendaProdutos.IsEmpty then
   begin
   Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
   frmVendasFechamento.ShowModal;
@@ -185,6 +179,7 @@ end;
 procedure TFrm_Vendas.FormCreate(Sender: TObject);
 begin
   InicializaComponentes;
+  VerificaIdPedido;
 end;
 
 procedure TFrm_Vendas.gridTabelaProdutoCellClick(Column: TColumn);
@@ -215,13 +210,14 @@ begin
   begin
   TryStrToInt(QuantidadeProdSTR, QuantidadeProdINT);
   //Insere os dados no TClientDataSet
-  cdsVendaProdutos.Append;
-  cdsVendaProdutos.FieldByName('ID').AsInteger := IdProd;
-  cdsVendaProdutos.FieldByName('Descricao').AsString := DescricaoProd;
-  cdsVendaProdutos.FieldByName('Valor Unitario').AsFloat := PrecoProd;
-  cdsVendaProdutos.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
-  cdsVendaProdutos.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
-  cdsVendaProdutos.Post;
+  dm.cdsVendaProdutos.Append;
+  dm.cdsVendaProdutos.FieldByName('IDPEDIDO').AsInteger := IdPedido;
+  dm.cdsVendaProdutos.FieldByName('ID').AsInteger := IdProd;
+  dm.cdsVendaProdutos.FieldByName('Descricao').AsString := DescricaoProd;
+  dm.cdsVendaProdutos.FieldByName('Valor Unitario').AsFloat := PrecoProd;
+  dm.cdsVendaProdutos.FieldByName('Quantidade').AsInteger := QuantidadeProdInt;
+  dm.cdsVendaProdutos.FieldByName('Valor Total').AsFloat := QuantidadeProdInt * PrecoProd;
+  dm.cdsVendaProdutos.Post;
   end
 
 end;
@@ -235,11 +231,11 @@ var
 begin
   //Calcula Total Geral da venda
   TotalGeralFLT := 0.0;
-  cdsVendaProdutos.First;
-    while not cdsVendaProdutos.Eof do
+  dm.cdsVendaProdutos.First;
+    while not dm.cdsVendaProdutos.Eof do
     begin
-      TotalGeralFLT := TotalGeralFLT + cdsVendaProdutos.FieldByName('Valor Total').AsFloat;
-      cdsVendaProdutos.Next;
+      TotalGeralFLT := TotalGeralFLT + dm.cdsVendaProdutos.FieldByName('Valor Total').AsFloat;
+      dm.cdsVendaProdutos.Next;
     end;
     //Limpa registros
     edtCodigoProduto.Text:='';
@@ -276,11 +272,28 @@ begin
   DS_produtos.enabled:=true;
   SQL_Produtos.connection:=DM.conexao;
   SQL_Produtos.Active:=true;
-  ds_VendaProdutos.dataset:=cdsVendaProdutos;
+  ds_VendaProdutos.dataset:=dm.cdsVendaProdutos;
   ds_VendaProdutos.Enabled:=true;
   gridCarrinhoVendas.Visible:=true;
   gridTabelaProduto.Visible:=false;
   pnl2PesquisaProduto.Visible:=false;
+end;
+
+procedure TFrm_Vendas.VerificaIdPedido;
+var
+Result: integer;
+begin
+   try
+    Dm.FDQuery.SQL.Text := 'SELECT COUNT(*) AS TotalRegistros FROM VENDA_PEDIDOS';
+    Dm.FDQuery.Open;
+    if not Dm.FDQuery.IsEmpty then
+      Result := Dm.FDQuery.FieldByName('TotalRegistros').AsInteger
+    else
+      Result := 0;
+   finally
+     IdPedido:= Result + 1;
+     PNL_PRODUTO.Caption:= 'Pedido de Venda n° ' + IntToStr(IdPedido);
+   end;
 end;
 
 end.

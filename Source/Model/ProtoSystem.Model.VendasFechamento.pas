@@ -60,6 +60,7 @@ type
     Shape7: TShape;
     Label2: TLabel;
     RadioGroup1: TRadioGroup;
+    sqlInsertProdutos: TFDQuery;
     procedure gridTabelaClienteCellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaClienteChange(Sender: TObject);
@@ -69,6 +70,7 @@ type
     procedure edtDespesasKeyPress(Sender: TObject; var Key: Char);
     procedure edtFreteKeyPress(Sender: TObject; var Key: Char);
     procedure edtValorDescontoKeyPress(Sender: TObject; var Key: Char);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     var
       idClienteINT: Integer;
@@ -88,6 +90,7 @@ type
   procedure TransfereInformacoes;
   procedure IniciaComponentes;
   procedure AtualizaTotais;
+  procedure FechaVenda;
   public
     { Public declarations }
     var
@@ -201,6 +204,11 @@ begin
     edtValorDesconto.Text:='0';
 end;
 
+procedure TfrmVendasFechamento.SpeedButton1Click(Sender: TObject);
+begin
+  FechaVenda;
+end;
+
 procedure TfrmVendasFechamento.AtualizaTotais;
 var TotalGeralSTR: string;
 begin
@@ -214,9 +222,28 @@ begin
      ValorDescontoFLT:= StrToFloat(ValorDescontoSTR); 
 
      TotalGeralFLT:= TotalGeralFLT + DespesasFLT + FreteFLT - ValorDescontoFLT;
-     edtTotalVenda.Text:='';;     
+     edtTotalVenda.Text:='';
      TotalGeralSTR:= FloatToStr(TotalGeralFLT);
      edtTotalVenda.Text:=TotalGeralSTR;
+end;
+
+Procedure TfrmVendasFechamento.FechaVenda;
+begin
+  sqlInsertProdutos.Connection:=DM.conexao;
+  sqlInsertProdutos.Active:=true;
+  dm.cdsVendaProdutos.First;
+  while not dm.cdsVendaProdutos.Eof do
+  begin
+    sqlInsertProdutos.SQL.Text := 'INSERT INTO VENDA_PRODUTOS (ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
+    sqlInsertProdutos.ParamByName('ID_PEDIDO').Value := dm.cdsVendaProdutos.FieldByName('IDPEDIDO').Value;
+    sqlInsertProdutos.ExecSQL;
+
+
+    dm.cdsVendaProdutos.Next;
+  end;
+
+
+
 end;
 
 end.

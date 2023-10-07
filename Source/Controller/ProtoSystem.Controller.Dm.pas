@@ -20,6 +20,13 @@ type
     FDQuery: TFDQuery;
     Tb_venda: TFDTable;
     SQL_vendas: TFDQuery;
+    cdsVendaProdutos: TClientDataSet;
+    cdsVendaProdutosID: TIntegerField;
+    cdsVendaProdutosDescricao: TStringField;
+    cdsVendaProdutosValorUnitario: TFloatField;
+    cdsVendaProdutosQuantidade: TIntegerField;
+    cdsVendaProdutosValorTotal: TFloatField;
+    cdsVendaProdutosIDPEDIDO: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -170,8 +177,6 @@ begin
       '  SET DATAHORACADASTRO = CURRENT_TIMESTAMP; ' + 'END;');
   end;
 
-  //-------------------------------------------------------------------
-
   Result := false;
   Result := TableNames.IndexOf('VENDA_PEDIDOS') >= 0;
 
@@ -202,10 +207,8 @@ begin
       'VALOR_UNIT REAL,' +
       'QUANTIDADE INTEGER,' +
       'VALOR_TOTAL REAL,' +
-      'FOREIGN KEY (ID_PEDIDO) REFERENCES VENDA_PEDIDO(ID));');
+      'FOREIGN KEY (ID_PEDIDO) REFERENCES VENDA_PEDIDOS(ID));');
   end;
-
-  //-------------------------------------------------------------------
 
   Result := false;
   Result := TableNames.IndexOf('USUARIO') >= 0;
