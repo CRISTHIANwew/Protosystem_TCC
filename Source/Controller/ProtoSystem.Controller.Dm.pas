@@ -203,7 +203,8 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PRODUTO (' +
-      'ID_PEDIDO INTEGER PRIMARY KEY,' +
+      'ID INTEGER PRIMARY KEY,' +
+      'ID_PEDIDO INTEGER,' +
       'ID_PRODUTO INTEGER,' +
       'DESCRICAO VARCHAR(50),' +
       'VALOR_UNIT REAL,' +
