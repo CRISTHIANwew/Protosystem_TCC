@@ -71,6 +71,7 @@ type
     edtTotalVenda: TEdit;
     cdsVendaPedidos: TClientDataSet;
     dsVendaPedidos: TDataSource;
+    SQL_ImpressaoPedido: TFDQuery;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -78,6 +79,7 @@ type
     procedure edtPesquisaProdutoChange(Sender: TObject);
     procedure BTN_CancelarItemClick(Sender: TObject);
     procedure btnCancelaVendaClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     TotalAmount: double;
     procedure InicializaComponentes;
@@ -85,6 +87,7 @@ type
     procedure TransfereInformacoes;
     procedure VerificaIdPedido;
     procedure ResetaVenda;
+    procedure ImprimePedido;
     var
       SubTotalFLT: Double;
       QuantidadeProdINT: Integer;
@@ -105,7 +108,8 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento,
+  ProtoSystem.Model.ImpressaoPedido, ProtoSystem.Model.ReportsVenda;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
@@ -177,7 +181,17 @@ begin
       edtSubTotalProduto.Text:='';
       edtTotalVenda.Text:='';
       VerificaIdPedido;
+      //ImprimePedido;
   end;
+end;
+
+procedure TFrm_Vendas.ImprimePedido;
+begin
+//  SQL_ImpressaoPedido.Active:=true;
+//  SQL_ImpressaoPedido.SQL.Text:='select * from VENDA_PEDIDOS WHERE ID = :IDPEDIDO';
+//  SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:= IntToStr(dm.IdPedido);
+//  SQL_ImpressaoPedido.ExecSQL;
+  //frmImpressaoPedido.RLReport1.Preview();
 end;
 
 procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);
@@ -319,6 +333,11 @@ begin
 
 
 
+end;
+
+procedure TFrm_Vendas.SpeedButton1Click(Sender: TObject);
+begin
+    frmReportsVenda.ReportPedido.Preview();
 end;
 
 end.

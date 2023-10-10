@@ -1,0 +1,18 @@
+object frmImpressaoPedido: TfrmImpressaoPedido
+  Left = 0
+  Top = 0
+  ClientHeight = 812
+  ClientWidth = 786
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object dsImpressaoPedido: TDataSource
+    DataSet = Frm_Vendas.SQL_ImpressaoPedido
+    Left = 328
+    Top = 408
+  end
+end
