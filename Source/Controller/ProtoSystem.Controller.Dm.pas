@@ -37,6 +37,7 @@ type
     var
     TotalGeralFLT: double;
     IdPedido: integer;
+    VendasFechamentoStatus: boolean;
   end;
 
 var
@@ -152,10 +153,16 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS FORNECEDOR (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'NOME VARCHAR(60),' +
-      'CPFCNPJ VARCHAR(14),' + 'RGIE VARCHAR (20),' + 'ENDERECO VARCHAR (60) ,'
-      + 'BAIRRO VARCHAR (60) ,' + 'CIDADE VARCHAR (60) ,' + 'CEP VARCHAR (20) ,'
-      + 'NUMERO VARCHAR(10) ,' + 'CELULAR VARCHAR(20) ,' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'NOME VARCHAR(60),' +
+      'CPFCNPJ VARCHAR(14),' +
+      'RGIE VARCHAR (20),' +
+      'ENDERECO VARCHAR (60) ,'+
+      'BAIRRO VARCHAR (60) ,' +
+      'CIDADE VARCHAR (60) ,' +
+      'CEP VARCHAR (20) ,' +
+      'NUMERO VARCHAR(10) ,' +
+      'CELULAR VARCHAR(20) ,' +
       'EMAIL VARCHAR(60));');
   end;
 
@@ -165,18 +172,18 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS PRODUTO (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
-       'DESCRICAO VARCHAR(90),' +
-      'ESTOQUE INTEGER,' +
-       'CUSTO REAL,' +
-        'PRECO REAL,' +
-         'IMAGEM BLOB,' +
-      'DATAHORACADASTRO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
-      'DATAHORAALTERACAO DATETIME);');
+     'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+     'DESCRICAO VARCHAR(90),' +
+     'ESTOQUE INTEGER,' +
+     'CUSTO REAL,' +
+     'PRECO REAL,' +
+     'IMAGEM BLOB,' +
+     'DATAHORACADASTRO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
+     'DATAHORAALTERACAO DATETIME);');
 
     FDQuery.ExecSQL('CREATE TRIGGER UpdateDataHoraCadastro ' +
-      'AFTER INSERT ON PRODUTO ' + 'BEGIN ' + '  UPDATE PRODUTO ' +
-      '  SET DATAHORACADASTRO = CURRENT_TIMESTAMP; ' + 'END;');
+     'AFTER INSERT ON PRODUTO ' + 'BEGIN ' + '  UPDATE PRODUTO ' +
+     '  SET DATAHORACADASTRO = CURRENT_TIMESTAMP; ' + 'END;');
   end;
 
   Result := false;
@@ -185,13 +192,16 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PEDIDOS (' +
-      'ID INTEGER PRIMARY KEY,' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'TOTAL_PROD REAL,' +
       'ID_CLIENTE INTEGER,' +
       'NOME_CLIENTE VARCHAR(50),' +
-      'CONDICAOPAGTO INTEGER,'+
-      'SUBTOTAL REAL,' +
-      'DESPESAS REAL,'+
-      'FRETE REAL,'+
+      'CPF_CNPJ VARCHAR,' +
+      'RG_IE VARCHAR,' +
+      'ID_PAG INTEGER,'+
+      'DESCRICAO_PAG VARCHAR,' +
+      'VALOR_DESPESAS REAL,'+
+      'VALOR_FRETE REAL,'+
       'VALOR_DESCONTO REAL,'+
       'TOTAL_GERAL REAL,'+
       'FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE(ID));');
@@ -203,7 +213,7 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS VENDA_PRODUTO (' +
-      'ID INTEGER PRIMARY KEY,' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
       'ID_PEDIDO INTEGER,' +
       'ID_PRODUTO INTEGER,' +
       'DESCRICAO VARCHAR(50),' +

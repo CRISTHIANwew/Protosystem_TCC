@@ -59,8 +59,9 @@ type
     Panel4: TPanel;
     Shape7: TShape;
     Label2: TLabel;
-    RadioGroup1: TRadioGroup;
+    rgCondicao: TRadioGroup;
     sqlInsertProdutos: TFDQuery;
+    sqlInsertPedido: TFDQuery;
     procedure gridTabelaClienteCellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaClienteChange(Sender: TObject);
@@ -71,6 +72,8 @@ type
     procedure edtFreteKeyPress(Sender: TObject; var Key: Char);
     procedure edtValorDescontoKeyPress(Sender: TObject; var Key: Char);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure rgCondicaoClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     var
       idClienteINT: Integer;
@@ -87,10 +90,14 @@ type
       ValorDescontoFLT: double;
       ValorDescontoSTR: string;
       PorcentagemDescontoSTR: string;
+      Cond_pagINT: integer;
+      Descricao_pagSTR: string;
   procedure TransfereInformacoes;
   procedure IniciaComponentes;
   procedure AtualizaTotais;
   procedure FechaVenda;
+  procedure ResetaVendafechamento;
+  //procedure VendasFechamentoClosed;
   public
     { Public declarations }
     var
@@ -167,6 +174,12 @@ begin
     Key := #0;
 end;
 
+procedure TfrmVendasFechamento.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+     dm.VendasFechamentoStatus:=false;
+end;
+
 procedure TfrmVendasFechamento.FormCreate(Sender: TObject);
 begin
   IniciaComponentes;
@@ -204,6 +217,44 @@ begin
     edtValorDesconto.Text:='0';
 end;
 
+procedure TfrmVendasFechamento.rgCondicaoClick(Sender: TObject);
+var index: integer;
+begin
+index:=rgCondicao.ItemIndex;
+case index of
+      0:
+      begin
+        Cond_pagINT:=0;
+        Descricao_pagSTR:='';
+        Cond_pagINT:=01;
+        Descricao_pagSTR:='A VISTA';
+      end;
+      1:
+     begin
+        Cond_pagINT:=0;
+        Descricao_pagSTR:='';
+        Cond_pagINT:=02;
+        Descricao_pagSTR:='CARTAO DEBITO';
+      end;
+      2:
+     begin
+        Cond_pagINT:=0;
+        Descricao_pagSTR:='';
+        Cond_pagINT:=03;
+        Descricao_pagSTR:='CARTAO CREDITO';
+      end;
+      3:
+     begin
+        Cond_pagINT:=0;
+        Descricao_pagSTR:='';
+        Cond_pagINT:=04;
+        Descricao_pagSTR:='PIX/DEPOSITO';
+      end;
+     else
+     ShowMessage('Seleção inválida!!');
+  end;
+end;
+
 procedure TfrmVendasFechamento.SpeedButton1Click(Sender: TObject);
 begin
   FechaVenda;
@@ -219,7 +270,7 @@ begin
 
      DespesasFLT:= StrToFloat(DespesasSTR);
      FreteFLT:= StrToFloat(FreteSTR);
-     ValorDescontoFLT:= StrToFloat(ValorDescontoSTR); 
+     ValorDescontoFLT:= StrToFloat(ValorDescontoSTR);
 
      TotalGeralFLT:= TotalGeralFLT + DespesasFLT + FreteFLT - ValorDescontoFLT;
      edtTotalVenda.Text:='';
@@ -229,11 +280,26 @@ end;
 
 Procedure TfrmVendasFechamento.FechaVenda;
 begin
+  sqlInsertPedido.Connection:=DM.conexao;
   sqlInsertProdutos.Connection:=DM.conexao;
+  //inserção dos dados da venda
+  sqlInsertPedido.SQL.Text := 'INSERT INTO VENDA_PEDIDOS (TOTAL_PROD, ID_CLIENTE, NOME_CLIENTE, CPF_CNPJ, RG_IE, ID_PAG, DESCRICAO_PAG, VALOR_DESPESAS, VALOR_FRETE, VALOR_DESCONTO, TOTAL_GERAL) VALUES '+'(:TOTAL_PROD, :ID_CLIENTE, :NOME_CLIENTE, :CPF_CNPJ, :RG_IE, :ID_PAG, :DESCRICAO_PAG, :VALOR_DESPESAS, :VALOR_FRETE, :VALOR_DESCONTO, :TOTAL_GERAL)';
+  sqlInsertPedido.ParamByName('TOTAL_PROD').Value:= DM.TotalGeralFLT;
+  sqlInsertPedido.ParamByName('ID_CLIENTE').Value:= idClienteINT;
+  sqlInsertPedido.ParamByName('NOME_CLIENTE').Value:= NomeClienteSTR;
+  sqlInsertPedido.ParamByName('CPF_CNPJ').Value:= cpfcnpjSTR;
+  sqlInsertPedido.ParamByName('RG_IE').Value:= rgieSTR;
+  sqlInsertPedido.ParamByName('ID_PAG').Value:= Cond_pagINT;
+  sqlInsertPedido.ParamByName('DESCRICAO_PAG').Value:= Descricao_pagSTR;
+  sqlInsertPedido.ParamByName('VALOR_DESPESAS').Value:= DespesasFLT;
+  sqlInsertPedido.ParamByName('VALOR_FRETE').Value:= FreteFLT;
+  sqlInsertPedido.ParamByName('VALOR_DESCONTO').Value:= ValorDescontoFLT;
+  sqlInsertPedido.ParamByName('TOTAL_GERAL').Value:= TotalGeralFLT;
+  sqlInsertPedido.ExecSQL;
+  //inserção dos produtos
   dm.cdsVendaProdutos.First;
   while not dm.cdsVendaProdutos.Eof do
   begin
-    //(ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
     sqlInsertProdutos.SQL.Text := 'INSERT INTO VENDA_PRODUTO (ID_PEDIDO, ID_PRODUTO, DESCRICAO, VALOR_UNIT, QUANTIDADE, VALOR_TOTAL) VALUES (:ID_PEDIDO, :ID_PRODUTO, :DESCRICAO, :VALOR_UNIT, :QUANTIDADE, :VALOR_TOTAL)';
     sqlInsertProdutos.ParamByName('ID_PEDIDO').Value := Dm.IdPedido;
     sqlInsertProdutos.ParamByName('ID_PRODUTO').Value := DM.cdsVendaProdutos.FieldByName('ID').Value;
@@ -244,9 +310,28 @@ begin
     sqlInsertProdutos.ExecSQL;
     dm.cdsVendaProdutos.Next;
   end;
+  ResetaVendafechamento;
+end;
 
-
-
+procedure TfrmVendasFechamento.ResetaVendafechamento;
+begin
+  edtIdCliente.Text:='';
+  edtNomeCliente.Text:='';
+  edtCPFCNPJ.Text:='';
+  edtRGIE.Text:='';
+  edtDespesas.Text:='';
+  edtFrete.Text:='';
+  edtValorDesconto.Text:='';
+  edtTotalVenda.Text:='';
+  idClienteINT:=0;
+  NomeClienteSTR:='';
+  cpfcnpjINT:=0;
+  rgieINT:=0;
+  DespesasFLT:=0;
+  FreteFLT:=0;
+  ValorDescontoFLT:=0;
+  TotalGeralFLT:=0;
+  frmVendasFechamento.Close;
 end;
 
 end.

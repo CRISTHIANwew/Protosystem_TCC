@@ -84,6 +84,7 @@ type
     procedure AtualizaTotais;
     procedure TransfereInformacoes;
     procedure VerificaIdPedido;
+    procedure ResetaVenda;
     var
       SubTotalFLT: Double;
       QuantidadeProdINT: Integer;
@@ -158,8 +159,24 @@ begin
   // Finalizar Venda
   if not dm.cdsVendaProdutos.IsEmpty then
   begin
+  dm.VendasFechamentoStatus:=true;
   Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
   frmVendasFechamento.ShowModal;
+  end;
+  if dm.VendasFechamentoStatus=false then
+  begin
+     while not dm.cdsVendaProdutos.IsEmpty do
+        begin
+          dm.cdsVendaProdutos.Delete;
+        end;
+      AtualizaTotais;
+      edtCodigoProduto.Text:='';
+      edtPrecoProduto.Text:='';
+      edtPrecoProduto.Text:='';
+      edtQuantidadeProduto.Text:='';
+      edtSubTotalProduto.Text:='';
+      edtTotalVenda.Text:='';
+      VerificaIdPedido;
   end;
 end;
 
@@ -295,6 +312,13 @@ begin
      PNL_PRODUTO.Caption:= 'Pedido de Venda n° ' + IntToStr(IdPedido);
      dm.IdPedido:=IdPedido;
    end;
+end;
+
+procedure TFrm_Vendas.ResetaVenda;
+begin
+
+
+
 end;
 
 end.
