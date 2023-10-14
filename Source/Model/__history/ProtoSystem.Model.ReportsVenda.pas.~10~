@@ -1,0 +1,54 @@
+unit ProtoSystem.Model.ReportsVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, Data.DB;
+
+type
+  TfrmReportsVenda = class(TForm)
+    ReportPedido: TRLReport;
+    dsReportsVenda: TDataSource;
+    RLBand1: TRLBand;
+    RLBand2: TRLBand;
+    RLDBText1: TRLDBText;
+    RLDBText2: TRLDBText;
+    RLDBText3: TRLDBText;
+    RLPanel1: TRLPanel;
+    RLLabel5: TRLLabel;
+    RLLabel6: TRLLabel;
+    RLLabel7: TRLLabel;
+    RLLabel8: TRLLabel;
+    RLSystemInfo1: TRLSystemInfo;
+    RLLabel9: TRLLabel;
+    RLLabel10: TRLLabel;
+    RLLabel1: TRLLabel;
+    RLDBText4: TRLDBText;
+    RLPanel2: TRLPanel;
+    RLLabel11: TRLLabel;
+    RLLabel12: TRLLabel;
+    RLLabel13: TRLLabel;
+    RLLabel14: TRLLabel;
+    RLPanel3: TRLPanel;
+    RLLabel2: TRLLabel;
+    RLLabel3: TRLLabel;
+    RLLabel4: TRLLabel;
+    RLLabel15: TRLLabel;
+    RLDBText5: TRLDBText;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmReportsVenda: TfrmReportsVenda;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+end.

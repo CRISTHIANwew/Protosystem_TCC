@@ -1,0 +1,656 @@
+object frmReportsVenda: TfrmReportsVenda
+  Left = 0
+  Top = 0
+  ClientHeight = 828
+  ClientWidth = 793
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object ReportPedido: TRLReport
+    AlignWithMargins = True
+    Left = 0
+    Top = 0
+    Width = 794
+    Height = 1123
+    AdjustableMargins = True
+    Borders.Sides = sdCustom
+    Borders.DrawLeft = False
+    Borders.DrawTop = False
+    Borders.DrawRight = False
+    Borders.DrawBottom = False
+    DataSource = dsReportsVenda
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -27
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 251
+      BandType = btHeader
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      object RLPanel1: TRLPanel
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 251
+        Align = faClient
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -20
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        object RLLabel5: TRLLabel
+          Left = 0
+          Top = 26
+          Width = 76
+          Height = 25
+          AutoSize = False
+          Caption = 'Cnpj:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel6: TRLLabel
+          Left = 0
+          Top = 0
+          Width = 715
+          Height = 26
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'ProtoSystem Sistema de Gest'#227'o Empresarial'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel7: TRLLabel
+          Left = 0
+          Top = 57
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Telefone:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel8: TRLLabel
+          Left = 0
+          Top = 86
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Endere'#231'o:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLSystemInfo1: TRLSystemInfo
+          Left = 567
+          Top = 57
+          Width = 148
+          Height = 23
+          AutoSize = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Info = itNow
+          ParentFont = False
+          Text = ''
+        end
+        object RLLabel9: TRLLabel
+          Left = 408
+          Top = 57
+          Width = 161
+          Height = 23
+          AutoSize = False
+          Caption = 'Data/Hora Impress'#227'o'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel10: TRLLabel
+          Left = 280
+          Top = 26
+          Width = 57
+          Height = 25
+          AutoSize = False
+          Caption = 'E-mail:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel1: TRLLabel
+          Left = 408
+          Top = 86
+          Width = 161
+          Height = 23
+          AutoSize = False
+          Caption = 'Pedido de Venda N'#176':'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLDBText4: TRLDBText
+          Left = 567
+          Top = 86
+          Width = 148
+          Height = 23
+          AutoSize = False
+          DataField = 'ID_PEDIDO'
+          DataSource = dsReportsVenda
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Text = ''
+        end
+        object RLDBText7: TRLDBText
+          Left = 75
+          Top = 26
+          Width = 199
+          Height = 25
+          AutoSize = False
+          DataField = 'CPFCNPJ'
+          DataSource = dsReportsEmpresa
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Text = ''
+        end
+        object RLDBText8: TRLDBText
+          Left = 75
+          Top = 57
+          Width = 320
+          Height = 23
+          AutoSize = False
+          DataField = 'TELEFONE'
+          DataSource = dsReportsEmpresa
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Text = ''
+        end
+        object RLDBText9: TRLDBText
+          Left = 75
+          Top = 86
+          Width = 320
+          Height = 23
+          AutoSize = False
+          DataField = 'ENDERECO'
+          DataSource = dsReportsEmpresa
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Text = ''
+        end
+        object RLDBText10: TRLDBText
+          Left = 343
+          Top = 26
+          Width = 372
+          Height = 25
+          AutoSize = False
+          DataField = 'EMAIL'
+          DataSource = dsReportsEmpresa
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          Text = ''
+        end
+      end
+      object RLPanel2: TRLPanel
+        Left = 0
+        Top = 115
+        Width = 721
+        Height = 110
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        object RLLabel11: TRLLabel
+          Left = 0
+          Top = 29
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Endere'#231'o:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel12: TRLLabel
+          Left = 0
+          Top = 54
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Telefone:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel13: TRLLabel
+          Left = 0
+          Top = 0
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Cliente:'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel14: TRLLabel
+          Left = 0
+          Top = 83
+          Width = 76
+          Height = 23
+          AutoSize = False
+          Caption = 'Condi'#231#227'o:'
+          Color = clWhite
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+      end
+      object RLPanel3: TRLPanel
+        Left = 0
+        Top = 227
+        Width = 721
+        Height = 21
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        object RLLabel2: TRLLabel
+          Left = 0
+          Top = 1
+          Width = 57
+          Height = 20
+          Align = faLeft
+          AutoSize = False
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = False
+          Borders.DrawTop = False
+          Borders.DrawRight = False
+          Borders.DrawBottom = False
+          Caption = 'C'#243'd.'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel3: TRLLabel
+          Left = 57
+          Top = 1
+          Width = 385
+          Height = 20
+          Align = faLeft
+          AutoSize = False
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = False
+          Borders.DrawTop = False
+          Borders.DrawRight = False
+          Borders.DrawBottom = False
+          Caption = 'Descricao'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel4: TRLLabel
+          Left = 445
+          Top = 1
+          Width = 80
+          Height = 20
+          Align = faRight
+          Alignment = taRightJustify
+          AutoSize = False
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = False
+          Borders.DrawTop = False
+          Borders.DrawRight = False
+          Borders.DrawBottom = False
+          Caption = 'Valor Unit.'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel15: TRLLabel
+          Left = 628
+          Top = 1
+          Width = 93
+          Height = 20
+          Align = faRight
+          Alignment = taRightJustify
+          AutoSize = False
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = False
+          Borders.DrawTop = False
+          Borders.DrawRight = False
+          Borders.DrawBottom = False
+          Caption = 'SubTotal'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object RLLabel16: TRLLabel
+          Left = 525
+          Top = 1
+          Width = 103
+          Height = 20
+          Align = faRight
+          Alignment = taRightJustify
+          AutoSize = False
+          Borders.Sides = sdCustom
+          Borders.DrawLeft = False
+          Borders.DrawTop = False
+          Borders.DrawRight = False
+          Borders.DrawBottom = False
+          Caption = 'Quantidade'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 289
+      Width = 718
+      Height = 24
+      object RLDBText1: TRLDBText
+        Left = 0
+        Top = 0
+        Width = 57
+        Height = 24
+        Align = faLeft
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        DataField = 'ID_PRODUTO'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText2: TRLDBText
+        Left = 57
+        Top = 0
+        Width = 385
+        Height = 24
+        Align = faLeft
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        DataField = 'DESCRICAO'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText3: TRLDBText
+        Left = 445
+        Top = 0
+        Width = 80
+        Height = 24
+        Align = faRight
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        DataField = 'VALOR_UNIT'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText5: TRLDBText
+        Left = 631
+        Top = 0
+        Width = 87
+        Height = 24
+        Align = faRight
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        DataField = 'VALOR_TOTAL'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLDBText6: TRLDBText
+        Left = 525
+        Top = 0
+        Width = 106
+        Height = 24
+        Align = faRight
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        DataField = 'QUANTIDADE'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 313
+      Width = 718
+      Height = 80
+      BandType = btColumnFooter
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = True
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      object RLLabel18: TRLLabel
+        Left = 631
+        Top = 27
+        Width = 87
+        Height = 22
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Caption = 'Total Geral'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLDBResult1: TRLDBResult
+        Left = 628
+        Top = 47
+        Width = 90
+        Height = 25
+        Alignment = taRightJustify
+        AutoSize = False
+        DataField = 'VALOR_TOTAL'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Info = riSum
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel17: TRLLabel
+        Left = 544
+        Top = 27
+        Width = 87
+        Height = 22
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Caption = 'Qtd. Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLDBResult2: TRLDBResult
+        Left = 544
+        Top = 47
+        Width = 87
+        Height = 25
+        Alignment = taRightJustify
+        AutoSize = False
+        DataField = 'QUANTIDADE'
+        DataSource = dsReportsVenda
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Info = riSum
+        ParentFont = False
+        Text = ''
+      end
+    end
+  end
+  object dsReportsVenda: TDataSource
+    DataSet = DM.SQL_ImpressaoPedido
+    Left = 160
+    Top = 432
+  end
+  object dsReportsEmpresa: TDataSource
+    DataSet = DM.SQL_empresa
+    Left = 280
+    Top = 440
+  end
+end

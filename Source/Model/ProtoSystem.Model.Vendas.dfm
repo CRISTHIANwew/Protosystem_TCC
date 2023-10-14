@@ -949,8 +949,8 @@ object Frm_Vendas: TFrm_Vendas
   end
   object ds_VendaProdutos: TDataSource
     DataSet = DM.cdsVendaProdutos
-    Left = 544
-    Top = 369
+    Left = 648
+    Top = 417
   end
   object cdsVendaPedidos: TClientDataSet
     Aggregates = <>
@@ -962,15 +962,5 @@ object Frm_Vendas: TFrm_Vendas
     DataSet = cdsVendaPedidos
     Left = 645
     Top = 369
-  end
-  object SQL_ImpressaoPedido: TFDQuery
-    Active = True
-    Connection = DM.conexao
-    SQL.Strings = (
-      
-        'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (P' +
-        'O.ID_PEDIDO = PE.ID) WHERE PE.ID =1')
-    Left = 312
-    Top = 320
   end
 end

@@ -27,6 +27,38 @@ type
     cdsVendaProdutosQuantidade: TIntegerField;
     cdsVendaProdutosValorTotal: TFloatField;
     cdsVendaProdutosIDPEDIDO: TIntegerField;
+    SQL_ImpressaoPedido: TFDQuery;
+    SQL_empresa: TFDQuery;
+    SQL_empresaID: TFDAutoIncField;
+    SQL_empresaNOMEFANTASIA: TStringField;
+    SQL_empresaRAZAOSOCIAL: TStringField;
+    SQL_empresaCPFCNPJ: TStringField;
+    SQL_empresaRGIE: TStringField;
+    SQL_empresaENDERECO: TStringField;
+    SQL_empresaBAIRRO: TStringField;
+    SQL_empresaCIDADE: TStringField;
+    SQL_empresaCEP: TStringField;
+    SQL_empresaTELEFONE: TStringField;
+    SQL_empresaEMAIL: TStringField;
+    SQL_ImpressaoPedidoID: TFDAutoIncField;
+    SQL_ImpressaoPedidoTOTAL_PROD: TFloatField;
+    SQL_ImpressaoPedidoID_CLIENTE: TIntegerField;
+    SQL_ImpressaoPedidoNOME_CLIENTE: TStringField;
+    SQL_ImpressaoPedidoCPF_CNPJ: TStringField;
+    SQL_ImpressaoPedidoRG_IE: TStringField;
+    SQL_ImpressaoPedidoID_PAG: TIntegerField;
+    SQL_ImpressaoPedidoDESCRICAO_PAG: TStringField;
+    SQL_ImpressaoPedidoVALOR_DESPESAS: TFloatField;
+    SQL_ImpressaoPedidoVALOR_FRETE: TFloatField;
+    SQL_ImpressaoPedidoVALOR_DESCONTO: TFloatField;
+    SQL_ImpressaoPedidoTOTAL_GERAL: TFloatField;
+    SQL_ImpressaoPedidoID_1: TIntegerField;
+    SQL_ImpressaoPedidoID_PEDIDO: TIntegerField;
+    SQL_ImpressaoPedidoID_PRODUTO: TIntegerField;
+    SQL_ImpressaoPedidoDESCRICAO: TStringField;
+    SQL_ImpressaoPedidoVALOR_UNIT: TFloatField;
+    SQL_ImpressaoPedidoQUANTIDADE: TIntegerField;
+    SQL_ImpressaoPedidoVALOR_TOTAL: TFloatField;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -114,17 +146,16 @@ begin
       'NUMERO VARCHAR(10) ,' +
       'CELULAR VARCHAR(20) ,' +
       'EMAIL VARCHAR(60));');
-
       FDQuery.SQL.Text :=
       'INSERT INTO CLIENTE (ID, NOME, CPFCNPJ, RGIE, ENDERECO, BAIRRO, CIDADE, CEP) VALUES (:ID, :NOME, :CPFCNPJ, :RGIE, :ENDERECO, :BAIRRO, :CIDADE, :CEP)';
-    FDQuery.ParamByName('ID').AsString := '01';
-    FDQuery.ParamByName('NOME').AsString := 'CONSUMIDOR';
-    FDQuery.ParamByName('CPFCNPJ').AsString := '00000000000';
-    FDQuery.ParamByName('RGIE').AsString := '00000000000';
+    FDQuery.ParamByName('ID').AsString       := '01';
+    FDQuery.ParamByName('NOME').AsString     := 'CONSUMIDOR';
+    FDQuery.ParamByName('CPFCNPJ').AsString  := '00000000000';
+    FDQuery.ParamByName('RGIE').AsString     := '00000000000';
     FDQuery.ParamByName('ENDERECO').AsString := 'ENDERECO';
-    FDQuery.ParamByName('BAIRRO').AsString := 'BAIRRO';
-    FDQuery.ParamByName('CIDADE').AsString := 'CIDADE';
-    FDQuery.ParamByName('CEP').AsString := '68193000';
+    FDQuery.ParamByName('BAIRRO').AsString   := 'BAIRRO';
+    FDQuery.ParamByName('CIDADE').AsString   := 'CIDADE';
+    FDQuery.ParamByName('CEP').AsString      := '68193000';
     FDQuery.ExecSQL;
 
   end;
@@ -237,6 +268,41 @@ begin
     FDQuery.ParamByName('ID').AsString := '01';
     FDQuery.ParamByName('USERNAME').AsString := 'SUPORTE';
     FDQuery.ParamByName('PASSWORD').AsString := '123';
+    FDQuery.ExecSQL;
+
+    conexao.Connected := true;
+  end;
+
+  Result := false;
+  Result := TableNames.IndexOf('EMPRESA') >= 0;
+
+   if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS EMPRESA (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'NOMEFANTASIA VARCHAR(100),' +
+      'RAZAOSOCIAL VARCHAR(100),'+
+      'CPFCNPJ VARCHAR,' +
+      'RGIE VARCHAR,'+
+      'ENDERECO VARCHAR,'+
+      'BAIRRO VARCHAR,'+
+      'CIDADE VARCHAR,'+
+      'CEP VARCHAR,'+
+      'TELEFONE VARCHAR,'+
+      'EMAIL VARCHAR);');
+    FDQuery.SQL.Text :=
+      'INSERT INTO EMPRESA (ID, NOMEFANTASIA, RAZAOSOCIAL, CPFCNPJ, RGIE, ENDERECO, BAIRRO, CIDADE, CEP, TELEFONE, EMAIL) VALUES (:ID, :NOMEFANTASIA, :RAZAOSOCIAL, :CPFCNPJ, :RGIE, :ENDERECO, :BAIRRO, :CIDADE, :CEP, :TELEFONE, :EMAIL)';
+    FDQuery.ParamByName('ID').AsString           := '01';
+    FDQuery.ParamByName('NOMEFANTASIA').AsString := 'ProtoSystem Sistemas De Gestao Empresarial';
+    FDQuery.ParamByName('RAZAOSOCIAL').AsString  := 'ProtoSystem Sistemas De Gestao Empresarial';
+    FDQuery.ParamByName('CPFCNPJ').AsString      := '00000000000';
+    FDQuery.ParamByName('RGIE').AsString         := '00000000000';
+    FDQuery.ParamByName('ENDERECO').AsString     := 'ENDERECO';
+    FDQuery.ParamByName('BAIRRO').AsString       := 'BAIRRO';
+    FDQuery.ParamByName('CIDADE').AsString       := 'CIDADE';
+    FDQuery.ParamByName('CEP').AsString          := '00000000';
+    FDQuery.ParamByName('TELEFONE').AsString     := '00000000000';
+    FDQuery.ParamByName('EMAIL').AsString        := 'Protosystem_sistemas@gmail.com';
     FDQuery.ExecSQL;
 
     conexao.Connected := true;

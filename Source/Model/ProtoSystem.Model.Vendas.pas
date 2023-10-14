@@ -71,7 +71,6 @@ type
     edtTotalVenda: TEdit;
     cdsVendaPedidos: TClientDataSet;
     dsVendaPedidos: TDataSource;
-    SQL_ImpressaoPedido: TFDQuery;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -108,8 +107,7 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento,
-  ProtoSystem.Model.ImpressaoPedido, ProtoSystem.Model.ReportsVenda;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento, ProtoSystem.Model.ReportsVenda;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
