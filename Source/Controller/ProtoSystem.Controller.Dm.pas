@@ -70,11 +70,12 @@ type
     TotalGeralFLT: double;
     IdPedido: integer;
     VendasFechamentoStatus: boolean;
+    caminho: string;
   end;
 
 var
   Dm: TDM;
-  caminho: string;
+  //caminho: string;
 
 implementation
 

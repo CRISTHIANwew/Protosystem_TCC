@@ -1,8 +1,8 @@
 object frmReportsVenda: TfrmReportsVenda
   Left = 0
   Top = 0
-  ClientHeight = 828
-  ClientWidth = 793
+  ClientHeight = 781
+  ClientWidth = 814
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -115,7 +115,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLSystemInfo1: TRLSystemInfo
-          Left = 543
+          Left = 723
           Top = 57
           Width = 172
           Height = 23
@@ -130,7 +130,7 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLLabel9: TRLLabel
-          Left = 408
+          Left = 588
           Top = 57
           Width = 129
           Height = 23
@@ -144,7 +144,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel10: TRLLabel
-          Left = 280
+          Left = 462
           Top = 26
           Width = 57
           Height = 25
@@ -158,7 +158,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel1: TRLLabel
-          Left = 408
+          Left = 588
           Top = 86
           Width = 129
           Height = 23
@@ -172,7 +172,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLDBText4: TRLDBText
-          Left = 543
+          Left = 723
           Top = 86
           Width = 172
           Height = 23
@@ -236,7 +236,7 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLDBText10: TRLDBText
-          Left = 343
+          Left = 525
           Top = 26
           Width = 372
           Height = 25
@@ -254,8 +254,8 @@ object frmReportsVenda: TfrmReportsVenda
       end
       object RLPanel2: TRLPanel
         Left = 0
-        Top = 115
-        Width = 721
+        Top = 116
+        Width = 897
         Height = 124
         Borders.Sides = sdCustom
         Borders.DrawLeft = False
@@ -321,7 +321,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel19: TRLLabel
-          Left = 408
+          Left = 584
           Top = 4
           Width = 89
           Height = 23
@@ -335,7 +335,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel20: TRLLabel
-          Left = 408
+          Left = 584
           Top = 33
           Width = 76
           Height = 23
@@ -349,7 +349,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel21: TRLLabel
-          Left = 408
+          Left = 584
           Top = 62
           Width = 76
           Height = 23
@@ -362,7 +362,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel22: TRLLabel
-          Left = 408
+          Left = 584
           Top = 91
           Width = 76
           Height = 23
@@ -391,7 +391,7 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLDBText12: TRLDBText
-          Left = 490
+          Left = 666
           Top = 4
           Width = 228
           Height = 23
@@ -407,7 +407,7 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLDBText13: TRLDBText
-          Left = 490
+          Left = 666
           Top = 33
           Width = 228
           Height = 23
@@ -426,7 +426,7 @@ object frmReportsVenda: TfrmReportsVenda
       object RLPanel3: TRLPanel
         Left = 0
         Top = 245
-        Width = 721
+        Width = 896
         Height = 21
         Borders.Sides = sdCustom
         Borders.DrawLeft = False
@@ -456,7 +456,7 @@ object frmReportsVenda: TfrmReportsVenda
         object RLLabel3: TRLLabel
           Left = 57
           Top = 1
-          Width = 385
+          Width = 552
           Height = 20
           Align = faLeft
           AutoSize = False
@@ -474,9 +474,9 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel4: TRLLabel
-          Left = 445
+          Left = 605
           Top = 1
-          Width = 80
+          Width = 100
           Height = 20
           Align = faRight
           Alignment = taRightJustify
@@ -495,9 +495,9 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel15: TRLLabel
-          Left = 628
+          Left = 808
           Top = 1
-          Width = 93
+          Width = 88
           Height = 20
           Align = faRight
           Alignment = taRightJustify
@@ -516,7 +516,7 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLLabel16: TRLLabel
-          Left = 525
+          Left = 705
           Top = 1
           Width = 103
           Height = 20
@@ -568,7 +568,7 @@ object frmReportsVenda: TfrmReportsVenda
       object RLDBText2: TRLDBText
         Left = 57
         Top = 0
-        Width = 385
+        Width = 552
         Height = 24
         Align = faLeft
         AutoSize = False
@@ -588,9 +588,9 @@ object frmReportsVenda: TfrmReportsVenda
         Text = ''
       end
       object RLDBText3: TRLDBText
-        Left = 445
+        Left = 425
         Top = 0
-        Width = 80
+        Width = 100
         Height = 24
         Align = faRight
         Alignment = taRightJustify
@@ -611,9 +611,9 @@ object frmReportsVenda: TfrmReportsVenda
         Text = ''
       end
       object RLDBText5: TRLDBText
-        Left = 631
+        Left = 628
         Top = 0
-        Width = 87
+        Width = 90
         Height = 24
         Align = faRight
         Alignment = taRightJustify
@@ -636,7 +636,7 @@ object frmReportsVenda: TfrmReportsVenda
       object RLDBText6: TRLDBText
         Left = 525
         Top = 0
-        Width = 106
+        Width = 103
         Height = 24
         Align = faRight
         Alignment = taRightJustify
@@ -669,7 +669,7 @@ object frmReportsVenda: TfrmReportsVenda
       Borders.DrawRight = False
       Borders.DrawBottom = False
       object RLLabel18: TRLLabel
-        Left = 628
+        Left = 805
         Top = 6
         Width = 93
         Height = 22
@@ -689,7 +689,7 @@ object frmReportsVenda: TfrmReportsVenda
         ParentFont = False
       end
       object RLDBResult1: TRLDBResult
-        Left = 628
+        Left = 805
         Top = 34
         Width = 90
         Height = 25
@@ -712,7 +712,7 @@ object frmReportsVenda: TfrmReportsVenda
         Text = ''
       end
       object RLLabel17: TRLLabel
-        Left = 525
+        Left = 702
         Top = 6
         Width = 106
         Height = 22
@@ -732,7 +732,7 @@ object frmReportsVenda: TfrmReportsVenda
         ParentFont = False
       end
       object RLDBResult2: TRLDBResult
-        Left = 525
+        Left = 702
         Top = 34
         Width = 106
         Height = 25
@@ -757,7 +757,7 @@ object frmReportsVenda: TfrmReportsVenda
       object RLPanel4: TRLPanel
         Left = 0
         Top = 65
-        Width = 721
+        Width = 897
         Height = 226
         Borders.Sides = sdCustom
         Borders.DrawLeft = False
@@ -765,8 +765,8 @@ object frmReportsVenda: TfrmReportsVenda
         Borders.DrawRight = False
         Borders.DrawBottom = True
         object RLLabel24: TRLLabel
-          Left = 625
-          Top = 0
+          Left = 811
+          Top = 8
           Width = 87
           Height = 22
           Alignment = taRightJustify
@@ -785,8 +785,8 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLDBResult3: TRLDBResult
-          Left = 625
-          Top = 20
+          Left = 811
+          Top = 28
           Width = 87
           Height = 25
           Alignment = taRightJustify
@@ -807,8 +807,8 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLLabel23: TRLLabel
-          Left = 625
-          Top = 48
+          Left = 811
+          Top = 56
           Width = 87
           Height = 22
           Alignment = taRightJustify
@@ -827,8 +827,8 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLDBResult4: TRLDBResult
-          Left = 625
-          Top = 76
+          Left = 811
+          Top = 84
           Width = 87
           Height = 25
           Alignment = taRightJustify
@@ -849,8 +849,8 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLLabel25: TRLLabel
-          Left = 625
-          Top = 107
+          Left = 811
+          Top = 115
           Width = 87
           Height = 22
           Alignment = taRightJustify
@@ -869,8 +869,8 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLDBResult5: TRLDBResult
-          Left = 625
-          Top = 130
+          Left = 811
+          Top = 138
           Width = 87
           Height = 25
           Alignment = taRightJustify
@@ -891,8 +891,8 @@ object frmReportsVenda: TfrmReportsVenda
           Text = ''
         end
         object RLLabel26: TRLLabel
-          Left = 625
-          Top = 161
+          Left = 811
+          Top = 169
           Width = 87
           Height = 22
           Alignment = taRightJustify
@@ -911,8 +911,8 @@ object frmReportsVenda: TfrmReportsVenda
           ParentFont = False
         end
         object RLDBResult6: TRLDBResult
-          Left = 625
-          Top = 189
+          Left = 811
+          Top = 197
           Width = 87
           Height = 25
           Alignment = taRightJustify

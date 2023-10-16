@@ -15,8 +15,8 @@ object DM: TDM
     Params.Strings = (
       'LockingMode=Normal'
       
-        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\bin\Database\ProtoSystem.s3db'
+        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
+        'in\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
@@ -30,13 +30,13 @@ object DM: TDM
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 792
-    Top = 88
+    Left = 752
+    Top = 48
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 792
-    Top = 136
+    Left = 776
+    Top = 120
   end
   object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
@@ -103,12 +103,13 @@ object DM: TDM
       
         'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (P' +
         'O.ID_PEDIDO = PE.ID) WHERE PE.ID =1')
-    Left = 792
+    Left = 768
     Top = 192
     object SQL_ImpressaoPedidoID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object SQL_ImpressaoPedidoTOTAL_PROD: TFloatField
       FieldName = 'TOTAL_PROD'
@@ -220,12 +221,13 @@ object DM: TDM
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
-    Left = 792
-    Top = 248
+    Left = 768
+    Top = 328
     object SQL_empresaID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object SQL_empresaNOMEFANTASIA: TStringField
       FieldName = 'NOMEFANTASIA'

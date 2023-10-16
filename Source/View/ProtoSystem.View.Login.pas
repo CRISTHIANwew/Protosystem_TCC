@@ -21,6 +21,7 @@ type
     Query_usuario: TFDQuery;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
     VirtualImage1: TVirtualImage;
     VirtualImage2: TVirtualImage;
     Button1: TButton;
@@ -28,14 +29,23 @@ type
     Shape1: TShape;
     SpeedButton2: TSpeedButton;
     box_senha: TCheckBox;
-    Panel3: TPanel;
-    VirtualImage3: TVirtualImage;
-    lb_logo: TLabel;
+    edit_senha: TLabeledEdit;
+    edit_usuario: TLabeledEdit;
     Pnl_sair: TPanel;
     Shape2: TShape;
     SpeedButton1: TSpeedButton;
-    edit_senha: TLabeledEdit;
-    edit_usuario: TLabeledEdit;
+    Panel4: TPanel;
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    Panel5: TPanel;
+    lbCaminhodb: TLabel;
+    VirtualImage3: TVirtualImage;
+    lb_logo: TLabel;
+    Label2: TLabel;
+    VirtualImage4: TVirtualImage;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -121,7 +131,7 @@ begin
   box_senha.Checked := true;
   edit_senha.PasswordChar := '*';
   Query_usuario.active := true;
-
+  lbCaminhodb.Caption:=dm.caminho;
 end;
 
 class function TFrm_Login.Login: Boolean;

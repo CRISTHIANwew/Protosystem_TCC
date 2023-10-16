@@ -14,23 +14,24 @@ uses
   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
   FireDAC.VCLUI.Wait, FireDAC.Stan.ExprFuncs, FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, FireDAC.Comp.UI, Data.DB,
-  FireDAC.Comp.Client, Vcl.Buttons;
+  FireDAC.Comp.Client, Vcl.Buttons, VclTee.TeeGDIPlus, VCLTee.TeEngine,
+  VCLTee.Series, VCLTee.TeeProcs, VCLTee.Chart, VCLTee.DBChart,
+  VCLTee.TeeDBCrossTab;
 
 type
   TFrm_Principal = class(TForm)
     VirtualImageList1: TVirtualImageList;
     ImageCollection1: TImageCollection;
-    StatusBar1: TStatusBar;
     Timer1: TTimer;
-    pnlBarraSuperior: TPanel;
     Panel1: TPanel;
+    Panel2: TPanel;
     PGC_MENU: TPageControl;
     TabSheet1: TTabSheet;
     pnl_boasvindas: TPanel;
     TabSheet2: TTabSheet;
     PGC_ESTOQUE: TPageControl;
     TabSheet8: TTabSheet;
-    Panel2: TPanel;
+    Panel3: TPanel;
     PnlCadastroProdutos: TPanel;
     shpCadastroProdutos: TShape;
     btnCadastroProdutos: TSpeedButton;
@@ -81,6 +82,28 @@ type
     ComboBox1: TComboBox;
     TabSheet35: TTabSheet;
     TabSheet36: TTabSheet;
+    pnlBarraSuperior: TPanel;
+    StatusBar1: TStatusBar;
+    Pnl_sair: TPanel;
+    Shape2: TShape;
+    SpeedButton1: TSpeedButton;
+    Panel4: TPanel;
+    Shape1: TShape;
+    SpeedButton2: TSpeedButton;
+    Panel5: TPanel;
+    Shape9: TShape;
+    SpeedButton3: TSpeedButton;
+    lb_logo: TLabel;
+    Label1: TLabel;
+    Shape3: TShape;
+    Shape4: TShape;
+    Shape5: TShape;
+    Shape6: TShape;
+    Shape7: TShape;
+    Shape8: TShape;
+    Chart1: TChart;
+    Series1: TLineSeries;
+    DBCrossTabSource1: TDBCrossTabSource;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -92,6 +115,7 @@ type
     procedure BTN_VENDASClick(Sender: TObject);
     procedure BTN_CAD_FORNECEDORClick(Sender: TObject);
     procedure btnCadastroProdutosClick(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -232,6 +256,11 @@ begin
   comboBox.Items.Add('Windows');
   comboBox.Items.Add('Iceberg Classico');
   comboBox.ItemIndex := 0;
+end;
+
+procedure TFrm_Principal.SpeedButton1Click(Sender: TObject);
+begin
+    Application.Terminate;
 end;
 
 procedure TFrm_Principal.Timer1Timer(Sender: TObject);

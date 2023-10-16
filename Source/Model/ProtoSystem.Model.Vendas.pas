@@ -178,18 +178,26 @@ begin
       edtQuantidadeProduto.Text:='';
       edtSubTotalProduto.Text:='';
       edtTotalVenda.Text:='';
+      ImprimePedido;
       VerificaIdPedido;
-      //ImprimePedido;
   end;
 end;
 
 procedure TFrm_Vendas.ImprimePedido;
 begin
-//  SQL_ImpressaoPedido.Active:=true;
-//  SQL_ImpressaoPedido.SQL.Text:='select * from VENDA_PEDIDOS WHERE ID = :IDPEDIDO';
-//  SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:= IntToStr(dm.IdPedido);
-//  SQL_ImpressaoPedido.ExecSQL;
-  //frmImpressaoPedido.RLReport1.Preview();
+  Dm.SQL_empresa.Connection:=dm.conexao;
+  Dm.SQL_empresa.SQL.Text:= 'select * from EMPRESA';
+  Dm.SQL_empresa.ExecSQL;
+  Dm.SQL_empresa.Active:=true;
+
+  dm.SQL_ImpressaoPedido.Connection:=dm.conexao;
+  dm.SQL_ImpressaoPedido.SQL.Text:='select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID = :IDPEDIDO';
+  dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(dm.IdPedido);
+  dm.SQL_ImpressaoPedido.ExecSQL;
+
+  dm.SQL_ImpressaoPedido.Active:=true;
+
+  frmReportsVenda.ReportPedido.Preview();
 end;
 
 procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);

@@ -1,15 +1,15 @@
 object Frm_Login: TFrm_Login
-  Left = 323
-  Top = 278
+  Left = 551
+  Top = 395
   AlphaBlendValue = 200
   BorderStyle = bsNone
   Caption = 'Login'
-  ClientHeight = 491
-  ClientWidth = 425
+  ClientHeight = 387
+  ClientWidth = 781
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindow
-  Font.Height = -15
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -137,341 +137,449 @@ object Frm_Login: TFrm_Login
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poScreenCenter
+  Position = poDesigned
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 20
+  TextHeight = 15
+  object Label4: TLabel
+    Left = 136
+    Top = 203
+    Width = 78
+    Height = 20
+    Alignment = taCenter
+    Caption = 'Vers'#227'o 1.0.0'
+    Color = 14725003
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = 13275746
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Font.Quality = fqClearTypeNatural
+    ParentColor = False
+    ParentFont = False
+  end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 425
-    Height = 491
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 781
+    Height = 387
     Align = alClient
-    Color = clHighlight
+    BevelOuter = bvNone
+    Color = 8739130
     Padding.Left = 5
     Padding.Top = 5
     Padding.Right = 5
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 69
-    ExplicitTop = 230
-    ExplicitWidth = 231
-    ExplicitHeight = 51
     object Panel2: TPanel
-      Left = 6
-      Top = 6
-      Width = 413
-      Height = 479
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 5
+      Top = 5
+      Width = 771
+      Height = 377
       Align = alClient
       BevelOuter = bvNone
-      BorderWidth = 10
-      Color = clWhite
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -15
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      Padding.Left = 10
-      Padding.Top = 10
-      Padding.Right = 10
-      Padding.Bottom = 10
+      Color = 14725001
       ParentBackground = False
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 425
-      ExplicitHeight = 491
-      object VirtualImage1: TVirtualImage
-        Left = 20
-        Top = 269
-        Width = 58
-        Height = 50
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'senha'
-      end
-      object VirtualImage2: TVirtualImage
-        Left = 20
-        Top = 183
-        Width = 58
-        Height = 50
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 1
-        ImageName = 'usuario'
-      end
-      object Button1: TButton
-        Left = 160
-        Top = 426
-        Width = 111
-        Height = 32
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Caption = 'Comfirmar'
-        Default = True
-        TabOrder = 3
-        StyleName = 'Windows'
-        OnClick = Button1Click
-      end
-      object Pnl_comfirmar: TPanel
-        Left = 53
-        Top = 407
-        Width = 290
-        Height = 58
-        Cursor = crHandPoint
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Color = clWhite
+      object Panel3: TPanel
+        Left = 386
+        Top = 0
+        Width = 385
+        Height = 377
+        Align = alRight
+        BevelOuter = bvNone
+        BorderWidth = 10
+        Color = 13274977
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = 2302755
-        Font.Height = -15
+        Font.Color = clBlack
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
+        Padding.Left = 8
+        Padding.Top = 8
+        Padding.Right = 8
+        Padding.Bottom = 8
         ParentBackground = False
         ParentFont = False
-        TabOrder = 5
-        object Shape1: TShape
-          Left = 1
-          Top = 1
-          Width = 288
-          Height = 56
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Align = alClient
-          Brush.Color = clHighlight
-          Shape = stRoundRect
-          ExplicitHeight = 55
-        end
-        object SpeedButton2: TSpeedButton
-          Left = 1
-          Top = 1
-          Width = 288
-          Height = 56
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Align = alClient
-          Caption = 'Comfirmar'
-          Flat = True
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clScrollBar
-          Font.Height = -15
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          OnClick = SpeedButton2Click
-          ExplicitHeight = 55
-        end
-      end
-      object box_senha: TCheckBox
-        Left = 370
-        Top = 295
-        Width = 21
-        Height = 21
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        TabOrder = 2
-        OnClick = box_senhaClick
-      end
-      object Panel3: TPanel
-        Left = 20
-        Top = 20
-        Width = 373
-        Height = 110
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Align = alTop
-        BevelOuter = bvNone
-        Color = clWhite
-        Padding.Left = 5
-        Padding.Top = 5
-        Padding.Right = 5
-        Padding.Bottom = 5
-        ParentBackground = False
-        TabOrder = 4
-        ExplicitWidth = 363
-        object VirtualImage3: TVirtualImage
-          Left = 5
-          Top = 5
-          Width = 363
-          Height = 56
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Align = alTop
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 0
+        object VirtualImage1: TVirtualImage
+          Left = 188
+          Top = 251
+          Width = 46
+          Height = 40
           ImageCollection = ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
-          ImageIndex = 0
-          ImageName = 'cat-black-face'
-          ExplicitWidth = 370
+          ImageIndex = 4
+          ImageName = 'icons8-secure'
+        end
+        object VirtualImage2: TVirtualImage
+          Left = 9
+          Top = 251
+          Width = 46
+          Height = 40
+          ImageCollection = ImageCollection1
+          ImageWidth = 0
+          ImageHeight = 0
+          ImageIndex = 5
+          ImageName = 'icons8-male-user'
+        end
+        object Label1: TLabel
+          Left = 8
+          Top = 300
+          Width = 53
+          Height = 15
+          Caption = 'Empresa: '
+          Color = 13275746
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 15649712
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object VirtualImage3: TVirtualImage
+          Left = 160
+          Top = 39
+          Width = 65
+          Height = 60
+          ImageCollection = ImageCollection1
+          ImageWidth = 0
+          ImageHeight = 0
+          ImageIndex = 3
+          ImageName = 'icons8-cat'
         end
         object lb_logo: TLabel
-          Left = 5
-          Top = 61
-          Width = 363
-          Height = 55
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
-          Align = alTop
+          Left = 43
+          Top = 97
+          Width = 319
+          Height = 45
           Alignment = taCenter
-          Caption = 'ProtoSystem'
+          Caption = 'ProtoSystem Sistemas'
+          Color = 14725003
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -41
+          Font.Color = 15649712
+          Font.Height = -33
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
+          ParentColor = False
           ParentFont = False
-          ExplicitWidth = 227
+        end
+        object Button1: TButton
+          Left = 23
+          Top = 343
+          Width = 106
+          Height = 25
+          Caption = 'Comfirmar'
+          Default = True
+          TabOrder = 3
+          StyleName = 'Windows'
+          OnClick = Button1Click
+        end
+        object Pnl_comfirmar: TPanel
+          Left = 22
+          Top = 337
+          Width = 107
+          Height = 35
+          Cursor = crHandPoint
+          BevelOuter = bvNone
+          Color = 14725001
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 2302755
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 4
+          object Shape1: TShape
+            Left = 0
+            Top = 0
+            Width = 107
+            Height = 35
+            Align = alClient
+            Brush.Color = 8739130
+            Shape = stRoundRect
+            ExplicitLeft = 17
+            ExplicitTop = 9
+            ExplicitWidth = 230
+            ExplicitHeight = 44
+          end
+          object SpeedButton2: TSpeedButton
+            Left = 0
+            Top = 0
+            Width = 107
+            Height = 35
+            Align = alClient
+            Caption = 'Entrar'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 15649712
+            Font.Height = -12
+            Font.Name = 'Segoe UI'
+            Font.Style = []
+            ParentFont = False
+            OnClick = SpeedButton2Click
+            ExplicitLeft = 32
+            ExplicitWidth = 115
+          end
+        end
+        object box_senha: TCheckBox
+          Left = 367
+          Top = 263
+          Width = 17
+          Height = 17
+          Color = 8739130
+          ParentColor = False
+          TabOrder = 2
+          OnClick = box_senhaClick
+        end
+        object edit_senha: TLabeledEdit
+          Left = 240
+          Top = 260
+          Width = 121
+          Height = 23
+          BorderStyle = bsNone
+          Color = 15649712
+          EditLabel.Width = 40
+          EditLabel.Height = 15
+          EditLabel.Margins.Left = 6
+          EditLabel.Margins.Top = 6
+          EditLabel.Margins.Right = 6
+          EditLabel.Margins.Bottom = 6
+          EditLabel.Caption = 'Senha: '
+          EditLabel.Color = 14725001
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = 15649712
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 8739130
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          NumbersOnly = True
+          ParentFont = False
+          TabOrder = 1
+          Text = ''
+          OnKeyPress = edit_usuarioKeyPress
+        end
+        object edit_usuario: TLabeledEdit
+          Left = 61
+          Top = 260
+          Width = 121
+          Height = 23
+          BorderStyle = bsNone
+          CharCase = ecUpperCase
+          Color = 15649712
+          EditLabel.Width = 48
+          EditLabel.Height = 15
+          EditLabel.Margins.Left = 6
+          EditLabel.Margins.Top = 6
+          EditLabel.Margins.Right = 6
+          EditLabel.Margins.Bottom = 6
+          EditLabel.BiDiMode = bdLeftToRight
+          EditLabel.Caption = 'Usuario: '
+          EditLabel.Color = clBlack
+          EditLabel.Font.Charset = DEFAULT_CHARSET
+          EditLabel.Font.Color = 15649712
+          EditLabel.Font.Height = -12
+          EditLabel.Font.Name = 'Segoe UI'
+          EditLabel.Font.Style = [fsBold]
+          EditLabel.ParentBiDiMode = False
+          EditLabel.ParentColor = False
+          EditLabel.ParentFont = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 8739130
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          Text = ''
+          OnKeyPress = edit_usuarioKeyPress
         end
         object Pnl_sair: TPanel
-          Left = 293
-          Top = 1
-          Width = 71
-          Height = 62
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 270
+          Top = 337
+          Width = 107
+          Height = 35
+          Cursor = crHandPoint
           BevelOuter = bvNone
-          Padding.Right = 6
-          TabOrder = 0
+          Color = 14725001
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 5
           object Shape2: TShape
             Left = 0
             Top = 0
-            Width = 65
-            Height = 62
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 107
+            Height = 35
             Align = alClient
-            Brush.Color = clHighlight
-            Pen.Style = psClear
+            Brush.Color = 8739130
             Shape = stRoundRect
-            ExplicitHeight = 61
+            ExplicitWidth = 52
+            ExplicitHeight = 50
           end
           object SpeedButton1: TSpeedButton
             Left = 0
             Top = 0
-            Width = 65
-            Height = 62
+            Width = 107
+            Height = 35
             Cursor = crHandPoint
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
             Align = alClient
-            Caption = 'X'
+            Caption = 'Sair'
             Flat = True
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = clScrollBar
-            Font.Height = -16
+            Font.Color = 15649712
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Font.Quality = fqClearTypeNatural
             ParentFont = False
             OnClick = SpeedButton1Click
-            ExplicitHeight = 61
+            ExplicitLeft = 1
+          end
+        end
+        object ComboBox1: TComboBox
+          Left = 61
+          Top = 297
+          Width = 300
+          Height = 22
+          Style = csOwnerDrawFixed
+          CharCase = ecUpperCase
+          Color = 15649712
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 8739130
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ItemIndex = 0
+          ParentFont = False
+          TabOrder = 6
+          Text = '01 - EMPRESA  DE DEMOSTRA'#199#195'O'
+          Items.Strings = (
+            '01 - EMPRESA  DE DEMOSTRA'#199#195'O')
+        end
+        object Panel5: TPanel
+          Left = 0
+          Top = 0
+          Width = 385
+          Height = 33
+          BevelOuter = bvNone
+          Color = 13142873
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 14725003
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentBackground = False
+          ParentFont = False
+          TabOrder = 7
+          object lbCaminhodb: TLabel
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 379
+            Height = 13
+            Align = alTop
+            Alignment = taRightJustify
+            Color = 13275746
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = 15321005
+            Font.Height = -11
+            Font.Name = 'Segoe UI'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+            ExplicitLeft = 379
+            ExplicitWidth = 3
           end
         end
       end
-      object edit_senha: TLabeledEdit
-        Left = 74
-        Top = 291
-        Width = 274
-        Height = 28
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        EditLabel.Width = 40
-        EditLabel.Height = 20
-        EditLabel.Margins.Left = 6
-        EditLabel.Margins.Top = 6
-        EditLabel.Margins.Right = 6
-        EditLabel.Margins.Bottom = 6
-        EditLabel.Caption = 'Senha'
-        EditLabel.Color = -1
-        EditLabel.ParentColor = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = -15
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        NumbersOnly = True
-        ParentFont = False
+      object Panel4: TPanel
+        Left = 0
+        Top = 0
+        Width = 361
+        Height = 377
+        Align = alLeft
+        BevelOuter = bvNone
+        Color = 15649712
+        ParentBackground = False
         TabOrder = 1
-        Text = ''
-        OnKeyPress = edit_usuarioKeyPress
-      end
-      object edit_usuario: TLabeledEdit
-        Left = 74
-        Top = 205
-        Width = 274
-        Height = 28
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
-        Color = clWhite
-        EditLabel.Width = 50
-        EditLabel.Height = 20
-        EditLabel.Margins.Left = 6
-        EditLabel.Margins.Top = 6
-        EditLabel.Margins.Right = 6
-        EditLabel.Margins.Bottom = 6
-        EditLabel.Caption = 'Usuario'
-        EditLabel.Color = clBlack
-        EditLabel.ParentColor = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Height = -15
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        Text = ''
-        OnKeyPress = edit_usuarioKeyPress
+        object Label2: TLabel
+          Left = 40
+          Top = 13
+          Width = 321
+          Height = 20
+          Caption = 'Bem vindo(a) ao ProtoSystem Sistemas'
+          Color = 14725003
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 13275746
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentColor = False
+          ParentFont = False
+        end
+        object VirtualImage4: TVirtualImage
+          Left = 128
+          Top = 115
+          Width = 81
+          Height = 74
+          ImageCollection = ImageCollection1
+          ImageWidth = 0
+          ImageHeight = 0
+          ImageIndex = 3
+          ImageName = 'icons8-cat'
+        end
+        object Label3: TLabel
+          Left = 128
+          Top = 195
+          Width = 81
+          Height = 20
+          Alignment = taCenter
+          Caption = 'Vers'#227'o 1.0.0'
+          Color = 14725003
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 13275746
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label5: TLabel
+          Left = 32
+          Top = 323
+          Width = 321
+          Height = 20
+          Caption = 'Desenvolvido Por: Cristhian RA: 200406765'
+          Color = 14725003
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 13275746
+          Font.Height = -15
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentColor = False
+          ParentFont = False
+        end
       end
     end
   end
@@ -483,10 +591,8 @@ object Frm_Login: TFrm_Login
         Name = 'cat-black-face'
       end>
     ImageCollection = ImageCollection1
-    Width = 20
-    Height = 20
-    Left = 41
-    Top = 62
+    Left = 89
+    Top = 126
   end
   object ImageCollection1: TImageCollection
     Images = <
@@ -758,20 +864,233 @@ object Frm_Login: TFrm_Login
               909F9EB5089C2603A6E261462B99AF1336804FF1AF4E9219701DC7711CC7711C
               C7216BFE03AA458E8D39FB10D30000000049454E44AE426082}
           end>
+      end
+      item
+        Name = 'icons8-cat'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+              DE000000097048597300000B1300000B1301009A9C180000098949444154789C
+              D55B7B5014471A9F5CEE91AB7B5FFE485D52758FDC5D55EE5D89F7CC55DD963B
+              B3B0DBBD8BB03DCD531E4230A8F816E47C80C2215182260A7A047C1B3048147C
+              10259E0A1A50230282272AA63489B9333EEFAEEA4C552ECED5B7D2B3BDBBB3B3
+              83EE8BAFEA2B8A9DEEAF7FDF6F66BEFEBAFB1B41889088D8F9B48868C1786BD2
+              0F1FC60EF477D941CEEF09634944245F90B0AC4898DC3163FADB07B101FDA0FF
+              889D2161AC88849D3FBE0F9A29B96341E477A3B161B6273C27627293B713E3A0
+              3F12C6824888A67B12202B2226FF1211B51AE96FB6111BB4F7B6017685B12022
+              92D7F980071210F99F84C85A292EF949AD7E664C9F82BEAE761AFDA1AF301644
+              44721F03BD7643B322A7E57A13F1998448978449AD88E59746FE76BB7EE7DA41
+              3FE8EFEE27F709D12E566BDAD7D91D8C8D4B527ACF7FAC74F75E56A6CE5EEC7B
+              477574DA9C62A5BBEF8AAB3FD8614FD0F371715F13A25944EC94981339530B94
+              B3EFDD56B579EF3165CAEC454A8CE3BE43DE0ABF03516FEE3BEAD10FECA8EDEC
+              4414A25924448B19D8B2CA751E8E303D35785569DAD3A9BCB6A545595DDBE0FA
+              0BFF9F3A7B55B33DD8E15E834542348B88E4FD0CECB6E6764D8746AB5B9BDBF9
+              27A54D88627944C4E41603FBCEE9F7824200D871CF04F2ED929292CF09D12816
+              9CF0730694A4E604C579A61E33094AFA89108D22623A99812C58BC3CA804CC5B
+              F4924A8019D11C211A45C464230359B37E475009A859DFC4A7D6F542348A84C9
+              1003D976A827A804803D8E80B342B489181FFFB884E57B00D03A2145E9BFF0B1
+              87031D27CF2BD5EB9B5C7FF51CF5D7EECCC51B0A8A4F6124DC8B89A1DF16A249
+              2C76A783DDA1C9D38B7C1C4BCE9CE2BA9692354D9700BD76B9D38BDC71C0466C
+              42348984C83206AE62559D8663530D12E0BF1DD8E5A6C352219A4442F26106AE
+              71D721CD471B0259C7C90B015F017FEDC02E9710BD2D448B984CA6CF4B88FC87
+              8183454C300320D3E3FD57F827E0DF94D247856890184CC7316049197921719E
+              29D857174F38E15742348888E4E90C54514965480900FBDCCA304F880611B1DC
+              C040D56EDA195202C03EB743B459880691B07C9981DADFD11752020E74F4F33B
+              4B1723EDBB00FB7B0C1072A62A03C337424AC0C0F04D0527A4B9F30147F21311
+              25C08CA9CCC0C06E4F289D670AE3B8A7431A1751022444AA1898E5AF6E080B01
+              2B566FE0D705159126A08B8169DADD11160260FBCC7DDE207744CC79ABD5FA25
+              11CB9F00108B9D2A27063E080B0127073E708D373213FC9752FAC58810301E91
+              E7D99D48CBCE0F8BF34C613CF535B0915F4784000991790CC482B29561256061
+              E92A7E3A9C111102442CBFC940D46D6D0D2B01F5DB5AF984A83152047CC4401C
+              7C6730AC04C078DCCAF072D89DB738E80F18003B99E84A50C249C0E0A55B8A83
+              66B813224C9F0A2B012296D3D473BCB92561759E69FEBC253C0172B809A86683
+              BF5CB3590575F4D4B0A18D8FD1DEED2D4D0794D7771EF4F8BDAA7A0B1F07AAC2
+              4A8084E41E36F8CEB6632AA8B49CFBD35362FA8B2EE0C120607DC31E456BB709
+              C6E508E80A9BF316CBC4AF4858FE94254070D8C9403953735450878F0F058580
+              C2E2158AD66CD3F3F77F28318E4496117E6232653E161E026CD4CC00A5BF30D3
+              03EC8C82A52AD8AD3B0E048500D8205597DB477A3DAE65E4CE54AF4162161602
+              244417B2411797AFF60054B966930AA8BCEAB587761EEE324B7BA150A2EFBCE7
+              794349C51A7E3A9C1B1E0230D9CB06DDD0B8D703D0F696C32AA0BC590B759D83
+              57040E41F45E95D6F613AABDCC1767FB5CDFD8B88F27A0391CFE3F2221729D0D
+              7AA8FB9CDFA36CC80FF40261D2C821081C86F86B0304A94FDB5F5ED124915B19
+              7E1472EF63ECCE67D8801312B3341D74A664ABA08E9CF07F77B93B6728004225
+              89F775183F3E6992DA263636E9FB212540C4249B0D36B370A926E81985EE0465
+              CB8EF687222075923B00BE75E4B4669B99F3CBF8E93025D404D4B1C156AD7B5D
+              1350E59A8D2AA0652BEB1E9880400190E92BB50DFC0ED1EA9012206172960DD6
+              B2BF5B1350638BFB084B6F9F301001AD078EEB0640AD762226A742E6BC69C284
+              6FB2624648404E0FFD531390D140188880EAFA37740320D3BEA16B7CE9DDA726
+              4ABF1A1202CC36626380B2F2E6F8056434100622800F80B51A0190D7497973DD
+              F6ECD4141202242497B241962CAFD1056424100622C0480064BA74790D3F1DFE
+              39340460F96D36C8E6A6FDBA808C04423D027ACE190B804C61B5A81280E4DD41
+              779E52FA285FC2DE1960B96B2410EA11102803F4D6A3EF0EF353E17548D88450
+              254009C9D90101F181D021A76B06423D020265809A71875B894A76FA5DBFCE40
+              94343BC82FCD56FA53D8DB374280849DB146A6365EF90C4DAB384A8F80F925C6
+              032053BE225DB4D33F681F6422B24DC2E42E9738DC9590DC2922B95CC24E2449
+              F41B5A0458109938DA22C8E905252A20A8F71D0D01FCBE7FDB61FD00A8593BE0
+              7D662862E7D312221FF2836AE9FD8F19E47EA8FAF437051A7D02F8333CADC229
+              7F04407EC10220CCEFF0CD8091F1606F52B5694DF8BDE7DD47E428BB08C63372
+              67B9A619F588498308A8FD63FDC73BC8CFD8B5B8C44CE5CCC5EB0101F1454D5A
+              A4F923603717003326070E80AC8E303E314BED171B9BF01DF7DDB727FC865DB0
+              C5272B7B0FBEEB71CEF646EB11D71DCACD9FAFC4C625BBDAA5644DF9ACEFC28D
+              7D83976E150D0CDFFC6357D7FB5F1611799FD969DCF5B780A08EF55CE2026186
+              4F20F447005F16BBA8CC5800840D53771E407AFDD6F02C585AA56B081EB7F6CE
+              334AEFB96B1EBF0F5EBA757771F9AB2A01B0868714F46102A13F02F877F9AF9B
+              77051C037206D884E5A6C1791E0498B15CC82E96AE586B88512D85D35FFE3183
+              1D1F6FA2461308FD11E0110003D41CC30DF3289840E48ACF5AC0C295B1428E7E
+              A2FFC1EBF8600B8C070E9BA27BB8574A2F10162F73EF1FC2FA80B7C39E0EC81F
+              F80C502F00C26A946DC38FE83DD146EC3E5398C994F99888C8559E047812E07B
+              9D07D169737CBF007326672BB9F9854A7EC112A56265BDEBFDF72E6A02C7E015
+              843499D504BB5FA9A94AF9CBB56AA92CE8ACA232FE1554366D7F4BA9ACDEA42C
+              285DE9D3DF55A8AD573627DA88DDEF07892150986118F8B90B2B46DD1F2ACEF9
+              C77FE3F636BF6D5D9FD8DA68AA5FE79948886223B94030D462A71F9EB972E75B
+              A0F50D2D4F5AE39377F9B6A337ED64E22A09CBB7BD7EBF96949E97CAFA8392D4
+              17F27CFA23F9061CD18DAA52CC04AF838DD82130C2579BC15033A25522A23B60
+              B52822B9D3829D75928DFEC27B6CD14A9E85C754C46409ECDDC147962E4CB0D1
+              82E534F84C5E42C4A9F571247C28E5CA46112D1631C9B420E79FC68D9BFC8540
+              0EFF1F0EDF12A1A061851C0000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'icons8-secure'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000097048597300000B1300000B1301009A9C18000006CE49444154789C
+              ED5D5B8B5C45106EAF51D4A844C14BF44511DF4405E30D41085EE2F5C17FE00D
+              3431F80F7C0C78CD4510F5C9B71010E35B1012826022C4EC6EA67B3639B3D527
+              3B6E12E2CE54CD667D4804F748CD8CAB843DB333E7F46DCEF6070DCBEE4E4FF5
+              577DAABBABAAEB08111111111111111111111111111092E4C2ED35DD794E6ADC
+              26357D2935FE24359D5080A0005169BCD46DFC3320F0DFF87F94A63DFC19FE2C
+              F7E17B1C638366B3797D0DF01509F8B9D23425019794A6AC4CEBF60134C97DD6
+              005F4ED3F43ADFE30C0ED3339D4725D04E09D82A4BF8AA0AD1D49140DF29E86C
+              CEB2EC0AB1569124D93AA93BEF2A8D33B649CF6FD890BAF30ECB22D692999140
+              1F4AA033FE88BFDC4CD19CD2B89D65135506DB6009A87D13AEF21A2FEE33ED2D
+              A26A9080F74AA01FBC13AC877D22F0FBA9A4B551540152E3AB0AB0ED9B54556C
+              B17E438C2B0E1DCAAE56803B4C6C2595BF2761A9BB3B93D9B5629C7062B673AB
+              D2F4B36F02953145D0E189946E11E380FAE93FEEE4838F6FD29469256892C1AF
+              0BB2D1B95F02A6BEC952D69E044C798C22444CCFCEDF5565F2D57FAD596BB4EF
+              112101006FAEA2D951794F82A61AAF732204F00EA14A0BAE1A560940878F1DCB
+              AEF1CDBF90405FF826437953027EEC957C95D2EB8EF7F94DA569B74CDB2F9C48
+              E71F9C3C77EE066EFCB34ADB2F721C4069FADDA10296D87DEECDBDD00B8AB818
+              28CDD581DECAB2ECAA610E8052D3DBCE9C7D80ED53CDD6DDC2359CF97680F64F
+              4FCFDF34AA7CFC19A5E947374F03EE13AEBD9A8EC8DF9565D99545E5E4CFB2C9
+              72216B4D779E17EEFCF90E5CCA40FBCB907F99121C3C09D87012EEE4608A0B9B
+              3F5DC0ECE421495AEB25D059EB726BDC664AE69C8164EB7AD123EBB3FFCD8132
+              709604E05105F42737097444026E1DE4B5E4D0A3FDA7809A563DA7BD18AEFD41
+              6439BB1DDE6D0C3A714BC0E3EC12C9DD1D39983CBC5BB3423E6710380AA0EFCE
+              9BF9C3B83B24E06F79B390738B6CCB2F352656B22D94C6671C909FF1812AE7FB
+              3F189A04C0F757EAA30EF8928B3148C0A78D2B406AFCD685F0755878204701BF
+              0E4F001D59A98FEE89D9C52402FCDA28F9BCBD5280E464F6C8F337AEAC005A1C
+              A19FC595FAE0BE9D8C4153C7688A0BFB3B9CCC1C4D599E0CBEFA29DC4CA6B7F4
+              7335A302F4281CE027C614C089B25101349A19023C6E847C4EEF76E972161531
+              4112F0EFFADCC286D20AE01C7BAB826ABCC84E37A51736B16F5F58067F473D6D
+              3DDE73D2F1FD028B8A80CEE6D202F3B1DFDE2CA1B99AC6878427A8941EB61937
+              C83B8F8C26642FCA6465E6D73C92FF2FEAA7E9116B4F02D0AED202F6AFFCD898
+              FD3B4520B035C914E081D2C2710A861D05741E1381A0BF26D8304353A5859340
+              A75D9E787DC0D609990357A585B3955A2E0283B2A1008DF30604B3B34089B5A1
+              808B955340CA8E418DDBBBDED1E588181E65777599CB76C12AC0D6D5D122B24C
+              25AD8D03DD2240934553C8833541B6329E8BCD7C5ADD27053459E449087611B6
+              B50D1D9D20DC6E333B21DC6DA8A583D8E80461E988987305983888D93A251690
+              63B16C446C95FEC33CEDDB72C6D95480D4B450A07FE363AC03BE27427547AF0D
+              13D429EF8E3E79F2C26D360232A31384A3A4A56C1DBDFF4003325DE12CDCFF1A
+              558664C8C42C053851243D30D890644F38FCCCB702960F628394003851F4B244
+              D041791BF7018ACA922C27E7D291FEC2BC28817E592D39D7B9027232FC8249CC
+              12814199241F108D1781921ABF890AA06115F095083D3937A4804C92B4D69B1C
+              5B6DA6FD94ADF4F486394117368940504FDB4F189B581A4F592B0668F896C96E
+              11088CDE1B1870BBA734BA7B716317A1F112E7E588004A662A8D7F1952C0ACF5
+              E24EA3B885577D5C81CEF85442BF5EE9D9A012B15603E7BD9BBDAA841CF2DCC3
+              76D8C5C2CCDF516BB49FEC991D6333BF6BFB9DD51FE54BC9E61440D568260F5E
+              C3804B3B7A1FB40EA349C0BDC235B86AD43896A354A6C9D7389F7735D63AF8D6
+              E13897A554E567FE92D2F89AF009A5F153DF44285F0D7087F00D2EDBC5E5BBD6
+              20F907832859B6EC4B019CF04E8A76D3F84D1DC11572ED97ADD495271F507371
+              5A1170E1D6CA2A4102EA5AD2B94F840C999EBFA38AE6486AAA79A90D57046C1F
+              2BB530031EE4E2B462FCCAD7D3479C9E31EEE5EB8F85B2DB29F1DA92D61892DF
+              E283A6A802BA95AE34EE1B23F2F77A732FD8442DA5671550DD37C12AB76183AB
+              F28A2A83535CFA09BF4DFF842FB7590EA6ACA9F78971E8AE0EF416D758F3666A
+              349EE218EED8BD23C6DAAB0C35CEDB273DBECA707006DE4C7B4BD7C3CA49B606
+              B6B0DC0727CA72AE2647ADD69499298BFADCC206CEB167FBDC2D2F0378A09B9C
+              DB7B9D6DFB7FAFB36DF77ED7FD1BFFCF2EBE1CC19F3596221E11111111111111
+              1111111121CCE01F99F429DBC9E4A3AA0000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'icons8-male-user'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D4948445200000060000000600806000000E29877
+              38000000097048597300000B1300000B1301009A9C180000069F49444154789C
+              ED5D4D8C5445106E131589FFA2117F38F86F623C79E0A0C698E0BFE2C583443D
+              899A28C618118D274F4AE23F4AA2D193D10404048FC40424DE7423EC4ED72C3B
+              3B558F1D49C8BA33D56FC08310D867EACD2086882CFBFA75F79BE92FA964323F
+              6FBEAEEAD73F55D5F5948A888888888888888888888808088DC6C12B6A94DEAF
+              895FD664D66BE21F35993140464066203E9C8BBC4646F94CBE03643E93DFC86F
+              E51ABEDB5119B45AAD8535E4C734F24740665423CF0299AC88E4D740B347AE59
+              437E344992F37CB733388C37D33B349A4F3472BBA8C24F6B1032A946F33560BA
+              2CCBB2B3D4B0A2D1C816684A5F00E266D94A3FB5F0A4A6F479E1A2866998D168
+              5ED568F6FB53FCC9C39470E157849B1A64C818AC91C9B7C2E15422937BB3F3B0
+              1A34D4263B4B34F256EF0AA6B9DE11FCFD68A37DAD1A0468E2E580DCF1AD5498
+              DF64FD84AA2A76EECCCE06E4B5369692E0EF4E98CD57673A3B5755096353E9A5
+              40E667DF0A046B8630BB7627E6125505D4F7FD71956C7C7C2B0D6C1B818C0E7E
+              5ED093E98D1A39F1AD2C28ED4EE044DAA842C4F8D4CCD583AC7C38212D59D5A9
+              9080C81703F2EE00949339B913C8D4649E53214056088334E1C25C8D80E6A791
+              91EC1CDFFA571ACDC7BE9501DE8CC0EF85E05A981D6203CC02F1E37E943FD959
+              D20B8AF85704F835427BA2D5BEC6B901FCF876F8B046DEA09B9D15E3D4BD65CF
+              8103E78BC86B794F236FEC45C99CF3DAE454F975E4473C3472F3D8547AFDE9B8
+              D51AE90D40BCC535BF1AA50F38F4E7BB73296BE4A31ACD6B67CA13C8ACD6C8C7
+              9CF1246E3809774A30C565CFD2F350FE710099356EB9F22A557A18D169248B37
+              576CAE6A95EA39EDC5709D29FFB08CE74539EFDD67AE733931D7D1AC54654032
+              085C06D035F2065BDC81F83B67BC891BA5645BD489EF71D7FB4D564F3A4FDAE2
+              AE919F72C95D23DF658BFB8946107FE5B211D0ECDE648BBBEC139C7247FE42D9
+              842CAF00D938ED457AFA025BFCE55A4EB99349ADA6B848BAA0D31E44261B1F9F
+              B9D0167FB9966BFE56D35BFAB99A4E1B50C7EECDB6F88F2533B73A3700F1FBB6
+              F8CB8666D4750374B3B3C21A7FE4A79DF347FECD0A7949EFF6E172D6C81B2D2E
+              433779E07FACBEBFBBA830797132B9260FB9F0111B017071E0F9F190CA6A285D
+              56D80072D0C18F018C18614B61FE68B6F9E2AF915FB26000B3DE9F018CC8EAF9
+              734FDFF0CA1DCD3A0B06C88FFC786B84EEB9945F9F8F27D4A53BFABF0DC0DB2D
+              18C0D43CDF0159DF105BE73227F492C3FC0D3B27C968710304956CC547C4B126
+              BE1D59DBCB0E57247F9DFB7B64B523DFF1CDF39F4E43850D50C5D472084434F1
+              4C7103F85AC251F54513FF150D405537401C8232AF439046B3CFF7AD0C15152B
+              937028CB50A8A68C567E230655161B1B31297CE1BD21544D91037E813BE3F897
+              5AB373A78F5388F29FF2DF40FC6BD0CE3829F95296F2470238E0201C34F148B0
+              EEE8BD7B0F5E5E4640467A9F0A04807C77B001991E41FBC74E433AFCDC68640B
+              820D490A80F843DB04556080908F2FC95124DB0443AA5CD56AB516DA6E1F249D
+              87AC12946423AB04273BB7A940308E7CBBD5B621B3F522509AF84BCBBD648D0A
+              041AF94DCB06F83CF89582F898920086A1FEF0D30A7E85D74F4F9F0C6EA75810
+              40E653AB6D229E28AD18A014B8B33C0C6575E4174B213BA7F698E76CB707D03C
+              5BF67AF977BB77011F95F411972524F3BB19F92DF96FCB06982A7D7F23D505AD
+              F71ACA87A36D6378E8CAD27B7D32BD18D0FC10ACEF676E9356494795D0FC0964
+              DE29A312896EA597019977FBFF615FF9C413CEEA8F4AEE7B2906A0E38D310781
+              CC37722EA148A37AC561793990F916C81C2A93731DD3FB944B4869C7321B0427
+              8CD105E41D40FC412FCDBCBB342F4D904C2F9665AC88BCEE1D43EA2E05E26772
+              D709F2CEBE212B95C97DA6C53A863E674813CF48B530E50352332296AB613FE5
+              6A8E231F1A1CDCE610A220AF55414494D0EC1A42E5EF0821A297A3D1685F3464
+              45FBC6822BE4DA2F5B4903AF7C6492E2B42AE0C2AD036B048D4C360A8838D8EA
+              0FDE70A4C9D4BCD4869B0F647C94BA9ABE9506B604798714A755D52B5F6FDEF6
+              7E4E8B8A97AF0F66B553A0B668BB82CA6FCB46530D0264ECF4715A1DE6AFFC8D
+              DEDC0B65A296987B014DDDB782E194C2933AE93CA80619BDC27FBCCA76201C8A
+              C994045386EA796212BAABA3592935D6BC0D35C41312C30D294DD2EFA30C8967
+              CA577A7C94E1FF97466B4AB42D0FBEECB6B184956B48A2AC14509274C1A11A66
+              8AA2BEBFBB4872EC657CCEF37790B7E799DABDC7D976FEF538DB4EEFBDFC33F9
+              CE3A497791DF5A4B118F88888888888888888888885076F037D3401EDA3ADFC9
+              7F0000000049454E44AE426082}
+          end>
       end>
-    Left = 153
-    Top = 56
+    Left = 89
+    Top = 168
   end
   object DS_usuario: TDataSource
     DataSet = Query_usuario
-    Left = 315
-    Top = 115
+    Left = 75
+    Top = 227
   end
   object Query_usuario: TFDQuery
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 245
-    Top = 130
+    Left = 53
+    Top = 106
   end
 end
