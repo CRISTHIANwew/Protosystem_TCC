@@ -4,8 +4,8 @@ object Frm_Principal: TFrm_Principal
   Align = alClient
   BorderStyle = bsNone
   Caption = '  ProtoSystem'
-  ClientHeight = 830
-  ClientWidth = 1375
+  ClientHeight = 787
+  ClientWidth = 1260
   Color = clWhite
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
@@ -138,15 +138,14 @@ object Frm_Principal: TFrm_Principal
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poDesigned
-  WindowState = wsMaximized
+  Position = poScreenCenter
   OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1375
-    Height = 830
+    Width = 1260
+    Height = 787
     Align = alClient
     BevelOuter = bvNone
     Color = 8739130
@@ -156,13 +155,11 @@ object Frm_Principal: TFrm_Principal
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1920
-    ExplicitHeight = 1031
     object Panel2: TPanel
       Left = 5
-      Top = 43
-      Width = 1365
-      Height = 762
+      Top = 49
+      Width = 1250
+      Height = 733
       Align = alClient
       BevelOuter = bvNone
       Color = 14725001
@@ -178,13 +175,11 @@ object Frm_Principal: TFrm_Principal
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1910
-      ExplicitHeight = 963
       object PGC_MENU: TPageControl
         Left = 4
         Top = 4
-        Width = 1357
-        Height = 754
+        Width = 1242
+        Height = 725
         ActivePage = TabSheet1
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
@@ -194,8 +189,6 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
-        ExplicitWidth = 1902
-        ExplicitHeight = 955
         object TabSheet1: TTabSheet
           Caption = 'Tela inicial'
           Font.Charset = DEFAULT_CHARSET
@@ -207,9 +200,9 @@ object Frm_Principal: TFrm_Principal
           object pnl_boasvindas: TPanel
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 33
-            Align = alTop
+            Width = 1234
+            Height = 693
+            Align = alClient
             Color = 13274977
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
@@ -218,19 +211,22 @@ object Frm_Principal: TFrm_Principal
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             Font.Quality = fqClearTypeNatural
+            Padding.Left = 5
+            Padding.Top = 5
+            Padding.Right = 5
+            Padding.Bottom = 5
             ParentBackground = False
             ParentCtl3D = False
             ParentFont = False
             TabOrder = 0
-            ExplicitWidth = 1894
             object Label1: TLabel
-              Left = 1
-              Top = 1
-              Width = 1347
+              Left = 6
+              Top = 6
+              Width = 1222
               Height = 31
               Align = alTop
               Alignment = taCenter
-              Caption = 'Resumo de estat'#237'sticas'
+              Caption = 'Dashboard Geral'
               Color = 13275746
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 15649712
@@ -240,35 +236,240 @@ object Frm_Principal: TFrm_Principal
               Font.Quality = fqClearTypeNatural
               ParentColor = False
               ParentFont = False
-              ExplicitWidth = 232
+              ExplicitWidth = 172
             end
-          end
-          object Chart1: TChart
-            Left = 337
-            Top = 94
-            Width = 656
-            Height = 427
-            Title.Text.Strings = (
-              'TChart')
-            View3D = False
-            TabOrder = 1
-            DefaultCanvas = 'TGDIPlusCanvas'
-            PrintMargins = (
-              15
-              18
-              15
-              18)
-            ColorPaletteIndex = 13
-            object Series1: TLineSeries
-              HoverElement = [heCurrent]
-              DataSource = DBCrossTabSource1
-              Brush.BackColor = clDefault
-              Pointer.InflateMargins = True
-              Pointer.Style = psRectangle
-              XValues.Name = 'X'
-              XValues.Order = loAscending
-              YValues.Name = 'Y'
-              YValues.Order = loNone
+            object Panel33: TPanel
+              Left = 6
+              Top = 37
+              Width = 1222
+              Height = 650
+              Align = alClient
+              BevelOuter = bvNone
+              Color = 15649712
+              Padding.Left = 112
+              Padding.Top = 100
+              Padding.Right = 112
+              Padding.Bottom = 100
+              ParentBackground = False
+              TabOrder = 0
+              object Shape8: TShape
+                Left = 160
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 8739130
+              end
+              object Shape7: TShape
+                Left = 130
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 13274977
+              end
+              object Shape6: TShape
+                Left = 100
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 14725001
+              end
+              object Shape5: TShape
+                Left = 70
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 15649712
+              end
+              object Shape4: TShape
+                Left = 40
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 15456203
+              end
+              object Shape3: TShape
+                Left = 10
+                Top = 14
+                Width = 24
+                Height = 39
+                Brush.Color = 16512241
+              end
+              object PageControl1: TPageControl
+                Left = 112
+                Top = 100
+                Width = 998
+                Height = 450
+                ActivePage = TabSheet37
+                Align = alClient
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = 14725003
+                Font.Height = -14
+                Font.Name = 'Segoe UI'
+                Font.Style = []
+                Font.Quality = fqClearTypeNatural
+                MultiLine = True
+                ParentFont = False
+                TabOrder = 0
+                TabPosition = tpBottom
+                object TabSheet37: TTabSheet
+                  Caption = '|  Dashboard Estoque  |'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 14725003
+                  Font.Height = -14
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Font.Quality = fqClearTypeNatural
+                  ParentFont = False
+                  object Panel34: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                    object Chart1: TChart
+                      Left = 8
+                      Top = 8
+                      Width = 974
+                      Height = 402
+                      Title.Text.Strings = (
+                        'TChart')
+                      View3D = False
+                      View3DOptions.Elevation = 315
+                      View3DOptions.Orthogonal = False
+                      View3DOptions.Perspective = 0
+                      View3DOptions.Rotation = 360
+                      Align = alClient
+                      TabOrder = 0
+                      DefaultCanvas = 'TGDIPlusCanvas'
+                      PrintMargins = (
+                        15
+                        29
+                        15
+                        29)
+                      ColorPaletteIndex = 15
+                      object Series1: TBarSeries
+                        HoverElement = []
+                        Active = False
+                        BarPen.Visible = False
+                        ColorEachPoint = True
+                        Marks.Callout.Length = 8
+                        Marks.Tail.Margin = 2
+                        DataSource = DBCrossTabSource1
+                        SeriesColor = 16744448
+                        Title = 'Composi'#231#227'o de Estoque'
+                        MultiBar = mbStacked
+                        XValues.Name = 'X'
+                        XValues.Order = loAscending
+                        YValues.Name = 'Bar'
+                        YValues.Order = loNone
+                      end
+                    end
+                  end
+                end
+                object TabSheet38: TTabSheet
+                  Caption = '|  Dashboard Vendas  |'
+                  ImageIndex = 1
+                  object Panel35: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                  end
+                end
+                object TabSheet39: TTabSheet
+                  Caption = '|  Dashboard Contas a Receber  |'
+                  ImageIndex = 2
+                  object Panel36: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                  end
+                end
+                object TabSheet40: TTabSheet
+                  Caption = '|  Dashboard Contas a Pagar  |'
+                  ImageIndex = 3
+                  object Panel37: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                  end
+                end
+                object TabSheet41: TTabSheet
+                  Caption = '|  Dashboard Caixa  |'
+                  ImageIndex = 4
+                  object Panel38: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                  end
+                end
+                object TabSheet42: TTabSheet
+                  Caption = '|  Dashboard Banco  |'
+                  ImageIndex = 5
+                  object Panel39: TPanel
+                    Left = 0
+                    Top = 0
+                    Width = 990
+                    Height = 418
+                    Align = alClient
+                    BevelOuter = bvNone
+                    Color = 13274977
+                    Padding.Left = 8
+                    Padding.Top = 8
+                    Padding.Right = 8
+                    Padding.Bottom = 8
+                    ParentBackground = False
+                    TabOrder = 0
+                  end
+                end
+              end
             end
           end
         end
@@ -278,8 +479,8 @@ object Frm_Principal: TFrm_Principal
           object PGC_ESTOQUE: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
+            Width = 1234
+            Height = 693
             ActivePage = TabSheet8
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -294,10 +495,11 @@ object Frm_Principal: TFrm_Principal
               object Panel3: TPanel
                 Left = 0
                 Top = 0
-                Width = 1341
-                Height = 690
+                Width = 1226
+                Height = 661
                 Align = alClient
-                Color = clSilver
+                BevelOuter = bvNone
+                Color = 13274977
                 Padding.Left = 8
                 Padding.Top = 8
                 Padding.Right = 8
@@ -307,10 +509,11 @@ object Frm_Principal: TFrm_Principal
                 object PnlCadastroProdutos: TPanel
                   Left = 11
                   Top = 13
-                  Width = 232
-                  Height = 46
+                  Width = 158
+                  Height = 84
                   Cursor = crHandPoint
-                  Color = clSilver
+                  BevelOuter = bvNone
+                  Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
                   Font.Height = -12
@@ -320,31 +523,37 @@ object Frm_Principal: TFrm_Principal
                   ParentFont = False
                   TabOrder = 0
                   object shpCadastroProdutos: TShape
-                    Left = 1
-                    Top = 1
-                    Width = 230
-                    Height = 44
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 84
                     Align = alClient
-                    Brush.Color = clSilver
+                    Brush.Color = 8739130
                     Shape = stRoundRect
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
                     ExplicitHeight = 45
                   end
                   object btnCadastroProdutos: TSpeedButton
-                    Left = 1
-                    Top = 1
-                    Width = 230
-                    Height = 44
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 84
                     Align = alClient
                     Caption = 'Cadastro de Produtos'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
-                    Font.Color = clWindow
+                    Font.Color = 15649712
                     Font.Height = -12
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = btnCadastroProdutosClick
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
                     ExplicitHeight = 45
                   end
                 end
@@ -353,10 +562,40 @@ object Frm_Principal: TFrm_Principal
             object TabSheet9: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel6: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet10: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel7: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 1
+              end
               object BTN_PES_ESTOQUE: TButton
                 Left = 20
                 Top = 20
@@ -370,6 +609,21 @@ object Frm_Principal: TFrm_Principal
             object TabSheet11: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel8: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -379,8 +633,8 @@ object Frm_Principal: TFrm_Principal
           object PGC_VENDAS: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
+            Width = 1234
+            Height = 693
             ActivePage = TabSheet14
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -392,10 +646,40 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet13: TTabSheet
               Caption = 'Cadastros'
+              object Panel9: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet14: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel10: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 1
+              end
               object BTN_VENDAS: TButton
                 Left = 20
                 Top = 20
@@ -409,10 +693,40 @@ object Frm_Principal: TFrm_Principal
             object TabSheet15: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel11: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet16: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel12: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -422,9 +736,9 @@ object Frm_Principal: TFrm_Principal
           object PGC_CAIXA: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
-            ActivePage = TabSheet17
+            Width = 1234
+            Height = 693
+            ActivePage = TabSheet20
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -435,18 +749,78 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet17: TTabSheet
               Caption = 'Cadastros'
+              object Panel13: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet18: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel14: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet19: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel15: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet20: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel16: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -462,8 +836,8 @@ object Frm_Principal: TFrm_Principal
           object PGC_BANCO: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
+            Width = 1234
+            Height = 693
             ActivePage = TabSheet21
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -475,18 +849,78 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet21: TTabSheet
               Caption = 'Cadastros'
+              object Panel17: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet22: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel18: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet23: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel19: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet24: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel20: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -496,8 +930,8 @@ object Frm_Principal: TFrm_Principal
           object PGC_RECEBER: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
+            Width = 1234
+            Height = 693
             ActivePage = TabSheet25
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -509,36 +943,174 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet25: TTabSheet
               Caption = 'Cadastros'
-              object BTN_CAD_CLIENTE: TButton
-                Left = 3
-                Top = 3
-                Width = 171
-                Height = 60
-                Caption = 'Cadastro de clientes'
+              object Panel21: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
                 TabOrder = 0
-                OnClick = BTN_CAD_CLIENTEClick
-              end
-              object btnCadReceber: TButton
-                Left = 180
-                Top = 3
-                Width = 170
-                Height = 60
-                Caption = 'Cadastro de contas a receber'
-                TabOrder = 1
-                OnClick = BTN_CAD_CLIENTEClick
+                object Panel40: TPanel
+                  Left = 5
+                  Top = 7
+                  Width = 158
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape10: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                  object SpeedButton4: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Cadastro de Clientes'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton4Click
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                end
+                object Panel41: TPanel
+                  Left = 171
+                  Top = 7
+                  Width = 201
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 1
+                  object Shape11: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 201
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 157
+                  end
+                  object SpeedButton5: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 201
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Cadastro de Contas a Receber'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = btnCadastroProdutosClick
+                    ExplicitWidth = 157
+                  end
+                end
               end
             end
             object TabSheet26: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel22: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet27: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel23: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet28: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel24: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -548,8 +1120,8 @@ object Frm_Principal: TFrm_Principal
           object PGC_PAGAR: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
+            Width = 1234
+            Height = 693
             ActivePage = TabSheet29
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
@@ -561,6 +1133,21 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet29: TTabSheet
               Caption = 'Cadastros'
+              object Panel25: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 1
+              end
               object BTN_CAD_FORNECEDOR: TButton
                 Left = 20
                 Top = 20
@@ -574,14 +1161,59 @@ object Frm_Principal: TFrm_Principal
             object TabSheet30: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel26: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet31: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel27: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet32: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel28: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -591,9 +1223,9 @@ object Frm_Principal: TFrm_Principal
           object PGC_CONFIGURACAO: TPageControl
             Left = 0
             Top = 0
-            Width = 1349
-            Height = 722
-            ActivePage = TabSheet33
+            Width = 1234
+            Height = 693
+            ActivePage = TabSheet36
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -604,6 +1236,21 @@ object Frm_Principal: TFrm_Principal
             TabOrder = 0
             object TabSheet33: TTabSheet
               Caption = 'Cadastros'
+              object Panel29: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 1
+              end
               object BTN_CAD_USUARIO: TButton
                 Left = 20
                 Top = 20
@@ -617,6 +1264,21 @@ object Frm_Principal: TFrm_Principal
             object TabSheet34: TTabSheet
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
+              object Panel30: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 2
+              end
               object CB_STYLES: TComboBox
                 Left = 216
                 Top = 37
@@ -643,10 +1305,40 @@ object Frm_Principal: TFrm_Principal
             object TabSheet35: TTabSheet
               Caption = 'Pesquisas'
               ImageIndex = 2
+              object Panel31: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
             object TabSheet36: TTabSheet
               Caption = 'Relatorios'
               ImageIndex = 3
+              object Panel32: TPanel
+                Left = 0
+                Top = 0
+                Width = 1226
+                Height = 661
+                Align = alClient
+                BevelOuter = bvNone
+                Color = 13274977
+                Padding.Left = 8
+                Padding.Top = 8
+                Padding.Right = 8
+                Padding.Bottom = 8
+                ParentBackground = False
+                TabOrder = 0
+              end
             end
           end
         end
@@ -655,8 +1347,8 @@ object Frm_Principal: TFrm_Principal
     object pnlBarraSuperior: TPanel
       Left = 5
       Top = 5
-      Width = 1365
-      Height = 38
+      Width = 1250
+      Height = 44
       Align = alTop
       BevelOuter = bvNone
       Color = 13274977
@@ -666,12 +1358,11 @@ object Frm_Principal: TFrm_Principal
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitTop = 3
       object lb_logo: TLabel
         Left = 5
         Top = 5
         Width = 223
-        Height = 28
+        Height = 34
         Align = alLeft
         Alignment = taCenter
         Caption = 'ProtoSystem Sistemas'
@@ -686,53 +1377,27 @@ object Frm_Principal: TFrm_Principal
         ParentFont = False
         ExplicitHeight = 31
       end
-      object Shape3: TShape
-        Left = 249
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 16512241
-      end
-      object Shape4: TShape
-        Left = 297
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 15456203
-      end
-      object Shape5: TShape
-        Left = 345
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 15649712
-      end
-      object Shape6: TShape
-        Left = 393
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 14725001
-      end
-      object Shape7: TShape
-        Left = 441
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 13274977
-      end
-      object Shape8: TShape
-        Left = 489
-        Top = -3
-        Width = 42
-        Height = 39
-        Brush.Color = 8739130
+      object lbHORA: TLabel
+        Left = 563
+        Top = 4
+        Width = 6
+        Height = 31
+        Alignment = taRightJustify
+        Color = clBtnFace
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 15649712
+        Font.Height = -23
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        Font.Quality = fqClearTypeNatural
+        ParentColor = False
+        ParentFont = False
       end
       object Pnl_sair: TPanel
-        Left = 1272
+        Left = 1157
         Top = 5
         Width = 88
-        Height = 28
+        Height = 34
         Cursor = crHandPoint
         Align = alRight
         BevelOuter = bvNone
@@ -745,12 +1410,11 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 1817
         object Shape2: TShape
           Left = 0
           Top = 0
           Width = 88
-          Height = 28
+          Height = 34
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -761,7 +1425,7 @@ object Frm_Principal: TFrm_Principal
           Left = 0
           Top = 0
           Width = 88
-          Height = 28
+          Height = 34
           Cursor = crHandPoint
           Align = alClient
           Caption = 'Sair'
@@ -774,15 +1438,16 @@ object Frm_Principal: TFrm_Principal
           Font.Quality = fqClearTypeNatural
           ParentFont = False
           OnClick = SpeedButton1Click
-          ExplicitTop = 4
-          ExplicitHeight = 27
+          ExplicitLeft = 1
+          ExplicitTop = -1
+          ExplicitHeight = 28
         end
       end
       object Panel4: TPanel
-        Left = 1096
+        Left = 981
         Top = 5
         Width = 88
-        Height = 28
+        Height = 34
         Cursor = crHandPoint
         Align = alRight
         BevelOuter = bvNone
@@ -796,12 +1461,11 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 1641
         object Shape1: TShape
           Left = 0
           Top = 0
           Width = 83
-          Height = 28
+          Height = 34
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -812,7 +1476,7 @@ object Frm_Principal: TFrm_Principal
           Left = 0
           Top = 0
           Width = 83
-          Height = 28
+          Height = 34
           Cursor = crHandPoint
           Align = alClient
           Caption = 'Minimizar'
@@ -824,17 +1488,17 @@ object Frm_Principal: TFrm_Principal
           Font.Style = []
           Font.Quality = fqClearTypeNatural
           ParentFont = False
-          OnClick = SpeedButton1Click
+          OnClick = SpeedButton2Click
           ExplicitTop = 4
           ExplicitWidth = 88
           ExplicitHeight = 27
         end
       end
       object Panel5: TPanel
-        Left = 1184
+        Left = 1069
         Top = 5
         Width = 88
-        Height = 28
+        Height = 34
         Cursor = crHandPoint
         Align = alRight
         BevelOuter = bvNone
@@ -848,12 +1512,11 @@ object Frm_Principal: TFrm_Principal
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
-        ExplicitLeft = 1729
         object Shape9: TShape
           Left = 0
           Top = 0
           Width = 83
-          Height = 28
+          Height = 34
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -864,7 +1527,7 @@ object Frm_Principal: TFrm_Principal
           Left = 0
           Top = 0
           Width = 83
-          Height = 28
+          Height = 34
           Cursor = crHandPoint
           Align = alClient
           Caption = 'Janela'
@@ -876,32 +1539,11 @@ object Frm_Principal: TFrm_Principal
           Font.Style = []
           Font.Quality = fqClearTypeNatural
           ParentFont = False
-          OnClick = SpeedButton1Click
           ExplicitTop = 4
           ExplicitWidth = 88
           ExplicitHeight = 27
         end
       end
-    end
-    object StatusBar1: TStatusBar
-      Left = 5
-      Top = 805
-      Width = 1365
-      Height = 20
-      Color = clHighlight
-      Panels = <
-        item
-          Alignment = taCenter
-          Bevel = pbNone
-          BiDiMode = bdLeftToRight
-          ParentBiDiMode = False
-          Text = 'Data e Hora'
-          Width = 50
-        end>
-      ParentShowHint = False
-      ShowHint = False
-      ExplicitTop = 1006
-      ExplicitWidth = 1910
     end
   end
   object VirtualImageList1: TVirtualImageList
@@ -1284,9 +1926,13 @@ object Frm_Principal: TFrm_Principal
     Top = 66
   end
   object DBCrossTabSource1: TDBCrossTabSource
-    GroupField = 'CPF_CNPJ'
+    Active = True
+    GroupField = 'DESCRICAO'
+    LabelField = 'DESCRICAO'
     Series = Series1
-    ValueField = 'TOTAL_PROD'
-    DataSet = DM.SQL_ImpressaoPedido
+    ValueField = 'ESTOQUE'
+    DataSet = DM.SQL_Dashboard_Estoque
+    Left = 1136
+    Top = 320
   end
 end

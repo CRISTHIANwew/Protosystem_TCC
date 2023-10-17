@@ -178,7 +178,7 @@ begin
       edtQuantidadeProduto.Text:='';
       edtSubTotalProduto.Text:='';
       edtTotalVenda.Text:='';
-      ImprimePedido;
+      //ImprimePedido;
       VerificaIdPedido;
   end;
 end;

@@ -61,8 +61,6 @@ type
     TabSheet6: TTabSheet;
     PGC_RECEBER: TPageControl;
     TabSheet25: TTabSheet;
-    BTN_CAD_CLIENTE: TButton;
-    btnCadReceber: TButton;
     TabSheet26: TTabSheet;
     TabSheet27: TTabSheet;
     TabSheet28: TTabSheet;
@@ -83,7 +81,6 @@ type
     TabSheet35: TTabSheet;
     TabSheet36: TTabSheet;
     pnlBarraSuperior: TPanel;
-    StatusBar1: TStatusBar;
     Pnl_sair: TPanel;
     Shape2: TShape;
     SpeedButton1: TSpeedButton;
@@ -95,15 +92,63 @@ type
     SpeedButton3: TSpeedButton;
     lb_logo: TLabel;
     Label1: TLabel;
-    Shape3: TShape;
-    Shape4: TShape;
-    Shape5: TShape;
-    Shape6: TShape;
-    Shape7: TShape;
+    Panel6: TPanel;
+    Panel7: TPanel;
+    Panel8: TPanel;
+    Panel9: TPanel;
+    Panel10: TPanel;
+    Panel11: TPanel;
+    Panel12: TPanel;
+    Panel13: TPanel;
+    Panel14: TPanel;
+    Panel15: TPanel;
+    Panel16: TPanel;
+    Panel17: TPanel;
+    Panel18: TPanel;
+    Panel19: TPanel;
+    Panel20: TPanel;
+    Panel21: TPanel;
+    Panel22: TPanel;
+    Panel23: TPanel;
+    Panel24: TPanel;
+    Panel25: TPanel;
+    Panel26: TPanel;
+    Panel27: TPanel;
+    Panel28: TPanel;
+    Panel29: TPanel;
+    Panel30: TPanel;
+    Panel31: TPanel;
+    Panel32: TPanel;
+    Panel33: TPanel;
+    lbHORA: TLabel;
     Shape8: TShape;
+    Shape7: TShape;
+    Shape6: TShape;
+    Shape5: TShape;
+    Shape4: TShape;
+    Shape3: TShape;
+    PageControl1: TPageControl;
+    TabSheet37: TTabSheet;
+    TabSheet38: TTabSheet;
+    TabSheet39: TTabSheet;
+    TabSheet40: TTabSheet;
+    TabSheet41: TTabSheet;
+    TabSheet42: TTabSheet;
+    Panel34: TPanel;
+    Panel35: TPanel;
+    Panel36: TPanel;
+    Panel37: TPanel;
+    Panel38: TPanel;
+    Panel39: TPanel;
     Chart1: TChart;
-    Series1: TLineSeries;
     DBCrossTabSource1: TDBCrossTabSource;
+    Series1: TBarSeries;
+    Panel40: TPanel;
+    Shape10: TShape;
+    SpeedButton4: TSpeedButton;
+    Panel41: TPanel;
+    Shape11: TShape;
+    SpeedButton5: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -116,6 +161,8 @@ type
     procedure BTN_CAD_FORNECEDORClick(Sender: TObject);
     procedure btnCadastroProdutosClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -263,10 +310,31 @@ begin
     Application.Terminate;
 end;
 
+procedure TFrm_Principal.SpeedButton2Click(Sender: TObject);
+begin
+  Application.Minimize;
+end;
+
+procedure TFrm_Principal.SpeedButton4Click(Sender: TObject);
+begin
+var
+    Frm_CadCliente: TFrm_CadCliente; // Declare uma variável para o formulário
+  Frm_CadCliente := TFrm_CadCliente.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_CadCliente.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadCliente.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
 procedure TFrm_Principal.Timer1Timer(Sender: TObject);
 begin
   // atualizar data e hora na statur bar
-  StatusBar1.Panels[0].Text := 'Data e Hora: ' +
+//  StatusBar1.Panels[0].Text := 'Data e Hora: ' +
+//    FormatDateTime('dd/mm/yyyy hh:nn:ss', Now);
+
+    lbHORA.Caption:='Data e Hora: ' +
     FormatDateTime('dd/mm/yyyy hh:nn:ss', Now);
 end;
 

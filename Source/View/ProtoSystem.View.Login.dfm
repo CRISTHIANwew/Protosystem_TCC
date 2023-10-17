@@ -5,7 +5,7 @@ object Frm_Login: TFrm_Login
   BorderStyle = bsNone
   Caption = 'Login'
   ClientHeight = 387
-  ClientWidth = 781
+  ClientWidth = 778
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindow
@@ -161,7 +161,7 @@ object Frm_Login: TFrm_Login
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 781
+    Width = 778
     Height = 387
     Align = alClient
     BevelOuter = bvNone
@@ -172,18 +172,20 @@ object Frm_Login: TFrm_Login
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 777
     object Panel2: TPanel
       Left = 5
       Top = 5
-      Width = 771
+      Width = 768
       Height = 377
       Align = alClient
       BevelOuter = bvNone
       Color = 14725001
       ParentBackground = False
       TabOrder = 0
+      ExplicitWidth = 767
       object Panel3: TPanel
-        Left = 386
+        Left = 383
         Top = 0
         Width = 385
         Height = 377
@@ -205,6 +207,7 @@ object Frm_Login: TFrm_Login
         ParentShowHint = False
         ShowHint = False
         TabOrder = 0
+        ExplicitLeft = 382
         object VirtualImage1: TVirtualImage
           Left = 188
           Top = 251
@@ -254,9 +257,9 @@ object Frm_Login: TFrm_Login
           ImageName = 'icons8-cat'
         end
         object lb_logo: TLabel
-          Left = 43
+          Left = 35
           Top = 97
-          Width = 319
+          Width = 317
           Height = 45
           Alignment = taCenter
           Caption = 'ProtoSystem Sistemas'
@@ -344,6 +347,7 @@ object Frm_Login: TFrm_Login
           Top = 260
           Width = 121
           Height = 23
+          Alignment = taCenter
           BorderStyle = bsNone
           Color = 15649712
           EditLabel.Width = 40
@@ -373,10 +377,15 @@ object Frm_Login: TFrm_Login
           OnKeyPress = edit_usuarioKeyPress
         end
         object edit_usuario: TLabeledEdit
+          AlignWithMargins = True
           Left = 61
           Top = 260
           Width = 121
           Height = 23
+          Alignment = taCenter
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BiDiMode = bdLeftToRight
           BorderStyle = bsNone
           CharCase = ecUpperCase
           Color = 15649712
@@ -402,6 +411,7 @@ object Frm_Login: TFrm_Login
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
+          ParentBiDiMode = False
           ParentFont = False
           TabOrder = 0
           Text = ''
@@ -523,7 +533,7 @@ object Frm_Login: TFrm_Login
         object Label2: TLabel
           Left = 40
           Top = 13
-          Width = 321
+          Width = 259
           Height = 20
           Caption = 'Bem vindo(a) ao ProtoSystem Sistemas'
           Color = 14725003
@@ -550,7 +560,7 @@ object Frm_Login: TFrm_Login
         object Label3: TLabel
           Left = 128
           Top = 195
-          Width = 81
+          Width = 78
           Height = 20
           Alignment = taCenter
           Caption = 'Vers'#227'o 1.0.0'
@@ -567,7 +577,7 @@ object Frm_Login: TFrm_Login
         object Label5: TLabel
           Left = 32
           Top = 323
-          Width = 321
+          Width = 281
           Height = 20
           Caption = 'Desenvolvido Por: Cristhian RA: 200406765'
           Color = 14725003

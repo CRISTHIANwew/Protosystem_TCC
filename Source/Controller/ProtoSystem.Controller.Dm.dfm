@@ -15,8 +15,8 @@ object DM: TDM
     Params.Strings = (
       'LockingMode=Normal'
       
-        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
-        'in\Database\ProtoSystem.s3db'
+        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
+        'CC\bin\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
@@ -97,7 +97,6 @@ object DM: TDM
     end
   end
   object SQL_ImpressaoPedido: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       
@@ -217,7 +216,6 @@ object DM: TDM
     end
   end
   object SQL_empresa: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
@@ -279,5 +277,13 @@ object DM: TDM
       Origin = 'EMAIL'
       Size = 32767
     end
+  end
+  object SQL_Dashboard_Estoque: TFDQuery
+    Active = True
+    Connection = conexao
+    SQL.Strings = (
+      'select descricao, estoque from produto')
+    Left = 592
+    Top = 368
   end
 end

@@ -59,6 +59,7 @@ type
     SQL_ImpressaoPedidoVALOR_UNIT: TFloatField;
     SQL_ImpressaoPedidoQUANTIDADE: TIntegerField;
     SQL_ImpressaoPedidoVALOR_TOTAL: TFloatField;
+    SQL_Dashboard_Estoque: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
 
   private
