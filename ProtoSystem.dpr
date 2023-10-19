@@ -16,7 +16,8 @@ uses
   ProtoSystem.View.TelaPadrao in 'Source\View\ProtoSystem.View.TelaPadrao.pas' {formTelaPadrao},
   ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Fom_CadastroContasReceber},
   ProtoSystem.Model.VendasFechamento in 'Source\Model\ProtoSystem.Model.VendasFechamento.pas' {frmVendasFechamento},
-  ProtoSystem.Model.ReportsVenda in 'Source\Model\ProtoSystem.Model.ReportsVenda.pas' {frmReportsVenda};
+  ProtoSystem.Model.ReportsVenda in 'Source\Model\ProtoSystem.Model.ReportsVenda.pas' {frmReportsVenda},
+  ProtoSystem.Model.Impressao in 'Source\Model\ProtoSystem.Model.Impressao.pas' {frmFortesReportes};
 
 {$R *.res}
 
@@ -27,6 +28,7 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
+  Application.CreateForm(TfrmFortesReportes, frmFortesReportes);
   if TFrm_Login.Login then
     Application.Run
   else

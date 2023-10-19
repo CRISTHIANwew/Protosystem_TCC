@@ -1,0 +1,24 @@
+unit ProtoSystem.Model.Impressao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmFortesReportes = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmFortesReportes: TfrmFortesReportes;
+
+implementation
+
+{$R *.dfm}
+
+end.

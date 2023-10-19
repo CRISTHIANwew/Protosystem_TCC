@@ -71,6 +71,16 @@ type
     edtTotalVenda: TEdit;
     cdsVendaPedidos: TClientDataSet;
     dsVendaPedidos: TDataSource;
+    Shape4: TShape;
+    Shape6: TShape;
+    Shape11: TShape;
+    Shape12: TShape;
+    Shape13: TShape;
+    Shape14: TShape;
+    Panel4: TPanel;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    SpeedButton2: TSpeedButton;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -79,6 +89,7 @@ type
     procedure BTN_CancelarItemClick(Sender: TObject);
     procedure btnCancelaVendaClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     TotalAmount: double;
     procedure InicializaComponentes;
@@ -107,7 +118,8 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento, ProtoSystem.Model.ReportsVenda;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento, ProtoSystem.Model.ReportsVenda,
+  ProtoSystem.View.MenuPrincipal, ProtoSystem.Model.Impressao;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
@@ -343,7 +355,23 @@ end;
 
 procedure TFrm_Vendas.SpeedButton1Click(Sender: TObject);
 begin
-    frmReportsVenda.ReportPedido.Preview();
+  dm.SQL_empresa.SQL.Text:= 'SELECT * FROM EMPRESA';
+  dm.SQL_empresa.Open;
+
+  dm.SQL_ImpressaoPedido.SQL.Text:= 'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID= :IDPEDIDO';
+  dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(DM.IdPedido-1);
+  dm.SQL_ImpressaoPedido.Open;
+
+  //frmReportsVenda.ReportPedido.Preview();
+
+
+
+  frmFortesReportes.RLReport1.Preview();
+end;
+
+procedure TFrm_Vendas.SpeedButton2Click(Sender: TObject);
+begin
+    close;
 end;
 
 end.

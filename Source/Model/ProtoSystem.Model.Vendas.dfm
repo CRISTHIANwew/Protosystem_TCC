@@ -1,10 +1,10 @@
 object Frm_Vendas: TFrm_Vendas
   Left = 82
   Top = 228
-  BorderStyle = bsDialog
+  BorderStyle = bsNone
   Caption = 'Vendas'
-  ClientHeight = 714
-  ClientWidth = 1091
+  ClientHeight = 703
+  ClientWidth = 1095
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -142,35 +142,85 @@ object Frm_Vendas: TFrm_Vendas
   object PNL_PRINCIPAL: TPanel
     Left = 0
     Top = 0
-    Width = 1091
-    Height = 714
+    Width = 1095
+    Height = 703
     Align = alClient
+    BevelOuter = bvNone
+    Color = 8739130
+    Padding.Left = 5
+    Padding.Top = 5
+    Padding.Right = 5
+    Padding.Bottom = 5
+    ParentBackground = False
     TabOrder = 0
     object PNL_PRODUTO: TPanel
-      Left = 1
-      Top = 1
-      Width = 1089
+      Left = 5
+      Top = 46
+      Width = 1085
       Height = 62
       Align = alTop
       BevelOuter = bvNone
       Caption = 'Pedido de Venda N'#176
-      Color = clHighlight
+      Color = 14725001
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
+      Font.Color = 15649712
       Font.Height = -42
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      object Shape4: TShape
+        Left = 160
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 8739130
+      end
+      object Shape6: TShape
+        Left = 130
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 13274977
+      end
+      object Shape11: TShape
+        Left = 100
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 14725001
+      end
+      object Shape12: TShape
+        Left = 70
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 15649712
+      end
+      object Shape13: TShape
+        Left = 40
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 15456203
+      end
+      object Shape14: TShape
+        Left = 10
+        Top = 14
+        Width = 24
+        Height = 39
+        Brush.Color = 16512241
+      end
     end
     object PNL_BUTTONS: TPanel
-      Left = 1
-      Top = 643
-      Width = 1089
+      Left = 5
+      Top = 628
+      Width = 1085
       Height = 70
       Align = alBottom
-      Color = clHighlight
+      BevelOuter = bvNone
+      Color = 15649712
       Padding.Left = 5
       Padding.Top = 10
       Padding.Right = 5
@@ -178,10 +228,10 @@ object Frm_Vendas: TFrm_Vendas
       ParentBackground = False
       TabOrder = 1
       object Panel1: TPanel
-        Left = 538
-        Top = 11
+        Left = 537
+        Top = 10
         Width = 177
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
         Padding.Right = 5
@@ -190,8 +240,9 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 172
-          Height = 48
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
           ExplicitWidth = 173
@@ -201,13 +252,13 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 172
-          Height = 48
+          Height = 50
           Align = alClient
           BiDiMode = bdLeftToRight
           Caption = '&Cancelar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
@@ -219,10 +270,10 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object pnlPesquisaProduto: TPanel
-        Left = 6
-        Top = 11
+        Left = 5
+        Top = 10
         Width = 177
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
         Padding.Right = 5
@@ -231,8 +282,9 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 172
-          Height = 48
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
           ExplicitWidth = 173
@@ -242,13 +294,13 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 172
-          Height = 48
+          Height = 50
           Hint = 'F2'
           Align = alClient
           Caption = '&Pesquisar Produto'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
@@ -261,10 +313,10 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object Panel3: TPanel
-        Left = 183
-        Top = 11
+        Left = 182
+        Top = 10
         Width = 179
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
         Padding.Right = 5
@@ -273,8 +325,9 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 174
-          Height = 48
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
           ExplicitHeight = 47
@@ -283,12 +336,12 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 174
-          Height = 48
+          Height = 50
           Align = alClient
           Caption = '&Abrir Caixa'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
@@ -297,10 +350,10 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object pnlFinalizarVenda: TPanel
-        Left = 715
-        Top = 11
+        Left = 714
+        Top = 10
         Width = 180
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
         Padding.Right = 5
@@ -309,8 +362,9 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 175
-          Height = 48
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
           ExplicitHeight = 47
@@ -319,12 +373,12 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 175
-          Height = 48
+          Height = 50
           Align = alClient
           Caption = '&Finalizar Venda'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
@@ -334,10 +388,10 @@ object Frm_Vendas: TFrm_Vendas
         end
       end
       object Panel5: TPanel
-        Left = 362
-        Top = 11
+        Left = 361
+        Top = 10
         Width = 176
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
         Padding.Right = 5
@@ -346,8 +400,9 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 171
-          Height = 48
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
           ExplicitWidth = 170
@@ -357,50 +412,51 @@ object Frm_Vendas: TFrm_Vendas
           Left = 0
           Top = 0
           Width = 171
-          Height = 48
+          Height = 50
           Align = alClient
           Caption = '&Excluir Item'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           OnClick = BTN_CancelarItemClick
-          ExplicitWidth = 170
-          ExplicitHeight = 47
+          ExplicitLeft = 1
+          ExplicitTop = -4
         end
       end
       object Panel2: TPanel
-        Left = 895
-        Top = 11
+        Left = 894
+        Top = 10
         Width = 179
-        Height = 48
+        Height = 50
         Align = alLeft
         BevelOuter = bvNone
-        Padding.Right = 5
         TabOrder = 5
         object Shape2: TShape
           Left = 0
           Top = 0
-          Width = 174
-          Height = 48
+          Width = 179
+          Height = 50
           Align = alClient
+          Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
+          ExplicitWidth = 174
           ExplicitHeight = 47
         end
         object SpeedButton1: TSpeedButton
           Left = 0
           Top = 0
-          Width = 174
-          Height = 48
+          Width = 179
+          Height = 50
           Align = alClient
           Caption = '&Impress'#227'o do Pedido'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
+          Font.Color = 15649712
           Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
@@ -408,16 +464,19 @@ object Frm_Vendas: TFrm_Vendas
           OnClick = SpeedButton1Click
           ExplicitLeft = 1
           ExplicitTop = -5
+          ExplicitWidth = 174
+          ExplicitHeight = 48
         end
       end
     end
     object PNL_PRINCIPAL_MAIN: TPanel
-      Left = 1
-      Top = 63
-      Width = 1089
-      Height = 580
+      Left = 5
+      Top = 108
+      Width = 1085
+      Height = 520
       Align = alClient
-      Color = clHighlight
+      BevelOuter = bvNone
+      Color = 15649712
       Padding.Left = 10
       Padding.Top = 10
       Padding.Right = 10
@@ -528,31 +587,37 @@ object Frm_Vendas: TFrm_Vendas
           end>
       end
       object PNL_OPERACOES: TPanel
-        Left = 726
-        Top = 11
+        Left = 723
+        Top = 10
         Width = 352
-        Height = 558
+        Height = 500
         Align = alRight
         BevelOuter = bvNone
-        Color = clWhite
+        Color = 14725001
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 15649712
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
         Padding.Left = 8
         Padding.Top = 8
         Padding.Right = 8
         Padding.Bottom = 8
         ParentBackground = False
+        ParentFont = False
         TabOrder = 0
         object GB_Total: TGroupBox
           Left = 8
-          Top = 494
+          Top = 436
           Width = 336
           Height = 56
           Align = alBottom
           Caption = 'Total da Compra'
-          Color = clHighlightText
+          Color = 14725001
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -560,15 +625,14 @@ object Frm_Vendas: TFrm_Vendas
           HeaderFont.Height = -14
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = [fsBold]
-          ParentBackground = False
           ParentColor = False
           ParentFont = False
           TabOrder = 0
           object Sh_Total: TShape
             Left = 2
-            Top = 21
+            Top = 17
             Width = 332
-            Height = 33
+            Height = 37
             Align = alClient
             Shape = stRoundRect
             ExplicitTop = 22
@@ -595,16 +659,16 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_QTD: TGroupBox
           Left = 8
-          Top = 380
+          Top = 322
           Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Quantidade'
-          Color = clHighlightText
+          Color = 14725001
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -612,15 +676,14 @@ object Frm_Vendas: TFrm_Vendas
           HeaderFont.Height = -14
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = [fsBold]
-          ParentBackground = False
           ParentColor = False
           ParentFont = False
           TabOrder = 1
           object Shape7: TShape
             Left = 2
-            Top = 21
+            Top = 17
             Width = 332
-            Height = 34
+            Height = 38
             Align = alClient
             Shape = stRoundRect
             ExplicitTop = 22
@@ -647,16 +710,16 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_SUBTOTAL: TGroupBox
           Left = 8
-          Top = 437
+          Top = 379
           Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Sub Total'
-          Color = clHighlightText
+          Color = 14725001
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -664,15 +727,14 @@ object Frm_Vendas: TFrm_Vendas
           HeaderFont.Height = -14
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = [fsBold]
-          ParentBackground = False
           ParentColor = False
           ParentFont = False
           TabOrder = 2
           object Shape8: TShape
             Left = 2
-            Top = 21
+            Top = 17
             Width = 332
-            Height = 34
+            Height = 38
             Align = alClient
             Shape = stRoundRect
             ExplicitTop = 22
@@ -699,16 +761,16 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRECO: TGroupBox
           Left = 8
-          Top = 323
+          Top = 265
           Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Pre'#231'o'
-          Color = clHighlightText
+          Color = 14725001
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
+          Font.Color = clWindowText
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           HeaderFont.Charset = DEFAULT_CHARSET
@@ -716,15 +778,14 @@ object Frm_Vendas: TFrm_Vendas
           HeaderFont.Height = -14
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = [fsBold]
-          ParentBackground = False
           ParentColor = False
           ParentFont = False
           TabOrder = 3
           object Shape9: TShape
             Left = 2
-            Top = 21
+            Top = 17
             Width = 332
-            Height = 34
+            Height = 38
             Align = alClient
             Shape = stRoundRect
             ExplicitTop = 22
@@ -751,35 +812,35 @@ object Frm_Vendas: TFrm_Vendas
         end
         object GB_PRODUTO: TGroupBox
           Left = 8
-          Top = 266
+          Top = 208
           Width = 336
           Height = 57
           Align = alBottom
           Caption = 'Produto'
-          Color = clHighlightText
+          Color = 14725001
           DefaultHeaderFont = False
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindow
-          Font.Height = -14
+          Font.Color = 15649712
+          Font.Height = -12
           Font.Name = 'Segoe UI'
-          Font.Style = []
+          Font.Style = [fsBold]
           HeaderFont.Charset = DEFAULT_CHARSET
-          HeaderFont.Color = clWindowText
+          HeaderFont.Color = clWhite
           HeaderFont.Height = -14
           HeaderFont.Name = 'Segoe UI'
           HeaderFont.Style = [fsBold]
-          ParentBackground = False
           ParentColor = False
           ParentFont = False
           TabOrder = 4
           object Shape10: TShape
             Left = 2
-            Top = 21
+            Top = 17
             Width = 332
-            Height = 34
+            Height = 38
             Align = alClient
             Shape = stRoundRect
             ExplicitTop = 22
+            ExplicitHeight = 34
           end
           object edtCodigoProduto: TEdit
             Left = 11
@@ -804,7 +865,7 @@ object Frm_Vendas: TFrm_Vendas
           Left = 8
           Top = 8
           Width = 336
-          Height = 258
+          Height = 200
           Align = alClient
           Color = clHighlight
           Padding.Left = 4
@@ -817,7 +878,7 @@ object Frm_Vendas: TFrm_Vendas
             Left = 5
             Top = 5
             Width = 326
-            Height = 248
+            Height = 190
             Align = alClient
             DataField = 'IMAGEM'
             DataSource = DS_produtos
@@ -831,6 +892,7 @@ object Frm_Vendas: TFrm_Vendas
         Top = 11
         Width = 712
         Height = 563
+        Color = clWhite
         DataSource = ds_VendaProdutos
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
@@ -897,6 +959,71 @@ object Frm_Vendas: TFrm_Vendas
             Width = 72
             Visible = True
           end>
+      end
+    end
+    object Panel4: TPanel
+      Left = 5
+      Top = 5
+      Width = 1085
+      Height = 41
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 13275746
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
+      ParentBackground = False
+      TabOrder = 3
+      object Pnl_sair: TPanel
+        Left = 992
+        Top = 5
+        Width = 88
+        Height = 31
+        Cursor = crHandPoint
+        Align = alRight
+        BevelOuter = bvNone
+        Color = 13274977
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 0
+        object Shape15: TShape
+          Left = 0
+          Top = 0
+          Width = 88
+          Height = 31
+          Align = alClient
+          Brush.Color = 8739130
+          Shape = stRoundRect
+          ExplicitWidth = 52
+          ExplicitHeight = 50
+        end
+        object SpeedButton2: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 88
+          Height = 31
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Fechar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 15649712
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentFont = False
+          OnClick = SpeedButton2Click
+          ExplicitLeft = 1
+          ExplicitTop = -1
+          ExplicitHeight = 34
+        end
       end
     end
   end

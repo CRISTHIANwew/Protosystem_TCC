@@ -155,6 +155,10 @@
             <Form>frmReportsVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.Impressao.pas">
+            <Form>frmFortesReportes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

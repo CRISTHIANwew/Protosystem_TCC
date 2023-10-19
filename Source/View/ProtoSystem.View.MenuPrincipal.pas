@@ -37,13 +37,11 @@ type
     btnCadastroProdutos: TSpeedButton;
     TabSheet9: TTabSheet;
     TabSheet10: TTabSheet;
-    BTN_PES_ESTOQUE: TButton;
     TabSheet11: TTabSheet;
     TabSheet3: TTabSheet;
     PGC_VENDAS: TPageControl;
     TabSheet13: TTabSheet;
     TabSheet14: TTabSheet;
-    BTN_VENDAS: TButton;
     TabSheet15: TTabSheet;
     TabSheet16: TTabSheet;
     TabSheet4: TTabSheet;
@@ -149,6 +147,12 @@ type
     Panel41: TPanel;
     Shape11: TShape;
     SpeedButton5: TSpeedButton;
+    Panel42: TPanel;
+    Shape12: TShape;
+    SpeedButton6: TSpeedButton;
+    Panel43: TPanel;
+    Shape13: TShape;
+    SpeedButton7: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -163,6 +167,8 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
     procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -325,6 +331,32 @@ var
     Frm_CadCliente.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_CadCliente.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton6Click(Sender: TObject);
+begin
+var
+    Frm_PesEstoque: TFrm_PesEstoque; // Declare uma variável para o formulário
+  Frm_PesEstoque := TFrm_PesEstoque.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_PesEstoque.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_PesEstoque.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton7Click(Sender: TObject);
+begin
+var
+    Frm_Vendas: TFrm_Vendas; // Declare uma variável para o formulário
+  Frm_Vendas := TFrm_Vendas.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_Vendas.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_Vendas.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

@@ -139,6 +139,69 @@ object Frm_CadCliente: TFrm_CadCliente
   Position = poScreenCenter
   OnCreate = FormCreate
   TextHeight = 15
+  object Shape2: TShape
+    Left = 850
+    Top = 459
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape10: TShape
+    Left = 600
+    Top = 411
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape12: TShape
+    Left = 519
+    Top = 355
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape14: TShape
+    Left = 569
+    Top = 307
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape18: TShape
+    Left = 569
+    Top = 211
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape20: TShape
+    Left = 600
+    Top = 160
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape22: TShape
+    Left = 590
+    Top = 112
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape24: TShape
+    Left = 779
+    Top = 64
+    Width = 24
+    Height = 29
+    Brush.Color = 16512241
+  end
+  object Shape15: TShape
+    Left = 475
+    Top = 25
+    Width = 24
+    Height = 31
+    Brush.Color = 16512241
+  end
   object Panel2: TPanel
     Left = 0
     Top = 0
@@ -153,39 +216,31 @@ object Frm_CadCliente: TFrm_CadCliente
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = 6
-    ExplicitWidth = 1406
-    ExplicitHeight = 792
     object Panel3: TPanel
       Left = 5
-      Top = 5
+      Top = 45
       Width = 934
-      Height = 679
+      Height = 639
       Align = alClient
       BevelOuter = bvNone
-      Color = 13275746
+      Color = 15649712
       Padding.Left = 5
       Padding.Top = 5
       Padding.Right = 5
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 128
-      ExplicitTop = 224
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitTop = 5
+      ExplicitHeight = 679
       object PgcUsuario: TPageControl
         Left = 5
         Top = 5
         Width = 924
-        Height = 669
+        Height = 629
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitLeft = 145
-        ExplicitTop = 51
-        ExplicitWidth = 665
-        ExplicitHeight = 617
+        ExplicitHeight = 669
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object pnlButtons: TPanel
@@ -363,7 +418,7 @@ object Frm_CadCliente: TFrm_CadCliente
             Left = 0
             Top = 0
             Width = 916
-            Height = 639
+            Height = 599
             Align = alClient
             BevelOuter = bvNone
             Color = 13274977
@@ -373,15 +428,12 @@ object Frm_CadCliente: TFrm_CadCliente
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 1
-            ExplicitLeft = 232
-            ExplicitTop = 144
-            ExplicitWidth = 185
-            ExplicitHeight = 41
+            ExplicitHeight = 639
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
               Width = 906
-              Height = 629
+              Height = 589
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
@@ -391,13 +443,13 @@ object Frm_CadCliente: TFrm_CadCliente
               Padding.Bottom = 4
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 10
-              ExplicitTop = 10
+              ExplicitLeft = 0
+              ExplicitHeight = 629
               object Shape3: TShape
                 Left = 844
-                Top = 34
+                Top = 18
                 Width = 24
-                Height = 39
+                Height = 55
                 Brush.Color = 16512241
               end
               object Shape4: TShape
@@ -423,21 +475,35 @@ object Frm_CadCliente: TFrm_CadCliente
               end
               object Shape7: TShape
                 Left = 844
-                Top = 66
+                Top = 69
                 Width = 24
                 Height = 39
                 Brush.Color = 13274977
               end
               object Shape8: TShape
-                Left = 844
-                Top = 74
+                Left = 804
+                Top = 87
                 Width = 24
                 Height = 39
                 Brush.Color = 8739130
               end
-              object edtID: TDBLabeledEdit
-                Left = 21
-                Top = 26
+              object Shape1: TShape
+                Left = 552
+                Top = 469
+                Width = 24
+                Height = 29
+                Brush.Color = 16512241
+              end
+              object Shape11: TShape
+                Left = 446
+                Top = 82
+                Width = 24
+                Height = 31
+                Brush.Color = 16512241
+              end
+              object edtID2: TDBLabeledEdit
+                Left = 720
+                Top = 146
                 Width = 28
                 Height = 23
                 BorderStyle = bsNone
@@ -455,10 +521,10 @@ object Frm_CadCliente: TFrm_CadCliente
                 EditLabel.Caption = 'Id'
                 EditLabel.Layout = tlCenter
               end
-              object edtNome: TDBLabeledEdit
-                Left = 55
-                Top = 26
-                Width = 323
+              object edtNome2: TDBLabeledEdit
+                Left = 756
+                Top = 146
+                Width = 132
                 Height = 23
                 BorderStyle = bsNone
                 Color = clWhite
@@ -550,9 +616,9 @@ object Frm_CadCliente: TFrm_CadCliente
                 EditLabel.Caption = 'Cidade'
                 EditLabel.Layout = tlCenter
               end
-              object edtCpfCnpj: TDBLabeledEdit
-                Left = 21
-                Top = 74
+              object edtCpfCnpj2: TDBLabeledEdit
+                Left = 720
+                Top = 189
                 Width = 168
                 Height = 23
                 BorderStyle = bsNone
@@ -626,9 +692,9 @@ object Frm_CadCliente: TFrm_CadCliente
                 EditLabel.Caption = 'Numero'
                 EditLabel.Layout = tlCenter
               end
-              object edtRgIe: TDBLabeledEdit
-                Left = 21
-                Top = 122
+              object edtRgIe2: TDBLabeledEdit
+                Left = 720
+                Top = 239
                 Width = 178
                 Height = 23
                 BorderStyle = bsNone
@@ -646,11 +712,392 @@ object Frm_CadCliente: TFrm_CadCliente
                 EditLabel.Layout = tlCenter
               end
               object DBImage1: TDBImage
-                Left = 440
-                Top = 18
-                Width = 201
-                Height = 199
+                Left = 611
+                Top = 0
+                Width = 83
+                Height = 81
                 TabOrder = 11
+              end
+              object pnlCPFCNPJ: TPanel
+                Left = 176
+                Top = 468
+                Width = 370
+                Height = 30
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 12
+                object shpCPFCNPJ: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 365
+                  Height = 30
+                  Align = alClient
+                  Shape = stRoundRect
+                  ExplicitLeft = 96
+                  ExplicitTop = 13
+                end
+                object Edit1: TEdit
+                  Left = 9
+                  Top = 4
+                  Width = 167
+                  Height = 18
+                  HelpType = htKeyword
+                  Alignment = taCenter
+                  BorderStyle = bsNone
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  TabOrder = 0
+                end
+              end
+              object Panel9: TPanel
+                Left = 17
+                Top = 18
+                Width = 71
+                Height = 30
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 13
+                object Shape17: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 66
+                  Height = 30
+                  Align = alClient
+                  Brush.Color = clBtnFace
+                  Shape = stRoundRect
+                  ExplicitLeft = 16
+                  ExplicitTop = 16
+                end
+                object edtID: TEdit
+                  Left = 7
+                  Top = 8
+                  Width = 52
+                  Height = 18
+                  HelpType = htKeyword
+                  Alignment = taCenter
+                  BorderStyle = bsNone
+                  Color = clBtnFace
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 15649712
+                  Font.Height = -11
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 0
+                  Text = 'ID'
+                end
+              end
+              object Panel14: TPanel
+                Left = 4
+                Top = 537
+                Width = 898
+                Height = 48
+                Align = alBottom
+                TabOrder = 14
+                ExplicitLeft = 5
+                ExplicitTop = 488
+                ExplicitWidth = 648
+                object Panel15: TPanel
+                  Left = 230
+                  Top = 0
+                  Width = 424
+                  Height = 49
+                  Align = alCustom
+                  Color = 14079702
+                  Padding.Left = 4
+                  Padding.Top = 4
+                  Padding.Right = 4
+                  Padding.Bottom = 4
+                  ParentBackground = False
+                  TabOrder = 0
+                  object Panel16: TPanel
+                    Left = 89
+                    Top = 5
+                    Width = 84
+                    Height = 39
+                    Align = alLeft
+                    BevelOuter = bvNone
+                    Padding.Right = 5
+                    TabOrder = 0
+                    object Shape26: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Brush.Color = 8618369
+                      Pen.Style = psClear
+                      Shape = stRoundRect
+                    end
+                    object SpeedButton1: TSpeedButton
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Caption = 'Editar'
+                      Flat = True
+                      OnClick = btnEditarClick
+                    end
+                  end
+                  object Panel17: TPanel
+                    Left = 5
+                    Top = 5
+                    Width = 84
+                    Height = 39
+                    Align = alLeft
+                    BevelOuter = bvNone
+                    Padding.Right = 5
+                    TabOrder = 1
+                    object Shape27: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Brush.Color = 8618369
+                      Pen.Style = psClear
+                      Shape = stRoundRect
+                    end
+                    object SpeedButton2: TSpeedButton
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Caption = 'Cadastrar'
+                      Flat = True
+                      Font.Charset = DEFAULT_CHARSET
+                      Font.Color = clBlack
+                      Font.Height = -12
+                      Font.Name = 'Segoe UI'
+                      Font.Style = []
+                      ParentFont = False
+                      OnClick = btnCadastrarClick
+                    end
+                  end
+                  object Panel18: TPanel
+                    Left = 173
+                    Top = 5
+                    Width = 84
+                    Height = 39
+                    Align = alLeft
+                    BevelOuter = bvNone
+                    Padding.Right = 5
+                    TabOrder = 2
+                    object Shape28: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Brush.Color = 14079702
+                      Pen.Style = psClear
+                      Shape = stRoundRect
+                    end
+                    object SpeedButton3: TSpeedButton
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Caption = 'Salvar'
+                      Enabled = False
+                      Flat = True
+                      OnClick = btnSalvarClick
+                    end
+                  end
+                  object Panel19: TPanel
+                    Left = 257
+                    Top = 5
+                    Width = 84
+                    Height = 39
+                    Align = alLeft
+                    BevelOuter = bvNone
+                    Padding.Right = 5
+                    TabOrder = 3
+                    object Shape29: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Brush.Color = 14079702
+                      Pen.Style = psClear
+                      Shape = stRoundRect
+                    end
+                    object SpeedButton4: TSpeedButton
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Caption = 'Cancelar'
+                      Enabled = False
+                      Flat = True
+                      OnClick = btnCancelarClick
+                    end
+                  end
+                  object Panel20: TPanel
+                    Left = 341
+                    Top = 5
+                    Width = 84
+                    Height = 39
+                    Align = alLeft
+                    BevelOuter = bvNone
+                    Padding.Right = 5
+                    TabOrder = 4
+                    object Shape30: TShape
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Brush.Color = 8618369
+                      Pen.Style = psClear
+                      Shape = stRoundRect
+                    end
+                    object SpeedButton5: TSpeedButton
+                      Left = 0
+                      Top = 0
+                      Width = 79
+                      Height = 39
+                      Align = alClient
+                      Caption = 'Excluir'
+                      Flat = True
+                      OnClick = btnExcluirClick
+                    end
+                  end
+                end
+              end
+              object Panel5: TPanel
+                Left = 94
+                Top = 17
+                Width = 312
+                Height = 31
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 15
+                object Shape9: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 307
+                  Height = 31
+                  Align = alClient
+                  Brush.Color = clBtnFace
+                  Shape = stRoundRect
+                  ExplicitLeft = 16
+                  ExplicitTop = 16
+                  ExplicitWidth = 66
+                  ExplicitHeight = 30
+                end
+                object edtNome: TEdit
+                  Left = 7
+                  Top = 8
+                  Width = 298
+                  Height = 18
+                  HelpType = htKeyword
+                  Alignment = taCenter
+                  BorderStyle = bsNone
+                  Color = clBtnFace
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 15649712
+                  Font.Height = -11
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 0
+                  Text = 'Nome'
+                end
+              end
+              object Panel6: TPanel
+                Left = 18
+                Top = 55
+                Width = 312
+                Height = 31
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 16
+                object Shape13: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 307
+                  Height = 31
+                  Align = alClient
+                  Brush.Color = clBtnFace
+                  Shape = stRoundRect
+                  ExplicitLeft = 16
+                  ExplicitTop = 16
+                  ExplicitWidth = 66
+                  ExplicitHeight = 30
+                end
+                object edtCpfCnpj: TEdit
+                  Left = 5
+                  Top = 7
+                  Width = 298
+                  Height = 18
+                  HelpType = htKeyword
+                  Alignment = taCenter
+                  BorderStyle = bsNone
+                  Color = clBtnFace
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 15649712
+                  Font.Height = -11
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 0
+                  Text = 'CPF/CNPJ'
+                end
+              end
+              object Panel7: TPanel
+                Left = 17
+                Top = 95
+                Width = 312
+                Height = 31
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 17
+                object Shape16: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 307
+                  Height = 31
+                  Align = alClient
+                  Brush.Color = clBtnFace
+                  Shape = stRoundRect
+                  ExplicitLeft = 16
+                  ExplicitTop = 16
+                  ExplicitWidth = 66
+                  ExplicitHeight = 30
+                end
+                object edtRgIe: TEdit
+                  Left = 5
+                  Top = 7
+                  Width = 298
+                  Height = 18
+                  HelpType = htKeyword
+                  Alignment = taCenter
+                  BorderStyle = bsNone
+                  Color = clBtnFace
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 15649712
+                  Font.Height = -11
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  ReadOnly = True
+                  TabOrder = 0
+                  Text = 'RG/IE'
+                end
               end
             end
           end
@@ -662,7 +1109,7 @@ object Frm_CadCliente: TFrm_CadCliente
             Left = 0
             Top = 0
             Width = 916
-            Height = 639
+            Height = 599
             Align = alClient
             Color = 14079702
             Padding.Left = 4
@@ -671,13 +1118,12 @@ object Frm_CadCliente: TFrm_CadCliente
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 657
-            ExplicitHeight = 587
+            ExplicitHeight = 639
             object DBGrid1: TDBGrid
               Left = 5
               Top = 28
               Width = 906
-              Height = 606
+              Height = 566
               Hint = 'Clique duas vezes para selecionar'
               Align = alClient
               DataSource = DataSource1
@@ -718,9 +1164,73 @@ object Frm_CadCliente: TFrm_CadCliente
               Height = 23
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 647
             end
           end
+        end
+      end
+    end
+    object Panel8: TPanel
+      Left = 5
+      Top = 5
+      Width = 934
+      Height = 40
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 13274977
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
+      ParentBackground = False
+      TabOrder = 1
+      object Pnl_sair: TPanel
+        Left = 841
+        Top = 5
+        Width = 88
+        Height = 30
+        Cursor = crHandPoint
+        Align = alRight
+        BevelOuter = bvNone
+        Color = 13274977
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentBackground = False
+        ParentFont = False
+        TabOrder = 0
+        ExplicitHeight = 31
+        object Shape19: TShape
+          Left = 0
+          Top = 0
+          Width = 88
+          Height = 30
+          Align = alClient
+          Brush.Color = 8739130
+          Shape = stRoundRect
+          ExplicitWidth = 52
+          ExplicitHeight = 50
+        end
+        object SpeedButton6: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 88
+          Height = 30
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Fechar'
+          Flat = True
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 15649712
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Font.Quality = fqClearTypeNatural
+          ParentFont = False
+          ExplicitLeft = 1
+          ExplicitTop = -1
+          ExplicitHeight = 34
         end
       end
     end

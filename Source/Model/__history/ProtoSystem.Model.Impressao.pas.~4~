@@ -1,0 +1,42 @@
+unit ProtoSystem.Model.Impressao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, Data.DB;
+
+type
+  TfrmFortesReportes = class(TForm)
+    RLReport1: TRLReport;
+    RLPanel1: TRLPanel;
+    RLLabel5: TRLLabel;
+    RLLabel6: TRLLabel;
+    RLLabel7: TRLLabel;
+    RLLabel8: TRLLabel;
+    RLSystemInfo1: TRLSystemInfo;
+    RLLabel9: TRLLabel;
+    RLLabel10: TRLLabel;
+    RLLabel1: TRLLabel;
+    RLDBText4: TRLDBText;
+    RLDBText7: TRLDBText;
+    RLDBText8: TRLDBText;
+    RLDBText9: TRLDBText;
+    RLDBText10: TRLDBText;
+    dsImpressaoEmpresa: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmFortesReportes: TfrmFortesReportes;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+end.

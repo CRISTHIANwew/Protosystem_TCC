@@ -180,7 +180,7 @@ object Frm_Principal: TFrm_Principal
         Top = 4
         Width = 1242
         Height = 725
-        ActivePage = TabSheet1
+        ActivePage = TabSheet6
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -189,6 +189,8 @@ object Frm_Principal: TFrm_Principal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 12
+        ExplicitTop = 20
         object TabSheet1: TTabSheet
           Caption = 'Tela inicial'
           Font.Charset = DEFAULT_CHARSET
@@ -510,7 +512,7 @@ object Frm_Principal: TFrm_Principal
                   Left = 11
                   Top = 13
                   Width = 158
-                  Height = 84
+                  Height = 60
                   Cursor = crHandPoint
                   BevelOuter = bvNone
                   Color = 13274977
@@ -526,7 +528,7 @@ object Frm_Principal: TFrm_Principal
                     Left = 0
                     Top = 0
                     Width = 158
-                    Height = 84
+                    Height = 60
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
@@ -539,7 +541,7 @@ object Frm_Principal: TFrm_Principal
                     Left = 0
                     Top = 0
                     Width = 158
-                    Height = 84
+                    Height = 60
                     Align = alClient
                     Caption = 'Cadastro de Produtos'
                     Flat = True
@@ -594,16 +596,58 @@ object Frm_Principal: TFrm_Principal
                 Padding.Right = 8
                 Padding.Bottom = 8
                 ParentBackground = False
-                TabOrder = 1
-              end
-              object BTN_PES_ESTOQUE: TButton
-                Left = 20
-                Top = 20
-                Width = 170
-                Height = 60
-                Caption = 'Pesquisa de estoque'
                 TabOrder = 0
-                OnClick = BTN_PES_ESTOQUEClick
+                object Panel42: TPanel
+                  Left = 9
+                  Top = 10
+                  Width = 158
+                  Height = 60
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape12: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 60
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                  object SpeedButton6: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 60
+                    Align = alClient
+                    Caption = 'Pesquisa de Estoque'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton6Click
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                end
               end
             end
             object TabSheet11: TTabSheet
@@ -678,16 +722,58 @@ object Frm_Principal: TFrm_Principal
                 Padding.Right = 8
                 Padding.Bottom = 8
                 ParentBackground = False
-                TabOrder = 1
-              end
-              object BTN_VENDAS: TButton
-                Left = 20
-                Top = 20
-                Width = 170
-                Height = 60
-                Caption = 'Vendas'
                 TabOrder = 0
-                OnClick = BTN_VENDASClick
+                object Panel43: TPanel
+                  Left = 19
+                  Top = 21
+                  Width = 158
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape13: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                  object SpeedButton7: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 158
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Vendas'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton7Click
+                    ExplicitLeft = 1
+                    ExplicitTop = 1
+                    ExplicitWidth = 230
+                    ExplicitHeight = 45
+                  end
+                end
               end
             end
             object TabSheet15: TTabSheet
@@ -738,7 +824,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet20
+            ActivePage = TabSheet17
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1378,8 +1464,8 @@ object Frm_Principal: TFrm_Principal
         ExplicitHeight = 31
       end
       object lbHORA: TLabel
-        Left = 563
-        Top = 4
+        Left = 595
+        Top = 5
         Width = 6
         Height = 31
         Alignment = taRightJustify
@@ -1440,7 +1526,6 @@ object Frm_Principal: TFrm_Principal
           OnClick = SpeedButton1Click
           ExplicitLeft = 1
           ExplicitTop = -1
-          ExplicitHeight = 28
         end
       end
       object Panel4: TPanel
@@ -1926,7 +2011,6 @@ object Frm_Principal: TFrm_Principal
     Top = 66
   end
   object DBCrossTabSource1: TDBCrossTabSource
-    Active = True
     GroupField = 'DESCRICAO'
     LabelField = 'DESCRICAO'
     Series = Series1
