@@ -49,20 +49,17 @@ type
     Shape8: TShape;
     edtID2: TDBLabeledEdit;
     edtNome2: TDBLabeledEdit;
-    edtBairro: TDBLabeledEdit;
-    edtCelular: TDBLabeledEdit;
-    edtCep: TDBLabeledEdit;
-    edtCidade: TDBLabeledEdit;
+    edtBairro2: TDBLabeledEdit;
+    edtCelular2: TDBLabeledEdit;
+    edtCep2: TDBLabeledEdit;
+    edtCidade2: TDBLabeledEdit;
     edtCpfCnpj2: TDBLabeledEdit;
-    edtEmail: TDBLabeledEdit;
-    editEndereco: TDBLabeledEdit;
-    edtNumero: TDBLabeledEdit;
+    edtEmail2: TDBLabeledEdit;
+    editEndereco2: TDBLabeledEdit;
+    edtNumero2: TDBLabeledEdit;
     edtRgIe2: TDBLabeledEdit;
     DBImage1: TDBImage;
     pnlCPFCNPJ: TPanel;
-    shpCPFCNPJ: TShape;
-    Edit1: TEdit;
-    Shape1: TShape;
     Shape2: TShape;
     Shape10: TShape;
     Shape12: TShape;
@@ -106,6 +103,27 @@ type
     Pnl_sair: TPanel;
     Shape19: TShape;
     SpeedButton6: TSpeedButton;
+    Panel10: TPanel;
+    Shape21: TShape;
+    editEndereco: TEdit;
+    Panel11: TPanel;
+    Shape23: TShape;
+    edtBairro: TEdit;
+    Panel12: TPanel;
+    Shape25: TShape;
+    edtNumero: TEdit;
+    Panel13: TPanel;
+    Shape31: TShape;
+    edtCep: TEdit;
+    Panel21: TPanel;
+    Shape32: TShape;
+    edtCidade: TEdit;
+    Panel22: TPanel;
+    Shape33: TShape;
+    edtEmail: TEdit;
+    Panel23: TPanel;
+    Shape1: TShape;
+    edtCelular: TMaskEdit;
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -113,6 +131,7 @@ type
     procedure btnExcluirClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -210,6 +229,11 @@ end;
 procedure TFrm_CadCliente.FormCreate(Sender: TObject);
 begin
          QueryCLIENTE.Active := true;
+end;
+
+procedure TFrm_CadCliente.SpeedButton6Click(Sender: TObject);
+begin
+     Frm_CadCliente.CloseModal;
 end;
 
 end.
