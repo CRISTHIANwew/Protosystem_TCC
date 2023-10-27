@@ -56,12 +56,22 @@ type
     Shape6: TShape;
     SpeedButton1: TSpeedButton;
     Panel2: TPanel;
-    Panel4: TPanel;
-    Shape7: TShape;
-    Label2: TLabel;
     rgCondicao: TRadioGroup;
     sqlInsertProdutos: TFDQuery;
     sqlInsertPedido: TFDQuery;
+    Shape8: TShape;
+    Shape9: TShape;
+    Shape11: TShape;
+    Shape12: TShape;
+    Shape13: TShape;
+    Shape14: TShape;
+    Panel5: TPanel;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    SpeedButton2: TSpeedButton;
+    Panel4: TPanel;
+    Shape7: TShape;
+    Label3: TLabel;
     procedure gridTabelaClienteCellClick(Column: TColumn);
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaClienteChange(Sender: TObject);
@@ -74,6 +84,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure rgCondicaoClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     var
       idClienteINT: Integer;
@@ -258,6 +269,11 @@ end;
 procedure TfrmVendasFechamento.SpeedButton1Click(Sender: TObject);
 begin
   FechaVenda;
+end;
+
+procedure TfrmVendasFechamento.SpeedButton2Click(Sender: TObject);
+begin
+     frmVendasFechamento.Close;
 end;
 
 procedure TfrmVendasFechamento.AtualizaTotais;

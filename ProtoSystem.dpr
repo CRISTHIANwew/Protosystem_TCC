@@ -28,7 +28,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
-  Application.CreateForm(TfrmFortesReportes, frmFortesReportes);
   if TFrm_Login.Login then
     Application.Run
   else

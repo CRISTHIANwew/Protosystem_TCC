@@ -23,12 +23,28 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     DBGrid1: TDBGrid;
-    edtId: TDBLabeledEdit;
-    edtDescricao: TDBLabeledEdit;
-    edtEstoque: TDBLabeledEdit;
-    edtCusto: TDBLabeledEdit;
-    edtPreco: TDBLabeledEdit;
-    Panel3: TPanel;
+    Panel4: TPanel;
+    DBImage1: TDBImage;
+    Query_ProdutoID: TFDAutoIncField;
+    Query_ProdutoDESCRICAO: TStringField;
+    Query_ProdutoESTOQUE: TIntegerField;
+    Query_ProdutoCUSTO: TFloatField;
+    Query_ProdutoPRECO: TFloatField;
+    Query_ProdutoDATAHORACADASTRO: TDateTimeField;
+    Query_ProdutoDATAHORAALTERACAO: TDateTimeField;
+    Query_ProdutoIMAGEM: TBlobField;
+    dlgImagens: TOpenDialog;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
+    Shape8: TShape;
+    Shape7: TShape;
+    Shape6: TShape;
+    Shape5: TShape;
+    Shape4: TShape;
+    Shape3: TShape;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Panel7: TPanel;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
     Shpeditar: TShape;
@@ -45,19 +61,24 @@ type
     pnlExcluir: TPanel;
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
-    Panel4: TPanel;
-    DBImage1: TDBImage;
-    Query_ProdutoID: TFDAutoIncField;
-    Query_ProdutoDESCRICAO: TStringField;
-    Query_ProdutoESTOQUE: TIntegerField;
-    Query_ProdutoCUSTO: TFloatField;
-    Query_ProdutoPRECO: TFloatField;
-    Query_ProdutoDATAHORACADASTRO: TDateTimeField;
-    Query_ProdutoDATAHORAALTERACAO: TDateTimeField;
-    Query_ProdutoIMAGEM: TBlobField;
-    dlgImagens: TOpenDialog;
-    DBLabeledEdit1: TDBLabeledEdit;
-    DBLabeledEdit2: TDBLabeledEdit;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    btn_saircadprod: TSpeedButton;
+    pnlIdCliente: TPanel;
+    shp2IdCliente: TShape;
+    Panel3: TPanel;
+    Shape1: TShape;
+    edtPreco: TDBLabeledEdit;
+    edtCusto: TDBLabeledEdit;
+    Panel8: TPanel;
+    Shape2: TShape;
+    Panel9: TPanel;
+    Shape9: TShape;
+    Panel10: TPanel;
+    Shape10: TShape;
+    edtEstoque: TDBLabeledEdit;
+    edtId: TDBLabeledEdit;
+    edtDescricao: TDBLabeledEdit;
     procedure Button1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
@@ -67,6 +88,7 @@ type
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure DBImage1DblClick(Sender: TObject);
+    procedure btn_saircadprodClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -87,16 +109,16 @@ begin
   Query_Produto.Insert;
   // desabilita editar, excluir, cadastrar.
   btnEditar.Enabled := false;
-  Shpeditar.Brush.Color := $00D6D6D6;
+//  Shpeditar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
+//  shpExcluir.Brush.Color := $00D6D6D6;
   btnCadastrar.Enabled := false;
-  ShpCadastrar.Brush.Color := $00D6D6D6;
+//  ShpCadastrar.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
+//  shpSalvar.Brush.Color := $00838181;
   btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
+//  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadProd.btnCancelarClick(Sender: TObject);
@@ -104,16 +126,16 @@ begin
   Query_Produto.Cancel;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
+//  shpSalvar.Brush.Color := $00D6D6D6;
   btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
+//  ShpCancelar.Brush.Color := $00D6D6D6;
   // habilitar editar, excluir, cadastrar.
   btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
+//  Shpeditar.Brush.Color := $00838181;
   btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
+//  shpExcluir.Brush.Color := $00838181;
   btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
+//  ShpCadastrar.Brush.Color := $00838181;
 
 end;
 
@@ -124,16 +146,16 @@ begin
   Query_Produto.Edit;
   // desabilitar cadastar, excluir, editar.
   btnCadastrar.Enabled := false;
-  ShpCadastrar.Brush.Color := $00D6D6D6;
+//  ShpCadastrar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
+//  shpExcluir.Brush.Color := $00D6D6D6;
   btnEditar.Enabled := false;
-  Shpeditar.Brush.Color := $00D6D6D6;
+//  Shpeditar.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
+//  shpSalvar.Brush.Color := $00838181;
   btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
+//  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadProd.btnExcluirClick(Sender: TObject);
@@ -151,16 +173,16 @@ begin
     Query_Produto.Post;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
+//  shpSalvar.Brush.Color := $00D6D6D6;
   btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
+//  ShpCancelar.Brush.Color := $00D6D6D6;
   // habilitar editar, excluir, cadastrar.
   btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
+//  Shpeditar.Brush.Color := $00838181;
   btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
+//  shpExcluir.Brush.Color := $00838181;
   btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
+//  ShpCadastrar.Brush.Color := $00838181;
   Query_Produto.Refresh;
 end;
 
@@ -193,6 +215,11 @@ end;
 procedure TFrm_CadProd.FormCreate(Sender: TObject);
 begin
   Query_Produto.Active := true;
+end;
+
+procedure TFrm_CadProd.btn_saircadprodClick(Sender: TObject);
+begin
+  Close;
 end;
 
 end.

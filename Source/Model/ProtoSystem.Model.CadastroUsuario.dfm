@@ -27,7 +27,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
     ActivePage = TabOperacao
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 543
     object TabOperacao: TTabSheet
       Margins.Left = 4
       Margins.Top = 4
@@ -51,7 +50,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
-        ExplicitWidth = 535
         object edtID: TDBLabeledEdit
           Left = 26
           Top = 33
@@ -145,7 +143,6 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 535
         object pnlEditar: TPanel
           Left = 111
           Top = 6

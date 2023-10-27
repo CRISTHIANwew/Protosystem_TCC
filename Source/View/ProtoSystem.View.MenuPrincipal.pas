@@ -272,7 +272,7 @@ begin
   end;
 end;
 
-procedure TFrm_Principal.BTN_VENDASClick(Sender: TObject);
+ procedure TFrm_Principal.BTN_VENDASClick(Sender: TObject);
 begin
   var
     Frm_Vendas: TFrm_Vendas; // Declare uma variável para o formulário
