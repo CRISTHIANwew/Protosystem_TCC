@@ -9,17 +9,31 @@ uses
   Vcl.Mask, Vcl.ExtCtrls, Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Vcl.DBCtrls,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons;
 
 type
   TFrm_PesEstoque = class(TForm)
     DataSource1: TDataSource;
     Query_PesProd: TFDQuery;
     Panel1: TPanel;
-    Edit_pesquisa: TEdit;
     DBGrid1: TDBGrid;
+    Panel6: TPanel;
+    Shape8: TShape;
+    Shape4: TShape;
+    Shape5: TShape;
+    Shape6: TShape;
+    Shape7: TShape;
+    Shape3: TShape;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    btn_saircadprod: TSpeedButton;
+    Panel2: TPanel;
+    Panel12: TPanel;
+    Shape12: TShape;
+    Edit_pesquisa: TEdit;
     procedure Edit_pesquisaChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btn_saircadprodClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,6 +48,11 @@ implementation
 {$R *.dfm}
 
 uses ProtoSystem.Controller.Dm;
+
+procedure TFrm_PesEstoque.btn_saircadprodClick(Sender: TObject);
+begin
+  close;
+end;
 
 procedure TFrm_PesEstoque.Edit_pesquisaChange(Sender: TObject);
 begin

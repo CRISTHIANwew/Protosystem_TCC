@@ -34,14 +34,6 @@ type
     Query_ProdutoDATAHORAALTERACAO: TDateTimeField;
     Query_ProdutoIMAGEM: TBlobField;
     dlgImagens: TOpenDialog;
-    DBLabeledEdit1: TDBLabeledEdit;
-    DBLabeledEdit2: TDBLabeledEdit;
-    Shape8: TShape;
-    Shape7: TShape;
-    Shape6: TShape;
-    Shape5: TShape;
-    Shape4: TShape;
-    Shape3: TShape;
     Panel5: TPanel;
     Panel6: TPanel;
     Panel7: TPanel;
@@ -79,6 +71,12 @@ type
     edtEstoque: TDBLabeledEdit;
     edtId: TDBLabeledEdit;
     edtDescricao: TDBLabeledEdit;
+    Panel11: TPanel;
+    Shape11: TShape;
+    Panel12: TPanel;
+    Shape12: TShape;
+    DBLabeledEdit1: TDBLabeledEdit;
+    DBLabeledEdit2: TDBLabeledEdit;
     procedure Button1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);

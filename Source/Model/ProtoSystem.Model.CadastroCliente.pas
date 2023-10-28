@@ -41,97 +41,76 @@ type
     edtPesquisa: TEdit;
     Panel4: TPanel;
     pnl_dados_user: TPanel;
-    Shape3: TShape;
-    Shape4: TShape;
-    Shape5: TShape;
-    Shape6: TShape;
-    Shape7: TShape;
-    Shape8: TShape;
-    edtID2: TDBLabeledEdit;
-    edtNome2: TDBLabeledEdit;
-    edtBairro2: TDBLabeledEdit;
-    edtCelular2: TDBLabeledEdit;
-    edtCep2: TDBLabeledEdit;
-    edtCidade2: TDBLabeledEdit;
-    edtCpfCnpj2: TDBLabeledEdit;
-    edtEmail2: TDBLabeledEdit;
-    editEndereco2: TDBLabeledEdit;
-    edtNumero2: TDBLabeledEdit;
-    edtRgIe2: TDBLabeledEdit;
-    DBImage1: TDBImage;
-    pnlCPFCNPJ: TPanel;
     Shape2: TShape;
     Shape10: TShape;
     Shape12: TShape;
     Shape14: TShape;
-    Panel9: TPanel;
-    Shape17: TShape;
-    edtID: TEdit;
     Shape18: TShape;
     Shape20: TShape;
     Shape22: TShape;
     Shape24: TShape;
     Panel14: TPanel;
-    Panel15: TPanel;
-    Panel16: TPanel;
-    Shape26: TShape;
-    SpeedButton1: TSpeedButton;
-    Panel17: TPanel;
-    Shape27: TShape;
-    SpeedButton2: TSpeedButton;
-    Panel18: TPanel;
-    Shape28: TShape;
-    SpeedButton3: TSpeedButton;
-    Panel19: TPanel;
-    Shape29: TShape;
-    SpeedButton4: TSpeedButton;
-    Panel20: TPanel;
-    Shape30: TShape;
-    SpeedButton5: TSpeedButton;
-    Panel5: TPanel;
-    Shape9: TShape;
-    edtNome: TEdit;
-    Shape11: TShape;
     Shape15: TShape;
-    Panel6: TPanel;
-    Shape13: TShape;
-    edtCpfCnpj: TEdit;
-    Panel7: TPanel;
-    Shape16: TShape;
-    edtRgIe: TEdit;
     Panel8: TPanel;
     Pnl_sair: TPanel;
     Shape19: TShape;
     SpeedButton6: TSpeedButton;
+    Panel16: TPanel;
+    Shape26: TShape;
+    btnCliEditar: TSpeedButton;
+    Panel17: TPanel;
+    Shape27: TShape;
+    btnCliCadastrar: TSpeedButton;
+    Panel18: TPanel;
+    Shape28: TShape;
+    btnCliSalvar: TSpeedButton;
+    Panel19: TPanel;
+    Shape29: TShape;
+    btnCliCancelar: TSpeedButton;
+    Panel20: TPanel;
+    Shape30: TShape;
+    btnCliExcluir: TSpeedButton;
+    Panel15: TPanel;
+    Shape34: TShape;
+    edtId: TDBLabeledEdit;
+    Panel5: TPanel;
+    Shape9: TShape;
+    Panel6: TPanel;
+    Shape13: TShape;
+    Panel7: TPanel;
+    Shape16: TShape;
+    Panel9: TPanel;
+    Shape17: TShape;
     Panel10: TPanel;
     Shape21: TShape;
-    editEndereco: TEdit;
+    edtNome2: TDBLabeledEdit;
+    edtCpfCnpj2: TDBLabeledEdit;
+    edtRgIe2: TDBLabeledEdit;
+    editEndereco2: TDBLabeledEdit;
+    edtBairro2: TDBLabeledEdit;
     Panel11: TPanel;
     Shape23: TShape;
-    edtBairro: TEdit;
     Panel12: TPanel;
     Shape25: TShape;
-    edtNumero: TEdit;
     Panel13: TPanel;
     Shape31: TShape;
-    edtCep: TEdit;
     Panel21: TPanel;
     Shape32: TShape;
-    edtCidade: TEdit;
     Panel22: TPanel;
     Shape33: TShape;
-    edtEmail: TEdit;
-    Panel23: TPanel;
-    Shape1: TShape;
-    edtCelular: TMaskEdit;
-    procedure btnCadastrarClick(Sender: TObject);
-    procedure btnEditarClick(Sender: TObject);
-    procedure btnSalvarClick(Sender: TObject);
-    procedure btnCancelarClick(Sender: TObject);
-    procedure btnExcluirClick(Sender: TObject);
+    edtNumero2: TDBLabeledEdit;
+    edtCep2: TDBLabeledEdit;
+    edtCidade2: TDBLabeledEdit;
+    edtEmail2: TDBLabeledEdit;
+    edtCelular2: TDBLabeledEdit;
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
+    procedure btnCliCadastrarClick(Sender: TObject);
+    procedure btnCliEditarClick(Sender: TObject);
+    procedure btnCliSalvarClick(Sender: TObject);
+    procedure btnCliCancelarClick(Sender: TObject);
+    procedure btnCliExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -147,77 +126,61 @@ implementation
 
 uses ProtoSystem.Controller.Dm;
 
-procedure TFrm_CadCliente.btnCadastrarClick(Sender: TObject);
+procedure TFrm_CadCliente.btnCliCadastrarClick(Sender: TObject);
 begin
-  QueryCLIENTE.Insert;
-  // desabilita editar, excluir.
-  btnEditar.Enabled := false;
-  Shpeditar.Brush.Color := $00D6D6D6;
-  btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
-  // habilita salvar e cancelar
-  btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
-  btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
+ QueryCLIENTE.Insert;
+  //desabilita editar e excluir
+  btnCliEditar.Enabled := false;
+  btnCliExcluir.Enabled := false;
+  //habilita salvar e cancelar
+  btnCliSalvar.Enabled := true;
+  btnCliCancelar.Enabled := true;
 end;
 
-procedure TFrm_CadCliente.btnCancelarClick(Sender: TObject);
-begin
-  QueryCLIENTE.Cancel;
-  // desabilitar salvar e cancelar
-  btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
-  btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
-  // habilitar editar, excluir, cadastrar.
-  btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
-  btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
-  btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
-end;
-
-procedure TFrm_CadCliente.btnEditarClick(Sender: TObject);
+procedure TFrm_CadCliente.btnCliEditarClick(Sender: TObject);
 begin
   TabOperacao.Visible := false;
   TabPesquisa.Visible := true;
   QueryCLIENTE.Edit;
   // desabilitar cadastar, excluir.
-  btnCadastrar.Enabled := false;
-  ShpCadastrar.Brush.Color := $00D6D6D6;
-  btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
+  btnCliCadastrar.Enabled := false;
+  btnCliExcluir.Enabled := false;
   // habilita salvar e cancelar
-  btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
-  btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
+  btnCliSalvar.Enabled := true;
+  btnCliCancelar.Enabled := true;
 end;
 
-procedure TFrm_CadCliente.btnExcluirClick(Sender: TObject);
+procedure TFrm_CadCliente.btnCliSalvarClick(Sender: TObject);
 begin
- QueryCLIENTE.Delete
-end;
-
-procedure TFrm_CadCliente.btnSalvarClick(Sender: TObject);
-begin
-  if QueryCLIENTE.State in [dsInsert, dsEdit] then
+  begin
+    if QueryCLIENTE.State in [dsInsert, dsEdit] then
     QueryCLIENTE.Post;
+    // desabilitar salvar e cancelar
+    btnCliSalvar.Enabled := false;
+    btnCliCancelar.Enabled := false;
+    // habilitar editar, excluir, cadastrar.
+    btnCliEditar.Enabled := true;
+    btnCliExcluir.Enabled := true;
+    btnCliCadastrar.Enabled := true;
+    QueryCLIENTE.Refresh;
+    end;
+end;
+
+procedure TFrm_CadCliente.btnCliCancelarClick(Sender: TObject);
+begin
+  QueryCLIENTE.Cancel;
   // desabilitar salvar e cancelar
-  btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
-  btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
+  btnCliSalvar.Enabled := false;
+  btnCliCancelar.Enabled := false;
   // habilitar editar, excluir, cadastrar.
-  btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
-  btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
-  btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
-  QueryCLIENTE.Refresh;
+  btnCliEditar.Enabled := true;
+  btnCliExcluir.Enabled := true;
+  btnCliCadastrar.Enabled := true;
+end;
+
+procedure TFrm_CadCliente.btnCliExcluirClick(Sender: TObject);
+begin
+  QueryCLIENTE.Delete;
 end;
 
 procedure TFrm_CadCliente.DBGrid1DblClick(Sender: TObject);
@@ -228,12 +191,12 @@ end;
 
 procedure TFrm_CadCliente.FormCreate(Sender: TObject);
 begin
-         QueryCLIENTE.Active := true;
+  QueryCLIENTE.Active := true;
 end;
 
 procedure TFrm_CadCliente.SpeedButton6Click(Sender: TObject);
 begin
-     Frm_CadCliente.CloseModal;
+  close;
 end;
 
 end.

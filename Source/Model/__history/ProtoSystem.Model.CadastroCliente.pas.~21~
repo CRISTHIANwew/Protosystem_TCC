@@ -1,0 +1,219 @@
+unit ProtoSystem.Model.CadastroCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
+  Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Buttons, Vcl.ComCtrls;
+
+type
+  TFrm_CadCliente = class(TForm)
+    DataSource1: TDataSource;
+    QueryCLIENTE: TFDQuery;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    PgcUsuario: TPageControl;
+    TabOperacao: TTabSheet;
+    pnlButtons: TPanel;
+    pnlEditar: TPanel;
+    Shpeditar: TShape;
+    btnEditar: TSpeedButton;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+    pnlSalvar: TPanel;
+    shpSalvar: TShape;
+    btnSalvar: TSpeedButton;
+    pnlCancelar: TPanel;
+    ShpCancelar: TShape;
+    btnCancelar: TSpeedButton;
+    pnlExcluir: TPanel;
+    shpExcluir: TShape;
+    btnExcluir: TSpeedButton;
+    TabPesquisa: TTabSheet;
+    Panel1: TPanel;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
+    Panel4: TPanel;
+    pnl_dados_user: TPanel;
+    Shape3: TShape;
+    Shape4: TShape;
+    Shape5: TShape;
+    Shape6: TShape;
+    Shape7: TShape;
+    Shape8: TShape;
+    edtID2: TDBLabeledEdit;
+    DBImage1: TDBImage;
+    Shape2: TShape;
+    Shape10: TShape;
+    Shape12: TShape;
+    Shape14: TShape;
+    Shape18: TShape;
+    Shape20: TShape;
+    Shape22: TShape;
+    Shape24: TShape;
+    Panel14: TPanel;
+    Shape11: TShape;
+    Shape15: TShape;
+    Panel8: TPanel;
+    Pnl_sair: TPanel;
+    Shape19: TShape;
+    SpeedButton6: TSpeedButton;
+    Panel23: TPanel;
+    Shape1: TShape;
+    edtCelular: TMaskEdit;
+    Panel16: TPanel;
+    Shape26: TShape;
+    btnCliEditar: TSpeedButton;
+    Panel17: TPanel;
+    Shape27: TShape;
+    btnCliCadastrar: TSpeedButton;
+    Panel18: TPanel;
+    Shape28: TShape;
+    btnCliSalvar: TSpeedButton;
+    Panel19: TPanel;
+    Shape29: TShape;
+    btnCliCancelar: TSpeedButton;
+    Panel20: TPanel;
+    Shape30: TShape;
+    btnCliExcluir: TSpeedButton;
+    Panel15: TPanel;
+    Shape34: TShape;
+    edtId: TDBLabeledEdit;
+    Panel5: TPanel;
+    Shape9: TShape;
+    Panel6: TPanel;
+    Shape13: TShape;
+    Panel7: TPanel;
+    Shape16: TShape;
+    Panel9: TPanel;
+    Shape17: TShape;
+    Panel10: TPanel;
+    Shape21: TShape;
+    edtNome2: TDBLabeledEdit;
+    edtCpfCnpj2: TDBLabeledEdit;
+    edtRgIe2: TDBLabeledEdit;
+    editEndereco2: TDBLabeledEdit;
+    edtBairro2: TDBLabeledEdit;
+    Panel11: TPanel;
+    Shape23: TShape;
+    Panel12: TPanel;
+    Shape25: TShape;
+    Panel13: TPanel;
+    Shape31: TShape;
+    Panel21: TPanel;
+    Shape32: TShape;
+    Panel22: TPanel;
+    Shape33: TShape;
+    edtNumero2: TDBLabeledEdit;
+    edtCep2: TDBLabeledEdit;
+    edtCidade2: TDBLabeledEdit;
+    edtEmail2: TDBLabeledEdit;
+    edtCelular2: TDBLabeledEdit;
+    procedure btnCadastrarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure btnCliCadastrarClick(Sender: TObject);
+    procedure btnCliEditarClick(Sender: TObject);
+    procedure btnCliSalvarClick(Sender: TObject);
+    procedure btnCliCancelarClick(Sender: TObject);
+    procedure btnCliExcluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_CadCliente: TFrm_CadCliente;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+procedure TFrm_CadCliente.btnCliCadastrarClick(Sender: TObject);
+begin
+ QueryCLIENTE.Insert;
+  //desabilita editar e excluir
+  btnCliEditar.Enabled := false;
+  btnCliExcluir.Enabled := false;
+  //habilita salvar e cancelar
+  btnCliSalvar.Enabled := true;
+  btnCliCancelar.Enabled := true;
+end;
+
+procedure TFrm_CadCliente.btnCliEditarClick(Sender: TObject);
+begin
+  TabOperacao.Visible := false;
+  TabPesquisa.Visible := true;
+  QueryCLIENTE.Edit;
+  // desabilitar cadastar, excluir.
+  btnCliCadastrar.Enabled := false;
+  btnCliExcluir.Enabled := false;
+  // habilita salvar e cancelar
+  btnCliSalvar.Enabled := true;
+  btnCliCancelar.Enabled := true;
+end;
+
+procedure TFrm_CadCliente.btnCliSalvarClick(Sender: TObject);
+begin
+  begin
+    if QueryCLIENTE.State in [dsInsert, dsEdit] then
+    QueryCLIENTE.Post;
+    // desabilitar salvar e cancelar
+    btnCliSalvar.Enabled := false;
+    btnCliCancelar.Enabled := false;
+    // habilitar editar, excluir, cadastrar.
+    btnCliEditar.Enabled := true;
+    btnCliExcluir.Enabled := true;
+    btnCliCadastrar.Enabled := true;
+    QueryCLIENTE.Refresh;
+    end;
+end;
+
+procedure TFrm_CadCliente.btnCliCancelarClick(Sender: TObject);
+begin
+  QueryCLIENTE.Cancel;
+  // desabilitar salvar e cancelar
+  btnCliSalvar.Enabled := false;
+  btnCliCancelar.Enabled := false;
+  // habilitar editar, excluir, cadastrar.
+  btnCliEditar.Enabled := true;
+  btnCliExcluir.Enabled := true;
+  btnCliCadastrar.Enabled := true;
+end;
+
+procedure TFrm_CadCliente.btnCliExcluirClick(Sender: TObject);
+begin
+  QueryCLIENTE.Delete;
+end;
+
+procedure TFrm_CadCliente.DBGrid1DblClick(Sender: TObject);
+begin
+  TabOperacao.Visible := true;
+  TabPesquisa.Visible := false;
+end;
+
+procedure TFrm_CadCliente.FormCreate(Sender: TObject);
+begin
+  QueryCLIENTE.Active := true;
+end;
+
+procedure TFrm_CadCliente.SpeedButton6Click(Sender: TObject);
+begin
+  close;
+end;
+
+end.
