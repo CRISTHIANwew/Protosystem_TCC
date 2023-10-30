@@ -216,8 +216,6 @@ object Frm_CadCliente: TFrm_CadCliente
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 944
-    ExplicitHeight = 689
     object Panel3: TPanel
       Left = 5
       Top = 33
@@ -232,8 +230,6 @@ object Frm_CadCliente: TFrm_CadCliente
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 934
-      ExplicitHeight = 651
       object PgcUsuario: TPageControl
         Left = 5
         Top = 5
@@ -242,8 +238,6 @@ object Frm_CadCliente: TFrm_CadCliente
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 924
-        ExplicitHeight = 641
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object pnlButtons: TPanel
@@ -426,8 +420,6 @@ object Frm_CadCliente: TFrm_CadCliente
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 916
-            ExplicitHeight = 611
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
@@ -442,10 +434,6 @@ object Frm_CadCliente: TFrm_CadCliente
               Padding.Bottom = 4
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = -2
-              ExplicitWidth = 1086
-              ExplicitHeight = 514
               object Panel14: TPanel
                 Left = 4
                 Top = 266
@@ -460,8 +448,6 @@ object Frm_CadCliente: TFrm_CadCliente
                 Padding.Bottom = 5
                 ParentBackground = False
                 TabOrder = 0
-                ExplicitTop = 565
-                ExplicitWidth = 898
                 object Panel16: TPanel
                   Left = 744
                   Top = 5
@@ -471,9 +457,6 @@ object Frm_CadCliente: TFrm_CadCliente
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 0
-                  ExplicitLeft = 8
-                  ExplicitTop = 0
-                  ExplicitHeight = 48
                   object Shape26: TShape
                     Left = 0
                     Top = 0
@@ -512,7 +495,6 @@ object Frm_CadCliente: TFrm_CadCliente
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 1
-                  ExplicitLeft = 724
                   object Shape27: TShape
                     Left = 0
                     Top = 0
@@ -540,7 +522,6 @@ object Frm_CadCliente: TFrm_CadCliente
                     ParentFont = False
                     OnClick = btnCliCadastrarClick
                     ExplicitLeft = -1
-                    ExplicitTop = 8
                   end
                 end
                 object Panel18: TPanel
@@ -552,8 +533,6 @@ object Frm_CadCliente: TFrm_CadCliente
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 2
-                  ExplicitLeft = 173
-                  ExplicitHeight = 39
                   object Shape28: TShape
                     Left = 0
                     Top = 0
@@ -593,8 +572,6 @@ object Frm_CadCliente: TFrm_CadCliente
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 3
-                  ExplicitLeft = 257
-                  ExplicitHeight = 39
                   object Shape29: TShape
                     Left = 0
                     Top = 0
@@ -634,8 +611,6 @@ object Frm_CadCliente: TFrm_CadCliente
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 4
-                  ExplicitLeft = 341
-                  ExplicitHeight = 39
                   object Shape30: TShape
                     Left = 0
                     Top = 0
@@ -1268,8 +1243,6 @@ object Frm_CadCliente: TFrm_CadCliente
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 916
-            ExplicitHeight = 611
             object DBGrid1: TDBGrid
               Left = 5
               Top = 28
@@ -1315,7 +1288,6 @@ object Frm_CadCliente: TFrm_CadCliente
               Height = 23
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 906
             end
           end
         end
@@ -1345,7 +1317,6 @@ object Frm_CadCliente: TFrm_CadCliente
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 934
       object Pnl_sair: TPanel
         Left = 1028
         Top = 5
@@ -1363,7 +1334,6 @@ object Frm_CadCliente: TFrm_CadCliente
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 841
         object Shape19: TShape
           Left = 0
           Top = 0

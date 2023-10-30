@@ -167,6 +167,8 @@ begin
   btnForCadastrar.Enabled := true;
 end;
 
+
+
 procedure TFrm_CadFornecedor.btnForExcluirClick(Sender: TObject);
 begin
   QueryFORNECEDOR.Delete

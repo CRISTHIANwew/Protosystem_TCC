@@ -180,7 +180,7 @@ object Frm_Principal: TFrm_Principal
         Top = 4
         Width = 1242
         Height = 725
-        ActivePage = TabSheet7
+        ActivePage = TabSheet12
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -481,7 +481,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet11
+            ActivePage = TabSheet8
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1172,7 +1172,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet29
+            ActivePage = TabSheet31
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1275,7 +1275,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet36
+            ActivePage = TabSheet33
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText

@@ -23,10 +23,18 @@ type
     Query_userusername: TStringField;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
+    Panel1: TPanel;
+    Panel8: TPanel;
+    Pnl_sair: TPanel;
+    Shape19: TShape;
+    SpeedButton6: TSpeedButton;
+    Panel2: TPanel;
     PgcUsuario: TPageControl;
     TabOperacao: TTabSheet;
     TabPesquisa: TTabSheet;
-    pnl_dados_user: TPanel;
+    Panel3: TPanel;
+    DBGrid1: TDBGrid;
+    edtPesquisa: TEdit;
     pnlButtons: TPanel;
     pnlEditar: TPanel;
     Shpeditar: TShape;
@@ -43,12 +51,11 @@ type
     pnlExcluir: TPanel;
     shpExcluir: TShape;
     btnExcluir: TSpeedButton;
-    Panel1: TPanel;
+    Panel4: TPanel;
+    pnl_dados_user: TPanel;
     edtID: TDBLabeledEdit;
     edtUsuario: TDBLabeledEdit;
     edtSenha: TDBLabeledEdit;
-    DBGrid1: TDBGrid;
-    edtPesquisa: TEdit;
     procedure btnNovoClick(Sender: TObject);
     procedure btnAlterarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -59,6 +66,7 @@ type
     procedure DBGrid1DblClick(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -132,6 +140,11 @@ end;
 procedure TFrm_CadUsuario.FormCreate(Sender: TObject);
 begin
   Query_user.Active := true;
+end;
+
+procedure TFrm_CadUsuario.SpeedButton6Click(Sender: TObject);
+begin
+  close;
 end;
 
 procedure TFrm_CadUsuario.btnEditarClick(Sender: TObject);

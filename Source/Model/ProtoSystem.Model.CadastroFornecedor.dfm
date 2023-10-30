@@ -153,10 +153,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 1131
-    ExplicitHeight = 390
     object Panel3: TPanel
       Left = 5
       Top = 33
@@ -171,8 +167,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 0
-      ExplicitWidth = 934
-      ExplicitHeight = 651
       object PgcUsuario: TPageControl
         Left = 5
         Top = 5
@@ -181,8 +175,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 924
-        ExplicitHeight = 641
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object pnlButtons: TPanel
@@ -365,8 +357,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 1
-            ExplicitWidth = 1103
-            ExplicitHeight = 312
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
@@ -381,8 +371,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
               Padding.Bottom = 4
               ParentBackground = False
               TabOrder = 0
-              ExplicitWidth = 1093
-              ExplicitHeight = 302
               object Panel14: TPanel
                 Left = 4
                 Top = 267
@@ -397,8 +385,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                 Padding.Bottom = 5
                 ParentBackground = False
                 TabOrder = 0
-                ExplicitTop = 266
-                ExplicitWidth = 1085
                 object Panel16: TPanel
                   Left = 746
                   Top = 5
@@ -408,7 +394,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 0
-                  ExplicitLeft = 744
                   object Shape26: TShape
                     Left = 0
                     Top = 0
@@ -447,7 +432,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 1
-                  ExplicitLeft = 660
                   object Shape27: TShape
                     Left = 0
                     Top = 0
@@ -487,7 +471,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 2
-                  ExplicitLeft = 828
                   object Shape28: TShape
                     Left = 0
                     Top = 0
@@ -527,7 +510,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 3
-                  ExplicitLeft = 912
                   object Shape29: TShape
                     Left = 0
                     Top = 0
@@ -567,7 +549,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                   BevelOuter = bvNone
                   Padding.Right = 5
                   TabOrder = 4
-                  ExplicitLeft = 996
                   object Shape30: TShape
                     Left = 0
                     Top = 0
@@ -673,7 +654,7 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
                 end
                 object edtNome2: TDBLabeledEdit
                   Left = 6
-                  Top = 21
+                  Top = 25
                   Width = 267
                   Height = 15
                   BevelOuter = bvNone
@@ -1200,8 +1181,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 1293
-            ExplicitHeight = 388
             object DBGrid1: TDBGrid
               Left = 5
               Top = 28
@@ -1247,7 +1226,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
               Height = 23
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 1283
             end
           end
         end
@@ -1277,7 +1255,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 1121
       object Pnl_sair: TPanel
         Left = 1030
         Top = 5
@@ -1295,7 +1272,6 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 1028
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -1333,14 +1309,14 @@ object Frm_CadFornecedor: TFrm_CadFornecedor
   end
   object DataSource1: TDataSource
     DataSet = QueryFORNECEDOR
-    Left = 709
-    Top = 160
+    Left = 693
+    Top = 80
   end
   object QueryFORNECEDOR: TFDQuery
     Connection = DM.conexao
     SQL.Strings = (
       'select * from fornecedor')
-    Left = 521
-    Top = 200
+    Left = 601
+    Top = 80
   end
 end
