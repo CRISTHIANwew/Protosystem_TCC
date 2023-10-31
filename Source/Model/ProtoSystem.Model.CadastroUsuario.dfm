@@ -3,23 +3,22 @@ object Frm_CadUsuario: TFrm_CadUsuario
   Top = 360
   BorderStyle = bsNone
   Caption = 'Cadastro de usu'#225'rio'
-  ClientHeight = 319
-  ClientWidth = 455
+  ClientHeight = 335
+  ClientWidth = 459
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Padding.Bottom = 5
   Position = poScreenCenter
   OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 455
-    Height = 314
+    Width = 459
+    Height = 335
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
@@ -29,14 +28,12 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 216
-    ExplicitTop = 144
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 455
+    ExplicitHeight = 314
     object Panel8: TPanel
       Left = 5
       Top = 5
-      Width = 445
+      Width = 449
       Height = 28
       Align = alTop
       Alignment = taLeftJustify
@@ -57,11 +54,9 @@ object Frm_CadUsuario: TFrm_CadUsuario
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 893
+      ExplicitWidth = 445
       object Pnl_sair: TPanel
-        Left = 352
+        Left = 356
         Top = 5
         Width = 88
         Height = 18
@@ -77,7 +72,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 800
+        ExplicitLeft = 352
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -115,8 +110,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
     object Panel2: TPanel
       Left = 5
       Top = 33
-      Width = 445
-      Height = 276
+      Width = 449
+      Height = 297
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
@@ -126,28 +121,25 @@ object Frm_CadUsuario: TFrm_CadUsuario
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 144
-      ExplicitTop = 112
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitWidth = 445
+      ExplicitHeight = 276
       object PgcUsuario: TPageControl
         Left = 5
         Top = 5
-        Width = 435
-        Height = 234
+        Width = 439
+        Height = 255
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitTop = 6
-        ExplicitWidth = 873
-        ExplicitHeight = 377
+        ExplicitWidth = 435
+        ExplicitHeight = 234
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object Panel4: TPanel
             Left = 0
             Top = 0
-            Width = 427
-            Height = 204
+            Width = 431
+            Height = 225
             Align = alClient
             BevelOuter = bvNone
             Color = 13274977
@@ -157,14 +149,13 @@ object Frm_CadUsuario: TFrm_CadUsuario
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 0
-            ExplicitTop = -2
-            ExplicitWidth = 865
-            ExplicitHeight = 317
+            ExplicitWidth = 427
+            ExplicitHeight = 204
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
-              Width = 417
-              Height = 194
+              Width = 421
+              Height = 215
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
@@ -174,72 +165,172 @@ object Frm_CadUsuario: TFrm_CadUsuario
               Padding.Bottom = 5
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 10
-              ExplicitTop = 10
-              ExplicitWidth = 855
-              ExplicitHeight = 307
-              object edtID: TDBLabeledEdit
-                Left = 21
-                Top = 26
-                Width = 36
-                Height = 23
-                BiDiMode = bdLeftToRight
-                BorderStyle = bsNone
-                Color = clWhite
-                DataField = 'id'
-                DataSource = DS_user
-                Enabled = False
-                ParentBiDiMode = False
-                TabOrder = 2
-                EditLabel.Width = 28
-                EditLabel.Height = 15
-                EditLabel.Margins.Left = 5
-                EditLabel.Margins.Top = 5
-                EditLabel.Margins.Right = 5
-                EditLabel.Margins.Bottom = 5
-                EditLabel.BiDiMode = bdLeftToRight
-                EditLabel.ParentBiDiMode = False
-                EditLabel.Layout = tlCenter
-              end
-              object edtUsuario: TDBLabeledEdit
-                Left = 71
-                Top = 26
-                Width = 202
-                Height = 23
-                BorderStyle = bsNone
-                CharCase = ecUpperCase
-                Color = clWhite
-                DataField = 'username'
-                DataSource = DS_user
+              ExplicitLeft = 6
+              ExplicitTop = 8
+              ExplicitWidth = 417
+              ExplicitHeight = 194
+              object Panel15: TPanel
+                Left = 14
+                Top = 16
+                Width = 59
+                Height = 40
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
                 TabOrder = 0
-                EditLabel.Width = 40
-                EditLabel.Height = 15
-                EditLabel.Margins.Left = 5
-                EditLabel.Margins.Top = 5
-                EditLabel.Margins.Right = 5
-                EditLabel.Margins.Bottom = 5
-                EditLabel.Caption = 'Usuario'
-                EditLabel.Layout = tlCenter
+                object Shape34: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 54
+                  Height = 40
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitLeft = 24
+                  ExplicitTop = 20
+                end
+                object edtID: TDBLabeledEdit
+                  Left = 5
+                  Top = 20
+                  Width = 48
+                  Height = 18
+                  BiDiMode = bdLeftToRight
+                  BorderStyle = bsNone
+                  CharCase = ecUpperCase
+                  Color = 13275746
+                  DataField = 'id'
+                  DataSource = DS_user
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 16512241
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentBiDiMode = False
+                  ParentFont = False
+                  TabOrder = 0
+                  EditLabel.Width = 28
+                  EditLabel.Height = 15
+                  EditLabel.Margins.Left = 5
+                  EditLabel.Margins.Top = 5
+                  EditLabel.Margins.Right = 5
+                  EditLabel.Margins.Bottom = 5
+                  EditLabel.BiDiMode = bdLeftToRight
+                  EditLabel.ParentBiDiMode = False
+                  EditLabel.Layout = tlCenter
+                end
               end
-              object edtSenha: TDBLabeledEdit
-                Left = 21
-                Top = 82
-                Width = 121
-                Height = 23
-                BorderStyle = bsNone
-                CharCase = ecUpperCase
-                Color = clWhite
-                DataField = 'password'
-                DataSource = DS_user
+              object Panel5: TPanel
+                Left = 74
+                Top = 16
+                Width = 196
+                Height = 40
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
                 TabOrder = 1
-                EditLabel.Width = 32
-                EditLabel.Height = 15
-                EditLabel.Margins.Left = 5
-                EditLabel.Margins.Top = 5
-                EditLabel.Margins.Right = 5
-                EditLabel.Margins.Bottom = 5
-                EditLabel.Caption = 'Senha'
-                EditLabel.Layout = tlCenter
+                object Shape1: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 191
+                  Height = 40
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitLeft = 24
+                  ExplicitTop = 20
+                  ExplicitWidth = 54
+                end
+                object edtUsuario: TDBLabeledEdit
+                  Left = 6
+                  Top = 20
+                  Width = 176
+                  Height = 18
+                  BorderStyle = bsNone
+                  CharCase = ecUpperCase
+                  Color = 13275746
+                  DataField = 'username'
+                  DataSource = DS_user
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 16512241
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  TabOrder = 0
+                  EditLabel.Width = 42
+                  EditLabel.Height = 15
+                  EditLabel.Margins.Left = 5
+                  EditLabel.Margins.Top = 5
+                  EditLabel.Margins.Right = 5
+                  EditLabel.Margins.Bottom = 5
+                  EditLabel.Caption = 'Usuario'
+                  EditLabel.Color = clWhite
+                  EditLabel.Font.Charset = DEFAULT_CHARSET
+                  EditLabel.Font.Color = 15649712
+                  EditLabel.Font.Height = -12
+                  EditLabel.Font.Name = 'Segoe UI'
+                  EditLabel.Font.Style = [fsBold]
+                  EditLabel.ParentColor = False
+                  EditLabel.ParentFont = False
+                  EditLabel.Layout = tlCenter
+                end
+              end
+              object Panel6: TPanel
+                Left = 271
+                Top = 16
+                Width = 138
+                Height = 40
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 2
+                object Shape2: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 133
+                  Height = 40
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitLeft = 24
+                  ExplicitTop = 20
+                  ExplicitWidth = 54
+                end
+                object edtSenha: TDBLabeledEdit
+                  Left = 6
+                  Top = 20
+                  Width = 118
+                  Height = 18
+                  BorderStyle = bsNone
+                  CharCase = ecUpperCase
+                  Color = 13275746
+                  DataField = 'password'
+                  DataSource = DS_user
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 16512241
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  TabOrder = 0
+                  EditLabel.Width = 34
+                  EditLabel.Height = 15
+                  EditLabel.Margins.Left = 5
+                  EditLabel.Margins.Top = 5
+                  EditLabel.Margins.Right = 5
+                  EditLabel.Margins.Bottom = 5
+                  EditLabel.Caption = 'Senha'
+                  EditLabel.Color = clWhite
+                  EditLabel.Font.Charset = DEFAULT_CHARSET
+                  EditLabel.Font.Color = 15649712
+                  EditLabel.Font.Height = -12
+                  EditLabel.Font.Name = 'Segoe UI'
+                  EditLabel.Font.Style = [fsBold]
+                  EditLabel.ParentColor = False
+                  EditLabel.ParentFont = False
+                  EditLabel.Layout = tlCenter
+                end
               end
             end
           end
@@ -250,8 +341,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 427
-            Height = 204
+            Width = 431
+            Height = 225
             Align = alClient
             Color = 14079702
             Padding.Left = 4
@@ -260,13 +351,13 @@ object Frm_CadUsuario: TFrm_CadUsuario
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 865
-            ExplicitHeight = 347
+            ExplicitWidth = 427
+            ExplicitHeight = 204
             object DBGrid1: TDBGrid
               Left = 5
               Top = 28
-              Width = 417
-              Height = 171
+              Width = 421
+              Height = 192
               Hint = 'Clique duas vezes para selecionar'
               Align = alClient
               DataSource = DS_user
@@ -284,20 +375,20 @@ object Frm_CadUsuario: TFrm_CadUsuario
             object edtPesquisa: TEdit
               Left = 5
               Top = 5
-              Width = 417
+              Width = 421
               Height = 23
               Align = alTop
               TabOrder = 1
               OnChange = edtPesquisaChange
-              ExplicitWidth = 855
+              ExplicitWidth = 417
             end
           end
         end
       end
       object pnlButtons: TPanel
         Left = 5
-        Top = 239
-        Width = 435
+        Top = 260
+        Width = 439
         Height = 32
         Align = alBottom
         BevelOuter = bvNone
@@ -308,10 +399,10 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 350
-        ExplicitWidth = 873
+        ExplicitTop = 239
+        ExplicitWidth = 435
         object pnlEditar: TPanel
-          Left = 94
+          Left = 98
           Top = 5
           Width = 84
           Height = 22
@@ -319,9 +410,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 0
-          ExplicitLeft = 526
-          ExplicitTop = 6
-          ExplicitHeight = 20
+          ExplicitLeft = 94
           object Shpeditar: TShape
             Left = 0
             Top = 0
@@ -354,7 +443,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           end
         end
         object pnlCadastrar: TPanel
-          Left = 10
+          Left = 14
           Top = 5
           Width = 84
           Height = 22
@@ -362,9 +451,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 1
-          ExplicitLeft = 358
-          ExplicitTop = 6
-          ExplicitHeight = 20
+          ExplicitLeft = 10
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
@@ -397,7 +484,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           end
         end
         object pnlSalvar: TPanel
-          Left = 178
+          Left = 182
           Top = 5
           Width = 84
           Height = 22
@@ -405,8 +492,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 2
-          ExplicitLeft = 173
-          ExplicitHeight = 38
+          ExplicitLeft = 178
           object shpSalvar: TShape
             Left = 0
             Top = 0
@@ -438,7 +524,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           end
         end
         object pnlCancelar: TPanel
-          Left = 262
+          Left = 266
           Top = 5
           Width = 84
           Height = 22
@@ -446,9 +532,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 3
-          ExplicitLeft = 680
-          ExplicitTop = 6
-          ExplicitHeight = 20
+          ExplicitLeft = 262
           object ShpCancelar: TShape
             Left = 0
             Top = 0
@@ -480,7 +564,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           end
         end
         object pnlExcluir: TPanel
-          Left = 346
+          Left = 350
           Top = 5
           Width = 84
           Height = 22
@@ -488,9 +572,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 4
-          ExplicitLeft = 784
-          ExplicitTop = 6
-          ExplicitHeight = 20
+          ExplicitLeft = 346
           object shpExcluir: TShape
             Left = 0
             Top = 0
@@ -527,8 +609,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Connection = DM.conexao
     SQL.Strings = (
       'select * from usuario')
-    Left = 400
-    Top = 61
+    Left = 224
+    Top = 149
     object Query_userid: TFDAutoIncField
       FieldName = 'id'
       Origin = 'id'
@@ -548,8 +630,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
   end
   object DS_user: TDataSource
     DataSet = Query_user
-    Left = 334
-    Top = 104
+    Left = 286
+    Top = 149
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = Query_user

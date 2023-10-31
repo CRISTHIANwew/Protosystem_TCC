@@ -53,6 +53,12 @@ type
     btnExcluir: TSpeedButton;
     Panel4: TPanel;
     pnl_dados_user: TPanel;
+    Panel15: TPanel;
+    Shape34: TShape;
+    Panel5: TPanel;
+    Shape1: TShape;
+    Panel6: TPanel;
+    Shape2: TShape;
     edtID: TDBLabeledEdit;
     edtUsuario: TDBLabeledEdit;
     edtSenha: TDBLabeledEdit;
@@ -100,16 +106,11 @@ begin
     Query_user.Post;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
   btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
   // habilitar editar, excluir, cadastrar.
   btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
   btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
   btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
   Query_user.Refresh;
 end;
 
@@ -154,14 +155,10 @@ begin
   Query_user.Edit;
   // desabilitar cadastar, excluir.
   btnCadastrar.Enabled := false;
-  ShpCadastrar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
   btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnExcluirClick(Sender: TObject);
@@ -174,14 +171,10 @@ begin
   Query_user.Insert;
   // desabilita editar, excluir.
   btnEditar.Enabled := false;
-  Shpeditar.Brush.Color := $00D6D6D6;
   btnExcluir.Enabled := false;
-  shpExcluir.Brush.Color := $00D6D6D6;
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
-  shpSalvar.Brush.Color := $00838181;
   btnCancelar.Enabled := true;
-  ShpCancelar.Brush.Color := $00838181;
 end;
 
 procedure TFrm_CadUsuario.btnCancelarClick(Sender: TObject);
@@ -189,16 +182,11 @@ begin
   Query_user.Cancel;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
-  shpSalvar.Brush.Color := $00D6D6D6;
   btnCancelar.Enabled := false;
-  ShpCancelar.Brush.Color := $00D6D6D6;
   // habilitar editar, excluir, cadastrar.
   btnEditar.Enabled := true;
-  Shpeditar.Brush.Color := $00838181;
   btnExcluir.Enabled := true;
-  shpExcluir.Brush.Color := $00838181;
   btnCadastrar.Enabled := true;
-  ShpCadastrar.Brush.Color := $00838181;
 end;
 
 end.
