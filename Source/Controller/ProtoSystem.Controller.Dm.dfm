@@ -1,42 +1,43 @@
 object DM: TDM
   OnCreate = DataModuleCreate
-  Height = 508
-  Width = 883
+  Height = 635
+  Width = 1104
+  PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 66
-    Top = 109
+    Left = 83
+    Top = 136
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 66
-    Top = 58
+    Left = 83
+    Top = 73
   end
   object conexao: TFDConnection
     Params.Strings = (
       'LockingMode=Normal'
       
-        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\bin\Database\ProtoSystem.s3db'
+        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
+        'in\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
-    Left = 66
-    Top = 6
+    Left = 83
+    Top = 8
   end
   object FDQuery: TFDQuery
     Connection = conexao
-    Left = 67
-    Top = 158
+    Left = 84
+    Top = 198
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 752
-    Top = 48
+    Left = 940
+    Top = 60
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 752
-    Top = 96
+    Left = 940
+    Top = 120
   end
   object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
@@ -73,8 +74,8 @@ object DM: TDM
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 663
-    Top = 48
+    Left = 829
+    Top = 60
     object cdsVendaProdutosIDPEDIDO: TIntegerField
       FieldKind = fkCalculated
       FieldName = 'IDPEDIDO'
@@ -97,27 +98,129 @@ object DM: TDM
     end
   end
   object SQL_ImpressaoPedido: TFDQuery
-    Active = True
+    CachedUpdates = True
     Connection = conexao
     SQL.Strings = (
       
         'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (P' +
-        'O.ID_PEDIDO = PE.ID) WHERE PE.ID =1')
-    Left = 768
-    Top = 368
+        'O.ID_PEDIDO = PE.ID) WHERE PE.ID =10')
+    Left = 888
+    Top = 460
+    object SQL_ImpressaoPedidoID: TFDAutoIncField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object SQL_ImpressaoPedidoTOTAL_PROD: TFloatField
+      FieldName = 'TOTAL_PROD'
+      Origin = 'TOTAL_PROD'
+    end
+    object SQL_ImpressaoPedidoID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+      Origin = 'ID_CLIENTE'
+    end
+    object SQL_ImpressaoPedidoNOME_CLIENTE: TStringField
+      FieldName = 'NOME_CLIENTE'
+      Origin = 'NOME_CLIENTE'
+      Size = 50
+    end
+    object SQL_ImpressaoPedidoCPF_CNPJ: TStringField
+      FieldName = 'CPF_CNPJ'
+      Origin = 'CPF_CNPJ'
+      Size = 32767
+    end
+    object SQL_ImpressaoPedidoRG_IE: TStringField
+      FieldName = 'RG_IE'
+      Origin = 'RG_IE'
+      Size = 32767
+    end
+    object SQL_ImpressaoPedidoID_PAG: TIntegerField
+      FieldName = 'ID_PAG'
+      Origin = 'ID_PAG'
+    end
+    object SQL_ImpressaoPedidoDESCRICAO_PAG: TStringField
+      FieldName = 'DESCRICAO_PAG'
+      Origin = 'DESCRICAO_PAG'
+      Size = 32767
+    end
+    object SQL_ImpressaoPedidoVALOR_DESPESAS: TFloatField
+      FieldName = 'VALOR_DESPESAS'
+      Origin = 'VALOR_DESPESAS'
+    end
+    object SQL_ImpressaoPedidoVALOR_FRETE: TFloatField
+      FieldName = 'VALOR_FRETE'
+      Origin = 'VALOR_FRETE'
+    end
+    object SQL_ImpressaoPedidoVALOR_DESCONTO: TFloatField
+      FieldName = 'VALOR_DESCONTO'
+      Origin = 'VALOR_DESCONTO'
+    end
+    object SQL_ImpressaoPedidoTOTAL_GERAL: TFloatField
+      FieldName = 'TOTAL_GERAL'
+      Origin = 'TOTAL_GERAL'
+    end
+    object SQL_ImpressaoPedidoID_1: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_1'
+      Origin = 'ID'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object SQL_ImpressaoPedidoID_PEDIDO: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_PEDIDO'
+      Origin = 'ID_PEDIDO'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object SQL_ImpressaoPedidoID_PRODUTO: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'ID_PRODUTO'
+      Origin = 'ID_PRODUTO'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object SQL_ImpressaoPedidoDESCRICAO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'DESCRICAO'
+      Origin = 'DESCRICAO'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+    object SQL_ImpressaoPedidoVALOR_UNIT: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALOR_UNIT'
+      Origin = 'VALOR_UNIT'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object SQL_ImpressaoPedidoQUANTIDADE: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'QUANTIDADE'
+      Origin = 'QUANTIDADE'
+      ProviderFlags = []
+      ReadOnly = True
+    end
+    object SQL_ImpressaoPedidoVALOR_TOTAL: TFloatField
+      AutoGenerateValue = arDefault
+      FieldName = 'VALOR_TOTAL'
+      Origin = 'VALOR_TOTAL'
+      ProviderFlags = []
+      ReadOnly = True
+    end
   end
   object SQL_empresa: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
-    Left = 664
-    Top = 368
+    Left = 758
+    Top = 460
   end
   object SQL_Dashboard_Estoque: TFDQuery
     Connection = conexao
     SQL.Strings = (
       'select descricao, estoque from produto')
-    Left = 752
+    Left = 940
   end
 end

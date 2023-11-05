@@ -1,0 +1,63 @@
+unit ProtoSystem.Model.PesquisaFornecedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Buttons,
+  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TfrmPesquisaFornecedor = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel12: TPanel;
+    Shape12: TShape;
+    Edit_pesquisa: TEdit;
+    DBGrid1: TDBGrid;
+    Panel6: TPanel;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    btn_saircadprod: TSpeedButton;
+    Panel3: TPanel;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+    SQL_PesquisaFornecedor: TFDQuery;
+    SQL_PesquisaFornecedorID: TFDAutoIncField;
+    SQL_PesquisaFornecedorNOME: TStringField;
+    SQL_PesquisaFornecedorCPFCNPJ: TStringField;
+    SQL_PesquisaFornecedorRGIE: TStringField;
+    SQL_PesquisaFornecedorENDERECO: TStringField;
+    SQL_PesquisaFornecedorBAIRRO: TStringField;
+    SQL_PesquisaFornecedorCIDADE: TStringField;
+    SQL_PesquisaFornecedorCEP: TStringField;
+    SQL_PesquisaFornecedorNUMERO: TStringField;
+    SQL_PesquisaFornecedorCELULAR: TStringField;
+    SQL_PesquisaFornecedorEMAIL: TStringField;
+    DS_PesquisaFornecedor: TDataSource;
+    procedure btn_saircadprodClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesquisaFornecedor: TfrmPesquisaFornecedor;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+procedure TfrmPesquisaFornecedor.btn_saircadprodClick(Sender: TObject);
+begin
+CLOSE;
+end;
+
+end.

@@ -1,0 +1,29 @@
+object frmPesquisaFornecedor: TfrmPesquisaFornecedor
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Pesquisa Fornecedor'
+  ClientHeight = 366
+  ClientWidth = 606
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Visible = True
+  PixelsPerInch = 120
+  TextHeight = 20
+  object Panel1: TPanel
+    Left = 310
+    Top = 120
+    Width = 185
+    Height = 41
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    Caption = 'Panel1'
+    TabOrder = 0
+  end
+end

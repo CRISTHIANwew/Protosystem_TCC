@@ -30,6 +30,25 @@ type
     SQL_ImpressaoPedido: TFDQuery;
     SQL_empresa: TFDQuery;
     SQL_Dashboard_Estoque: TFDQuery;
+    SQL_ImpressaoPedidoID: TFDAutoIncField;
+    SQL_ImpressaoPedidoTOTAL_PROD: TFloatField;
+    SQL_ImpressaoPedidoID_CLIENTE: TIntegerField;
+    SQL_ImpressaoPedidoNOME_CLIENTE: TStringField;
+    SQL_ImpressaoPedidoCPF_CNPJ: TStringField;
+    SQL_ImpressaoPedidoRG_IE: TStringField;
+    SQL_ImpressaoPedidoID_PAG: TIntegerField;
+    SQL_ImpressaoPedidoDESCRICAO_PAG: TStringField;
+    SQL_ImpressaoPedidoVALOR_DESPESAS: TFloatField;
+    SQL_ImpressaoPedidoVALOR_FRETE: TFloatField;
+    SQL_ImpressaoPedidoVALOR_DESCONTO: TFloatField;
+    SQL_ImpressaoPedidoTOTAL_GERAL: TFloatField;
+    SQL_ImpressaoPedidoID_1: TIntegerField;
+    SQL_ImpressaoPedidoID_PEDIDO: TIntegerField;
+    SQL_ImpressaoPedidoID_PRODUTO: TIntegerField;
+    SQL_ImpressaoPedidoDESCRICAO: TStringField;
+    SQL_ImpressaoPedidoVALOR_UNIT: TFloatField;
+    SQL_ImpressaoPedidoQUANTIDADE: TIntegerField;
+    SQL_ImpressaoPedidoVALOR_TOTAL: TFloatField;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -42,6 +61,9 @@ type
     IdPedido: integer;
     VendasFechamentoStatus: boolean;
     caminho: string;
+    IDCliente: string;
+    NOMECliente: string;
+    PesquisaClienteStatus: boolean;
   end;
 
 var
@@ -147,7 +169,20 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS DOC_RECEBER (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'A VARCHAR(100));');
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'ID_FORNECEDOR VARCHAR,' +
+      'NOME_FORNECEDOR VARCHAR,' +
+      'TIPO_DOC VARCHAR,' +
+      'IDENTIFICACAO VARCHAR,' +
+      'EMISSAO VARCHAR,' +
+      'VENCIMENTO VARCHAR,' +
+      'VALOR REAL,' +
+      'VALOR_PEND REAL,' +
+      'QUITADO VARCHAR (1),' +
+      'QTD_PARCELAS INTEGER,' +
+      'DESCONTO REAL,' +
+      'OBSERVACAO VARCHAR,' +
+      'A VARCHAR(100));');
   end;
 
   Result := false;

@@ -143,19 +143,19 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas">
-            <Form>Fom_CadastroContasReceber</Form>
+            <Form>Frm_CadastroContasReceber</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.VendasFechamento.pas">
             <Form>frmVendasFechamento</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\Model\ProtoSystem.Model.ReportsVenda.pas">
-            <Form>frmReportsVenda</Form>
+        <DCCReference Include="Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas">
+            <Form>frmReportsPedidoDeVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\Model\ProtoSystem.Model.Impressao.pas">
-            <Form>frmFortesReportes</Form>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaCliente.pas">
+            <Form>frmPesquisaCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

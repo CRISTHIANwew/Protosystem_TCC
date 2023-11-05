@@ -14,10 +14,10 @@ uses
   ProtoSystem.Model.CadastroFornecedor in 'Source\Model\ProtoSystem.Model.CadastroFornecedor.pas' {Frm_CadFornecedor},
   ProtoSystem.Model.Vendas in 'Source\Model\ProtoSystem.Model.Vendas.pas' {Frm_Vendas},
   ProtoSystem.View.TelaPadrao in 'Source\View\ProtoSystem.View.TelaPadrao.pas' {formTelaPadrao},
-  ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Fom_CadastroContasReceber},
+  ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Frm_CadastroContasReceber},
   ProtoSystem.Model.VendasFechamento in 'Source\Model\ProtoSystem.Model.VendasFechamento.pas' {frmVendasFechamento},
-  ProtoSystem.Model.ReportsVenda in 'Source\Model\ProtoSystem.Model.ReportsVenda.pas' {frmReportsVenda},
-  ProtoSystem.Model.Impressao in 'Source\Model\ProtoSystem.Model.Impressao.pas' {frmFortesReportes};
+  ProtoSystem.Model.ReportsPedidoDeVenda in 'Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas' {frmReportsPedidoDeVenda},
+  ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente};
 
 {$R *.res}
 
@@ -28,6 +28,7 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
+  Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
   if TFrm_Login.Login then
     Application.Run
   else
