@@ -119,12 +119,6 @@ type
     Panel32: TPanel;
     Panel33: TPanel;
     lbHORA: TLabel;
-    Shape8: TShape;
-    Shape7: TShape;
-    Shape6: TShape;
-    Shape5: TShape;
-    Shape4: TShape;
-    Shape3: TShape;
     PageControl1: TPageControl;
     TabSheet37: TTabSheet;
     TabSheet38: TTabSheet;
@@ -153,6 +147,12 @@ type
     Panel43: TPanel;
     Shape13: TShape;
     SpeedButton7: TSpeedButton;
+    Shape14: TShape;
+    Shape15: TShape;
+    Shape16: TShape;
+    Shape17: TShape;
+    Shape18: TShape;
+    Shape19: TShape;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -169,6 +169,7 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
+    procedure SpeedButton5Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -186,7 +187,8 @@ uses
   ProtoSystem.Controller.Dm, ProtoSystem.Model.CadastroProduto,
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
   ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
-  ProtoSystem.Model.CadastroFornecedor, ProtoSystem.View.Login;
+  ProtoSystem.Model.CadastroFornecedor, ProtoSystem.View.Login,
+  ProtoSystem.Model.CadastroDeContasReceber;
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);
 begin
@@ -331,6 +333,19 @@ var
     Frm_CadCliente.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_CadCliente.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton5Click(Sender: TObject);
+begin
+var
+    Frm_CadastroDeContasReceber: TFrm_CadastroContasReceber; // Declare uma variável para o formulário
+  Frm_CadastroDeContasReceber := TFrm_CadastroContasReceber.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_CadastroDeContasReceber.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadastroDeContasReceber.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

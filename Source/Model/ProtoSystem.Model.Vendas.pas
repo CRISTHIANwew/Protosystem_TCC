@@ -71,12 +71,6 @@ type
     edtTotalVenda: TEdit;
     cdsVendaPedidos: TClientDataSet;
     dsVendaPedidos: TDataSource;
-    Shape4: TShape;
-    Shape6: TShape;
-    Shape11: TShape;
-    Shape12: TShape;
-    Shape13: TShape;
-    Shape14: TShape;
     Panel4: TPanel;
     Pnl_sair: TPanel;
     Shape15: TShape;
@@ -118,8 +112,8 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento, ProtoSystem.Model.ReportsVenda,
-  ProtoSystem.View.MenuPrincipal, ProtoSystem.Model.Impressao;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento,
+  ProtoSystem.View.MenuPrincipal, ProtoSystem.Model.ReportsPedidoDeVenda;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin
@@ -164,6 +158,7 @@ end;
 procedure TFrm_Vendas.BTN_CancelarItemClick(Sender: TObject);
 begin
   //Cancela item
+  if not dm.cdsVendaProdutos.IsEmpty then
   dm.cdsVendaProdutos.Delete;
   AtualizaTotais;
 end;
@@ -190,26 +185,19 @@ begin
       edtQuantidadeProduto.Text:='';
       edtSubTotalProduto.Text:='';
       edtTotalVenda.Text:='';
-      //ImprimePedido;
       VerificaIdPedido;
+      ImprimePedido;
   end;
 end;
 
 procedure TFrm_Vendas.ImprimePedido;
 begin
-  Dm.SQL_empresa.Connection:=dm.conexao;
-  Dm.SQL_empresa.SQL.Text:= 'select * from EMPRESA';
-  Dm.SQL_empresa.ExecSQL;
-  Dm.SQL_empresa.Active:=true;
-
-  dm.SQL_ImpressaoPedido.Connection:=dm.conexao;
-  dm.SQL_ImpressaoPedido.SQL.Text:='select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID = :IDPEDIDO';
-  dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(dm.IdPedido);
-  dm.SQL_ImpressaoPedido.ExecSQL;
-
-  dm.SQL_ImpressaoPedido.Active:=true;
-
-  frmReportsVenda.ReportPedido.Preview();
+  dm.SQL_empresa.SQL.Text:= 'SELECT * FROM EMPRESA';
+  dm.SQL_empresa.Open;
+  dm.SQL_ImpressaoPedido.SQL.Text:= 'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID= :IDPEDIDO';
+  dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(DM.IdPedido-1);
+  dm.SQL_ImpressaoPedido.Open;
+  frmReportsPedidoDeVenda.RLReport1.Preview();
 end;
 
 procedure TFrm_Vendas.edtPesquisaProdutoChange(Sender: TObject);
@@ -357,16 +345,10 @@ procedure TFrm_Vendas.SpeedButton1Click(Sender: TObject);
 begin
   dm.SQL_empresa.SQL.Text:= 'SELECT * FROM EMPRESA';
   dm.SQL_empresa.Open;
-
   dm.SQL_ImpressaoPedido.SQL.Text:= 'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID= :IDPEDIDO';
   dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(DM.IdPedido-1);
   dm.SQL_ImpressaoPedido.Open;
-
-  //frmReportsVenda.ReportPedido.Preview();
-
-
-
-  frmFortesReportes.RLReport1.Preview();
+  frmReportsPedidoDeVenda.RLReport1.Preview();
 end;
 
 procedure TFrm_Vendas.SpeedButton2Click(Sender: TObject);

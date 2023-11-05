@@ -59,12 +59,6 @@ type
     rgCondicao: TRadioGroup;
     sqlInsertProdutos: TFDQuery;
     sqlInsertPedido: TFDQuery;
-    Shape8: TShape;
-    Shape9: TShape;
-    Shape11: TShape;
-    Shape12: TShape;
-    Shape13: TShape;
-    Shape14: TShape;
     Panel5: TPanel;
     Pnl_sair: TPanel;
     Shape15: TShape;
@@ -108,6 +102,7 @@ type
   procedure AtualizaTotais;
   procedure FechaVenda;
   procedure ResetaVendafechamento;
+  procedure ImpressaoPedido;
   //procedure VendasFechamentoClosed;
   public
     { Public declarations }
@@ -122,7 +117,8 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm, ProtoSystem.Model.Vendas;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Model.Vendas,
+  ProtoSystem.Model.ReportsPedidoDeVenda;
 
 procedure TfrmVendasFechamento.edtDespesasExit(Sender: TObject);
 begin
@@ -348,6 +344,16 @@ begin
   ValorDescontoFLT:=0;
   TotalGeralFLT:=0;
   frmVendasFechamento.Close;
+end;
+
+procedure TfrmVendasFechamento.ImpressaoPedido;
+begin
+  dm.SQL_empresa.SQL.Text:= 'SELECT * FROM EMPRESA';
+  dm.SQL_empresa.Open;
+  dm.SQL_ImpressaoPedido.SQL.Text:= 'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (PO.ID_PEDIDO = PE.ID) WHERE PE.ID= :IDPEDIDO';
+  dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(DM.IdPedido-1);
+  dm.SQL_ImpressaoPedido.Open;
+  frmReportsPedidoDeVenda.RLReport1.Preview();
 end;
 
 end.

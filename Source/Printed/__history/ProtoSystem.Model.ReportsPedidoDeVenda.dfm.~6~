@@ -1,0 +1,92 @@
+object frmReportsPedidoDeVenda: TfrmReportsPedidoDeVenda
+  Left = 0
+  Top = 0
+  ClientHeight = 709
+  ClientWidth = 993
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  PixelsPerInch = 120
+  TextHeight = 20
+  object RLReport1: TRLReport
+    Left = 0
+    Top = 0
+    Width = 992
+    Height = 1403
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 47
+      Top = 47
+      Width = 898
+      Height = 144
+      BandType = btTitle
+      object RLLabel1: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 898
+        Height = 21
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Align = faTop
+        Alignment = taCenter
+        Caption = 'PROTOSYSTEM SISTEMAS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -18
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLDBText1: TRLDBText
+        Left = 106
+        Top = 29
+        Width = 265
+        Height = 21
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        DataField = 'CPFCNPJ'
+        DataSource = dsDadosEmpresa
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -18
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel2: TRLLabel
+        Left = 0
+        Top = 29
+        Width = 98
+        Height = 21
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Caption = 'CPF/CNPJ:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -18
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object dsDadosEmpresa: TDataSource
+    DataSet = DM.SQL_empresa
+    Left = 594
+    Top = 336
+  end
+end
