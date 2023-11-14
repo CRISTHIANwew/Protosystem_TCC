@@ -54,6 +54,7 @@ type
   private
     { Private declarations }
     procedure CreateDB;
+
     function GetTables: TDataSet;
   public
     var
@@ -64,11 +65,11 @@ type
     IDCliente: string;
     NOMECliente: string;
     PesquisaClienteStatus: boolean;
+    procedure fecharaplicacao;
   end;
 
 var
   Dm: TDM;
-  //caminho: string;
 
 implementation
 
@@ -124,6 +125,56 @@ begin
   conexao.GetTableNames('', '', '', TableNames);
 
   Result := false;
+  Result := TableNames.IndexOf('BANCO') >= 0;
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS BANCO (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'SALDO_BANCO REAL);');
+      FDQuery.SQL.Text.Empty;
+      FDQuery.SQL.Text :=
+      'INSERT INTO BANCO (SALDO_BANCO) VALUES (:SALDO_BANCO)';
+    FDQuery.ParamByName('SALDO_BANCO').AsFloat := 0.00;
+    FDQuery.ExecSQL;
+  end;
+
+  Result := false;
+  Result := TableNames.IndexOf('BANCO_MOV') >= 0;
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS BANCO_MOV (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'DATAMOVIMENTO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
+      'VALORMOVIMENTO REAL,' +
+      'OBSERVACAO VARCHAR(80));');
+  end;
+
+  Result := false;
+  Result := TableNames.IndexOf('CAIXA') >= 0;
+
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS CAIXA (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'SALDO_CAIXA REAL);');
+      FDQuery.SQL.Text.Empty;
+      FDQuery.SQL.Text := 'INSERT INTO CAIXA (SALDO_CAIXA) VALUES (:SALDO_CAIXA)';
+    FDQuery.ParamByName('SALDO_CAIXA').AsFloat := 0.00;
+    FDQuery.ExecSQL;
+  end;
+
+    Result := false;
+  Result := TableNames.IndexOf('CAIXA_LANC') >= 0;
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS CAIXA_LANC (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'DATALANCAMENTO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
+      'VALORLANCAMENTO REAL,' +
+      'OBSERVACAO VARCHAR(80));');
+  end;
+
+  Result := false;
   Result := TableNames.IndexOf('CLIENTE') >= 0;
 
   if Result = false then
@@ -140,6 +191,7 @@ begin
       'NUMERO VARCHAR(10) ,' +
       'CELULAR VARCHAR(20) ,' +
       'EMAIL VARCHAR(60));');
+      FDQuery.SQL.Text.Empty;
       FDQuery.SQL.Text :=
       'INSERT INTO CLIENTE (ID, NOME, CPFCNPJ, RGIE, ENDERECO, BAIRRO, CIDADE, CEP) VALUES (:ID, :NOME, :CPFCNPJ, :RGIE, :ENDERECO, :BAIRRO, :CIDADE, :CEP)';
     FDQuery.ParamByName('ID').AsString       := '01';
@@ -160,11 +212,46 @@ begin
   if Result = false then
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS DOC_PAGAR (' +
-      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' + 'A VARCHAR(100));');
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'ID_FORNECEDOR VARCHAR,' +
+      'NOME_FORNECEDOR VARCHAR,' +
+      'TIPO_DOC VARCHAR,' +
+      'IDENTIFICACAO VARCHAR,' +
+      'EMISSAO VARCHAR,' +
+      'VENCIMENTO VARCHAR,' +
+      'VALOR REAL,' +
+      'VALOR_PEND REAL,' +
+      'QUITADO VARCHAR (1),' +
+      'QTD_PARCELAS INTEGER,' +
+      'DESCONTO REAL,' +
+      'OBSERVACAO VARCHAR,' +
+      'A VARCHAR(100));');
   end;
 
   Result := false;
   Result := TableNames.IndexOf('DOC_RECEBER') >= 0;
+
+  if Result = false then
+  begin
+    FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS DOC_RECEBER (' +
+      'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
+      'ID_FORNECEDOR VARCHAR,' +
+      'NOME_FORNECEDOR VARCHAR,' +
+      'TIPO_DOC VARCHAR,' +
+      'IDENTIFICACAO VARCHAR,' +
+      'EMISSAO VARCHAR,' +
+      'VENCIMENTO VARCHAR,' +
+      'VALOR REAL,' +
+      'VALOR_PEND REAL,' +
+      'QUITADO VARCHAR (1),' +
+      'QTD_PARCELAS INTEGER,' +
+      'DESCONTO REAL,' +
+      'OBSERVACAO VARCHAR,' +
+      'A VARCHAR(100));');
+  end;
+
+  Result := false;
+  Result := TableNames.IndexOf('BAIXA_DOC_RECEBER') >= 0;
 
   if Result = false then
   begin
@@ -269,7 +356,7 @@ begin
       'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
       'USERNAME VARCHAR(100),' +
       'PASSWORD VARCHAR(100));');
-
+    FDQuery.SQL.Text.Empty;
     FDQuery.SQL.Text :=
       'INSERT INTO USUARIO (ID, USERNAME, PASSWORD) VALUES (:ID, :USERNAME, :PASSWORD)';
     FDQuery.ParamByName('ID').AsString := '01';
@@ -297,6 +384,7 @@ begin
       'CEP VARCHAR,'+
       'TELEFONE VARCHAR,'+
       'EMAIL VARCHAR);');
+    FDQuery.SQL.Text.Empty;
     FDQuery.SQL.Text :=
       'INSERT INTO EMPRESA (ID, NOMEFANTASIA, RAZAOSOCIAL, CPFCNPJ, RGIE, ENDERECO, BAIRRO, CIDADE, CEP, TELEFONE, EMAIL) VALUES (:ID, :NOMEFANTASIA, :RAZAOSOCIAL, :CPFCNPJ, :RGIE, :ENDERECO, :BAIRRO, :CIDADE, :CEP, :TELEFONE, :EMAIL)';
     FDQuery.ParamByName('ID').AsString           := '01';
@@ -313,7 +401,7 @@ begin
     FDQuery.ExecSQL;
 
     conexao.Connected := true;
-  end;
+    end;
 end;
 
 function TDM.GetTables: TDataSet;
@@ -328,6 +416,12 @@ begin
     FreeAndNil(Result);
     raise;
   end;
+end;
+
+procedure TDM.fecharaplicacao;
+begin
+conexao.Connected:=false;
+
 end;
 
 end.

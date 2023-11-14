@@ -103,6 +103,8 @@ type
   procedure FechaVenda;
   procedure ResetaVendafechamento;
   procedure ImpressaoPedido;
+  procedure InsereMovimentacoesCXBA;
+  procedure AtualizaSaldoCXBA;
   //procedure VendasFechamentoClosed;
   public
     { Public declarations }
@@ -322,6 +324,8 @@ begin
     sqlInsertProdutos.ExecSQL;
     dm.cdsVendaProdutos.Next;
   end;
+  InsereMovimentacoesCXBA;
+  AtualizaSaldoCXBA;
   ResetaVendafechamento;
 end;
 
@@ -354,6 +358,54 @@ begin
   dm.SQL_ImpressaoPedido.ParamByName('IDPEDIDO').AsString:=IntToStr(DM.IdPedido-1);
   dm.SQL_ImpressaoPedido.Open;
   frmReportsPedidoDeVenda.RLReport1.Preview();
+end;
+
+procedure TfrmVendasFechamento.InsereMovimentacoesCXBA;
+begin
+// inserir o movimento deacordo com o valor da venda e tipo
+case Cond_pagINT of
+  01:
+  begin
+
+  end;
+
+  02:
+  begin
+
+  end;
+
+  03:
+  begin
+
+  end;
+
+  04:
+  begin
+
+  end;
+
+end;
+
+
+
+if Cond_pagINT=01 then      //a vista
+    begin
+
+    end;
+if Cond_pagINT=02 then
+    begin
+
+    end;
+if True then
+
+
+end;
+
+procedure TfrmVendasFechamento.AtualizaSaldoCXBA;
+begin
+// fazer uma pesquisa do saldo atual e somar com a movimentação da venda
+
+
 end;
 
 end.

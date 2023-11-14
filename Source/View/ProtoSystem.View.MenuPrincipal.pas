@@ -153,6 +153,9 @@ type
     Shape17: TShape;
     Shape18: TShape;
     Shape19: TShape;
+    Panel44: TPanel;
+    Shape3: TShape;
+    SpeedButton8: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -170,6 +173,8 @@ type
     procedure SpeedButton6Click(Sender: TObject);
     procedure SpeedButton7Click(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
+    procedure SpeedButton8Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -188,7 +193,14 @@ uses
   ProtoSystem.Model.CadastroCliente, ProtoSystem.Model.PesquisaEstoque,
   ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
   ProtoSystem.Model.CadastroFornecedor, ProtoSystem.View.Login,
-  ProtoSystem.Model.CadastroDeContasReceber;
+  ProtoSystem.Model.CadastroDeContasReceber,
+  ProtoSystem.Model.BaixaDocumentoReceber;
+
+procedure TFrm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Timer1.Enabled :=false;
+   Application.Terminate;
+end;
 
 procedure TFrm_Principal.FormCreate(Sender: TObject);
 begin
@@ -372,6 +384,19 @@ var
     Frm_Vendas.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_Vendas.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton8Click(Sender: TObject);
+begin
+var
+    frm_baixadocumentoreceber: Tfrm_baixadocumentoreceber; // Declare uma variável para o formulário
+  frm_baixadocumentoreceber := Tfrm_baixadocumentoreceber.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frm_baixadocumentoreceber.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frm_baixadocumentoreceber.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

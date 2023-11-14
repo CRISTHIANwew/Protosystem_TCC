@@ -77,6 +77,9 @@ type
     Panel16: TPanel;
     Shape10: TShape;
     DBLabeledEdit7: TDBLabeledEdit;
+    Panel17: TPanel;
+    Shape11: TShape;
+    bx_Quitado: TDBCheckBox;
     procedure SpeedButton6Click(Sender: TObject);
     procedure btnPesquisaClienteClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
@@ -112,6 +115,7 @@ begin
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
   btnCancelar.Enabled := true;
+  bx_Quitado.Checked:=false;
 end;
 
 procedure TFrm_CadastroContasReceber.btnCancelarClick(Sender: TObject);

@@ -17,7 +17,9 @@ uses
   ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Frm_CadastroContasReceber},
   ProtoSystem.Model.VendasFechamento in 'Source\Model\ProtoSystem.Model.VendasFechamento.pas' {frmVendasFechamento},
   ProtoSystem.Model.ReportsPedidoDeVenda in 'Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas' {frmReportsPedidoDeVenda},
-  ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente};
+  ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente},
+  ProtoSystem.Model.BaixaDocumentoReceber in 'Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas' {frm_BaixaDocumentoReceber},
+  ProtoSystem.Utils.Validates in 'Source\Utils\ProtoSystem.Utils.Validates.pas';
 
 {$R *.res}
 

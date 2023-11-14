@@ -53,6 +53,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure edit_usuarioKeyPress(Sender: TObject; var Key: Char);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -121,6 +122,11 @@ begin
 
 end;
 
+procedure TFrm_Login.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    Application.Terminate;
+end;
+
 procedure TFrm_Login.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   // CanClose := False;
@@ -149,6 +155,7 @@ end;
 
 procedure TFrm_Login.SpeedButton1Click(Sender: TObject);
 begin
+  dm.fecharaplicacao;
   Application.Terminate;
 end;
 

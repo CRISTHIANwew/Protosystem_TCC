@@ -3,7 +3,7 @@
         <ProjectGuid>{09589F71-1A44-4AD8-9A79-385B9C84516F}</ProjectGuid>
         <MainSource>ProtoSystem.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
@@ -158,6 +158,11 @@
             <Form>frmPesquisaCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas">
+            <Form>frm_BaixaDocumentoReceber</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Utils\ProtoSystem.Utils.Validates.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

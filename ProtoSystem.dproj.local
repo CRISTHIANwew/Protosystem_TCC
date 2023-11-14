@@ -2,22 +2,22 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2023/08/17 09:16:52.000.221,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit5.pas</Transaction>
-    <Transaction>2023/08/17 09:17:22.000.176,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\UPesEstoque.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit5.pas</Transaction>
     <Transaction>2023/08/17 09:17:22.000.176,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\UPesEstoque.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit5.dfm</Transaction>
+    <Transaction>2023/08/17 09:17:22.000.176,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\UPesEstoque.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit5.pas</Transaction>
     <Transaction>2023/08/17 10:34:44.000.393,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/08/17 10:35:01.000.718,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\UCadUsuario.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/08/17 10:35:01.000.718,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\UCadUsuario.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/08/31 10:22:31.000.463,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\ULoguin.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\ULogin.dfm</Transaction>
     <Transaction>2023/08/31 10:22:31.000.463,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\ULoguin.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\ULogin.pas</Transaction>
     <Transaction>2023/08/31 20:58:32.000.690,=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.pas</Transaction>
-    <Transaction>2023/08/31 20:58:53.000.872,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadFornecedor.pas</Transaction>
     <Transaction>2023/08/31 20:58:53.000.872,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadFornecedor.dfm</Transaction>
+    <Transaction>2023/08/31 20:58:53.000.872,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadFornecedor.pas</Transaction>
     <Transaction>2023/08/31 21:39:16.000.419,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Controller\ProtoSystem.Controller.Dm.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UDataModule.dfm</Transaction>
     <Transaction>2023/08/31 21:39:16.000.419,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Controller\ProtoSystem.Controller.Dm.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UDataModule.pas</Transaction>
-    <Transaction>2023/08/31 21:44:30.000.669,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.MenuPrincipal.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UPrincipal.pas</Transaction>
     <Transaction>2023/08/31 21:44:30.000.669,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.MenuPrincipal.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UPrincipal.dfm</Transaction>
-    <Transaction>2023/08/31 21:45:25.000.108,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.Login.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\ULogin.pas</Transaction>
+    <Transaction>2023/08/31 21:44:30.000.669,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.MenuPrincipal.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UPrincipal.pas</Transaction>
     <Transaction>2023/08/31 21:45:25.000.108,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.Login.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\ULogin.dfm</Transaction>
+    <Transaction>2023/08/31 21:45:25.000.108,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\View\ProtoSystem.View.Login.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\ULogin.pas</Transaction>
     <Transaction>2023/08/31 21:47:17.000.232,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaEstoque.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UPesEstoque.dfm</Transaction>
     <Transaction>2023/08/31 21:47:17.000.232,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaEstoque.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UPesEstoque.pas</Transaction>
     <Transaction>2023/08/31 21:48:09.000.970,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.CadastroUsuario.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadUsuario.pas</Transaction>
@@ -29,8 +29,8 @@
     <Transaction>2023/08/31 21:49:45.000.170,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.CadastroCliente.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadCliente.dfm</Transaction>
     <Transaction>2023/08/31 21:49:45.000.170,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.CadastroCliente.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\UCadCliente.pas</Transaction>
     <Transaction>2023/09/01 11:01:55.000.722,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
-    <Transaction>2023/09/01 11:02:31.000.862,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.Vendas.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/09/01 11:02:31.000.862,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.Vendas.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
+    <Transaction>2023/09/01 11:02:31.000.862,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.Vendas.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/09/05 08:01:49.000.498,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/09/05 08:02:31.000.473,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\View\ProtoSystem.View.TelaPadrao.dfm</Transaction>
     <Transaction>2023/09/05 08:02:31.000.473,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\View\ProtoSystem.View.TelaPadrao.pas</Transaction>
@@ -41,8 +41,8 @@
     <Transaction>2023/09/28 10:06:09.000.602,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.VendasFechamento.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/09/28 10:06:09.000.602,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.VendasFechamento.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/10/10 09:52:13.000.345,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
-    <Transaction>2023/10/10 09:53:49.000.889,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.ImpressaoPedido.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/10/10 09:53:49.000.889,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.ImpressaoPedido.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
+    <Transaction>2023/10/10 09:53:49.000.889,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.ImpressaoPedido.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
     <Transaction>2023/10/10 16:53:27.000.669,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/10/10 16:54:00.000.193,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.ReportsVenda.pas</Transaction>
     <Transaction>2023/10/10 16:54:00.000.193,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.ReportsVenda.dfm</Transaction>
@@ -58,10 +58,15 @@
     <Transaction>2023/11/05 17:08:22.000.540,=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.pas</Transaction>
     <Transaction>2023/11/05 17:09:52.000.597,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaFornecedor.dfm</Transaction>
     <Transaction>2023/11/05 17:09:52.000.597,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Unit1.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas</Transaction>
-    <Transaction>2023/11/05 18:09:12.000.517,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaFornecedor.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaClientepas.dfm</Transaction>
     <Transaction>2023/11/05 18:09:12.000.517,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaClientepas.pas</Transaction>
+    <Transaction>2023/11/05 18:09:12.000.517,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaFornecedor.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaClientepas.dfm</Transaction>
     <Transaction>2023/11/05 18:09:51.000.561,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaClientepas.pas=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaCliente.pas</Transaction>
     <Transaction>2023/11/05 18:09:51.000.561,C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaClientepas.dfm=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\Source\Model\ProtoSystem.Model.PesquisaCliente.dfm</Transaction>
+    <Transaction>2023/11/07 08:59:23.000.525,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 09:00:26.000.597,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 09:00:26.000.597,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.dfm=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.dfm</Transaction>
+    <Transaction>2023/11/09 07:59:17.000.842,=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
+    <Transaction>2023/11/09 08:00:30.000.360,C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Source\Utils\ProtoSystem.Utils.Validates.pas=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_TCC\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Source"/>
@@ -87,9 +92,13 @@
     <File Path="Source\Model\ProtoSystem.Model.VendasFechamento.dfm"/>
     <File Path="Source\Model\ProtoSystem.Model.PesquisaCliente.pas"/>
     <File Path="Source\Model\ProtoSystem.Model.PesquisaCliente.dfm"/>
+    <File Path="Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas"/>
+    <File Path="Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.dfm"/>
     <File Path="Source\Printed"/>
     <File Path="Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas"/>
     <File Path="Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.dfm"/>
+    <File Path="Source\Utils"/>
+    <File Path="Source\Utils\ProtoSystem.Utils.Validates.pas"/>
     <File Path="Source\View"/>
     <File Path="Source\View\ProtoSystem.View.Login.pas"/>
     <File Path="Source\View\ProtoSystem.View.Login.dfm"/>

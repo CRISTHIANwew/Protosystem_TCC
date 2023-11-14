@@ -4,12 +4,12 @@ object Frm_Login: TFrm_Login
   AlphaBlendValue = 200
   BorderStyle = bsNone
   Caption = 'Login'
-  ClientHeight = 484
-  ClientWidth = 973
+  ClientHeight = 387
+  ClientWidth = 778
   Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindow
-  Font.Height = -15
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -138,25 +138,21 @@ object Frm_Login: TFrm_Login
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
   Position = poScreenCenter
+  OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 20
+  TextHeight = 15
   object Label4: TLabel
-    Left = 170
-    Top = 254
-    Width = 100
-    Height = 25
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Left = 136
+    Top = 203
+    Width = 78
+    Height = 20
     Alignment = taCenter
     Caption = 'Vers'#227'o 1.0.0'
     Color = 14725003
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 13275746
-    Font.Height = -19
+    Font.Height = -15
     Font.Name = 'Segoe UI'
     Font.Style = []
     Font.Quality = fqClearTypeNatural
@@ -166,71 +162,55 @@ object Frm_Login: TFrm_Login
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 973
-    Height = 484
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 778
+    Height = 387
     Align = alClient
     BevelOuter = bvNone
     Color = 8739130
-    Padding.Left = 6
-    Padding.Top = 6
-    Padding.Right = 6
-    Padding.Bottom = 6
+    Padding.Left = 5
+    Padding.Top = 5
+    Padding.Right = 5
+    Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
     object Panel2: TPanel
-      Left = 6
-      Top = 6
-      Width = 961
-      Height = 472
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 5
+      Top = 5
+      Width = 768
+      Height = 377
       Align = alClient
       BevelOuter = bvNone
       Color = 14725001
       ParentBackground = False
       TabOrder = 0
       object Panel3: TPanel
-        Left = 480
+        Left = 383
         Top = 0
-        Width = 481
-        Height = 472
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 385
+        Height = 377
         Align = alRight
         BevelOuter = bvNone
         BorderWidth = 10
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Padding.Left = 10
-        Padding.Top = 10
-        Padding.Right = 10
-        Padding.Bottom = 10
+        Padding.Left = 8
+        Padding.Top = 8
+        Padding.Right = 8
+        Padding.Bottom = 8
         ParentBackground = False
         ParentFont = False
         ParentShowHint = False
         ShowHint = False
         TabOrder = 0
         object VirtualImage1: TVirtualImage
-          Left = 235
-          Top = 314
-          Width = 58
-          Height = 50
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 188
+          Top = 251
+          Width = 46
+          Height = 40
           ImageCollection = ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
@@ -238,14 +218,10 @@ object Frm_Login: TFrm_Login
           ImageName = 'icons8-secure'
         end
         object VirtualImage2: TVirtualImage
-          Left = 11
-          Top = 314
-          Width = 58
-          Height = 50
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 9
+          Top = 251
+          Width = 46
+          Height = 40
           ImageCollection = ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
@@ -253,33 +229,25 @@ object Frm_Login: TFrm_Login
           ImageName = 'icons8-male-user'
         end
         object Label1: TLabel
-          Left = 10
-          Top = 375
-          Width = 68
-          Height = 20
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 8
+          Top = 300
+          Width = 53
+          Height = 15
           Caption = 'Empresa: '
           Color = 13275746
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
         end
         object VirtualImage3: TVirtualImage
-          Left = 200
-          Top = 49
-          Width = 81
-          Height = 75
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 160
+          Top = 39
+          Width = 65
+          Height = 60
           ImageCollection = ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
@@ -287,20 +255,16 @@ object Frm_Login: TFrm_Login
           ImageName = 'icons8-cat'
         end
         object lb_logo: TLabel
-          Left = 44
-          Top = 121
-          Width = 395
-          Height = 55
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 35
+          Top = 97
+          Width = 317
+          Height = 45
           Alignment = taCenter
           Caption = 'ProtoSystem Sistemas'
           Color = 14725003
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -41
+          Font.Height = -33
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -308,14 +272,10 @@ object Frm_Login: TFrm_Login
           ParentFont = False
         end
         object Button1: TButton
-          Left = 29
-          Top = 429
-          Width = 132
-          Height = 31
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 23
+          Top = 343
+          Width = 106
+          Height = 25
           Caption = 'Comfirmar'
           Default = True
           TabOrder = 3
@@ -323,20 +283,16 @@ object Frm_Login: TFrm_Login
           OnClick = Button1Click
         end
         object Pnl_comfirmar: TPanel
-          Left = 28
-          Top = 421
-          Width = 133
-          Height = 44
+          Left = 22
+          Top = 337
+          Width = 107
+          Height = 35
           Cursor = crHandPoint
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
           BevelOuter = bvNone
           Color = 14725001
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 2302755
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentBackground = False
@@ -345,62 +301,46 @@ object Frm_Login: TFrm_Login
           object Shape1: TShape
             Left = 0
             Top = 0
-            Width = 133
-            Height = 44
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 107
+            Height = 35
             Align = alClient
             Brush.Color = 8739130
             Shape = stRoundRect
-            ExplicitWidth = 134
+            ExplicitWidth = 106
           end
           object SpeedButton2: TSpeedButton
             Left = 0
             Top = 0
-            Width = 133
-            Height = 44
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 107
+            Height = 35
             Align = alClient
             Caption = 'Entrar'
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -15
+            Font.Height = -12
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             OnClick = SpeedButton2Click
-            ExplicitWidth = 134
+            ExplicitWidth = 106
           end
         end
         object box_senha: TCheckBox
-          Left = 459
-          Top = 329
-          Width = 21
-          Height = 21
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 367
+          Top = 263
+          Width = 17
+          Height = 17
           Color = 8739130
           ParentColor = False
           TabOrder = 2
           OnClick = box_senhaClick
         end
         object edit_senha: TLabeledEdit
-          Left = 300
-          Top = 325
-          Width = 151
-          Height = 29
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 240
+          Top = 260
+          Width = 121
+          Height = 23
           Alignment = taCenter
           BorderStyle = bsNone
           Color = 15649712
@@ -421,7 +361,7 @@ object Frm_Login: TFrm_Login
           EditLabel.ParentFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 8739130
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           NumbersOnly = True
@@ -432,14 +372,10 @@ object Frm_Login: TFrm_Login
         end
         object edit_usuario: TLabeledEdit
           AlignWithMargins = True
-          Left = 76
-          Top = 325
-          Width = 152
-          Height = 29
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 61
+          Top = 260
+          Width = 121
+          Height = 23
           Alignment = taCenter
           BevelInner = bvNone
           BevelOuter = bvNone
@@ -466,7 +402,7 @@ object Frm_Login: TFrm_Login
           EditLabel.ParentFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 8739130
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentBiDiMode = False
@@ -476,20 +412,16 @@ object Frm_Login: TFrm_Login
           OnKeyPress = edit_usuarioKeyPress
         end
         object Pnl_sair: TPanel
-          Left = 338
-          Top = 421
-          Width = 133
-          Height = 44
+          Left = 270
+          Top = 337
+          Width = 107
+          Height = 35
           Cursor = crHandPoint
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
           BevelOuter = bvNone
           Color = 14725001
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentBackground = False
@@ -498,59 +430,46 @@ object Frm_Login: TFrm_Login
           object Shape2: TShape
             Left = 0
             Top = 0
-            Width = 133
-            Height = 44
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 107
+            Height = 35
             Align = alClient
             Brush.Color = 8739130
             Shape = stRoundRect
-            ExplicitWidth = 134
+            ExplicitWidth = 106
           end
           object SpeedButton1: TSpeedButton
             Left = 0
             Top = 0
-            Width = 133
-            Height = 44
+            Width = 107
+            Height = 35
             Cursor = crHandPoint
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
             Align = alClient
             Caption = 'Sair'
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -16
+            Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
             Font.Quality = fqClearTypeNatural
             ParentFont = False
             OnClick = SpeedButton1Click
-            ExplicitWidth = 134
+            ExplicitWidth = 106
           end
         end
         object ComboBox1: TComboBox
-          Left = 76
-          Top = 371
-          Width = 375
-          Height = 26
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 61
+          Top = 297
+          Width = 300
+          Height = 22
           Style = csOwnerDrawFixed
           CharCase = ecUpperCase
           Color = 15649712
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 8739130
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
-          ItemHeight = 20
           ItemIndex = 0
           ParentFont = False
           TabOrder = 6
@@ -561,17 +480,13 @@ object Frm_Login: TFrm_Login
         object Panel5: TPanel
           Left = 0
           Top = 0
-          Width = 481
-          Height = 41
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 385
+          Height = 33
           BevelOuter = bvNone
           Color = 13142873
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 14725003
-          Font.Height = -15
+          Font.Height = -12
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentBackground = False
@@ -579,57 +494,45 @@ object Frm_Login: TFrm_Login
           TabOrder = 7
           object lbCaminhodb: TLabel
             AlignWithMargins = True
-            Left = 4
-            Top = 4
-            Width = 473
-            Height = 19
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Left = 3
+            Top = 3
+            Width = 379
+            Height = 13
             Align = alTop
             Alignment = taRightJustify
             Color = 13275746
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15321005
-            Font.Height = -14
+            Font.Height = -11
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentColor = False
             ParentFont = False
-            ExplicitLeft = 473
-            ExplicitWidth = 4
+            ExplicitLeft = 379
+            ExplicitWidth = 3
           end
         end
       end
       object Panel4: TPanel
         Left = 0
         Top = 0
-        Width = 451
-        Height = 472
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Width = 361
+        Height = 377
         Align = alLeft
         BevelOuter = bvNone
         Color = 15649712
         ParentBackground = False
         TabOrder = 1
         object Label2: TLabel
-          Left = 50
-          Top = 16
-          Width = 324
-          Height = 25
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 40
+          Top = 13
+          Width = 259
+          Height = 20
           Caption = 'Bem vindo(a) ao ProtoSystem Sistemas'
           Color = 14725003
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 13275746
-          Font.Height = -19
+          Font.Height = -15
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -637,14 +540,10 @@ object Frm_Login: TFrm_Login
           ParentFont = False
         end
         object VirtualImage4: TVirtualImage
-          Left = 160
-          Top = 144
-          Width = 101
-          Height = 92
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 128
+          Top = 115
+          Width = 81
+          Height = 74
           ImageCollection = ImageCollection1
           ImageWidth = 0
           ImageHeight = 0
@@ -652,20 +551,16 @@ object Frm_Login: TFrm_Login
           ImageName = 'icons8-cat'
         end
         object Label3: TLabel
-          Left = 160
-          Top = 244
-          Width = 100
-          Height = 25
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 128
+          Top = 195
+          Width = 78
+          Height = 20
           Alignment = taCenter
           Caption = 'Vers'#227'o 1.0.0'
           Color = 14725003
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 13275746
-          Font.Height = -19
+          Font.Height = -15
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -673,19 +568,15 @@ object Frm_Login: TFrm_Login
           ParentFont = False
         end
         object Label5: TLabel
-          Left = 40
-          Top = 404
-          Width = 357
-          Height = 25
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 32
+          Top = 323
+          Width = 281
+          Height = 20
           Caption = 'Desenvolvido Por: Cristhian RA: 200406765'
           Color = 14725003
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 13275746
-          Font.Height = -19
+          Font.Height = -15
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -703,8 +594,6 @@ object Frm_Login: TFrm_Login
         Name = 'cat-black-face'
       end>
     ImageCollection = ImageCollection1
-    Width = 20
-    Height = 20
     Left = 89
     Top = 126
   end
