@@ -124,7 +124,7 @@ end;
 
 procedure TFrm_Login.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-    Application.Terminate;
+    //Application.Terminate;
 end;
 
 procedure TFrm_Login.FormCloseQuery(Sender: TObject; var CanClose: Boolean);

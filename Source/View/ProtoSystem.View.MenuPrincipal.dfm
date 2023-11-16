@@ -181,7 +181,7 @@ object Frm_Principal: TFrm_Principal
         Top = 4
         Width = 1242
         Height = 725
-        ActivePage = TabSheet6
+        ActivePage = TabSheet4
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -620,7 +620,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet16
+            ActivePage = TabSheet14
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -782,6 +782,52 @@ object Frm_Principal: TFrm_Principal
                 Padding.Bottom = 8
                 ParentBackground = False
                 TabOrder = 0
+                object Panel47: TPanel
+                  Left = 7
+                  Top = 8
+                  Width = 178
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 6
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape6: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 172
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 158
+                  end
+                  object SpeedButton11: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 172
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Cadastro de Movimentos'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton11Click
+                    ExplicitWidth = 158
+                  end
+                end
               end
             end
             object TabSheet18: TTabSheet
@@ -820,6 +866,52 @@ object Frm_Principal: TFrm_Principal
                 Padding.Bottom = 8
                 ParentBackground = False
                 TabOrder = 0
+                object Panel45: TPanel
+                  Left = 15
+                  Top = 16
+                  Width = 162
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 6
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape4: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 156
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 158
+                  end
+                  object SpeedButton9: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 156
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Pesquisa Saldo Do Caixa'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton9Click
+                    ExplicitWidth = 158
+                  end
+                end
               end
             end
             object TabSheet20: TTabSheet
@@ -857,7 +949,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet24
+            ActivePage = TabSheet21
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -920,6 +1012,52 @@ object Frm_Principal: TFrm_Principal
                 Padding.Bottom = 8
                 ParentBackground = False
                 TabOrder = 0
+                object Panel46: TPanel
+                  Left = 7
+                  Top = 8
+                  Width = 162
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 6
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape5: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 156
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 158
+                  end
+                  object SpeedButton10: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 156
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Pesquisa Saldo Do Banco'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton10Click
+                    ExplicitWidth = 158
+                  end
+                end
               end
             end
             object TabSheet24: TTabSheet

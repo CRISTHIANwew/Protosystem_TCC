@@ -156,6 +156,15 @@ type
     Panel44: TPanel;
     Shape3: TShape;
     SpeedButton8: TSpeedButton;
+    Panel45: TPanel;
+    Shape4: TShape;
+    SpeedButton9: TSpeedButton;
+    Panel46: TPanel;
+    Shape5: TShape;
+    SpeedButton10: TSpeedButton;
+    Panel47: TPanel;
+    Shape6: TShape;
+    SpeedButton11: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -175,6 +184,9 @@ type
     procedure SpeedButton5Click(Sender: TObject);
     procedure SpeedButton8Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure SpeedButton9Click(Sender: TObject);
+    procedure SpeedButton10Click(Sender: TObject);
+    procedure SpeedButton11Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -194,11 +206,13 @@ uses
   ProtoSystem.Model.CadastroUsuario, ProtoSystem.Model.Vendas,
   ProtoSystem.Model.CadastroFornecedor, ProtoSystem.View.Login,
   ProtoSystem.Model.CadastroDeContasReceber,
-  ProtoSystem.Model.BaixaDocumentoReceber;
+  ProtoSystem.Model.BaixaDocumentoReceber, ProtoSystem.Model.PesquisaSaldoBanco,
+  ProtoSystem.Model.PesquisaSaldoCaixa,
+  ProtoSystem.Model.CadastroMovimentosBancarios;
 
 procedure TFrm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
-  Timer1.Enabled :=false;
+   Timer1.Enabled :=false;
    Application.Terminate;
 end;
 
@@ -325,6 +339,32 @@ begin
   comboBox.ItemIndex := 0;
 end;
 
+procedure TFrm_Principal.SpeedButton10Click(Sender: TObject);
+begin
+var
+  frmPesquisaSaldoBanco : TfrmPesquisaSaldoBanco; // Declare uma variável para o formulário
+  frmPesquisaSaldoBanco := TfrmPesquisaSaldoBanco.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmPesquisaSaldoBanco.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmPesquisaSaldoBanco.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton11Click(Sender: TObject);
+begin
+var
+  frmCadastroMovimento : TfrmCadastroMovimento; // Declare uma variável para o formulário
+  frmCadastroMovimento := TfrmCadastroMovimento.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmCadastroMovimento.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmCadastroMovimento.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
 procedure TFrm_Principal.SpeedButton1Click(Sender: TObject);
 begin
     Application.Terminate;
@@ -397,6 +437,19 @@ var
     frm_baixadocumentoreceber.ShowModal; // Exiba o formulário de maneira modal
   finally
     frm_baixadocumentoreceber.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton9Click(Sender: TObject);
+begin
+var
+  frmPesquisaSaldoCaixa : TfrmPesquisaSaldoCaixa; // Declare uma variável para o formulário
+  frmPesquisaSaldoCaixa := TfrmPesquisaSaldoCaixa.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmPesquisaSaldoCaixa.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmPesquisaSaldoCaixa.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

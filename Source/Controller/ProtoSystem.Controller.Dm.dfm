@@ -18,6 +18,7 @@ object DM: TDM
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
         'CC\bin\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
+    Connected = True
     LoginPrompt = False
     Left = 66
     Top = 6
@@ -72,8 +73,8 @@ object DM: TDM
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 663
-    Top = 48
+    Left = 751
+    Top = 152
     object cdsVendaProdutosIDPEDIDO: TIntegerField
       FieldKind = fkCalculated
       FieldName = 'IDPEDIDO'
@@ -213,8 +214,8 @@ object DM: TDM
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
-    Left = 606
-    Top = 368
+    Left = 710
+    Top = 424
   end
   object SQL_Dashboard_Estoque: TFDQuery
     Connection = conexao

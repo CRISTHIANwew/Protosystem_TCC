@@ -97,15 +97,19 @@ type
       PorcentagemDescontoSTR: string;
       Cond_pagINT: integer;
       Descricao_pagSTR: string;
+      SALDOCXA: double;
+      SALDOBAN: double;
   procedure TransfereInformacoes;
   procedure IniciaComponentes;
   procedure AtualizaTotais;
   procedure FechaVenda;
   procedure ResetaVendafechamento;
   procedure ImpressaoPedido;
-  procedure InsereMovimentacoesCXBA;
+  procedure InsereMovimentacoesBA;
+  procedure InsereLancamentoCX;
   procedure AtualizaSaldoCXBA;
-  //procedure VendasFechamentoClosed;
+  procedure BuscaSaldoCXBA;
+
   public
     { Public declarations }
     var
@@ -324,7 +328,7 @@ begin
     sqlInsertProdutos.ExecSQL;
     dm.cdsVendaProdutos.Next;
   end;
-  InsereMovimentacoesCXBA;
+  BuscaSaldoCXBA;
   AtualizaSaldoCXBA;
   ResetaVendafechamento;
 end;
@@ -360,52 +364,88 @@ begin
   frmReportsPedidoDeVenda.RLReport1.Preview();
 end;
 
-procedure TfrmVendasFechamento.InsereMovimentacoesCXBA;
-begin
-// inserir o movimento deacordo com o valor da venda e tipo
-case Cond_pagINT of
-  01:
-  begin
-
-  end;
-
-  02:
-  begin
-
-  end;
-
-  03:
-  begin
-
-  end;
-
-  04:
-  begin
-
-  end;
-
-end;
-
-
-
-if Cond_pagINT=01 then      //a vista
-    begin
-
-    end;
-if Cond_pagINT=02 then
-    begin
-
-    end;
-if True then
-
-
+procedure TfrmVendasFechamento.BuscaSaldoCXBA;
+begin  // fazer uma pesquisa do saldo atual
+SALDOBAN:=0;
+SALDOCXA:=0;
+dm.FDQuery.SQL.Text.Empty;
+dm.FDQuery.SQL.Text:='SELECT SALDO_BANCO FROM BANCO WHERE ID=1';
+dm.FDQuery.Open;
+SALDOBAN := dm.FDQuery.FieldByName('SALDO_BANCO').AsFloat;
+dm.FDQuery.Close;
+dm.FDQuery.SQL.Text.Empty;
+dm.FDQuery.SQL.Text:='SELECT SALDO_CAIXA FROM CAIXA WHERE ID=1';
+dm.FDQuery.Open;
+SALDOCXA := dm.FDQuery.FieldByName('SALDO_CAIXA').AsFloat;
+dm.FDQuery.Close;
+//ShowMessage('pesquisa saldo ok!');
 end;
 
 procedure TfrmVendasFechamento.AtualizaSaldoCXBA;
+var
+  NovoSaldo: double;
+  SqlUpdate: string;
 begin
-// fazer uma pesquisa do saldo atual e somar com a movimentação da venda
+BuscaSaldoCXBA;
+// calcular o movimento deacordo com o valor da venda e tipo
+case Cond_pagINT of
+  01:
+  begin //caixa a vista
+    NovoSaldo:=SALDOCXA+TotalGeralFLT;
+    SqlUpdate:='UPDATE CAIXA SET SALDO_CAIXA = :NovoSaldo WHERE ID =1';
+    InsereLancamentoCX;
+  end;
 
+  02:
+  begin //banco  cart deb
+    NovoSaldo:=SALDOBAN+TotalGeralFLT;
+    SqlUpdate:='UPDATE BANCO SET SALDO_BANCO = :NovoSaldo WHERE ID =1';
+    InsereMovimentacoesBA;
+  end;
 
+  03:
+  begin //banco   cart cred
+    NovoSaldo:=SALDOBAN+TotalGeralFLT;
+    SqlUpdate:='UPDATE BANCO SET SALDO_BANCO = :NovoSaldo WHERE ID =1';
+    InsereMovimentacoesBA;
+  end;
+
+  04:
+  begin //banco  pix
+    NovoSaldo:=SALDOBAN+TotalGeralFLT;
+    SqlUpdate:='UPDATE BANCO SET SALDO_BANCO = :NovoSaldo WHERE ID =1';
+    InsereMovimentacoesBA;
+  end;
+end;
+
+  dm.FDQuery.SQL.Text := SQLUpdate;
+  dm.FDQuery.ParamByName('NovoSaldo').AsFloat := NovoSaldo;
+  dm.FDQuery.ExecSQL;
+
+//ShowMessage('atualiza saldo ok!');
+  dm.FDQuery.Close;
+end;
+
+procedure TfrmVendasFechamento.InsereMovimentacoesBA;
+begin
+// Insere os registros(MOVIMENTO/LANCAMENTO) de banco
+  dm.FDQuery.SQL.Text := 'INSERT INTO BANCO_MOV (VALORMOVIMENTO, OBSERVACAO) VALUES (:VALORMOVIMENTO, :OBSERVACAO)';
+  dm.FDQuery.ParamByName('VALORMOVIMENTO').AsFloat :=TotalGeralFLT;
+  dm.FDQuery.ParamByName('OBSERVACAO').AsString := 'MOVIMENTO GERADO PELA TELA DE VENDAS';
+  dm.FDQuery.ExecSQL;
+ // ShowMessage('insere movimentos ok!');
+  dm.FDQuery.Close;
+end;
+
+procedure TfrmVendasFechamento.InsereLancamentoCX;
+begin
+// Insere os registros(MOVIMENTO/LANCAMENTO) de caixa
+  dm.FDQuery.SQL.Text := 'INSERT INTO CAIXA_LANC (VALORLANCAMENTO, OBSERVACAO) VALUES (:VALORLANCAMENTO, :OBSERVACAO)';
+  dm.FDQuery.ParamByName('VALORLANCAMENTO').AsFloat :=TotalGeralFLT;
+  dm.FDQuery.ParamByName('OBSERVACAO').AsString := 'LANÇAMENTO GERADO PELA TELA DE VENDAS';
+  dm.FDQuery.ExecSQL;
+ // ShowMessage('insere lancamentos ok!');
+  dm.FDQuery.Close;
 end;
 
 end.

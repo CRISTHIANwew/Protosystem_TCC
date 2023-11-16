@@ -478,6 +478,8 @@ object Frm_CadUsuario: TFrm_CadUsuario
             Font.Style = [fsBold]
             ParentFont = False
             OnClick = btnSalvarClick
+            ExplicitLeft = -1
+            ExplicitTop = 1
           end
         end
         object pnlCancelar: TPanel
