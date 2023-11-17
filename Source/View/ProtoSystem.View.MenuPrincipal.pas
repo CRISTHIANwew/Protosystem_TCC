@@ -165,6 +165,9 @@ type
     Panel47: TPanel;
     Shape6: TShape;
     SpeedButton11: TSpeedButton;
+    Panel48: TPanel;
+    Shape7: TShape;
+    SpeedButton12: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -186,6 +189,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SpeedButton9Click(Sender: TObject);
     procedure SpeedButton10Click(Sender: TObject);
+    procedure SpeedButton12Click(Sender: TObject);
     procedure SpeedButton11Click(Sender: TObject);
 
   private
@@ -208,7 +212,8 @@ uses
   ProtoSystem.Model.CadastroDeContasReceber,
   ProtoSystem.Model.BaixaDocumentoReceber, ProtoSystem.Model.PesquisaSaldoBanco,
   ProtoSystem.Model.PesquisaSaldoCaixa,
-  ProtoSystem.Model.CadastroMovimentosBancarios;
+  ProtoSystem.Model.CadastroMovimentosBancarios,
+  ProtoSystem.Model.CadastroLancamentoCaixa;
 
 procedure TFrm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -353,6 +358,19 @@ var
 end;
 
 procedure TFrm_Principal.SpeedButton11Click(Sender: TObject);
+begin
+var
+  frmLancamentoDeCaixa : TfrmLancamentoDeCaixa; // Declare uma variável para o formulário
+  frmLancamentoDeCaixa := TfrmLancamentoDeCaixa.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmLancamentoDeCaixa.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmLancamentoDeCaixa.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton12Click(Sender: TObject);
 begin
 var
   frmCadastroMovimento : TfrmCadastroMovimento; // Declare uma variável para o formulário

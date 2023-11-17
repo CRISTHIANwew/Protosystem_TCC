@@ -1,22 +1,22 @@
 object frmCadastroMovimento: TfrmCadastroMovimento
-  Left = 0
-  Top = 0
+  Left = 572
+  Top = 395
   BorderStyle = bsNone
-  ClientHeight = 390
-  ClientWidth = 657
+  ClientHeight = 313
+  ClientWidth = 705
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
+  Position = poDesigned
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 657
-    Height = 390
+    Width = 705
+    Height = 313
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
@@ -26,14 +26,12 @@ object frmCadastroMovimento: TfrmCadastroMovimento
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 459
-    ExplicitHeight = 335
+    ExplicitWidth = 657
+    ExplicitHeight = 390
     object Panel8: TPanel
       Left = 5
       Top = 5
-      Width = 647
+      Width = 695
       Height = 28
       Align = alTop
       Alignment = taLeftJustify
@@ -54,9 +52,10 @@ object frmCadastroMovimento: TfrmCadastroMovimento
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 449
+      ExplicitTop = 4
+      ExplicitWidth = 647
       object Pnl_sair: TPanel
-        Left = 554
+        Left = 602
         Top = 5
         Width = 88
         Height = 18
@@ -72,7 +71,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 356
+        ExplicitLeft = 554
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -105,8 +104,8 @@ object frmCadastroMovimento: TfrmCadastroMovimento
     object Panel2: TPanel
       Left = 5
       Top = 33
-      Width = 647
-      Height = 352
+      Width = 695
+      Height = 275
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
@@ -116,25 +115,27 @@ object frmCadastroMovimento: TfrmCadastroMovimento
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 449
-      ExplicitHeight = 297
+      ExplicitWidth = 647
+      ExplicitHeight = 352
       object PgcUsuario: TPageControl
         Left = 5
         Top = 5
-        Width = 637
-        Height = 310
+        Width = 685
+        Height = 233
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 439
-        ExplicitHeight = 255
+        ExplicitLeft = 0
+        ExplicitTop = 1
+        ExplicitWidth = 676
+        ExplicitHeight = 355
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object Panel4: TPanel
             Left = 0
             Top = 0
-            Width = 629
-            Height = 280
+            Width = 677
+            Height = 203
             Align = alClient
             BevelOuter = bvNone
             Color = 13274977
@@ -144,13 +145,13 @@ object frmCadastroMovimento: TfrmCadastroMovimento
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 431
-            ExplicitHeight = 225
+            ExplicitWidth = 629
+            ExplicitHeight = 280
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
-              Width = 619
-              Height = 270
+              Width = 667
+              Height = 193
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
@@ -160,11 +161,13 @@ object frmCadastroMovimento: TfrmCadastroMovimento
               Padding.Bottom = 5
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = 8
+              ExplicitLeft = 13
+              ExplicitTop = -25
+              ExplicitWidth = 658
+              ExplicitHeight = 315
               object Panel15: TPanel
-                Left = 14
-                Top = 16
+                Left = 402
+                Top = 13
                 Width = 59
                 Height = 40
                 Align = alCustom
@@ -212,8 +215,8 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                 end
               end
               object Panel5: TPanel
-                Left = 74
-                Top = 16
+                Left = 462
+                Top = 13
                 Width = 196
                 Height = 40
                 Align = alCustom
@@ -228,6 +231,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
+                  ExplicitLeft = 8
                 end
                 object edtUsuario: TDBLabeledEdit
                   Tag = 1
@@ -267,9 +271,9 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                 end
               end
               object Panel6: TPanel
-                Left = 271
-                Top = 16
-                Width = 138
+                Left = 14
+                Top = 13
+                Width = 235
                 Height = 40
                 Align = alCustom
                 BevelOuter = bvNone
@@ -278,18 +282,19 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                 object Shape2: TShape
                   Left = 0
                   Top = 0
-                  Width = 133
+                  Width = 230
                   Height = 40
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
+                  ExplicitWidth = 133
                 end
                 object edtSenha: TDBLabeledEdit
                   Tag = 1
                   Left = 5
                   Top = 21
-                  Width = 119
-                  Height = 18
+                  Width = 220
+                  Height = 14
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
@@ -327,7 +332,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
               object Panel7: TPanel
                 Left = 14
                 Top = 62
-                Width = 395
+                Width = 235
                 Height = 123
                 Align = alCustom
                 BevelOuter = bvNone
@@ -336,7 +341,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                 object Shape3: TShape
                   Left = 0
                   Top = 0
-                  Width = 390
+                  Width = 230
                   Height = 123
                   Align = alClient
                   Brush.Color = 13275746
@@ -346,9 +351,9 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                 end
                 object DBLabeledEdit1: TDBLabeledEdit
                   Tag = 1
-                  Left = 5
+                  Left = 8
                   Top = 32
-                  Width = 372
+                  Width = 209
                   Height = 81
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
@@ -384,6 +389,108 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                   EditLabel.Layout = tlCenter
                 end
               end
+              object Panel9: TPanel
+                Left = 255
+                Top = 13
+                Width = 146
+                Height = 172
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 4
+                object Shape4: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 141
+                  Height = 172
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitWidth = 133
+                  ExplicitHeight = 40
+                end
+                object gpTipo: TRadioGroup
+                  Left = 10
+                  Top = 10
+                  Width = 122
+                  Height = 145
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
+                  Caption = 'Tipo do Movimento'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clWindowText
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  Items.Strings = (
+                    ' -  Saida'
+                    ' - Entrada')
+                  ParentFont = False
+                  TabOrder = 0
+                end
+              end
+              object Panel10: TPanel
+                Left = 402
+                Top = 59
+                Width = 255
+                Height = 40
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 5
+                TabOrder = 5
+                object Shape5: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 250
+                  Height = 40
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitWidth = 133
+                end
+                object edtTipo: TDBLabeledEdit
+                  Tag = 1
+                  Left = 13
+                  Top = 22
+                  Width = 220
+                  Height = 13
+                  BiDiMode = bdLeftToRight
+                  BorderStyle = bsNone
+                  CharCase = ecUpperCase
+                  Color = 13275746
+                  DataField = 'TIPO'
+                  DataSource = DS_MovimentoBan
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 16512241
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentBiDiMode = False
+                  ParentFont = False
+                  TabOrder = 0
+                  EditLabel.Width = 30
+                  EditLabel.Height = 20
+                  EditLabel.Margins.Left = 6
+                  EditLabel.Margins.Top = 6
+                  EditLabel.Margins.Right = 6
+                  EditLabel.Margins.Bottom = 6
+                  EditLabel.BiDiMode = bdLeftToRight
+                  EditLabel.Caption = 'Tipo'
+                  EditLabel.Color = clWhite
+                  EditLabel.Font.Charset = DEFAULT_CHARSET
+                  EditLabel.Font.Color = 15649712
+                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Name = 'Segoe UI'
+                  EditLabel.Font.Style = []
+                  EditLabel.ParentBiDiMode = False
+                  EditLabel.ParentColor = False
+                  EditLabel.ParentFont = False
+                  EditLabel.Layout = tlCenter
+                end
+              end
             end
           end
         end
@@ -393,8 +500,8 @@ object frmCadastroMovimento: TfrmCadastroMovimento
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 629
-            Height = 280
+            Width = 677
+            Height = 203
             Align = alClient
             Color = 14079702
             Padding.Left = 4
@@ -403,13 +510,13 @@ object frmCadastroMovimento: TfrmCadastroMovimento
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 431
-            ExplicitHeight = 225
+            ExplicitWidth = 629
+            ExplicitHeight = 280
             object DBGrid1: TDBGrid
               Left = 5
               Top = 28
-              Width = 619
-              Height = 247
+              Width = 667
+              Height = 170
               Hint = 'Clique duas vezes para selecionar'
               Align = alClient
               DataSource = DS_MovimentoBan
@@ -424,11 +531,16 @@ object frmCadastroMovimento: TfrmCadastroMovimento
               TitleFont.Style = []
               Columns = <
                 item
-                  Alignment = taLeftJustify
                   Expanded = False
                   FieldName = 'ID'
                   Title.Caption = 'Id'
-                  Width = 50
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'TIPO'
+                  Title.Caption = 'Tipo'
+                  Width = 100
                   Visible = True
                 end
                 item
@@ -437,41 +549,41 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                   FieldName = 'DATAMOVIMENTO'
                   Title.Alignment = taCenter
                   Title.Caption = 'Data do Movimento'
-                  Width = 120
-                  Visible = True
-                end
-                item
-                  Expanded = False
-                  FieldName = 'VALORMOVIMENTO'
-                  Title.Alignment = taRightJustify
-                  Title.Caption = 'Valor'
+                  Width = 118
                   Visible = True
                 end
                 item
                   Alignment = taCenter
                   Expanded = False
-                  FieldName = 'OBSERVACAO'
+                  FieldName = 'VALORMOVIMENTO'
                   Title.Alignment = taCenter
-                  Width = 345
+                  Title.Caption = 'Valor'
+                  Visible = True
+                end
+                item
+                  Expanded = False
+                  FieldName = 'OBSERVACAO'
+                  Title.Caption = 'Observa'#231#227'o'
+                  Width = 183
                   Visible = True
                 end>
             end
             object edtPesquisa: TEdit
               Left = 5
               Top = 5
-              Width = 619
+              Width = 667
               Height = 23
               Align = alTop
               TabOrder = 1
-              ExplicitWidth = 421
+              ExplicitWidth = 619
             end
           end
         end
       end
       object pnlButtons: TPanel
         Left = 5
-        Top = 315
-        Width = 637
+        Top = 238
+        Width = 685
         Height = 32
         Align = alBottom
         BevelOuter = bvNone
@@ -482,10 +594,10 @@ object frmCadastroMovimento: TfrmCadastroMovimento
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 260
-        ExplicitWidth = 439
-        object pnlEditar: TPanel
-          Left = 296
+        ExplicitTop = 315
+        ExplicitWidth = 637
+        object pnlCadastrar: TPanel
+          Left = 428
           Top = 5
           Width = 84
           Height = 22
@@ -493,44 +605,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 0
-          ExplicitLeft = 98
-          object Shpeditar: TShape
-            Left = 0
-            Top = 0
-            Width = 79
-            Height = 22
-            Align = alClient
-            Brush.Color = 8739130
-            Pen.Style = psClear
-            Shape = stRoundRect
-          end
-          object btnEditar: TSpeedButton
-            Left = 0
-            Top = 0
-            Width = 79
-            Height = 22
-            Align = alClient
-            Caption = 'Editar'
-            Flat = True
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 15649712
-            Font.Height = -12
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            OnClick = btnEditarClick
-          end
-        end
-        object pnlCadastrar: TPanel
-          Left = 212
-          Top = 5
-          Width = 84
-          Height = 22
-          Align = alRight
-          BevelOuter = bvNone
-          Padding.Right = 5
-          TabOrder = 1
-          ExplicitLeft = 14
+          ExplicitLeft = 212
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
@@ -556,18 +631,20 @@ object frmCadastroMovimento: TfrmCadastroMovimento
             Font.Style = [fsBold]
             ParentFont = False
             OnClick = btnCadastrarClick
+            ExplicitLeft = -1
+            ExplicitTop = 1
           end
         end
         object pnlSalvar: TPanel
-          Left = 380
+          Left = 512
           Top = 5
           Width = 84
           Height = 22
           Align = alRight
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 2
-          ExplicitLeft = 182
+          TabOrder = 1
+          ExplicitLeft = 380
           object shpSalvar: TShape
             Left = 0
             Top = 0
@@ -597,15 +674,15 @@ object frmCadastroMovimento: TfrmCadastroMovimento
           end
         end
         object pnlCancelar: TPanel
-          Left = 464
+          Left = 596
           Top = 5
           Width = 84
           Height = 22
           Align = alRight
           BevelOuter = bvNone
           Padding.Right = 5
-          TabOrder = 3
-          ExplicitLeft = 266
+          TabOrder = 2
+          ExplicitLeft = 464
           object ShpCancelar: TShape
             Left = 0
             Top = 0
@@ -634,43 +711,6 @@ object frmCadastroMovimento: TfrmCadastroMovimento
             OnClick = btnCancelarClick
           end
         end
-        object pnlExcluir: TPanel
-          Left = 548
-          Top = 5
-          Width = 84
-          Height = 22
-          Align = alRight
-          BevelOuter = bvNone
-          Padding.Right = 5
-          TabOrder = 4
-          ExplicitLeft = 350
-          object shpExcluir: TShape
-            Left = 0
-            Top = 0
-            Width = 79
-            Height = 22
-            Align = alClient
-            Brush.Color = 8739130
-            Pen.Style = psClear
-            Shape = stRoundRect
-          end
-          object btnExcluir: TSpeedButton
-            Left = 0
-            Top = 0
-            Width = 79
-            Height = 22
-            Align = alClient
-            Caption = 'Excluir'
-            Flat = True
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 15649712
-            Font.Height = -12
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            OnClick = btnExcluirClick
-          end
-        end
       end
     end
   end
@@ -685,6 +725,7 @@ object frmCadastroMovimento: TfrmCadastroMovimento
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object SQL_MovimentoBanDATAMOVIMENTO: TDateTimeField
       FieldName = 'DATAMOVIMENTO'
@@ -700,10 +741,15 @@ object frmCadastroMovimento: TfrmCadastroMovimento
       Origin = 'OBSERVACAO'
       Size = 80
     end
+    object SQL_MovimentoBanTIPO: TStringField
+      FieldName = 'TIPO'
+      Origin = 'TIPO'
+      Size = 32767
+    end
   end
   object DS_MovimentoBan: TDataSource
     DataSet = SQL_MovimentoBan
-    Left = 331
-    Top = 269
+    Left = 323
+    Top = 261
   end
 end

@@ -175,6 +175,10 @@
             <Form>frmCadastroMovimento</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas">
+            <Form>frmLancamentoDeCaixa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

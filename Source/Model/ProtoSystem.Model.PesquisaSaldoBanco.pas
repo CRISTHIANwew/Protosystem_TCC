@@ -27,6 +27,7 @@ type
     DS_PesquisaSaldo: TDataSource;
     procedure btn_saircadprodClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,12 +45,18 @@ uses ProtoSystem.Controller.Dm;
 
 procedure TfrmPesquisaSaldoBanco.btnCadastrarClick(Sender: TObject);
 begin
-SQL_PesquisaSaldo.Refresh;
+  SQL_PesquisaSaldo.Refresh;
 end;
 
 procedure TfrmPesquisaSaldoBanco.btn_saircadprodClick(Sender: TObject);
 begin
+  SQL_PesquisaSaldo.Close;
   close;
+end;
+
+procedure TfrmPesquisaSaldoBanco.FormCreate(Sender: TObject);
+begin
+  SQL_PesquisaSaldo.Open;
 end;
 
 end.

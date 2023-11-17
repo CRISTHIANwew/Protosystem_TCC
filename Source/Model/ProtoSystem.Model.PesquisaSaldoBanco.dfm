@@ -11,6 +11,7 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -27,9 +28,6 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 540
     object Panel2: TPanel
       Left = 5
       Top = 35
@@ -44,10 +42,9 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 530
     end
     object gridFornecedor: TDBGrid
-      Left = 13
+      Left = 14
       Top = 42
       Width = 514
       Height = 166
@@ -113,7 +110,6 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
-      ExplicitWidth = 530
       object Pnl_sair: TPanel
         Left = 435
         Top = 6
@@ -132,7 +128,6 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 436
         object Shape15: TShape
           Left = 0
           Top = 0
@@ -188,7 +183,7 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
-      ExplicitWidth = 530
+      ExplicitTop = 215
       object pnlCadastrar: TPanel
         Left = 439
         Top = 6
@@ -198,7 +193,6 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
         BevelOuter = bvNone
         Padding.Right = 5
         TabOrder = 0
-        ExplicitLeft = 440
         object ShpCadastrar: TShape
           Left = 0
           Top = 0
@@ -235,7 +229,7 @@ object frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'SELECT * FROM BANCO')
+      'SELECT * FROM BANCO WHERE ID=1')
     Left = 232
     Top = 120
   end

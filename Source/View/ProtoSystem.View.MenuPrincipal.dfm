@@ -1,6 +1,6 @@
 object Frm_Principal: TFrm_Principal
-  Left = 258
-  Top = 213
+  Left = 286
+  Top = 145
   Align = alClient
   BorderStyle = bsNone
   Caption = '  ProtoSystem'
@@ -138,7 +138,7 @@ object Frm_Principal: TFrm_Principal
     6895B89F8DCA5B5A9C38D2DAF189162D623C8163E942470EE310DA58506F6691
     A4A1FDBE86708220088220088220088220088220084266E0BFAB73E91D36963B
     240000000049454E44AE426082}
-  Position = poScreenCenter
+  Position = poDesigned
   OnClose = FormClose
   OnCreate = FormCreate
   TextHeight = 15
@@ -181,7 +181,7 @@ object Frm_Principal: TFrm_Principal
         Top = 4
         Width = 1242
         Height = 725
-        ActivePage = TabSheet4
+        ActivePage = TabSheet6
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -815,7 +815,7 @@ object Frm_Principal: TFrm_Principal
                     Width = 172
                     Height = 52
                     Align = alClient
-                    Caption = 'Cadastro de Movimentos'
+                    Caption = 'Cadastro de Lan'#231'amentos'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
@@ -949,7 +949,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet21
+            ActivePage = TabSheet23
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -974,6 +974,52 @@ object Frm_Principal: TFrm_Principal
                 Padding.Bottom = 8
                 ParentBackground = False
                 TabOrder = 0
+                object Panel48: TPanel
+                  Left = 7
+                  Top = 8
+                  Width = 178
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 6
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape7: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 172
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 158
+                  end
+                  object SpeedButton12: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 172
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Cadastro de Movimentos'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton12Click
+                    ExplicitWidth = 158
+                  end
+                end
               end
             end
             object TabSheet22: TTabSheet
@@ -1089,7 +1135,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet26
+            ActivePage = TabSheet25
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText

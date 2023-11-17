@@ -361,7 +361,7 @@ object Frm_Login: TFrm_Login
           EditLabel.ParentFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 8739130
-          Font.Height = -12
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           NumbersOnly = True
@@ -402,7 +402,7 @@ object Frm_Login: TFrm_Login
           EditLabel.ParentFont = False
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 8739130
-          Font.Height = -12
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           ParentBiDiMode = False

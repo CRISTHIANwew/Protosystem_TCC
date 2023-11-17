@@ -22,7 +22,8 @@ uses
   ProtoSystem.Utils.Validates in 'Source\Utils\ProtoSystem.Utils.Validates.pas',
   ProtoSystem.Model.PesquisaSaldoCaixa in 'Source\Model\ProtoSystem.Model.PesquisaSaldoCaixa.pas' {frmPesquisaSaldoCaixa},
   ProtoSystem.Model.PesquisaSaldoBanco in 'Source\Model\ProtoSystem.Model.PesquisaSaldoBanco.pas' {frmPesquisaSaldoBanco},
-  ProtoSystem.Model.CadastroMovimentosBancarios in 'Source\Model\ProtoSystem.Model.CadastroMovimentosBancarios.pas' {frmCadastroMovimento};
+  ProtoSystem.Model.CadastroMovimentosBancarios in 'Source\Model\ProtoSystem.Model.CadastroMovimentosBancarios.pas' {frmCadastroMovimento},
+  ProtoSystem.Model.CadastroLancamentoCaixa in 'Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas' {frmLancamentoDeCaixa};
 
 {$R *.res}
 
@@ -34,9 +35,7 @@ begin
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
   Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
-  Application.CreateForm(TfrmPesquisaSaldoCaixa, frmPesquisaSaldoCaixa);
-  Application.CreateForm(TfrmPesquisaSaldoBanco, frmPesquisaSaldoBanco);
-  Application.CreateForm(TfrmCadastroMovimento, frmCadastroMovimento);
+  Application.CreateForm(TfrmLancamentoDeCaixa, frmLancamentoDeCaixa);
   if TFrm_Login.Login then
     Application.Run
   else
