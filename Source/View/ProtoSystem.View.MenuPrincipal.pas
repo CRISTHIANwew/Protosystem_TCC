@@ -65,7 +65,6 @@ type
     TabSheet7: TTabSheet;
     PGC_PAGAR: TPageControl;
     TabSheet29: TTabSheet;
-    BTN_CAD_FORNECEDOR: TButton;
     TabSheet30: TTabSheet;
     TabSheet31: TTabSheet;
     TabSheet32: TTabSheet;
@@ -169,6 +168,15 @@ type
     Shape7: TShape;
     SpeedButton12: TSpeedButton;
     Panel49: TPanel;
+    Panel50: TPanel;
+    Shape8: TShape;
+    SpeedButton13: TSpeedButton;
+    Panel51: TPanel;
+    Shape20: TShape;
+    SpeedButton14: TSpeedButton;
+    Panel52: TPanel;
+    Shape21: TShape;
+    SpeedButton15: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -192,6 +200,9 @@ type
     procedure SpeedButton10Click(Sender: TObject);
     procedure SpeedButton12Click(Sender: TObject);
     procedure SpeedButton11Click(Sender: TObject);
+    procedure SpeedButton14Click(Sender: TObject);
+    procedure SpeedButton13Click(Sender: TObject);
+    procedure SpeedButton15Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -214,7 +225,9 @@ uses
   ProtoSystem.Model.BaixaDocumentoReceber, ProtoSystem.Model.PesquisaSaldoBanco,
   ProtoSystem.Model.PesquisaSaldoCaixa,
   ProtoSystem.Model.CadastroMovimentosBancarios,
-  ProtoSystem.Model.CadastroLancamentoCaixa;
+  ProtoSystem.Model.CadastroLancamentoCaixa,
+  ProtoSystem.Model.CadastroDeContasPagar,
+  ProtoSystem.Model.BaixaDocumentoPagar;
 
 procedure TFrm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -381,6 +394,48 @@ var
     frmCadastroMovimento.ShowModal; // Exiba o formulário de maneira modal
   finally
     frmCadastroMovimento.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton13Click(Sender: TObject);
+begin
+var
+    FrmCadastroContasPagar: TFrmCadastroContasPagar;
+    // Declare uma variável para o formulário
+  FrmCadastroContasPagar := TFrmCadastroContasPagar.Create(Self);
+  // Crie uma instância do formulário
+  try
+    FrmCadastroContasPagar.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    FrmCadastroContasPagar.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton14Click(Sender: TObject);
+begin
+var
+    Frm_CadFornecedor: TFrm_CadFornecedor;
+    // Declare uma variável para o formulário
+  Frm_CadFornecedor := TFrm_CadFornecedor.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_CadFornecedor.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadFornecedor.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton15Click(Sender: TObject);
+begin
+var
+    frmBaixaDocumentosPagar: TfrmBaixaDocumentosPagar;
+    // Declare uma variável para o formulário
+  frmBaixaDocumentosPagar := TfrmBaixaDocumentosPagar.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmBaixaDocumentosPagar.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmBaixaDocumentosPagar.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

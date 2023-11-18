@@ -11,6 +11,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object Panel1: TPanel
@@ -31,8 +32,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
     Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1515
-    ExplicitHeight = 653
     object Panel8: TPanel
       Left = 6
       Top = 6
@@ -61,7 +60,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 1503
       object Pnl_sair: TPanel
         Left = 947
         Top = 6
@@ -83,7 +81,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 1387
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -139,8 +136,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
       Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 1503
-      ExplicitHeight = 606
       object pnlButtons: TPanel
         Left = 6
         Top = 470
@@ -159,7 +154,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         Padding.Bottom = 6
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 520
         object pnlCadastrar: TPanel
           Left = 901
           Top = 6
@@ -173,8 +167,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 0
-          ExplicitLeft = 1341
-          ExplicitHeight = 52
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
@@ -225,8 +217,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 1
-          ExplicitLeft = 446
-          ExplicitHeight = 78
           object Shape3: TShape
             Left = 0
             Top = 0
@@ -293,7 +283,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         Columns = <
           item
             Expanded = False
-            FieldName = 'NOME_FORNECEDOR'
+            FieldName = 'NOME_CLIENTE'
             Title.Caption = 'Nome'
             Width = 396
             Visible = True

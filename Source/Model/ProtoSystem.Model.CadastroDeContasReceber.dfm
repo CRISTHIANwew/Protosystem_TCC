@@ -191,8 +191,6 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Padding.Bottom = 6
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = 8
               object Panel15: TPanel
                 Left = 18
                 Top = 20
@@ -221,7 +219,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   ExplicitWidth = 68
                 end
                 object edtID: TDBLabeledEdit
-                  Left = 6
+                  Left = 8
                   Top = 25
                   Width = 52
                   Height = 23
@@ -233,7 +231,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
-                  DataField = 'ID_FORNECEDOR'
+                  DataField = 'ID_CLIENTE'
                   DataSource = DS_DocumentosaReceber
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
@@ -294,7 +292,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
-                  DataField = 'NOME_FORNECEDOR'
+                  DataField = 'NOME_CLIENTE'
                   DataSource = DS_DocumentosaReceber
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
@@ -583,7 +581,6 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   ParentShowHint = False
                   ShowHint = False
                   TabOrder = 1
-                  OnChange = dtEmissaoChange
                   OnMouseLeave = dtEmissaoMouseLeave
                 end
               end
@@ -667,7 +664,6 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   ParentShowHint = False
                   ShowHint = False
                   TabOrder = 1
-                  OnChange = dtVencimentoChange
                   OnMouseLeave = dtVencimentoMouseLeave
                 end
               end
@@ -698,8 +694,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                 end
                 object edtValor: TDBLabeledEdit
-                  Left = 10
-                  Top = 26
+                  Left = 16
+                  Top = 27
                   Width = 148
                   Height = 23
                   Margins.Left = 4
@@ -1065,7 +1061,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Columns = <
                 item
                   Expanded = False
-                  FieldName = 'NOME_FORNECEDOR'
+                  FieldName = 'NOME_CLIENTE'
                   Title.Caption = 'Nome'
                   Width = 668
                   Visible = True
@@ -1386,15 +1382,16 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     end
   end
   object SQL_DocumentosaReceber: TFDQuery
+    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from DOC_RECEBER')
-    Left = 591
-    Top = 91
+    Left = 919
+    Top = 164
   end
   object DS_DocumentosaReceber: TDataSource
     DataSet = SQL_DocumentosaReceber
-    Left = 592
-    Top = 142
+    Left = 1153
+    Top = 250
   end
 end

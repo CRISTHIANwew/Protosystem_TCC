@@ -1,0 +1,14 @@
+object frmCadastroContasPagar: TfrmCadastroContasPagar
+  Left = 0
+  Top = 0
+  ClientHeight = 386
+  ClientWidth = 1462
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  PixelsPerInch = 120
+  TextHeight = 20
+end

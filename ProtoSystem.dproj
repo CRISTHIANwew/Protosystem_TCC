@@ -138,10 +138,6 @@
             <Form>Frm_Vendas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\View\ProtoSystem.View.TelaPadrao.pas">
-            <Form>formTelaPadrao</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas">
             <Form>Frm_CadastroContasReceber</Form>
             <FormType>dfm</FormType>
@@ -177,6 +173,18 @@
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas">
             <Form>frmLancamentoDeCaixa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroDeContasPagar.pas">
+            <Form>frmCadastroContasPagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas">
+            <Form>frmPesquisaFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas">
+            <Form>frmBaixaDocumentosPagar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

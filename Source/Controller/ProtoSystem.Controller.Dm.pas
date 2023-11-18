@@ -65,6 +65,7 @@ type
     IDCliente: string;
     NOMECliente: string;
     PesquisaClienteStatus: boolean;
+    PesquisaFornecedorStatus: boolean;
     procedure fecharaplicacao;
   end;
 
@@ -226,8 +227,7 @@ begin
       'QUITADO VARCHAR (1),' +
       'QTD_PARCELAS INTEGER,' +
       'DESCONTO REAL,' +
-      'OBSERVACAO VARCHAR,' +
-      'A VARCHAR(100));');
+      'OBSERVACAO VARCHAR);');
   end;
 
   Result := false;
@@ -237,8 +237,8 @@ begin
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS DOC_RECEBER (' +
       'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
-      'ID_FORNECEDOR VARCHAR,' +
-      'NOME_FORNECEDOR VARCHAR,' +
+      'ID_CLIENTE VARCHAR,' +
+      'NOME_CLIENTE VARCHAR,' +
       'TIPO_DOC VARCHAR,' +
       'IDENTIFICACAO VARCHAR,' +
       'EMISSAO VARCHAR,' +
@@ -248,8 +248,7 @@ begin
       'QUITADO VARCHAR (1),' +
       'QTD_PARCELAS INTEGER,' +
       'DESCONTO REAL,' +
-      'OBSERVACAO VARCHAR,' +
-      'A VARCHAR(100));');
+      'OBSERVACAO VARCHAR);');
   end;
 
   Result := false;
@@ -259,8 +258,8 @@ begin
   begin
     FDQuery.ExecSQL('CREATE TABLE IF NOT EXISTS DOC_RECEBER (' +
       'ID INTEGER PRIMARY KEY AUTOINCREMENT,' +
-      'ID_FORNECEDOR VARCHAR,' +
-      'NOME_FORNECEDOR VARCHAR,' +
+      'ID_CLIENTE VARCHAR,' +
+      'NOME_CLIENTE VARCHAR,' +
       'TIPO_DOC VARCHAR,' +
       'IDENTIFICACAO VARCHAR,' +
       'EMISSAO VARCHAR,' +

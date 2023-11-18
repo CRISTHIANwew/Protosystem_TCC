@@ -91,8 +91,6 @@ type
     procedure btnExcluirClick(Sender: TObject);
     procedure edtValorKeyPress(Sender: TObject; var Key: Char);
     procedure gridDocumentosDblClick(Sender: TObject);
-    procedure dtEmissaoChange(Sender: TObject);
-    procedure dtVencimentoChange(Sender: TObject);
     procedure dtEmissaoMouseLeave(Sender: TObject);
     procedure dtVencimentoMouseLeave(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -209,20 +207,9 @@ begin
   edtDesconto.Enabled:=false;
   edtObservacao.Enabled:=false;
 end;
-
-procedure TFrm_CadastroContasReceber.dtEmissaoChange(Sender: TObject);
-begin
-    //  edtEmissao.Text:=DateToStr(dtEmissao.Date);
-end;
-
 procedure TFrm_CadastroContasReceber.dtEmissaoMouseLeave(Sender: TObject);
 begin
       edtEmissao.Text:=DateToStr(dtEmissao.Date);
-end;
-
-procedure TFrm_CadastroContasReceber.dtVencimentoChange(Sender: TObject);
-begin
-    //edtVencimento.Text:=DateToStr(dtVencimento.Date);
 end;
 
 procedure TFrm_CadastroContasReceber.dtVencimentoMouseLeave(Sender: TObject);

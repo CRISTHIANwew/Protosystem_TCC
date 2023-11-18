@@ -31,6 +31,7 @@ type
     procedure btn_FecharClick(Sender: TObject);
     procedure btnComfirmarClick(Sender: TObject);
     procedure gpTipoPagClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     procedure GeraMovimentações;
@@ -63,7 +64,6 @@ begin
   var CellProd := grid_Documentos.DataSource.DataSet.RecNo;
   //Obtém os dados da linha selecionada no DBGrid
   ValorMov := SQL_PesquisaDocumentos.FieldByName('VALOR').AsFloat;
-  ShowMessage('VALOR= '+FloatToStr(ValorMov));
 
   // fazer uma pesquisa do saldo atual
   dm.FDQuery.SQL.Text.Empty;
@@ -126,7 +126,6 @@ begin
   var CellProd := grid_Documentos.DataSource.DataSet.RecNo;
   //Obtém os dados do documento selecionado(ID)
   IDDOC := SQL_PesquisaDocumentos.FieldByName('ID').AsInteger;
-  ShowMessage('ID SELECIONADO: '+IntToStr(IDDOC));
 
   //atualiza campo quitado do documento
   dm.FDQuery.SQL.Text :='UPDATE DOC_RECEBER SET QUITADO ="S" WHERE ID= :ID';
@@ -145,6 +144,11 @@ end;
 procedure Tfrm_BaixaDocumentoReceber.btn_FecharClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure Tfrm_BaixaDocumentoReceber.FormCreate(Sender: TObject);
+begin
+ SQL_PesquisaDocumentos.Active:=true;
 end;
 
 end.
