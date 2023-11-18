@@ -683,7 +683,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           Left = 16
           Top = 41
           Width = 241
-          Height = 278
+          Height = 360
           Color = 15649713
           DefaultHeaderFont = False
           DoubleBuffered = False
@@ -708,6 +708,7 @@ object frmVendasFechamento: TfrmVendasFechamento
           ParentDoubleBuffered = False
           ParentFont = False
           ParentShowHint = False
+          ShowFrame = False
           ShowHint = False
           TabOrder = 0
           OnClick = rgCondicaoClick

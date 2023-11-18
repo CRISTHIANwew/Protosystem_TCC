@@ -1,23 +1,24 @@
 object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
-  Left = 0
-  Top = 0
+  Left = 347
+  Top = 270
   BorderStyle = bsNone
   Caption = 'Cadastro de contas a receber'
-  ClientHeight = 530
-  ClientWidth = 1166
+  ClientHeight = 313
+  ClientWidth = 1162
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
+  Position = poDesigned
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1166
-    Height = 530
+    Width = 1162
+    Height = 313
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
@@ -27,10 +28,12 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    ExplicitLeft = -8
+    ExplicitTop = -8
     object Panel8: TPanel
       Left = 5
       Top = 5
-      Width = 1156
+      Width = 1152
       Height = 28
       Align = alTop
       Alignment = taLeftJustify
@@ -51,8 +54,9 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1156
       object Pnl_sair: TPanel
-        Left = 1063
+        Left = 1059
         Top = 5
         Width = 88
         Height = 18
@@ -68,6 +72,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 1063
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -100,8 +105,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     object Panel2: TPanel
       Left = 5
       Top = 33
-      Width = 1156
-      Height = 492
+      Width = 1152
+      Height = 275
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
@@ -111,21 +116,25 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
+      ExplicitWidth = 1156
+      ExplicitHeight = 492
       object Q: TPageControl
         Left = 5
         Top = 5
-        Width = 1146
-        Height = 450
+        Width = 1142
+        Height = 233
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 1146
+        ExplicitHeight = 450
         object TabOperacao: TTabSheet
           Caption = 'Operacao'
           object Panel4: TPanel
             Left = 0
             Top = 0
-            Width = 1138
-            Height = 420
+            Width = 1134
+            Height = 203
             Align = alClient
             BevelOuter = bvNone
             Color = 13274977
@@ -135,11 +144,13 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 1138
+            ExplicitHeight = 420
             object pnl_dados_user: TPanel
               Left = 5
               Top = 5
-              Width = 1128
-              Height = 410
+              Width = 1124
+              Height = 193
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
@@ -149,6 +160,10 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Padding.Bottom = 5
               ParentBackground = False
               TabOrder = 0
+              ExplicitLeft = 0
+              ExplicitTop = 8
+              ExplicitWidth = 1128
+              ExplicitHeight = 410
               object Panel15: TPanel
                 Left = 14
                 Top = 16
@@ -271,7 +286,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Brush.Color = 13275746
                   Shape = stRoundRect
                 end
-                object edtSenha: TDBLabeledEdit
+                object edtTipo: TDBLabeledEdit
                   Left = 6
                   Top = 20
                   Width = 118
@@ -362,8 +377,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                   ExplicitWidth = 133
                 end
-                object DBLabeledEdit1: TDBLabeledEdit
-                  Left = 6
+                object edtCodigo: TDBLabeledEdit
+                  Left = 5
                   Top = 20
                   Width = 118
                   Height = 18
@@ -416,7 +431,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                   ExplicitWidth = 133
                 end
-                object DBLabeledEdit2: TDBLabeledEdit
+                object edtEmissao: TDBLabeledEdit
                   Left = 6
                   Top = 20
                   Width = 118
@@ -450,6 +465,21 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   EditLabel.ParentFont = False
                   EditLabel.Layout = tlCenter
                 end
+                object dtEmissao: TDateTimePicker
+                  Left = 6
+                  Top = 17
+                  Width = 118
+                  Height = 18
+                  CalColors.BackColor = clWhite
+                  Date = 45248.000000000000000000
+                  Time = 0.464278715277032500
+                  Color = clWhite
+                  ParentShowHint = False
+                  ShowHint = False
+                  TabOrder = 1
+                  OnChange = dtEmissaoChange
+                  OnMouseLeave = dtEmissaoMouseLeave
+                end
               end
               object Panel11: TPanel
                 Left = 799
@@ -470,8 +500,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                   ExplicitWidth = 133
                 end
-                object DBLabeledEdit3: TDBLabeledEdit
-                  Left = 6
+                object edtVencimento: TDBLabeledEdit
+                  Left = 5
                   Top = 20
                   Width = 118
                   Height = 18
@@ -504,9 +534,24 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   EditLabel.ParentFont = False
                   EditLabel.Layout = tlCenter
                 end
+                object dtVencimento: TDateTimePicker
+                  Left = 5
+                  Top = 17
+                  Width = 118
+                  Height = 18
+                  CalColors.BackColor = clWhite
+                  Date = 45248.000000000000000000
+                  Time = 0.464278715277032500
+                  Color = clWhite
+                  ParentShowHint = False
+                  ShowHint = False
+                  TabOrder = 1
+                  OnChange = dtVencimentoChange
+                  OnMouseLeave = dtVencimentoMouseLeave
+                end
               end
               object Panel12: TPanel
-                Left = 18
+                Left = 14
                 Top = 62
                 Width = 137
                 Height = 40
@@ -524,7 +569,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                   ExplicitWidth = 133
                 end
-                object DBLabeledEdit4: TDBLabeledEdit
+                object edtValor: TDBLabeledEdit
                   Left = 8
                   Top = 21
                   Width = 118
@@ -541,7 +586,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  OnKeyPress = DBLabeledEdit4KeyPress
+                  OnKeyPress = edtValorKeyPress
                   EditLabel.Width = 36
                   EditLabel.Height = 20
                   EditLabel.Margins.Left = 6
@@ -561,7 +606,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 end
               end
               object Panel13: TPanel
-                Left = 157
+                Left = 152
                 Top = 62
                 Width = 191
                 Height = 40
@@ -579,7 +624,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Shape = stRoundRect
                   ExplicitWidth = 153
                 end
-                object DBLabeledEdit5: TDBLabeledEdit
+                object edtQtdParcelas: TDBLabeledEdit
                   Left = 5
                   Top = 21
                   Width = 118
@@ -615,7 +660,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 end
               end
               object Panel14: TPanel
-                Left = 349
+                Left = 344
                 Top = 62
                 Width = 138
                 Height = 40
@@ -632,7 +677,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Brush.Color = 13275746
                   Shape = stRoundRect
                 end
-                object DBLabeledEdit6: TDBLabeledEdit
+                object edtDesconto: TDBLabeledEdit
                   Left = 5
                   Top = 21
                   Width = 117
@@ -670,8 +715,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               object Panel16: TPanel
                 Left = 14
                 Top = 109
-                Width = 443
-                Height = 148
+                Width = 784
+                Height = 52
                 Align = alCustom
                 BevelOuter = bvNone
                 Padding.Right = 5
@@ -679,17 +724,19 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape10: TShape
                   Left = 0
                   Top = 0
-                  Width = 438
-                  Height = 148
+                  Width = 779
+                  Height = 52
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
+                  ExplicitWidth = 438
+                  ExplicitHeight = 148
                 end
-                object DBLabeledEdit7: TDBLabeledEdit
+                object edtObservacao: TDBLabeledEdit
                   Left = 11
-                  Top = 24
-                  Width = 414
-                  Height = 105
+                  Top = 23
+                  Width = 750
+                  Height = 25
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
@@ -767,8 +814,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 1138
-            Height = 420
+            Width = 1134
+            Height = 203
             Align = alClient
             Color = 14079702
             Padding.Left = 4
@@ -777,11 +824,13 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
+            ExplicitWidth = 1138
+            ExplicitHeight = 420
             object gridDocumentos: TDBGrid
               Left = 5
               Top = 28
-              Width = 1128
-              Height = 387
+              Width = 1124
+              Height = 170
               Hint = 'Clique duas vezes para selecionar'
               Align = alClient
               BorderStyle = bsNone
@@ -794,6 +843,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Font.Height = -12
               Font.Name = 'Segoe UI'
               Font.Style = []
+              Options = [dgTitles, dgIndicator, dgTabs, dgAlwaysShowSelection, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
               ParentFont = False
               ParentShowHint = False
               ReadOnly = True
@@ -853,18 +903,19 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             object edtPesquisa: TEdit
               Left = 5
               Top = 5
-              Width = 1128
+              Width = 1124
               Height = 23
               Align = alTop
               TabOrder = 1
+              ExplicitWidth = 1128
             end
           end
         end
       end
       object pnlButtons: TPanel
         Left = 5
-        Top = 455
-        Width = 1146
+        Top = 238
+        Width = 1142
         Height = 32
         Align = alBottom
         BevelOuter = bvNone
@@ -875,8 +926,10 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
+        ExplicitTop = 455
+        ExplicitWidth = 1146
         object pnlEditar: TPanel
-          Left = 805
+          Left = 801
           Top = 5
           Width = 84
           Height = 22
@@ -884,6 +937,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 0
+          ExplicitLeft = 805
           object Shpeditar: TShape
             Left = 0
             Top = 0
@@ -912,7 +966,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlCadastrar: TPanel
-          Left = 721
+          Left = 717
           Top = 5
           Width = 84
           Height = 22
@@ -920,6 +974,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 1
+          ExplicitLeft = 721
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
@@ -948,7 +1003,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlSalvar: TPanel
-          Left = 889
+          Left = 885
           Top = 5
           Width = 84
           Height = 22
@@ -956,6 +1011,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 2
+          ExplicitLeft = 889
           object shpSalvar: TShape
             Left = 0
             Top = 0
@@ -985,7 +1041,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlCancelar: TPanel
-          Left = 973
+          Left = 969
           Top = 5
           Width = 84
           Height = 22
@@ -993,6 +1049,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 3
+          ExplicitLeft = 973
           object ShpCancelar: TShape
             Left = 0
             Top = 0
@@ -1022,7 +1079,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlExcluir: TPanel
-          Left = 1057
+          Left = 1053
           Top = 5
           Width = 84
           Height = 22
@@ -1030,6 +1087,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           BevelOuter = bvNone
           Padding.Right = 5
           TabOrder = 4
+          ExplicitLeft = 1057
           object shpExcluir: TShape
             Left = 0
             Top = 0
@@ -1065,12 +1123,12 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     Connection = DM.conexao
     SQL.Strings = (
       'select * from DOC_RECEBER')
-    Left = 791
-    Top = 339
+    Left = 591
+    Top = 91
   end
   object DS_DocumentosaReceber: TDataSource
     DataSet = SQL_DocumentosaReceber
-    Left = 792
-    Top = 390
+    Left = 592
+    Top = 142
   end
 end

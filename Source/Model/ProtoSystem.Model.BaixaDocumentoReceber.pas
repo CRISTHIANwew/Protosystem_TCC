@@ -31,6 +31,10 @@ type
     Panel3: TPanel;
     Shape1: TShape;
     DBLabeledEdit1: TDBLabeledEdit;
+    Panel4: TPanel;
+    Panel6: TPanel;
+    Shape3: TShape;
+    gpTipoPag: TRadioGroup;
     procedure btn_FecharClick(Sender: TObject);
   private
     { Private declarations }

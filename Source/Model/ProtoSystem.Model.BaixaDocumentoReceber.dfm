@@ -2,7 +2,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
   Left = 0
   Top = 0
   BorderStyle = bsNone
-  ClientHeight = 429
+  ClientHeight = 522
   ClientWidth = 1212
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
     Left = 0
     Top = 0
     Width = 1212
-    Height = 429
+    Height = 522
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
@@ -26,6 +26,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 429
     object Panel8: TPanel
       Left = 5
       Top = 5
@@ -102,7 +103,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
       Left = 5
       Top = 33
       Width = 1202
-      Height = 391
+      Height = 484
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
@@ -112,9 +113,10 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
+      ExplicitHeight = 391
       object pnlButtons: TPanel
         Left = 5
-        Top = 335
+        Top = 428
         Width = 1192
         Height = 51
         Align = alBottom
@@ -126,6 +128,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 0
+        ExplicitTop = 335
         object pnlCadastrar: TPanel
           Left = 1072
           Top = 5
@@ -273,19 +276,20 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         end
       end
       object grid_Documentos: TDBGrid
-        Left = 5
+        Left = 6
         Top = 6
         Width = 1190
-        Height = 323
+        Height = 331
+        BorderStyle = bsNone
         DataSource = ds_PesquisaDocumentos
         DrawingStyle = gdsClassic
-        FixedColor = clAppWorkSpace
+        FixedColor = 14079702
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        Options = [dgTitles, dgIndicator, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ParentFont = False
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -294,6 +298,13 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
         Columns = <
+          item
+            Expanded = False
+            FieldName = 'NOME_FORNECEDOR'
+            Title.Caption = 'Nome'
+            Width = 559
+            Visible = True
+          end
           item
             Alignment = taCenter
             Expanded = False
@@ -310,13 +321,6 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             Title.Alignment = taCenter
             Title.Caption = 'Tipo'
             Width = 100
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'NOME_FORNECEDOR'
-            Title.Caption = 'Nome'
-            Width = 559
             Visible = True
           end
           item
@@ -356,19 +360,68 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             Visible = True
           end>
       end
+      object Panel4: TPanel
+        Left = 5
+        Top = 343
+        Width = 1192
+        Height = 85
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = 13275746
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
+        ParentBackground = False
+        TabOrder = 2
+        object Panel6: TPanel
+          Left = 5
+          Top = 5
+          Width = 1188
+          Height = 75
+          Align = alLeft
+          BevelOuter = bvNone
+          Padding.Right = 5
+          TabOrder = 0
+          object Shape3: TShape
+            Left = 0
+            Top = 0
+            Width = 1183
+            Height = 75
+            Align = alClient
+            Brush.Color = 13275746
+            Shape = stRoundRect
+            ExplicitWidth = 133
+            ExplicitHeight = 40
+          end
+          object gpTipoPag: TRadioGroup
+            Left = 13
+            Top = 8
+            Width = 332
+            Height = 57
+            Caption = 'Tipo do Pagamento'
+            Columns = 2
+            Items.Strings = (
+              '01 - Dinheiro '
+              '02 - Pix/Dep'#243'sito')
+            ShowFrame = False
+            TabOrder = 0
+          end
+        end
+      end
     end
   end
   object SQL_PesquisaDocumentos: TFDQuery
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'select * from doc_receber where quitado=false')
+      'select * from doc_receber')
     Left = 957
     Top = 145
   end
   object ds_PesquisaDocumentos: TDataSource
     DataSet = SQL_PesquisaDocumentos
-    Left = 813
-    Top = 145
+    Left = 957
+    Top = 201
   end
 end

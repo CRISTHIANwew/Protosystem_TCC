@@ -168,6 +168,7 @@ type
     Panel48: TPanel;
     Shape7: TShape;
     SpeedButton12: TSpeedButton;
+    Panel49: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);

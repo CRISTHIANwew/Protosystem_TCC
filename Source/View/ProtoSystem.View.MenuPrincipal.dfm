@@ -1656,13 +1656,15 @@ object Frm_Principal: TFrm_Principal
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
-        ExplicitHeight = 31
+        ExplicitLeft = 45
+        ExplicitTop = 4
       end
       object lbHORA: TLabel
-        Left = 595
+        Left = 297
         Top = 5
-        Width = 6
-        Height = 31
+        Width = 288
+        Height = 34
+        Align = alLeft
         Alignment = taRightJustify
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
@@ -1673,6 +1675,8 @@ object Frm_Principal: TFrm_Principal
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
+        ExplicitLeft = 321
+        ExplicitTop = 4
       end
       object Pnl_sair: TPanel
         Left = 1157
@@ -1809,6 +1813,15 @@ object Frm_Principal: TFrm_Principal
           Font.Quality = fqClearTypeNatural
           ParentFont = False
         end
+      end
+      object Panel49: TPanel
+        Left = 228
+        Top = 5
+        Width = 69
+        Height = 34
+        Align = alLeft
+        BevelOuter = bvNone
+        TabOrder = 3
       end
     end
   end
