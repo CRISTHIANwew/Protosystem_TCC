@@ -79,9 +79,9 @@ type
     edtObservacao: TDBLabeledEdit;
     Panel17: TPanel;
     Shape11: TShape;
-    bx_Quitado: TDBCheckBox;
     dtEmissao: TDateTimePicker;
     dtVencimento: TDateTimePicker;
+    edtQuitado: TDBLabeledEdit;
     procedure SpeedButton6Click(Sender: TObject);
     procedure btnPesquisaClienteClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
@@ -122,7 +122,6 @@ begin
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
   btnCancelar.Enabled := true;
-  bx_Quitado.Checked:=false;
   //habilita entrada das informações
   btnPesquisaCliente.Enabled:=true;
   edtTipo.Enabled:=true;
@@ -189,6 +188,7 @@ end;
 procedure TFrm_CadastroContasReceber.btnSalvarClick(Sender: TObject);
 begin
   if SQL_DocumentosaReceber.State in [dsInsert, dsEdit] then
+    edtQuitado.Text:='N';
     SQL_DocumentosaReceber.Post;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
@@ -248,6 +248,7 @@ edtValor.Enabled:=false;
 edtQtdParcelas.Enabled:=false;
 edtDesconto.Enabled:=false;
 edtObservacao.Enabled:=false;
+SQL_DocumentosaReceber.Active:=true;
 end;
 
 procedure TFrm_CadastroContasReceber.gridDocumentosDblClick(Sender: TObject);

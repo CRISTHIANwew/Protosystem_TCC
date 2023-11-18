@@ -1,37 +1,47 @@
 object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
-  Left = 0
-  Top = 0
+  Left = 549
+  Top = 245
   BorderStyle = bsNone
-  ClientHeight = 522
-  ClientWidth = 1212
+  ClientHeight = 603
+  ClientWidth = 1075
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 15
+  PixelsPerInch = 120
+  TextHeight = 20
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1212
-    Height = 522
+    Width = 1075
+    Height = 603
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
-    Padding.Left = 5
-    Padding.Top = 5
-    Padding.Right = 5
-    Padding.Bottom = 5
+    Padding.Left = 6
+    Padding.Top = 6
+    Padding.Right = 6
+    Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
-    ExplicitHeight = 429
+    ExplicitWidth = 1515
+    ExplicitHeight = 653
     object Panel8: TPanel
-      Left = 5
-      Top = 5
-      Width = 1202
-      Height = 28
+      Left = 6
+      Top = 6
+      Width = 1063
+      Height = 35
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alTop
       Alignment = taLeftJustify
       BevelOuter = bvNone
@@ -40,39 +50,49 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
       Color = 13275746
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 15649712
-      Font.Height = -17
+      Font.Height = -21
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
-      Padding.Left = 5
-      Padding.Top = 5
-      Padding.Right = 5
-      Padding.Bottom = 5
+      Padding.Left = 6
+      Padding.Top = 6
+      Padding.Right = 6
+      Padding.Bottom = 6
       ParentBiDiMode = False
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 1503
       object Pnl_sair: TPanel
-        Left = 1109
-        Top = 5
-        Width = 88
-        Height = 18
+        Left = 947
+        Top = 6
+        Width = 110
+        Height = 23
         Cursor = crHandPoint
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alRight
         BevelOuter = bvNone
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
+        ExplicitLeft = 1387
         object Shape19: TShape
           Left = 0
           Top = 0
-          Width = 88
-          Height = 18
+          Width = 110
+          Height = 23
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -80,213 +100,186 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         object btn_Fechar: TSpeedButton
           Left = 0
           Top = 0
-          Width = 88
-          Height = 18
+          Width = 110
+          Height = 23
           Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Caption = 'Fechar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
           ParentFont = False
           OnClick = btn_FecharClick
-          ExplicitLeft = 8
-          ExplicitTop = -1
         end
       end
     end
     object Panel2: TPanel
-      Left = 5
-      Top = 33
-      Width = 1202
-      Height = 484
+      Left = 6
+      Top = 41
+      Width = 1063
+      Height = 556
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
-      Padding.Left = 5
-      Padding.Top = 5
-      Padding.Right = 5
-      Padding.Bottom = 5
+      Padding.Left = 6
+      Padding.Top = 6
+      Padding.Right = 6
+      Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 391
+      ExplicitWidth = 1503
+      ExplicitHeight = 606
       object pnlButtons: TPanel
-        Left = 5
-        Top = 428
-        Width = 1192
-        Height = 51
+        Left = 6
+        Top = 470
+        Width = 1051
+        Height = 80
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alBottom
         BevelOuter = bvNone
         Color = 13275746
-        Padding.Left = 5
-        Padding.Top = 5
-        Padding.Right = 5
-        Padding.Bottom = 5
+        Padding.Left = 6
+        Padding.Top = 6
+        Padding.Right = 6
+        Padding.Bottom = 6
         ParentBackground = False
         TabOrder = 0
-        ExplicitTop = 335
+        ExplicitTop = 520
         object pnlCadastrar: TPanel
-          Left = 1072
-          Top = 5
-          Width = 115
-          Height = 41
+          Left = 901
+          Top = 6
+          Width = 144
+          Height = 68
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alRight
           BevelOuter = bvNone
-          Padding.Right = 5
+          Padding.Right = 6
           TabOrder = 0
+          ExplicitLeft = 1341
+          ExplicitHeight = 52
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
-            Width = 110
-            Height = 41
+            Width = 138
+            Height = 68
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Align = alClient
             Brush.Color = 8739130
             Pen.Style = psClear
             Shape = stRoundRect
-            ExplicitWidth = 79
-            ExplicitHeight = 22
+            ExplicitHeight = 51
           end
-          object btnCadastrar: TSpeedButton
+          object btnComfirmar: TSpeedButton
             Left = 0
             Top = 0
-            Width = 110
-            Height = 41
+            Width = 138
+            Height = 68
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Align = alClient
             Caption = 'Comfirmar'
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -12
+            Font.Height = -15
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
-            ExplicitWidth = 79
-            ExplicitHeight = 22
+            OnClick = btnComfirmarClick
+            ExplicitHeight = 51
           end
         end
-        object Panel14: TPanel
-          Left = 89
-          Top = 5
-          Width = 144
-          Height = 41
-          Align = alLeft
+        object Panel6: TPanel
+          Left = 546
+          Top = 6
+          Width = 355
+          Height = 68
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alRight
           BevelOuter = bvNone
-          Padding.Right = 5
+          Padding.Right = 6
           TabOrder = 1
-          object Shape9: TShape
+          ExplicitLeft = 446
+          ExplicitHeight = 78
+          object Shape3: TShape
             Left = 0
             Top = 0
-            Width = 139
-            Height = 41
+            Width = 349
+            Height = 68
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Align = alClient
             Brush.Color = 13275746
             Shape = stRoundRect
-            ExplicitWidth = 133
-            ExplicitHeight = 40
+            ExplicitTop = -2
+            ExplicitWidth = 1479
+            ExplicitHeight = 94
           end
-          object DBLabeledEdit6: TDBLabeledEdit
-            Left = 5
-            Top = 20
-            Width = 124
-            Height = 18
-            BorderStyle = bsNone
-            CharCase = ecUpperCase
-            Color = 13275746
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 16512241
-            Font.Height = -12
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
-            TabOrder = 0
-            EditLabel.Width = 128
-            EditLabel.Height = 20
-            EditLabel.Margins.Left = 6
-            EditLabel.Margins.Top = 6
-            EditLabel.Margins.Right = 6
-            EditLabel.Margins.Bottom = 6
-            EditLabel.Caption = 'Deposito Bancario'
-            EditLabel.Color = clWhite
-            EditLabel.Font.Charset = DEFAULT_CHARSET
-            EditLabel.Font.Color = 15649712
-            EditLabel.Font.Height = -15
-            EditLabel.Font.Name = 'Segoe UI'
-            EditLabel.Font.Style = [fsBold]
-            EditLabel.ParentColor = False
-            EditLabel.ParentFont = False
-            EditLabel.Layout = tlCenter
-          end
-        end
-        object Panel3: TPanel
-          Left = 5
-          Top = 5
-          Width = 84
-          Height = 41
-          Align = alLeft
-          BevelOuter = bvNone
-          Padding.Right = 5
-          TabOrder = 2
-          object Shape1: TShape
-            Left = 0
+          object gpTipoPag: TRadioGroup
+            Left = 2
             Top = 0
-            Width = 79
-            Height = 41
-            Align = alClient
-            Brush.Color = 13275746
-            Shape = stRoundRect
-            ExplicitWidth = 133
-            ExplicitHeight = 40
-          end
-          object DBLabeledEdit1: TDBLabeledEdit
-            Left = 5
-            Top = 20
-            Width = 68
-            Height = 18
-            BorderStyle = bsNone
-            CharCase = ecUpperCase
-            Color = 13275746
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = 16512241
-            Font.Height = -12
-            Font.Name = 'Segoe UI'
-            Font.Style = [fsBold]
-            ParentFont = False
+            Width = 319
+            Height = 62
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
+            Caption = 'Tipo do Pagamento'
+            Columns = 2
+            ItemIndex = 0
+            Items.Strings = (
+              '01 - Dinheiro '
+              '02 - Pix/Dep'#243'sito')
+            ShowFrame = False
             TabOrder = 0
-            EditLabel.Width = 60
-            EditLabel.Height = 20
-            EditLabel.Margins.Left = 6
-            EditLabel.Margins.Top = 6
-            EditLabel.Margins.Right = 6
-            EditLabel.Margins.Bottom = 6
-            EditLabel.Caption = 'Dinheiro'
-            EditLabel.Color = clWhite
-            EditLabel.Font.Charset = DEFAULT_CHARSET
-            EditLabel.Font.Color = 15649712
-            EditLabel.Font.Height = -15
-            EditLabel.Font.Name = 'Segoe UI'
-            EditLabel.Font.Style = [fsBold]
-            EditLabel.ParentColor = False
-            EditLabel.ParentFont = False
-            EditLabel.Layout = tlCenter
+            OnClick = gpTipoPagClick
           end
         end
       end
       object grid_Documentos: TDBGrid
-        Left = 6
-        Top = 6
-        Width = 1190
-        Height = 331
+        Left = 10
+        Top = 8
+        Width = 1041
+        Height = 444
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         BorderStyle = bsNone
         DataSource = ds_PesquisaDocumentos
         DrawingStyle = gdsClassic
         FixedColor = 14079702
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
         Options = [dgTitles, dgIndicator, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -294,7 +287,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
-        TitleFont.Height = -12
+        TitleFont.Height = -15
         TitleFont.Name = 'Segoe UI'
         TitleFont.Style = [fsBold]
         Columns = <
@@ -302,7 +295,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             Expanded = False
             FieldName = 'NOME_FORNECEDOR'
             Title.Caption = 'Nome'
-            Width = 559
+            Width = 396
             Visible = True
           end
           item
@@ -311,7 +304,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             FieldName = 'IDENTIFICACAO'
             Title.Alignment = taCenter
             Title.Caption = 'Identifica'#231#227'o'
-            Width = 100
+            Width = 125
             Visible = True
           end
           item
@@ -320,7 +313,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             FieldName = 'TIPO_DOC'
             Title.Alignment = taCenter
             Title.Caption = 'Tipo'
-            Width = 100
+            Width = 125
             Visible = True
           end
           item
@@ -329,7 +322,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             FieldName = 'EMISSAO'
             Title.Alignment = taCenter
             Title.Caption = 'Data de emiss'#227'o'
-            Width = 100
+            Width = 125
             Visible = True
           end
           item
@@ -338,7 +331,7 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             FieldName = 'VENCIMENTO'
             Title.Alignment = taCenter
             Title.Caption = 'Data de vencimento'
-            Width = 120
+            Width = 150
             Visible = True
           end
           item
@@ -347,67 +340,9 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
             FieldName = 'VALOR'
             Title.Alignment = taCenter
             Title.Caption = 'Valor'
-            Width = 70
-            Visible = True
-          end
-          item
-            Alignment = taCenter
-            Expanded = False
-            FieldName = 'VALOR_PEND'
-            Title.Alignment = taCenter
-            Title.Caption = 'Valor Pendente'
-            Width = 98
+            Width = 88
             Visible = True
           end>
-      end
-      object Panel4: TPanel
-        Left = 5
-        Top = 343
-        Width = 1192
-        Height = 85
-        Align = alBottom
-        BevelOuter = bvNone
-        Color = 13275746
-        Padding.Left = 5
-        Padding.Top = 5
-        Padding.Right = 5
-        Padding.Bottom = 5
-        ParentBackground = False
-        TabOrder = 2
-        object Panel6: TPanel
-          Left = 5
-          Top = 5
-          Width = 1188
-          Height = 75
-          Align = alLeft
-          BevelOuter = bvNone
-          Padding.Right = 5
-          TabOrder = 0
-          object Shape3: TShape
-            Left = 0
-            Top = 0
-            Width = 1183
-            Height = 75
-            Align = alClient
-            Brush.Color = 13275746
-            Shape = stRoundRect
-            ExplicitWidth = 133
-            ExplicitHeight = 40
-          end
-          object gpTipoPag: TRadioGroup
-            Left = 13
-            Top = 8
-            Width = 332
-            Height = 57
-            Caption = 'Tipo do Pagamento'
-            Columns = 2
-            Items.Strings = (
-              '01 - Dinheiro '
-              '02 - Pix/Dep'#243'sito')
-            ShowFrame = False
-            TabOrder = 0
-          end
-        end
       end
     end
   end
@@ -415,13 +350,13 @@ object frm_BaixaDocumentoReceber: Tfrm_BaixaDocumentoReceber
     Active = True
     Connection = DM.conexao
     SQL.Strings = (
-      'select * from doc_receber')
-    Left = 957
-    Top = 145
+      'select * from doc_receber where QUITADO='#39'N'#39)
+    Left = 747
+    Top = 195
   end
   object ds_PesquisaDocumentos: TDataSource
     DataSet = SQL_PesquisaDocumentos
-    Left = 957
-    Top = 201
+    Left = 747
+    Top = 261
   end
 end

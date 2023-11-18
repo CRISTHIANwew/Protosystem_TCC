@@ -1,42 +1,43 @@
 object DM: TDM
   OnCreate = DataModuleCreate
-  Height = 508
-  Width = 883
+  Height = 635
+  Width = 1104
+  PixelsPerInch = 120
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 66
-    Top = 109
+    Left = 83
+    Top = 136
   end
   object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
-    Left = 66
-    Top = 58
+    Left = 83
+    Top = 73
   end
   object conexao: TFDConnection
     Params.Strings = (
       'LockingMode=Normal'
       
-        'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
-        'CC\bin\Database\ProtoSystem.s3db'
+        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
+        'in\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
     Connected = True
     LoginPrompt = False
-    Left = 66
-    Top = 6
+    Left = 83
+    Top = 8
   end
   object FDQuery: TFDQuery
     Connection = conexao
-    Left = 67
-    Top = 158
+    Left = 84
+    Top = 198
   end
   object Tb_venda: TFDTable
     Connection = conexao
-    Left = 752
-    Top = 48
+    Left = 940
+    Top = 60
   end
   object SQL_vendas: TFDQuery
     Connection = conexao
-    Left = 752
-    Top = 96
+    Left = 940
+    Top = 120
   end
   object cdsVendaProdutos: TClientDataSet
     PersistDataPacket.Data = {
@@ -73,8 +74,8 @@ object DM: TDM
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 751
-    Top = 152
+    Left = 939
+    Top = 190
     object cdsVendaProdutosIDPEDIDO: TIntegerField
       FieldKind = fkCalculated
       FieldName = 'IDPEDIDO'
@@ -103,8 +104,8 @@ object DM: TDM
       
         'select * from VENDA_PEDIDOS PE inner join VENDA_PRODUTO PO ON (P' +
         'O.ID_PEDIDO = PE.ID) WHERE PE.ID =10')
-    Left = 710
-    Top = 368
+    Left = 888
+    Top = 460
     object SQL_ImpressaoPedidoID: TFDAutoIncField
       FieldName = 'ID'
       Origin = 'ID'
@@ -214,13 +215,13 @@ object DM: TDM
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
-    Left = 710
-    Top = 424
+    Left = 888
+    Top = 530
   end
   object SQL_Dashboard_Estoque: TFDQuery
     Connection = conexao
     SQL.Strings = (
       'select descricao, estoque from produto')
-    Left = 752
+    Left = 940
   end
 end

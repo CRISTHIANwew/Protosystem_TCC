@@ -4,13 +4,13 @@ object Frm_Principal: TFrm_Principal
   Align = alClient
   BorderStyle = bsNone
   Caption = '  ProtoSystem'
-  ClientHeight = 787
-  ClientWidth = 1260
+  ClientHeight = 984
+  ClientWidth = 1575
   Color = clWhite
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
   Icon.Data = {
@@ -141,128 +141,161 @@ object Frm_Principal: TFrm_Principal
   Position = poDesigned
   OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 15
+  PixelsPerInch = 120
+  TextHeight = 20
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1260
-    Height = 787
+    Width = 1575
+    Height = 984
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alClient
     BevelOuter = bvNone
     Color = 8739130
-    Padding.Left = 5
-    Padding.Top = 5
-    Padding.Right = 5
-    Padding.Bottom = 5
+    Padding.Left = 6
+    Padding.Top = 6
+    Padding.Right = 6
+    Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
     object Panel2: TPanel
-      Left = 5
-      Top = 49
-      Width = 1250
-      Height = 733
+      Left = 6
+      Top = 61
+      Width = 1563
+      Height = 917
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alClient
       BevelOuter = bvNone
       Color = 14725001
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 15649712
-      Font.Height = -12
+      Font.Height = -15
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
-      Padding.Left = 4
-      Padding.Top = 4
-      Padding.Right = 4
-      Padding.Bottom = 4
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object PGC_MENU: TPageControl
-        Left = 4
-        Top = 4
-        Width = 1242
-        Height = 725
-        ActivePage = TabSheet6
+        Left = 5
+        Top = 5
+        Width = 1553
+        Height = 907
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        ActivePage = TabSheet1
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
-        Font.Height = -13
+        Font.Height = -16
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
         TabOrder = 0
         object TabSheet1: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Tela inicial'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ParentFont = False
           object pnl_boasvindas: TPanel
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Align = alClient
             Color = 13274977
             Ctl3D = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 14725003
-            Font.Height = -14
+            Font.Height = -18
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             Font.Quality = fqClearTypeNatural
-            Padding.Left = 5
-            Padding.Top = 5
-            Padding.Right = 5
-            Padding.Bottom = 5
+            Padding.Left = 6
+            Padding.Top = 6
+            Padding.Right = 6
+            Padding.Bottom = 6
             ParentBackground = False
             ParentCtl3D = False
             ParentFont = False
             TabOrder = 0
             object Label1: TLabel
-              Left = 6
-              Top = 6
-              Width = 1222
-              Height = 31
+              Left = 7
+              Top = 7
+              Width = 1531
+              Height = 40
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Align = alTop
               Alignment = taCenter
               Caption = 'Dashboard Geral'
               Color = 13275746
               Font.Charset = DEFAULT_CHARSET
               Font.Color = 15649712
-              Font.Height = -23
+              Font.Height = -29
               Font.Name = 'Segoe UI'
               Font.Style = []
               Font.Quality = fqClearTypeNatural
               ParentColor = False
               ParentFont = False
-              ExplicitWidth = 172
+              ExplicitWidth = 214
             end
             object Panel33: TPanel
-              Left = 6
-              Top = 37
-              Width = 1222
-              Height = 650
+              Left = 7
+              Top = 47
+              Width = 1531
+              Height = 817
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
-              Padding.Left = 112
-              Padding.Top = 100
-              Padding.Right = 112
-              Padding.Bottom = 100
+              Padding.Left = 140
+              Padding.Top = 125
+              Padding.Right = 140
+              Padding.Bottom = 125
               ParentBackground = False
               TabOrder = 0
               object PageControl1: TPageControl
-                Left = 112
-                Top = 100
-                Width = 998
-                Height = 450
+                Left = 140
+                Top = 125
+                Width = 1251
+                Height = 567
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 ActivePage = TabSheet37
                 Align = alClient
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = 14725003
-                Font.Height = -14
+                Font.Height = -18
                 Font.Name = 'Segoe UI'
                 Font.Style = []
                 Font.Quality = fqClearTypeNatural
@@ -271,10 +304,14 @@ object Frm_Principal: TFrm_Principal
                 TabOrder = 0
                 TabPosition = tpBottom
                 object TabSheet37: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Estoque  |'
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 14725003
-                  Font.Height = -14
+                  Font.Height = -18
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   Font.Quality = fqClearTypeNatural
@@ -282,22 +319,30 @@ object Frm_Principal: TFrm_Principal
                   object Panel34: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                     object Chart1: TChart
-                      Left = 8
-                      Top = 8
-                      Width = 974
-                      Height = 402
+                      Left = 10
+                      Top = 10
+                      Width = 1223
+                      Height = 479
+                      Margins.Left = 4
+                      Margins.Top = 4
+                      Margins.Right = 4
+                      Margins.Bottom = 4
                       Title.Text.Strings = (
                         'TChart')
                       View3D = False
@@ -334,96 +379,136 @@ object Frm_Principal: TFrm_Principal
                   end
                 end
                 object TabSheet38: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Vendas  |'
                   ImageIndex = 1
                   object Panel35: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                   end
                 end
                 object TabSheet39: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Contas a Receber  |'
                   ImageIndex = 2
                   object Panel36: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                   end
                 end
                 object TabSheet40: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Contas a Pagar  |'
                   ImageIndex = 3
                   object Panel37: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                   end
                 end
                 object TabSheet41: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Caixa  |'
                   ImageIndex = 4
                   object Panel38: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                   end
                 end
                 object TabSheet42: TTabSheet
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Caption = '|  Dashboard Banco  |'
                   ImageIndex = 5
                   object Panel39: TPanel
                     Left = 0
                     Top = 0
-                    Width = 990
-                    Height = 418
+                    Width = 1243
+                    Height = 499
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     BevelOuter = bvNone
                     Color = 13274977
-                    Padding.Left = 8
-                    Padding.Top = 8
-                    Padding.Right = 8
-                    Padding.Bottom = 8
+                    Padding.Left = 10
+                    Padding.Top = 10
+                    Padding.Right = 10
+                    Padding.Bottom = 10
                     ParentBackground = False
                     TabOrder = 0
                   end
@@ -433,49 +518,69 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet2: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Estoque'
           ImageIndex = 1
           object PGC_ESTOQUE: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet11
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet8: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel3: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object PnlCadastroProdutos: TPanel
-                  Left = 11
-                  Top = 13
-                  Width = 158
-                  Height = 60
+                  Left = 14
+                  Top = 16
+                  Width = 197
+                  Height = 75
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBackground = False
@@ -484,79 +589,109 @@ object Frm_Principal: TFrm_Principal
                   object shpCadastroProdutos: TShape
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 60
+                    Width = 197
+                    Height = 75
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
+                    ExplicitWidth = 198
                   end
                   object btnCadastroProdutos: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 60
+                    Width = 197
+                    Height = 75
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Cadastro de Produtos'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = btnCadastroProdutosClick
+                    ExplicitWidth = 198
                   end
                 end
               end
             end
             object TabSheet9: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel6: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet10: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel7: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel42: TPanel
-                  Left = 9
-                  Top = 10
-                  Width = 158
-                  Height = 60
+                  Left = 11
+                  Top = 13
+                  Width = 198
+                  Height = 75
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBackground = False
@@ -565,8 +700,12 @@ object Frm_Principal: TFrm_Principal
                   object Shape12: TShape
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 60
+                    Width = 198
+                    Height = 75
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
@@ -574,14 +713,18 @@ object Frm_Principal: TFrm_Principal
                   object SpeedButton6: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 60
+                    Width = 198
+                    Height = 75
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Pesquisa de Estoque'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
@@ -592,20 +735,28 @@ object Frm_Principal: TFrm_Principal
               end
             end
             object TabSheet11: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel8: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -613,68 +764,96 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet3: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Vendas'
           ImageIndex = 2
           object PGC_VENDAS: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet14
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet13: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel9: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet14: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel10: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel43: TPanel
-                  Left = 19
-                  Top = 21
-                  Width = 158
-                  Height = 52
+                  Left = 24
+                  Top = 26
+                  Width = 197
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBackground = False
@@ -683,66 +862,92 @@ object Frm_Principal: TFrm_Principal
                   object Shape13: TShape
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 52
+                    Width = 197
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
+                    ExplicitWidth = 198
                   end
                   object SpeedButton7: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 52
+                    Width = 197
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Vendas'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton7Click
+                    ExplicitWidth = 198
                   end
                 end
               end
             end
             object TabSheet15: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel11: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet16: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel12: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -750,185 +955,249 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet4: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Caixa'
           ImageIndex = 3
           object PGC_CAIXA: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet17
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet17: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel13: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel47: TPanel
-                  Left = 7
-                  Top = 8
-                  Width = 178
-                  Height = 52
+                  Left = 9
+                  Top = 10
+                  Width = 222
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
-                  Padding.Right = 6
+                  Padding.Right = 8
                   ParentBackground = False
                   ParentFont = False
                   TabOrder = 0
                   object Shape6: TShape
                     Left = 0
                     Top = 0
-                    Width = 172
-                    Height = 52
+                    Width = 214
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
-                    ExplicitWidth = 158
+                    ExplicitWidth = 215
                   end
                   object SpeedButton11: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 172
-                    Height = 52
+                    Width = 214
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Cadastro de Lan'#231'amentos'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton11Click
-                    ExplicitWidth = 158
+                    ExplicitWidth = 215
                   end
                 end
               end
             end
             object TabSheet18: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel14: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet19: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel15: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel45: TPanel
-                  Left = 15
-                  Top = 16
-                  Width = 162
-                  Height = 52
+                  Left = 19
+                  Top = 20
+                  Width = 202
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
-                  Padding.Right = 6
+                  Padding.Right = 8
                   ParentBackground = False
                   ParentFont = False
                   TabOrder = 0
                   object Shape4: TShape
                     Left = 0
                     Top = 0
-                    Width = 156
-                    Height = 52
+                    Width = 194
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
-                    ExplicitWidth = 158
+                    ExplicitWidth = 195
                   end
                   object SpeedButton9: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 156
-                    Height = 52
+                    Width = 194
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Pesquisa Saldo Do Caixa'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton9Click
-                    ExplicitWidth = 158
+                    ExplicitWidth = 195
                   end
                 end
               end
             end
             object TabSheet20: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel16: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -936,10 +1205,14 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet5: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Banco'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = [fsBold]
           ImageIndex = 4
@@ -947,180 +1220,240 @@ object Frm_Principal: TFrm_Principal
           object PGC_BANCO: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet23
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet21: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel17: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel48: TPanel
-                  Left = 7
-                  Top = 8
-                  Width = 178
-                  Height = 52
+                  Left = 9
+                  Top = 10
+                  Width = 222
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
-                  Padding.Right = 6
+                  Padding.Right = 8
                   ParentBackground = False
                   ParentFont = False
                   TabOrder = 0
                   object Shape7: TShape
                     Left = 0
                     Top = 0
-                    Width = 172
-                    Height = 52
+                    Width = 214
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
-                    ExplicitWidth = 158
+                    ExplicitWidth = 215
                   end
                   object SpeedButton12: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 172
-                    Height = 52
+                    Width = 214
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Cadastro de Movimentos'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton12Click
-                    ExplicitWidth = 158
+                    ExplicitWidth = 215
                   end
                 end
               end
             end
             object TabSheet22: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel18: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet23: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel19: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel46: TPanel
-                  Left = 7
-                  Top = 8
-                  Width = 162
-                  Height = 52
+                  Left = 9
+                  Top = 10
+                  Width = 202
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
-                  Padding.Right = 6
+                  Padding.Right = 8
                   ParentBackground = False
                   ParentFont = False
                   TabOrder = 0
                   object Shape5: TShape
                     Left = 0
                     Top = 0
-                    Width = 156
-                    Height = 52
+                    Width = 194
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
-                    ExplicitWidth = 158
+                    ExplicitWidth = 195
                   end
                   object SpeedButton10: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 156
-                    Height = 52
+                    Width = 194
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Pesquisa Saldo Do Banco'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton10Click
-                    ExplicitWidth = 158
+                    ExplicitWidth = 195
                   end
                 end
               end
             end
             object TabSheet24: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel20: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -1128,49 +1461,69 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet6: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Contas a receber'
           ImageIndex = 5
           object PGC_RECEBER: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet25
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet25: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel21: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel40: TPanel
-                  Left = 5
-                  Top = 7
-                  Width = 158
-                  Height = 52
+                  Left = 6
+                  Top = 9
+                  Width = 198
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBackground = False
@@ -1179,8 +1532,12 @@ object Frm_Principal: TFrm_Principal
                   object Shape10: TShape
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 52
+                    Width = 198
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
@@ -1188,14 +1545,18 @@ object Frm_Principal: TFrm_Principal
                   object SpeedButton4: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 158
-                    Height = 52
+                    Width = 198
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Cadastro de Clientes'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
@@ -1204,16 +1565,20 @@ object Frm_Principal: TFrm_Principal
                   end
                 end
                 object Panel41: TPanel
-                  Left = 171
-                  Top = 7
-                  Width = 201
-                  Height = 52
+                  Left = 214
+                  Top = 9
+                  Width = 251
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBackground = False
@@ -1222,8 +1587,12 @@ object Frm_Principal: TFrm_Principal
                   object Shape11: TShape
                     Left = 0
                     Top = 0
-                    Width = 201
-                    Height = 52
+                    Width = 251
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
@@ -1231,14 +1600,18 @@ object Frm_Principal: TFrm_Principal
                   object SpeedButton5: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 201
-                    Height = 52
+                    Width = 251
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Cadastro de Contas a Receber'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
@@ -1249,104 +1622,138 @@ object Frm_Principal: TFrm_Principal
               end
             end
             object TabSheet26: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel22: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Panel44: TPanel
-                  Left = 7
-                  Top = 8
-                  Width = 203
-                  Height = 52
+                  Left = 9
+                  Top = 10
+                  Width = 254
+                  Height = 65
                   Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   BevelOuter = bvNone
                   Color = 13274977
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 2302755
-                  Font.Height = -12
+                  Font.Height = -15
                   Font.Name = 'Segoe UI'
                   Font.Style = []
-                  Padding.Right = 6
+                  Padding.Right = 8
                   ParentBackground = False
                   ParentFont = False
                   TabOrder = 0
                   object Shape3: TShape
                     Left = 0
                     Top = 0
-                    Width = 197
-                    Height = 52
+                    Width = 246
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Brush.Color = 8739130
                     Shape = stRoundRect
-                    ExplicitWidth = 158
                   end
                   object SpeedButton8: TSpeedButton
                     Left = 0
                     Top = 0
-                    Width = 197
-                    Height = 52
+                    Width = 246
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
                     Align = alClient
                     Caption = 'Baixa de documentos a receber'
                     Flat = True
                     Font.Charset = DEFAULT_CHARSET
                     Font.Color = 15649712
-                    Font.Height = -12
+                    Font.Height = -15
                     Font.Name = 'Segoe UI'
                     Font.Style = [fsBold]
                     Font.Quality = fqClearTypeNatural
                     ParentFont = False
                     OnClick = SpeedButton8Click
-                    ExplicitWidth = 158
                   end
                 end
               end
             end
             object TabSheet27: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel23: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet28: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel24: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -1354,102 +1761,146 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet7: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Contas a pagar'
           ImageIndex = 6
           object PGC_PAGAR: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet29
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet29: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel25: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 1
               end
               object BTN_CAD_FORNECEDOR: TButton
-                Left = 20
-                Top = 20
-                Width = 170
-                Height = 60
+                Left = 25
+                Top = 25
+                Width = 213
+                Height = 75
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Caption = 'Cadastro de fornecedor'
                 TabOrder = 0
                 OnClick = BTN_CAD_FORNECEDORClick
               end
             end
             object TabSheet30: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel26: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet31: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel27: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet32: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel28: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
@@ -1457,81 +1908,117 @@ object Frm_Principal: TFrm_Principal
           end
         end
         object TabSheet12: TTabSheet
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Configura'#231#245'es'
           ImageIndex = 7
           object PGC_CONFIGURACAO: TPageControl
             Left = 0
             Top = 0
-            Width = 1234
-            Height = 693
+            Width = 1545
+            Height = 871
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ActivePage = TabSheet33
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
-            Font.Height = -13
+            Font.Height = -16
             Font.Name = 'Segoe UI'
             Font.Style = []
             ParentFont = False
             TabOrder = 0
             object TabSheet33: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Cadastros'
               object Panel29: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 1
               end
               object BTN_CAD_USUARIO: TButton
-                Left = 20
-                Top = 20
-                Width = 170
-                Height = 60
+                Left = 25
+                Top = 25
+                Width = 213
+                Height = 75
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Caption = 'Cadastro de usuarios'
                 TabOrder = 0
                 OnClick = BTN_CAD_USUARIOClick
               end
             end
             object TabSheet34: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Digita'#231#245'es'
               ImageIndex = 1
               object Panel30: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 2
               end
               object CB_STYLES: TComboBox
-                Left = 216
-                Top = 37
-                Width = 265
-                Height = 25
+                Left = 270
+                Top = 46
+                Width = 331
+                Height = 29
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Style = csDropDownList
                 TabOrder = 0
                 OnChange = CB_STYLESChange
               end
               object ComboBox1: TComboBox
-                Left = 552
-                Top = 37
-                Width = 241
-                Height = 25
+                Left = 690
+                Top = 46
+                Width = 301
+                Height = 29
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Style = csDropDownList
                 TabOrder = 1
                 OnSelect = ComboBox1Select
@@ -1542,81 +2029,121 @@ object Frm_Principal: TFrm_Principal
               end
             end
             object TabSheet35: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Pesquisas'
               ImageIndex = 2
               object Panel31: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
               end
             end
             object TabSheet36: TTabSheet
+              Margins.Left = 4
+              Margins.Top = 4
+              Margins.Right = 4
+              Margins.Bottom = 4
               Caption = 'Relatorios'
               ImageIndex = 3
               object Panel32: TPanel
                 Left = 0
                 Top = 0
-                Width = 1226
-                Height = 661
+                Width = 1537
+                Height = 835
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
                 Align = alClient
                 BevelOuter = bvNone
                 Color = 13274977
-                Padding.Left = 8
-                Padding.Top = 8
-                Padding.Right = 8
-                Padding.Bottom = 8
+                Padding.Left = 10
+                Padding.Top = 10
+                Padding.Right = 10
+                Padding.Bottom = 10
                 ParentBackground = False
                 TabOrder = 0
                 object Shape14: TShape
-                  Left = 169
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 211
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 8739130
                 end
                 object Shape15: TShape
-                  Left = 138
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 173
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 13274977
                 end
                 object Shape16: TShape
-                  Left = 108
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 135
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 14725001
                 end
                 object Shape17: TShape
-                  Left = 78
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 98
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 15649712
                 end
                 object Shape18: TShape
-                  Left = 48
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 60
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 15456203
                 end
                 object Shape19: TShape
-                  Left = 18
-                  Top = 22
-                  Width = 24
-                  Height = 39
+                  Left = 23
+                  Top = 28
+                  Width = 30
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
                   Brush.Color = 16512241
                 end
               end
@@ -1626,70 +2153,84 @@ object Frm_Principal: TFrm_Principal
       end
     end
     object pnlBarraSuperior: TPanel
-      Left = 5
-      Top = 5
-      Width = 1250
-      Height = 44
+      Left = 6
+      Top = 6
+      Width = 1563
+      Height = 55
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alTop
       BevelOuter = bvNone
       Color = 13274977
-      Padding.Left = 5
-      Padding.Top = 5
-      Padding.Right = 5
-      Padding.Bottom = 5
+      Padding.Left = 6
+      Padding.Top = 6
+      Padding.Right = 6
+      Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
       object lb_logo: TLabel
-        Left = 5
-        Top = 5
-        Width = 223
-        Height = 34
+        Left = 6
+        Top = 6
+        Width = 279
+        Height = 43
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alLeft
         Alignment = taCenter
         Caption = 'ProtoSystem Sistemas'
         Color = 13275746
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
-        Font.Height = -23
+        Font.Height = -29
         Font.Name = 'Segoe UI'
         Font.Style = []
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
-        ExplicitLeft = 45
-        ExplicitTop = 4
+        ExplicitHeight = 40
       end
       object lbHORA: TLabel
-        Left = 297
-        Top = 5
-        Width = 288
-        Height = 34
+        Left = 441
+        Top = 6
+        Width = 320
+        Height = 43
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alLeft
         Alignment = taRightJustify
         Color = clBtnFace
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
-        Font.Height = -23
+        Font.Height = -29
         Font.Name = 'Segoe UI'
         Font.Style = []
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
-        ExplicitLeft = 321
-        ExplicitTop = 4
+        ExplicitLeft = 371
       end
       object Pnl_sair: TPanel
-        Left = 1157
-        Top = 5
-        Width = 88
-        Height = 34
+        Left = 1447
+        Top = 6
+        Width = 110
+        Height = 43
         Cursor = crHandPoint
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alRight
         BevelOuter = bvNone
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -1698,8 +2239,12 @@ object Frm_Principal: TFrm_Principal
         object Shape2: TShape
           Left = 0
           Top = 0
-          Width = 88
-          Height = 34
+          Width = 110
+          Height = 43
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -1707,15 +2252,19 @@ object Frm_Principal: TFrm_Principal
         object SpeedButton1: TSpeedButton
           Left = 0
           Top = 0
-          Width = 88
-          Height = 34
+          Width = 110
+          Height = 43
           Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Caption = 'Sair'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -1724,28 +2273,36 @@ object Frm_Principal: TFrm_Principal
         end
       end
       object Panel4: TPanel
-        Left = 981
-        Top = 5
-        Width = 88
-        Height = 34
+        Left = 1227
+        Top = 6
+        Width = 110
+        Height = 43
         Cursor = crHandPoint
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alRight
         BevelOuter = bvNone
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Padding.Right = 5
+        Padding.Right = 6
         ParentBackground = False
         ParentFont = False
         TabOrder = 1
         object Shape1: TShape
           Left = 0
           Top = 0
-          Width = 83
-          Height = 34
+          Width = 104
+          Height = 43
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -1753,15 +2310,19 @@ object Frm_Principal: TFrm_Principal
         object SpeedButton2: TSpeedButton
           Left = 0
           Top = 0
-          Width = 83
-          Height = 34
+          Width = 104
+          Height = 43
           Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Caption = 'Minimizar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -1770,28 +2331,36 @@ object Frm_Principal: TFrm_Principal
         end
       end
       object Panel5: TPanel
-        Left = 1069
-        Top = 5
-        Width = 88
-        Height = 34
+        Left = 1337
+        Top = 6
+        Width = 110
+        Height = 43
         Cursor = crHandPoint
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alRight
         BevelOuter = bvNone
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -12
+        Font.Height = -15
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Padding.Right = 5
+        Padding.Right = 6
         ParentBackground = False
         ParentFont = False
         TabOrder = 2
         object Shape9: TShape
           Left = 0
           Top = 0
-          Width = 83
-          Height = 34
+          Width = 104
+          Height = 43
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -1799,15 +2368,19 @@ object Frm_Principal: TFrm_Principal
         object SpeedButton3: TSpeedButton
           Left = 0
           Top = 0
-          Width = 83
-          Height = 34
+          Width = 104
+          Height = 43
           Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alClient
           Caption = 'Janela'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -1815,12 +2388,17 @@ object Frm_Principal: TFrm_Principal
         end
       end
       object Panel49: TPanel
-        Left = 228
-        Top = 5
-        Width = 69
-        Height = 34
+        Left = 285
+        Top = 6
+        Width = 156
+        Height = 43
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Align = alLeft
         BevelOuter = bvNone
+        Caption = '--'
         TabOrder = 3
       end
     end
@@ -1828,6 +2406,8 @@ object Frm_Principal: TFrm_Principal
   object VirtualImageList1: TVirtualImageList
     Images = <>
     ImageCollection = ImageCollection1
+    Width = 20
+    Height = 20
     Left = 1320
     Top = 120
   end
