@@ -71,7 +71,6 @@ type
     TabSheet12: TTabSheet;
     PGC_CONFIGURACAO: TPageControl;
     TabSheet33: TTabSheet;
-    BTN_CAD_USUARIO: TButton;
     TabSheet34: TTabSheet;
     CB_STYLES: TComboBox;
     ComboBox1: TComboBox;
@@ -177,12 +176,14 @@ type
     Panel52: TPanel;
     Shape21: TShape;
     SpeedButton15: TSpeedButton;
+    Panel53: TPanel;
+    Shape22: TShape;
+    SpeedButton16: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
     procedure BTN_PES_ESTOQUEClick(Sender: TObject);
     procedure BTN_CAD_CLIENTEClick(Sender: TObject);
-    procedure BTN_CAD_USUARIOClick(Sender: TObject);
     procedure CB_STYLESChange(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
     procedure BTN_VENDASClick(Sender: TObject);
@@ -203,6 +204,7 @@ type
     procedure SpeedButton14Click(Sender: TObject);
     procedure SpeedButton13Click(Sender: TObject);
     procedure SpeedButton15Click(Sender: TObject);
+    procedure SpeedButton16Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -290,19 +292,6 @@ begin
     Frm_CadProd.ShowModal; // Exiba o formulário de maneira modal
   finally
     Frm_CadProd.Free; // Libere a memória após fechar o formulário
-  end;
-end;
-
-procedure TFrm_Principal.BTN_CAD_USUARIOClick(Sender: TObject);
-begin
-  var
-    Frm_CadUsuario: TFrm_CadUsuario; // Declare uma variável para o formulário
-  Frm_CadUsuario := TFrm_CadUsuario.Create(Self);
-  // Crie uma instância do formulário
-  try
-    Frm_CadUsuario.ShowModal; // Exiba o formulário de maneira modal
-  finally
-    Frm_CadUsuario.Free; // Libere a memória após fechar o formulário
   end;
 end;
 
@@ -436,6 +425,19 @@ var
     frmBaixaDocumentosPagar.ShowModal; // Exiba o formulário de maneira modal
   finally
     frmBaixaDocumentosPagar.Free; // Libere a memória após fechar o formulário
+  end;
+end;
+
+procedure TFrm_Principal.SpeedButton16Click(Sender: TObject);
+begin
+var
+    Frm_CadUsuario: TFrm_CadUsuario; // Declare uma variável para o formulário
+  Frm_CadUsuario := TFrm_CadUsuario.Create(Self);
+  // Crie uma instância do formulário
+  try
+    Frm_CadUsuario.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    Frm_CadUsuario.Free; // Libere a memória após fechar o formulário
   end;
 end;
 

@@ -634,14 +634,14 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                   Expanded = False
                   FieldName = 'ID'
                   Title.Caption = 'Id'
-                  Width = 80
+                  Width = 58
                   Visible = True
                 end
                 item
                   Expanded = False
                   FieldName = 'TIPO'
                   Title.Caption = 'Tipo'
-                  Width = 125
+                  Width = 77
                   Visible = True
                 end
                 item
@@ -658,14 +658,14 @@ object frmCadastroMovimento: TfrmCadastroMovimento
                   FieldName = 'VALORMOVIMENTO'
                   Title.Alignment = taCenter
                   Title.Caption = 'Valor'
-                  Width = 80
+                  Width = 70
                   Visible = True
                 end
                 item
                   Expanded = False
                   FieldName = 'OBSERVACAO'
                   Title.Caption = 'Observa'#231#227'o'
-                  Width = 229
+                  Width = 437
                   Visible = True
                 end>
             end

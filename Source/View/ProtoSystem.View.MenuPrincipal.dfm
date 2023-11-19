@@ -194,7 +194,7 @@ object Frm_Principal: TFrm_Principal
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabSheet7
+        ActivePage = TabSheet1
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -533,7 +533,7 @@ object Frm_Principal: TFrm_Principal
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = TabSheet11
+            ActivePage = TabSheet8
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -779,7 +779,7 @@ object Frm_Principal: TFrm_Principal
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = TabSheet14
+            ActivePage = TabSheet13
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1226,7 +1226,7 @@ object Frm_Principal: TFrm_Principal
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = TabSheet23
+            ActivePage = TabSheet21
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1476,7 +1476,7 @@ object Frm_Principal: TFrm_Principal
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = TabSheet26
+            ActivePage = TabSheet25
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -1779,7 +1779,7 @@ object Frm_Principal: TFrm_Principal
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ActivePage = TabSheet30
+            ActivePage = TabSheet29
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -2119,20 +2119,65 @@ object Frm_Principal: TFrm_Principal
                 Padding.Right = 10
                 Padding.Bottom = 10
                 ParentBackground = False
-                TabOrder = 1
-              end
-              object BTN_CAD_USUARIO: TButton
-                Left = 25
-                Top = 25
-                Width = 213
-                Height = 75
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
-                Caption = 'Cadastro de usuarios'
                 TabOrder = 0
-                OnClick = BTN_CAD_USUARIOClick
+                object Panel53: TPanel
+                  Left = 16
+                  Top = 20
+                  Width = 182
+                  Height = 65
+                  Cursor = crHandPoint
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 5
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape22: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 177
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 251
+                  end
+                  object SpeedButton16: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 177
+                    Height = 65
+                    Margins.Left = 4
+                    Margins.Top = 4
+                    Margins.Right = 4
+                    Margins.Bottom = 4
+                    Align = alClient
+                    Caption = 'Cadastro de usuarios'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -15
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton16Click
+                    ExplicitWidth = 251
+                  end
+                end
               end
             end
             object TabSheet34: TTabSheet
@@ -2355,12 +2400,13 @@ object Frm_Principal: TFrm_Principal
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
-        ExplicitHeight = 40
+        ExplicitLeft = -2
+        ExplicitTop = 4
       end
       object lbHORA: TLabel
         Left = 441
         Top = 6
-        Width = 8
+        Width = 290
         Height = 43
         Margins.Left = 4
         Margins.Top = 4
@@ -2377,8 +2423,6 @@ object Frm_Principal: TFrm_Principal
         Font.Quality = fqClearTypeNatural
         ParentColor = False
         ParentFont = False
-        ExplicitLeft = 753
-        ExplicitHeight = 40
       end
       object Pnl_sair: TPanel
         Left = 1447
@@ -2563,8 +2607,10 @@ object Frm_Principal: TFrm_Principal
         Margins.Bottom = 4
         Align = alLeft
         BevelOuter = bvNone
-        Caption = '--'
+        Caption = '-'
         TabOrder = 3
+        ExplicitLeft = 277
+        ExplicitTop = 4
       end
     end
   end

@@ -71,7 +71,7 @@ begin
     // Atualize o filtro do DataSet ligado ao DBGrid
     // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
     SQL_PesquisaFornecedor.Filtered := False;
-    SQL_PesquisaFornecedor.Filter := 'DESCRICAO LIKE ' +
+    SQL_PesquisaFornecedor.Filter := 'NOME LIKE ' +
       QuotedStr('%' + Edit_pesquisa.Text + '%');
     SQL_PesquisaFornecedor.Filtered := True;
   end

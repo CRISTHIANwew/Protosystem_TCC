@@ -18,12 +18,6 @@ type
     Panel1: TPanel;
     DBGrid1: TDBGrid;
     Panel6: TPanel;
-    Shape8: TShape;
-    Shape4: TShape;
-    Shape5: TShape;
-    Shape6: TShape;
-    Shape7: TShape;
-    Shape3: TShape;
     Pnl_sair: TPanel;
     Shape15: TShape;
     btn_saircadprod: TSpeedButton;

@@ -33,9 +33,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
     Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = -63
-    ExplicitWidth = 905
-    ExplicitHeight = 676
     object Panel2: TPanel
       Left = 6
       Top = 44
@@ -54,8 +51,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 893
-      ExplicitHeight = 566
       object Panel12: TPanel
         Left = 6
         Top = 6
@@ -69,7 +64,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 0
-        ExplicitWidth = 881
         object Shape12: TShape
           Left = 0
           Top = 0
@@ -104,7 +98,7 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          Text = 'PESQUISA POR NOME'
+          TextHint = 'PESQUISA POR NOME'
           OnChange = Edit_pesquisaChange
         end
       end
@@ -184,7 +178,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
-      ExplicitWidth = 893
       object Pnl_sair: TPanel
         Left = 773
         Top = 8
@@ -207,7 +200,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 775
         object Shape15: TShape
           Left = 0
           Top = 0
@@ -273,8 +265,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
-      ExplicitTop = 610
-      ExplicitWidth = 893
       object pnlCadastrar: TPanel
         Left = 778
         Top = 8
@@ -288,7 +278,6 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 0
-        ExplicitLeft = 780
         object ShpCadastrar: TShape
           Left = 0
           Top = 0

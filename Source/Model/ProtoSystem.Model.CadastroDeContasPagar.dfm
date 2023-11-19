@@ -32,10 +32,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
     Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 10
-    ExplicitTop = 10
-    ExplicitWidth = 1453
-    ExplicitHeight = 391
     object Panel8: TPanel
       Left = 6
       Top = 6
@@ -64,7 +60,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = 4
       object Pnl_sair: TPanel
         Left = 1352
         Top = 6
@@ -86,7 +81,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 1325
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -142,8 +136,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
       Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 1441
-      ExplicitHeight = 344
       object Q: TPageControl
         Left = 6
         Top = 6
@@ -153,11 +145,9 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabPesquisa
+        ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1429
-        ExplicitHeight = 292
         object TabOperacao: TTabSheet
           Margins.Left = 4
           Margins.Top = 4
@@ -182,8 +172,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
             Padding.Bottom = 6
             ParentBackground = False
             TabOrder = 0
-            ExplicitWidth = 1421
-            ExplicitHeight = 257
             object pnl_dados_user: TPanel
               Left = 6
               Top = 6
@@ -202,8 +190,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
               Padding.Bottom = 6
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = 8
               object Panel15: TPanel
                 Left = 18
                 Top = 20
@@ -1148,8 +1134,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
         Padding.Bottom = 6
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = 298
-        ExplicitWidth = 1429
         object pnlEditar: TPanel
           Left = 1030
           Top = 6
@@ -1163,7 +1147,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 0
-          ExplicitLeft = 1003
           object Shpeditar: TShape
             Left = 0
             Top = 0
@@ -1212,7 +1195,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 1
-          ExplicitLeft = 898
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
@@ -1261,7 +1243,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 2
-          ExplicitLeft = 1108
           object shpSalvar: TShape
             Left = 0
             Top = 0
@@ -1311,7 +1292,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 3
-          ExplicitLeft = 1213
           object ShpCancelar: TShape
             Left = 0
             Top = 0
@@ -1361,7 +1341,6 @@ object frmCadastroContasPagar: TfrmCadastroContasPagar
           BevelOuter = bvNone
           Padding.Right = 6
           TabOrder = 4
-          ExplicitLeft = 1318
           object shpExcluir: TShape
             Left = 0
             Top = 0

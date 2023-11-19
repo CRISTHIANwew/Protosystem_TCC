@@ -100,7 +100,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          Text = 'PESQUISA POR NOME'
+          TextHint = 'PESQUISA POR NOME'
           OnChange = Edit_pesquisaChange
         end
       end
