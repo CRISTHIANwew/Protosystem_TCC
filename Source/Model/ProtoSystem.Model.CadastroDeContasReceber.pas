@@ -32,7 +32,7 @@ type
     edtNome: TDBLabeledEdit;
     Panel6: TPanel;
     Shape2: TShape;
-    edtSenha: TDBLabeledEdit;
+    edtTipo: TDBLabeledEdit;
     TabPesquisa: TTabSheet;
     Panel3: TPanel;
     gridDocumentos: TDBGrid;
@@ -58,25 +58,30 @@ type
     btnPesquisaCliente: TSpeedButton;
     Panel7: TPanel;
     Shape3: TShape;
-    DBLabeledEdit1: TDBLabeledEdit;
+    edtCodigo: TDBLabeledEdit;
     Panel10: TPanel;
     Shape5: TShape;
-    DBLabeledEdit2: TDBLabeledEdit;
+    edtEmissao: TDBLabeledEdit;
     Panel11: TPanel;
     Shape6: TShape;
-    DBLabeledEdit3: TDBLabeledEdit;
+    edtVencimento: TDBLabeledEdit;
     Panel12: TPanel;
     Shape7: TShape;
-    DBLabeledEdit4: TDBLabeledEdit;
+    edtValor: TDBLabeledEdit;
     Panel13: TPanel;
     Shape8: TShape;
-    DBLabeledEdit5: TDBLabeledEdit;
+    edtQtdParcelas: TDBLabeledEdit;
     Panel14: TPanel;
     Shape9: TShape;
-    DBLabeledEdit6: TDBLabeledEdit;
+    edtDesconto: TDBLabeledEdit;
     Panel16: TPanel;
     Shape10: TShape;
-    DBLabeledEdit7: TDBLabeledEdit;
+    edtObservacao: TDBLabeledEdit;
+    Panel17: TPanel;
+    Shape11: TShape;
+    dtEmissao: TDateTimePicker;
+    dtVencimento: TDateTimePicker;
+    edtQuitado: TDBLabeledEdit;
     procedure SpeedButton6Click(Sender: TObject);
     procedure btnPesquisaClienteClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
@@ -84,8 +89,11 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
-    procedure DBLabeledEdit4KeyPress(Sender: TObject; var Key: Char);
+    procedure edtValorKeyPress(Sender: TObject; var Key: Char);
     procedure gridDocumentosDblClick(Sender: TObject);
+    procedure dtEmissaoMouseLeave(Sender: TObject);
+    procedure dtVencimentoMouseLeave(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -112,6 +120,16 @@ begin
   // habilita salvar e cancelar
   btnSalvar.Enabled := true;
   btnCancelar.Enabled := true;
+  //habilita entrada das informações
+  btnPesquisaCliente.Enabled:=true;
+  edtTipo.Enabled:=true;
+  edtCodigo.Enabled:=true;
+  dtEmissao.Enabled:=true;
+  dtVencimento.Enabled:=true;
+  edtValor.Enabled:=true;
+  edtQtdParcelas.Enabled:=true;
+  edtDesconto.Enabled:=true;
+  edtObservacao.Enabled:=true;
 end;
 
 procedure TFrm_CadastroContasReceber.btnCancelarClick(Sender: TObject);
@@ -168,6 +186,7 @@ end;
 procedure TFrm_CadastroContasReceber.btnSalvarClick(Sender: TObject);
 begin
   if SQL_DocumentosaReceber.State in [dsInsert, dsEdit] then
+    edtQuitado.Text:='N';
     SQL_DocumentosaReceber.Post;
   // desabilitar salvar e cancelar
   btnSalvar.Enabled := false;
@@ -177,13 +196,46 @@ begin
   btnExcluir.Enabled := true;
   btnCadastrar.Enabled := true;
   SQL_DocumentosaReceber.Refresh;
+
+  btnPesquisaCliente.Enabled:=false;
+  edtTipo.Enabled:=false;
+  edtCodigo.Enabled:=false;
+  dtEmissao.Enabled:=false;
+  dtVencimento.Enabled:=false;
+  edtValor.Enabled:=false;
+  edtQtdParcelas.Enabled:=false;
+  edtDesconto.Enabled:=false;
+  edtObservacao.Enabled:=false;
+end;
+procedure TFrm_CadastroContasReceber.dtEmissaoMouseLeave(Sender: TObject);
+begin
+      edtEmissao.Text:=DateToStr(dtEmissao.Date);
 end;
 
-procedure TFrm_CadastroContasReceber.DBLabeledEdit4KeyPress(Sender: TObject;
+procedure TFrm_CadastroContasReceber.dtVencimentoMouseLeave(Sender: TObject);
+begin
+    edtVencimento.Text:=DateToStr(dtVencimento.Date);
+end;
+
+procedure TFrm_CadastroContasReceber.edtValorKeyPress(Sender: TObject;
   var Key: Char);
 begin
   if not (Key in ['0'..'9', ',', #8]) then
     Key := #0;
+end;
+
+procedure TFrm_CadastroContasReceber.FormCreate(Sender: TObject);
+begin
+btnPesquisaCliente.Enabled:=false;
+edtTipo.Enabled:=false;
+edtCodigo.Enabled:=false;
+dtEmissao.Enabled:=false;
+dtVencimento.Enabled:=false;
+edtValor.Enabled:=false;
+edtQtdParcelas.Enabled:=false;
+edtDesconto.Enabled:=false;
+edtObservacao.Enabled:=false;
+SQL_DocumentosaReceber.Active:=true;
 end;
 
 procedure TFrm_CadastroContasReceber.gridDocumentosDblClick(Sender: TObject);

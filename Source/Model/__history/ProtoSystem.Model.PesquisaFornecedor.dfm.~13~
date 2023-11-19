@@ -1,0 +1,16 @@
+object frmPesquisaFornecedor: TfrmPesquisaFornecedor
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  ClientHeight = 613
+  ClientWidth = 995
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  PixelsPerInch = 120
+  TextHeight = 20
+end

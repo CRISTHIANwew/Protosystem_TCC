@@ -146,7 +146,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
-        ActivePage = TabPesquisa
+        ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
         object TabOperacao: TTabSheet
@@ -244,10 +244,10 @@ object Frm_CadUsuario: TFrm_CadUsuario
                   TabOrder = 0
                   EditLabel.Width = 37
                   EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.BiDiMode = bdLeftToRight
                   EditLabel.ParentBiDiMode = False
                   EditLabel.Layout = tlCenter
@@ -280,6 +280,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
                   Shape = stRoundRect
                 end
                 object edtUsuario: TDBLabeledEdit
+                  Tag = 1
                   Left = 8
                   Top = 25
                   Width = 220
@@ -300,17 +301,17 @@ object Frm_CadUsuario: TFrm_CadUsuario
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 54
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 69
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Usuario'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -345,6 +346,7 @@ object Frm_CadUsuario: TFrm_CadUsuario
                   Shape = stRoundRect
                 end
                 object edtSenha: TDBLabeledEdit
+                  Tag = 1
                   Left = 8
                   Top = 25
                   Width = 147
@@ -365,17 +367,17 @@ object Frm_CadUsuario: TFrm_CadUsuario
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 42
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 54
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Senha'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -719,17 +721,20 @@ object Frm_CadUsuario: TFrm_CadUsuario
     Left = 224
     Top = 149
     object Query_userid: TFDAutoIncField
+      DisplayLabel = 'Id'
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = True
     end
     object Query_userpassword: TStringField
+      DisplayLabel = 'Senha'
       FieldName = 'password'
       Origin = 'password'
       Size = 30
     end
     object Query_userusername: TStringField
+      DisplayLabel = 'Usu'#225'rio'
       FieldName = 'username'
       Origin = 'username'
       Size = 15

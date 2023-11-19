@@ -1,0 +1,36 @@
+unit ProtoSystem.Model.PesquisaSaldoBanco;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.Grids, Vcl.DBGrids;
+
+type
+  TfrmPesquisaSaldoBanco = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    gridFornecedor: TDBGrid;
+    Panel6: TPanel;
+    Pnl_sair: TPanel;
+    Shape15: TShape;
+    btn_saircadprod: TSpeedButton;
+    Panel3: TPanel;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnCadastrar: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesquisaSaldoBanco: TfrmPesquisaSaldoBanco;
+
+implementation
+
+{$R *.dfm}
+
+end.

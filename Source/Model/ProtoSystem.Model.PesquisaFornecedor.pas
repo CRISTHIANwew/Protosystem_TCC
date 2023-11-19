@@ -4,11 +4,11 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Data.DB, Vcl.Buttons,
-  Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
-  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Buttons, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TfrmPesquisaFornecedor = class(TForm)
@@ -47,7 +47,6 @@ type
     { Private declarations }
   public
     { Public declarations }
-    procedure transfereinformacoes;
   end;
 
 var
@@ -64,22 +63,15 @@ begin
   close;
 end;
 
-procedure TfrmPesquisaFornecedor.gridFornecedorCellClick(Column: TColumn);
-begin
-  transfereinformacoes;
-  dm.PesquisaFornecedorStatus:=false;
-  close;
-end;
-
 procedure TfrmPesquisaFornecedor.Edit_pesquisaChange(Sender: TObject);
 begin
-  // Verifique se o critério de pesquisa não está vazio
+// Verifique se o critério de pesquisa não está vazio
   if Edit_pesquisa.Text <> '' then
     begin
     // Atualize o filtro do DataSet ligado ao DBGrid
     // Suponha que o seu DataSet se chame "qryData" e o campo que você quer pesquisar seja "Nome"
     SQL_PesquisaFornecedor.Filtered := False;
-    SQL_PesquisaFornecedor.Filter := 'DESCRICAO LIKE ' +
+    SQL_PesquisaFornecedor.Filter := 'NOME LIKE ' +
       QuotedStr('%' + Edit_pesquisa.Text + '%');
     SQL_PesquisaFornecedor.Filtered := True;
   end
@@ -91,16 +83,18 @@ end;
 procedure TfrmPesquisaFornecedor.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
-    dm.PesquisaFornecedorStatus:=false;
+  dm.PesquisaFornecedorStatus:=false;
 end;
 
-procedure TfrmPesquisaFornecedor.transfereinformacoes;
+procedure TfrmPesquisaFornecedor.gridFornecedorCellClick(Column: TColumn);
 begin
   //Transferencia da celula de pesquisa selecionada
- var CellProd := gridFornecedor.DataSource.DataSet.RecNo;
+  var CellProd := gridFornecedor.DataSource.DataSet.RecNo;
   //Obtém os dados da linha selecionada no DBGrid
-  DM.IDFORNECEDOR := SQL_PesquisaFornecedor.FieldByName('ID').AsString;
-  DM.NOMEFORNECEDOR := SQL_PesquisaFornecedor.FieldByName('NOME').AsString;
+  DM.IDCliente := SQL_PesquisaFornecedor.FieldByName('ID').AsString;
+  DM.NOMECliente := SQL_PesquisaFornecedor.FieldByName('NOME').AsString;
+  dm.PesquisaClienteStatus:=false;
+  close;
 end;
 
 end.

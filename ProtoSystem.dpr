@@ -13,11 +13,19 @@ uses
   ProtoSystem.Model.CadastroUsuario in 'Source\Model\ProtoSystem.Model.CadastroUsuario.pas' {Frm_CadUsuario},
   ProtoSystem.Model.CadastroFornecedor in 'Source\Model\ProtoSystem.Model.CadastroFornecedor.pas' {Frm_CadFornecedor},
   ProtoSystem.Model.Vendas in 'Source\Model\ProtoSystem.Model.Vendas.pas' {Frm_Vendas},
-  ProtoSystem.View.TelaPadrao in 'Source\View\ProtoSystem.View.TelaPadrao.pas' {formTelaPadrao},
   ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Frm_CadastroContasReceber},
   ProtoSystem.Model.VendasFechamento in 'Source\Model\ProtoSystem.Model.VendasFechamento.pas' {frmVendasFechamento},
   ProtoSystem.Model.ReportsPedidoDeVenda in 'Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas' {frmReportsPedidoDeVenda},
-  ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente};
+  ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente},
+  ProtoSystem.Model.BaixaDocumentoReceber in 'Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas' {frm_BaixaDocumentoReceber},
+  ProtoSystem.Utils.Validates in 'Source\Utils\ProtoSystem.Utils.Validates.pas',
+  ProtoSystem.Model.PesquisaSaldoCaixa in 'Source\Model\ProtoSystem.Model.PesquisaSaldoCaixa.pas' {frmPesquisaSaldoCaixa},
+  ProtoSystem.Model.PesquisaSaldoBanco in 'Source\Model\ProtoSystem.Model.PesquisaSaldoBanco.pas' {frmPesquisaSaldoBanco},
+  ProtoSystem.Model.CadastroMovimentosBancarios in 'Source\Model\ProtoSystem.Model.CadastroMovimentosBancarios.pas' {frmCadastroMovimento},
+  ProtoSystem.Model.CadastroLancamentoCaixa in 'Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas' {frmLancamentoDeCaixa},
+  ProtoSystem.Model.CadastroDeContasPagar in 'Source\Model\ProtoSystem.Model.CadastroDeContasPagar.pas' {frmCadastroContasPagar},
+  ProtoSystem.Model.PesquisaFornecedor in 'Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas' {frmPesquisaFornecedor},
+  ProtoSystem.Model.BaixaDocumentoPagar in 'Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas' {frmBaixaDocumentosPagar};
 
 {$R *.res}
 
@@ -29,6 +37,10 @@ begin
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
   Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
+  Application.CreateForm(TfrmLancamentoDeCaixa, frmLancamentoDeCaixa);
+  Application.CreateForm(TfrmCadastroContasPagar, frmCadastroContasPagar);
+  Application.CreateForm(TfrmPesquisaFornecedor, frmPesquisaFornecedor);
+  Application.CreateForm(TfrmBaixaDocumentosPagar, frmBaixaDocumentosPagar);
   if TFrm_Login.Login then
     Application.Run
   else

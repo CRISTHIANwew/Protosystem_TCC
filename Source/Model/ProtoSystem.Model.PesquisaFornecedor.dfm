@@ -2,9 +2,8 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
   Left = 0
   Top = 0
   BorderStyle = bsNone
-  Caption = 'Pesquisa Fornecedor'
-  ClientHeight = 676
-  ClientWidth = 905
+  ClientHeight = 671
+  ClientWidth = 903
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,15 +11,14 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  Visible = True
   OnClose = FormClose
   PixelsPerInch = 120
   TextHeight = 20
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 905
-    Height = 676
+    Width = 903
+    Height = 671
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -35,14 +33,11 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
     Padding.Bottom = 6
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -299
-    ExplicitTop = -269
-    ExplicitHeight = 635
     object Panel2: TPanel
       Left = 6
       Top = 44
-      Width = 893
-      Height = 588
+      Width = 891
+      Height = 561
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -56,11 +51,10 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       Padding.Bottom = 6
       ParentBackground = False
       TabOrder = 1
-      ExplicitHeight = 585
       object Panel12: TPanel
         Left = 6
         Top = 6
-        Width = 881
+        Width = 879
         Height = 43
         Margins.Left = 4
         Margins.Top = 4
@@ -73,7 +67,7 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         object Shape12: TShape
           Left = 0
           Top = 0
-          Width = 875
+          Width = 873
           Height = 43
           Margins.Left = 4
           Margins.Top = 4
@@ -104,16 +98,16 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          Text = 'PESQUISA POR NOME'
+          TextHint = 'PESQUISA POR NOME'
           OnChange = Edit_pesquisaChange
         end
       end
     end
     object gridFornecedor: TDBGrid
-      Left = 13
+      Left = 12
       Top = 101
       Width = 878
-      Height = 521
+      Height = 500
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -128,6 +122,7 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       Font.Height = -15
       Font.Name = 'Segoe UI'
       Font.Style = []
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
@@ -152,14 +147,14 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         item
           Expanded = False
           FieldName = 'CPFCNPJ'
-          Width = 304
+          Width = 314
           Visible = True
         end>
     end
     object Panel6: TPanel
       Left = 6
       Top = 6
-      Width = 893
+      Width = 891
       Height = 38
       Margins.Left = 5
       Margins.Top = 5
@@ -183,10 +178,8 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
-      ExplicitTop = 3
-      ExplicitWidth = 891
       object Pnl_sair: TPanel
-        Left = 775
+        Left = 773
         Top = 8
         Width = 110
         Height = 22
@@ -248,9 +241,9 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
     end
     object Panel3: TPanel
       Left = 6
-      Top = 632
-      Width = 893
-      Height = 38
+      Top = 605
+      Width = 891
+      Height = 60
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -272,14 +265,11 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
-      ExplicitLeft = 12
-      ExplicitTop = 16
-      ExplicitWidth = 891
       object pnlCadastrar: TPanel
-        Left = 780
+        Left = 778
         Top = 8
         Width = 105
-        Height = 22
+        Height = 44
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -288,14 +278,11 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
         BevelOuter = bvNone
         Padding.Right = 6
         TabOrder = 0
-        ExplicitLeft = 19
-        ExplicitTop = 6
-        ExplicitHeight = 28
         object ShpCadastrar: TShape
           Left = 0
           Top = 0
           Width = 99
-          Height = 22
+          Height = 44
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -304,13 +291,13 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
           Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
-          ExplicitHeight = 28
+          ExplicitHeight = 45
         end
         object btnCadastrar: TSpeedButton
           Left = 0
           Top = 0
           Width = 99
-          Height = 22
+          Height = 44
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -325,7 +312,7 @@ object frmPesquisaFornecedor: TfrmPesquisaFornecedor
           Font.Style = [fsBold]
           Font.Quality = fqClearTypeNatural
           ParentFont = False
-          ExplicitHeight = 28
+          ExplicitHeight = 45
         end
       end
     end

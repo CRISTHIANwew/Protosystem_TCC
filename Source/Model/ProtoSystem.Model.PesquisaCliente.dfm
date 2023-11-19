@@ -39,7 +39,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
       Left = 6
       Top = 44
       Width = 893
-      Height = 588
+      Height = 566
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -100,16 +100,16 @@ object frmPesquisaCliente: TfrmPesquisaCliente
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          Text = 'PESQUISA POR NOME'
+          TextHint = 'PESQUISA POR NOME'
           OnChange = Edit_pesquisaChange
         end
       end
     end
     object gridFornecedor: TDBGrid
-      Left = 12
+      Left = 13
       Top = 101
       Width = 878
-      Height = 521
+      Height = 500
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -124,6 +124,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
       Font.Height = -15
       Font.Name = 'Segoe UI'
       Font.Style = []
+      Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
@@ -148,7 +149,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
         item
           Expanded = False
           FieldName = 'CPFCNPJ'
-          Width = 304
+          Width = 314
           Visible = True
         end>
     end
@@ -242,9 +243,9 @@ object frmPesquisaCliente: TfrmPesquisaCliente
     end
     object Panel3: TPanel
       Left = 6
-      Top = 632
+      Top = 610
       Width = 893
-      Height = 38
+      Height = 60
       Margins.Left = 5
       Margins.Top = 5
       Margins.Right = 5
@@ -270,7 +271,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
         Left = 780
         Top = 8
         Width = 105
-        Height = 22
+        Height = 44
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -283,7 +284,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
           Left = 0
           Top = 0
           Width = 99
-          Height = 22
+          Height = 44
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -292,13 +293,13 @@ object frmPesquisaCliente: TfrmPesquisaCliente
           Brush.Color = 8739130
           Pen.Style = psClear
           Shape = stRoundRect
-          ExplicitHeight = 28
+          ExplicitHeight = 45
         end
         object btnCadastrar: TSpeedButton
           Left = 0
           Top = 0
           Width = 99
-          Height = 22
+          Height = 44
           Margins.Left = 4
           Margins.Top = 4
           Margins.Right = 4
@@ -313,7 +314,7 @@ object frmPesquisaCliente: TfrmPesquisaCliente
           Font.Style = [fsBold]
           Font.Quality = fqClearTypeNatural
           ParentFont = False
-          ExplicitHeight = 28
+          ExplicitHeight = 45
         end
       end
     end

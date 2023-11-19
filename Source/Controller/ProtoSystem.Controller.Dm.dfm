@@ -15,11 +15,7 @@ object DM: TDM
   object conexao: TFDConnection
     Params.Strings = (
       'LockingMode=Normal'
-      
-        'Database=C:\Users\CRISTHIAN\Documents\Projetos\Protosystem_TCC\b' +
-        'in\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 83
     Top = 8
@@ -74,8 +70,8 @@ object DM: TDM
     PacketRecords = 0
     Params = <>
     StoreDefs = True
-    Left = 829
-    Top = 60
+    Left = 939
+    Top = 190
     object cdsVendaProdutosIDPEDIDO: TIntegerField
       FieldKind = fkCalculated
       FieldName = 'IDPEDIDO'
@@ -110,6 +106,7 @@ object DM: TDM
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object SQL_ImpressaoPedidoTOTAL_PROD: TFloatField
       FieldName = 'TOTAL_PROD'
@@ -214,8 +211,8 @@ object DM: TDM
     Connection = conexao
     SQL.Strings = (
       'select * from EMPRESA')
-    Left = 758
-    Top = 460
+    Left = 888
+    Top = 530
   end
   object SQL_Dashboard_Estoque: TFDQuery
     Connection = conexao

@@ -3,7 +3,7 @@
         <ProjectGuid>{09589F71-1A44-4AD8-9A79-385B9C84516F}</ProjectGuid>
         <MainSource>ProtoSystem.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
@@ -138,10 +138,6 @@
             <Form>Frm_Vendas</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\View\ProtoSystem.View.TelaPadrao.pas">
-            <Form>formTelaPadrao</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas">
             <Form>Frm_CadastroContasReceber</Form>
             <FormType>dfm</FormType>
@@ -156,6 +152,39 @@
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaCliente.pas">
             <Form>frmPesquisaCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas">
+            <Form>frm_BaixaDocumentoReceber</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Utils\ProtoSystem.Utils.Validates.pas"/>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaSaldoCaixa.pas">
+            <Form>frmPesquisaSaldoCaixa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaSaldoBanco.pas">
+            <Form>frmPesquisaSaldoBanco</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroMovimentosBancarios.pas">
+            <Form>frmCadastroMovimento</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas">
+            <Form>frmLancamentoDeCaixa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.CadastroDeContasPagar.pas">
+            <Form>frmCadastroContasPagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas">
+            <Form>frmPesquisaFornecedor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas">
+            <Form>frmBaixaDocumentosPagar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
@@ -195,7 +224,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="ProtoSystem.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="bin\ProtoSystem.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ProtoSystem.exe</RemoteName>
                         <Overwrite>true</Overwrite>

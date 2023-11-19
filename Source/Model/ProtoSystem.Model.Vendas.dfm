@@ -455,8 +455,7 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = [fsBold]
           ParentFont = False
           OnClick = BTN_CancelarItemClick
-          ExplicitLeft = -2
-          ExplicitTop = -5
+          ExplicitHeight = 63
         end
       end
       object Panel2: TPanel
@@ -506,8 +505,8 @@ object Frm_Vendas: TFrm_Vendas
           Font.Style = [fsBold]
           ParentFont = False
           OnClick = SpeedButton1Click
-          ExplicitLeft = 2
-          ExplicitTop = -5
+          ExplicitWidth = 224
+          ExplicitHeight = 63
         end
       end
     end
@@ -648,10 +647,10 @@ object Frm_Vendas: TFrm_Vendas
             ExplicitHeight = 47
           end
           object edtTotalVenda: TEdit
-            Left = 4
-            Top = 33
-            Width = 387
-            Height = 33
+            Left = 5
+            Top = 30
+            Width = 386
+            Height = 34
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -1043,9 +1042,11 @@ object Frm_Vendas: TFrm_Vendas
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
+        BorderStyle = bsNone
         Color = clWhite
         DataSource = ds_VendaProdutos
-        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        FixedColor = 14079702
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         ReadOnly = True
         TabOrder = 3
         TitleFont.Charset = DEFAULT_CHARSET
@@ -1085,7 +1086,7 @@ object Frm_Vendas: TFrm_Vendas
             Title.Font.Height = -15
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
-            Width = 108
+            Width = 123
             Visible = True
           end
           item
@@ -1096,7 +1097,7 @@ object Frm_Vendas: TFrm_Vendas
             Title.Font.Height = -15
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
-            Width = 100
+            Width = 101
             Visible = True
           end
           item
@@ -1107,7 +1108,7 @@ object Frm_Vendas: TFrm_Vendas
             Title.Font.Height = -15
             Title.Font.Name = 'Segoe UI'
             Title.Font.Style = [fsBold]
-            Width = 90
+            Width = 89
             Visible = True
           end>
       end

@@ -1,10 +1,10 @@
 object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
-  Left = 0
-  Top = 0
+  Left = 347
+  Top = 270
   BorderStyle = bsNone
   Caption = 'Cadastro de contas a receber'
-  ClientHeight = 662
-  ClientWidth = 1457
+  ClientHeight = 391
+  ClientWidth = 1453
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,13 +12,14 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 20
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 1457
-    Height = 662
+    Width = 1453
+    Height = 391
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -35,7 +36,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     object Panel8: TPanel
       Left = 6
       Top = 6
-      Width = 1445
+      Width = 1441
       Height = 35
       Margins.Left = 4
       Margins.Top = 4
@@ -61,7 +62,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
       ParentFont = False
       TabOrder = 0
       object Pnl_sair: TPanel
-        Left = 1329
+        Left = 1325
         Top = 6
         Width = 110
         Height = 23
@@ -121,8 +122,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     object Panel2: TPanel
       Left = 6
       Top = 41
-      Width = 1445
-      Height = 615
+      Width = 1441
+      Height = 344
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -139,8 +140,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
       object Q: TPageControl
         Left = 6
         Top = 6
-        Width = 1433
-        Height = 563
+        Width = 1429
+        Height = 292
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
@@ -157,8 +158,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           object Panel4: TPanel
             Left = 0
             Top = 0
-            Width = 1425
-            Height = 528
+            Width = 1421
+            Height = 257
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -175,8 +176,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             object pnl_dados_user: TPanel
               Left = 6
               Top = 6
-              Width = 1413
-              Height = 516
+              Width = 1409
+              Height = 245
               Margins.Left = 4
               Margins.Top = 4
               Margins.Right = 4
@@ -190,8 +191,6 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Padding.Bottom = 6
               ParentBackground = False
               TabOrder = 0
-              ExplicitLeft = 0
-              ExplicitTop = 8
               object Panel15: TPanel
                 Left = 18
                 Top = 20
@@ -220,9 +219,9 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   ExplicitWidth = 68
                 end
                 object edtID: TDBLabeledEdit
-                  Left = 6
+                  Left = 8
                   Top = 25
-                  Width = 51
+                  Width = 52
                   Height = 23
                   Margins.Left = 4
                   Margins.Top = 4
@@ -232,7 +231,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
-                  DataField = 'ID_FORNECEDOR'
+                  DataField = 'ID_CLIENTE'
                   DataSource = DS_DocumentosaReceber
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
@@ -245,10 +244,10 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   TabOrder = 0
                   EditLabel.Width = 15
                   EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.BiDiMode = bdLeftToRight
                   EditLabel.Caption = 'iD'
                   EditLabel.ParentBiDiMode = False
@@ -293,7 +292,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
-                  DataField = 'NOME_FORNECEDOR'
+                  DataField = 'NOME_CLIENTE'
                   DataSource = DS_DocumentosaReceber
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
@@ -303,17 +302,17 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 91
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 115
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Nome Cliente'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = []
                   EditLabel.ParentColor = False
@@ -346,10 +345,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
-                  ExplicitWidth = 166
                 end
-                object edtSenha: TDBLabeledEdit
+                object edtTipo: TDBLabeledEdit
                   Left = 8
                   Top = 25
                   Width = 147
@@ -370,17 +367,17 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 137
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 177
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Tipo do documento'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -413,8 +410,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Brush.Color = 8739130
                   Pen.Style = psClear
                   Shape = stRoundRect
-                  ExplicitWidth = 99
-                  ExplicitHeight = 28
+                  ExplicitWidth = 41
                 end
                 object btnPesquisaCliente: TSpeedButton
                   Left = 0
@@ -435,14 +431,13 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   OnClick = btnPesquisaClienteClick
-                  ExplicitWidth = 51
-                  ExplicitHeight = 41
+                  ExplicitWidth = 41
                 end
               end
               object Panel7: TPanel
                 Left = 623
                 Top = 20
-                Width = 172
+                Width = 203
                 Height = 50
                 Margins.Left = 4
                 Margins.Top = 4
@@ -455,7 +450,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape3: TShape
                   Left = 0
                   Top = 0
-                  Width = 166
+                  Width = 197
                   Height = 50
                   Margins.Left = 4
                   Margins.Top = 4
@@ -464,12 +459,12 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
+                  ExplicitWidth = 198
                 end
-                object DBLabeledEdit1: TDBLabeledEdit
-                  Left = 8
+                object edtCodigo: TDBLabeledEdit
+                  Left = 6
                   Top = 25
-                  Width = 147
+                  Width = 148
                   Height = 23
                   Margins.Left = 4
                   Margins.Top = 4
@@ -487,17 +482,17 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 142
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 184
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Codigo identificador'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -506,7 +501,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 end
               end
               object Panel10: TPanel
-                Left = 797
+                Left = 826
                 Top = 20
                 Width = 172
                 Height = 50
@@ -530,9 +525,9 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
+                  ExplicitWidth = 165
                 end
-                object DBLabeledEdit2: TDBLabeledEdit
+                object edtEmissao: TDBLabeledEdit
                   Left = 8
                   Top = 25
                   Width = 147
@@ -553,28 +548,46 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 115
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 143
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Data de emiss'#227'o'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
                   EditLabel.ParentFont = False
                   EditLabel.Layout = tlCenter
                 end
+                object dtEmissao: TDateTimePicker
+                  Left = 8
+                  Top = 21
+                  Width = 147
+                  Height = 28
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
+                  CalColors.BackColor = clWhite
+                  Date = 45248.000000000000000000
+                  Time = 0.464278715277032500
+                  Color = clWhite
+                  ParentShowHint = False
+                  ShowHint = False
+                  TabOrder = 1
+                  OnMouseLeave = dtEmissaoMouseLeave
+                end
               end
               object Panel11: TPanel
-                Left = 971
+                Left = 999
                 Top = 20
-                Width = 172
+                Width = 200
                 Height = 50
                 Margins.Left = 4
                 Margins.Top = 4
@@ -587,7 +600,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape6: TShape
                   Left = 0
                   Top = 0
-                  Width = 166
+                  Width = 194
                   Height = 50
                   Margins.Left = 4
                   Margins.Top = 4
@@ -596,12 +609,11 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
                 end
-                object DBLabeledEdit3: TDBLabeledEdit
-                  Left = 8
+                object edtVencimento: TDBLabeledEdit
+                  Left = 6
                   Top = 25
-                  Width = 147
+                  Width = 148
                   Height = 23
                   Margins.Left = 4
                   Margins.Top = 4
@@ -619,28 +631,46 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 140
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 177
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Data de vencimento'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
                   EditLabel.ParentFont = False
                   EditLabel.Layout = tlCenter
                 end
+                object dtVencimento: TDateTimePicker
+                  Left = 6
+                  Top = 21
+                  Width = 148
+                  Height = 28
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
+                  CalColors.BackColor = clWhite
+                  Date = 45248.000000000000000000
+                  Time = 0.464278715277032500
+                  Color = clWhite
+                  ParentShowHint = False
+                  ShowHint = False
+                  TabOrder = 1
+                  OnMouseLeave = dtVencimentoMouseLeave
+                end
               end
               object Panel12: TPanel
-                Left = 22
+                Left = 18
                 Top = 78
-                Width = 172
+                Width = 171
                 Height = 50
                 Margins.Left = 4
                 Margins.Top = 4
@@ -653,7 +683,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape7: TShape
                   Left = 0
                   Top = 0
-                  Width = 166
+                  Width = 165
                   Height = 50
                   Margins.Left = 4
                   Margins.Top = 4
@@ -662,12 +692,11 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
                 end
-                object DBLabeledEdit4: TDBLabeledEdit
-                  Left = 10
-                  Top = 25
-                  Width = 147
+                object edtValor: TDBLabeledEdit
+                  Left = 16
+                  Top = 27
+                  Width = 148
                   Height = 23
                   Margins.Left = 4
                   Margins.Top = 4
@@ -685,18 +714,18 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  OnKeyPress = DBLabeledEdit4KeyPress
-                  EditLabel.Width = 36
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  OnKeyPress = edtValorKeyPress
+                  EditLabel.Width = 47
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Valor'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -705,9 +734,9 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 end
               end
               object Panel13: TPanel
-                Left = 196
+                Left = 190
                 Top = 78
-                Width = 197
+                Width = 239
                 Height = 50
                 Margins.Left = 4
                 Margins.Top = 4
@@ -720,7 +749,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape8: TShape
                   Left = 0
                   Top = 0
-                  Width = 191
+                  Width = 233
                   Height = 50
                   Margins.Left = 4
                   Margins.Top = 4
@@ -729,13 +758,11 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
-                  ExplicitWidth = 166
                 end
-                object DBLabeledEdit5: TDBLabeledEdit
-                  Left = 8
-                  Top = 25
-                  Width = 147
+                object edtQtdParcelas: TDBLabeledEdit
+                  Left = 6
+                  Top = 26
+                  Width = 148
                   Height = 23
                   Margins.Left = 4
                   Margins.Top = 4
@@ -753,17 +780,17 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 163
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 208
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Quantidade de parcelas'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -772,9 +799,9 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 end
               end
               object Panel14: TPanel
-                Left = 395
+                Left = 430
                 Top = 78
-                Width = 172
+                Width = 173
                 Height = 50
                 Margins.Left = 4
                 Margins.Top = 4
@@ -787,7 +814,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape9: TShape
                   Left = 0
                   Top = 0
-                  Width = 166
+                  Width = 167
                   Height = 50
                   Margins.Left = 4
                   Margins.Top = 4
@@ -796,11 +823,11 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
+                  ExplicitWidth = 166
                 end
-                object DBLabeledEdit6: TDBLabeledEdit
+                object edtDesconto: TDBLabeledEdit
                   Left = 6
-                  Top = 25
+                  Top = 26
                   Width = 147
                   Height = 23
                   Margins.Left = 4
@@ -819,17 +846,17 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 66
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 84
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Desconto'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
                   EditLabel.ParentColor = False
@@ -840,8 +867,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               object Panel16: TPanel
                 Left = 18
                 Top = 136
-                Width = 553
-                Height = 185
+                Width = 980
+                Height = 65
                 Margins.Left = 4
                 Margins.Top = 4
                 Margins.Right = 4
@@ -853,8 +880,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                 object Shape10: TShape
                   Left = 0
                   Top = 0
-                  Width = 547
-                  Height = 185
+                  Width = 974
+                  Height = 65
                   Margins.Left = 4
                   Margins.Top = 4
                   Margins.Right = 4
@@ -862,15 +889,12 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitLeft = 30
-                  ExplicitWidth = 166
-                  ExplicitHeight = 50
                 end
-                object DBLabeledEdit7: TDBLabeledEdit
+                object edtObservacao: TDBLabeledEdit
                   Left = 14
-                  Top = 30
-                  Width = 517
-                  Height = 131
+                  Top = 29
+                  Width = 937
+                  Height = 31
                   Margins.Left = 4
                   Margins.Top = 4
                   Margins.Right = 4
@@ -887,19 +911,88 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
                   Font.Style = [fsBold]
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 82
-                  EditLabel.Height = 20
-                  EditLabel.Margins.Left = 6
-                  EditLabel.Margins.Top = 6
-                  EditLabel.Margins.Right = 6
-                  EditLabel.Margins.Bottom = 6
+                  EditLabel.Width = 104
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
                   EditLabel.Caption = 'Observa'#231#227'o'
                   EditLabel.Color = clWhite
                   EditLabel.Font.Charset = DEFAULT_CHARSET
                   EditLabel.Font.Color = 15649712
-                  EditLabel.Font.Height = -15
+                  EditLabel.Font.Height = -19
                   EditLabel.Font.Name = 'Segoe UI'
                   EditLabel.Font.Style = [fsBold]
+                  EditLabel.ParentColor = False
+                  EditLabel.ParentFont = False
+                  EditLabel.Layout = tlCenter
+                end
+              end
+              object Panel17: TPanel
+                Left = 1271
+                Top = 21
+                Width = 112
+                Height = 48
+                Margins.Left = 4
+                Margins.Top = 4
+                Margins.Right = 4
+                Margins.Bottom = 4
+                Align = alCustom
+                BevelOuter = bvNone
+                Padding.Right = 6
+                TabOrder = 11
+                object Shape11: TShape
+                  Left = 0
+                  Top = 0
+                  Width = 106
+                  Height = 48
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
+                  Align = alClient
+                  Brush.Color = 13275746
+                  Shape = stRoundRect
+                  ExplicitWidth = 115
+                  ExplicitHeight = 36
+                end
+                object edtQuitado: TDBLabeledEdit
+                  Left = 13
+                  Top = 25
+                  Width = 48
+                  Height = 21
+                  Margins.Left = 4
+                  Margins.Top = 4
+                  Margins.Right = 4
+                  Margins.Bottom = 4
+                  BorderStyle = bsNone
+                  CharCase = ecUpperCase
+                  Color = 13275746
+                  DataField = 'QUITADO'
+                  DataSource = DS_DocumentosaReceber
+                  Enabled = False
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 16512241
+                  Font.Height = -15
+                  Font.Name = 'Segoe UI'
+                  Font.Style = [fsBold]
+                  ParentFont = False
+                  TabOrder = 0
+                  OnKeyPress = edtValorKeyPress
+                  EditLabel.Width = 82
+                  EditLabel.Height = 25
+                  EditLabel.Margins.Left = 8
+                  EditLabel.Margins.Top = 8
+                  EditLabel.Margins.Right = 8
+                  EditLabel.Margins.Bottom = 8
+                  EditLabel.Caption = 'Quitado ?'
+                  EditLabel.Color = clWhite
+                  EditLabel.Font.Charset = DEFAULT_CHARSET
+                  EditLabel.Font.Color = 15649712
+                  EditLabel.Font.Height = -19
+                  EditLabel.Font.Name = 'Segoe UI'
+                  EditLabel.Font.Style = []
                   EditLabel.ParentColor = False
                   EditLabel.ParentFont = False
                   EditLabel.Layout = tlCenter
@@ -918,8 +1011,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 1425
-            Height = 528
+            Width = 1421
+            Height = 257
             Margins.Left = 4
             Margins.Top = 4
             Margins.Right = 4
@@ -935,8 +1028,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             object gridDocumentos: TDBGrid
               Left = 6
               Top = 34
-              Width = 1413
-              Height = 488
+              Width = 1409
+              Height = 217
               Hint = 'Clique duas vezes para selecionar'
               Margins.Left = 4
               Margins.Top = 4
@@ -953,6 +1046,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Font.Height = -15
               Font.Name = 'Segoe UI'
               Font.Style = []
+              Options = [dgTitles, dgIndicator, dgTabs, dgAlwaysShowSelection, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
               ParentFont = False
               ParentShowHint = False
               ReadOnly = True
@@ -967,39 +1061,52 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
               Columns = <
                 item
                   Expanded = False
-                  FieldName = 'NOME_FORNECEDOR'
-                  Width = 742
+                  FieldName = 'NOME_CLIENTE'
+                  Title.Caption = 'Nome'
+                  Width = 668
                   Visible = True
                 end
                 item
+                  Alignment = taCenter
                   Expanded = False
                   FieldName = 'IDENTIFICACAO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Identifica'#231#227'o'
                   Width = 140
                   Visible = True
                 end
                 item
+                  Alignment = taCenter
                   Expanded = False
                   FieldName = 'EMISSAO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Data de emiss'#227'o'
                   Width = 200
                   Visible = True
                 end
                 item
+                  Alignment = taCenter
                   Expanded = False
                   FieldName = 'VENCIMENTO'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Data de vencimento'
                   Width = 200
                   Visible = True
                 end
                 item
-                  Alignment = taLeftJustify
+                  Alignment = taCenter
                   Expanded = False
                   FieldName = 'VALOR'
+                  Title.Alignment = taCenter
+                  Title.Caption = 'Valor do documento'
+                  Width = 150
                   Visible = True
                 end>
             end
             object edtPesquisa: TEdit
               Left = 6
               Top = 6
-              Width = 1413
+              Width = 1409
               Height = 28
               Margins.Left = 4
               Margins.Top = 4
@@ -1013,8 +1120,8 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
       end
       object pnlButtons: TPanel
         Left = 6
-        Top = 569
-        Width = 1433
+        Top = 298
+        Width = 1429
         Height = 40
         Margins.Left = 4
         Margins.Top = 4
@@ -1030,7 +1137,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
         ParentBackground = False
         TabOrder = 1
         object pnlEditar: TPanel
-          Left = 1007
+          Left = 1003
           Top = 6
           Width = 105
           Height = 28
@@ -1078,7 +1185,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlCadastrar: TPanel
-          Left = 902
+          Left = 898
           Top = 6
           Width = 105
           Height = 28
@@ -1123,12 +1230,10 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
             Font.Style = [fsBold]
             ParentFont = False
             OnClick = btnCadastrarClick
-            ExplicitLeft = -2
-            ExplicitTop = -2
           end
         end
         object pnlSalvar: TPanel
-          Left = 1112
+          Left = 1108
           Top = 6
           Width = 105
           Height = 28
@@ -1177,7 +1282,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlCancelar: TPanel
-          Left = 1217
+          Left = 1213
           Top = 6
           Width = 105
           Height = 28
@@ -1226,7 +1331,7 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
           end
         end
         object pnlExcluir: TPanel
-          Left = 1322
+          Left = 1318
           Top = 6
           Width = 105
           Height = 28
@@ -1281,12 +1386,12 @@ object Frm_CadastroContasReceber: TFrm_CadastroContasReceber
     Connection = DM.conexao
     SQL.Strings = (
       'select * from DOC_RECEBER')
-    Left = 583
-    Top = 395
+    Left = 919
+    Top = 164
   end
   object DS_DocumentosaReceber: TDataSource
     DataSet = SQL_DocumentosaReceber
-    Left = 792
-    Top = 390
+    Left = 1153
+    Top = 250
   end
 end

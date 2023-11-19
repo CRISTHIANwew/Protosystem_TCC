@@ -88,7 +88,7 @@ implementation
 
 {$R *.dfm}
 
-uses ProtoSystem.Controller.Dm;
+uses ProtoSystem.Controller.Dm, ProtoSystem.Utils.Validates;
 
 procedure TFrm_CadUsuario.btnNovoClick(Sender: TObject);
 begin
@@ -103,15 +103,25 @@ end;
 procedure TFrm_CadUsuario.btnSalvarClick(Sender: TObject);
 begin
   if Query_user.State in [dsInsert, dsEdit] then
-    Query_user.Post;
-  // desabilitar salvar e cancelar
-  btnSalvar.Enabled := false;
-  btnCancelar.Enabled := false;
-  // habilitar editar, excluir, cadastrar.
-  btnEditar.Enabled := true;
-  btnExcluir.Enabled := true;
-  btnCadastrar.Enabled := true;
-  Query_user.Refresh;
+  begin
+    var
+    CamposVazios := ValidarCampos(self);
+    if CamposVazios = '' then
+    begin
+      Query_user.Post;
+      // desabilitar salvar e cancelar
+      btnSalvar.Enabled := false;
+      btnCancelar.Enabled := false;
+      // habilitar editar, excluir, cadastrar.
+      btnEditar.Enabled := true;
+      btnExcluir.Enabled := true;
+      btnCadastrar.Enabled := true;
+      Query_user.Refresh;
+    end
+    else
+      showmessage('Os campos abaixo são obrigatórios, verifique:' + #13 +
+        CamposVazios)
+  end;
 end;
 
 procedure TFrm_CadUsuario.DBGrid1DblClick(Sender: TObject);
