@@ -1,0 +1,330 @@
+object frmReportsRelatorioProdutos: TfrmReportsRelatorioProdutos
+  Left = 0
+  Top = 0
+  ClientHeight = 681
+  ClientWidth = 795
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object RLReport1: TRLReport
+    Left = 0
+    Top = 0
+    Width = 794
+    Height = 1123
+    DataSource = DS_RELATORIO
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 107
+      BandType = btTitle
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = True
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      object RLLabel1: TRLLabel
+        Left = 0
+        Top = 1
+        Width = 718
+        Height = 25
+        Align = faTop
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = True
+        Caption = 'ProtoSystem Sistemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLSystemInfo1: TRLSystemInfo
+        Left = 632
+        Top = 57
+        Width = 83
+        Height = 22
+        AutoSize = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        Layout = tlCenter
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel2: TRLLabel
+        Left = 576
+        Top = 57
+        Width = 57
+        Height = 22
+        AutoSize = False
+        Caption = 'Data: '
+      end
+      object RLSystemInfo2: TRLSystemInfo
+        Left = 639
+        Top = 32
+        Width = 43
+        Height = 22
+        AutoSize = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        Info = itPageNumber
+        Layout = tlCenter
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel3: TRLLabel
+        Left = 575
+        Top = 32
+        Width = 65
+        Height = 22
+        AutoSize = False
+        Caption = 'Pagina: '
+      end
+      object RLLabel4: TRLLabel
+        Left = 0
+        Top = 81
+        Width = 718
+        Height = 25
+        Align = faBottom
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = True
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Caption = 'Relat'#243'rio de Produtos'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 145
+      Width = 718
+      Height = 16
+      BandType = btColumnHeader
+      object RLLabel5: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 41
+        Height = 16
+        Align = faLeft
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Id'
+      end
+      object RLLabel6: TRLLabel
+        Left = 41
+        Top = 0
+        Width = 288
+        Height = 16
+        Align = faLeft
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Descri'#231#227'o'
+      end
+      object RLLabel7: TRLLabel
+        Left = 329
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Custo Unit'#225'rio'
+      end
+      object RLLabel8: TRLLabel
+        Left = 417
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Pre'#231'o Unit'#225'rio'
+      end
+      object RLLabel9: TRLLabel
+        Left = 505
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Estoque Atual'
+      end
+      object RLLabel10: TRLLabel
+        Left = 593
+        Top = 0
+        Width = 124
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'Data/Hora Cadastro'
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 161
+      Width = 718
+      Height = 16
+      object RLDBMemo1: TRLDBMemo
+        Left = 0
+        Top = 0
+        Width = 41
+        Height = 16
+        Align = faLeft
+        Behavior = [beSiteExpander]
+        DataField = 'ID'
+        DataSource = DS_RELATORIO
+      end
+      object RLDBMemo2: TRLDBMemo
+        Left = 41
+        Top = 0
+        Width = 288
+        Height = 16
+        Align = faLeft
+        Behavior = [beSiteExpander]
+        DataField = 'DESCRICAO'
+        DataSource = DS_RELATORIO
+      end
+      object RLDBMemo3: TRLDBMemo
+        Left = 329
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        Behavior = [beSiteExpander]
+        DataField = 'CUSTO'
+        DataSource = DS_RELATORIO
+      end
+      object RLDBMemo4: TRLDBMemo
+        Left = 417
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        Behavior = [beSiteExpander]
+        DataField = 'PRECO'
+        DataSource = DS_RELATORIO
+      end
+      object RLDBMemo5: TRLDBMemo
+        Left = 505
+        Top = 0
+        Width = 88
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        Behavior = [beSiteExpander]
+        DataField = 'ESTOQUE'
+        DataSource = DS_RELATORIO
+      end
+      object RLDBMemo6: TRLDBMemo
+        Left = 593
+        Top = 0
+        Width = 122
+        Height = 16
+        Align = faLeft
+        Alignment = taCenter
+        Behavior = [beSiteExpander]
+        DataField = 'DATAHORACADASTRO'
+        DataSource = DS_RELATORIO
+      end
+    end
+    object RLBand4: TRLBand
+      Left = 38
+      Top = 177
+      Width = 718
+      Height = 24
+      BandType = btColumnFooter
+      object RLLabel11: TRLLabel
+        Left = 0
+        Top = 8
+        Width = 718
+        Height = 16
+        Align = faBottom
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Caption = 'Desenvolvido Por: Analsita Cristhian - ProtoSistem Sistemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object DS_RELATORIO: TDataSource
+    DataSet = DM.SQL_RelatorioProdutos
+    Left = 432
+    Top = 368
+  end
+end

@@ -1,0 +1,24 @@
+unit ProtoSystem.Model.InterfaceRelatorioLancamentos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmInterfaceRelatorioLancamentos = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos;
+
+implementation
+
+{$R *.dfm}
+
+end.

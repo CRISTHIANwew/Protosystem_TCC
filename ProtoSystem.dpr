@@ -15,7 +15,7 @@ uses
   ProtoSystem.Model.Vendas in 'Source\Model\ProtoSystem.Model.Vendas.pas' {Frm_Vendas},
   ProtoSystem.Model.CadastroDeContasReceber in 'Source\Model\ProtoSystem.Model.CadastroDeContasReceber.pas' {Frm_CadastroContasReceber},
   ProtoSystem.Model.VendasFechamento in 'Source\Model\ProtoSystem.Model.VendasFechamento.pas' {frmVendasFechamento},
-  ProtoSystem.Model.ReportsPedidoDeVenda in 'Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas' {frmReportsPedidoDeVenda},
+  ProtoSystem.Printed.ReportsPedidoDeVenda in 'Source\Printed\ProtoSystem.Printed.ReportsPedidoDeVenda.pas' {frmReportsPedidoDeVenda},
   ProtoSystem.Model.PesquisaCliente in 'Source\Model\ProtoSystem.Model.PesquisaCliente.pas' {frmPesquisaCliente},
   ProtoSystem.Model.BaixaDocumentoReceber in 'Source\Model\ProtoSystem.Model.BaixaDocumentoReceber.pas' {frm_BaixaDocumentoReceber},
   ProtoSystem.Utils.Validates in 'Source\Utils\ProtoSystem.Utils.Validates.pas',
@@ -25,22 +25,24 @@ uses
   ProtoSystem.Model.CadastroLancamentoCaixa in 'Source\Model\ProtoSystem.Model.CadastroLancamentoCaixa.pas' {frmLancamentoDeCaixa},
   ProtoSystem.Model.CadastroDeContasPagar in 'Source\Model\ProtoSystem.Model.CadastroDeContasPagar.pas' {frmCadastroContasPagar},
   ProtoSystem.Model.PesquisaFornecedor in 'Source\Model\ProtoSystem.Model.PesquisaFornecedor.pas' {frmPesquisaFornecedor},
-  ProtoSystem.Model.BaixaDocumentoPagar in 'Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas' {frmBaixaDocumentosPagar};
+  ProtoSystem.Model.BaixaDocumentoPagar in 'Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas' {frmBaixaDocumentosPagar},
+  ProtoSystem.Printed.ReportsRelatorioProdutos in 'Source\Printed\ProtoSystem.Printed.ReportsRelatorioProdutos.pas' {frmReportsRelatorioProdutos},
+  ProtoSystem.Model.InterfaceRelatorioProd in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioProd.pas' {frmInterfaceRelatorioProd},
+  ProtoSystem.Model.InterfaceRelatorioMovimentacoes in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioMovimentacoes.pas' {frmInterfaceRelatorioMovimentacoes},
+  ProtoSystem.Printed.ReportsRelatorioMovimentacoes in 'Source\Printed\ProtoSystem.Printed.ReportsRelatorioMovimentacoes.pas' {frmReportsRelatorioMovimentacoes},
+  ProtoSystem.Model.InterfaceRelatorioLancamentos in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioLancamentos.pas' {frmInterfaceRelatorioLancamentos},
+  ProtoSystem.Printed.ReportsRelatoriolancamentos in 'Source\Printed\ProtoSystem.Printed.ReportsRelatoriolancamentos.pas' {frmReportsRelatorioLancamentos};
 
 {$R *.res}
 
 begin
 //ReportMemoryLeaksOnShutdown := True;
   Application.Initialize;
-  Application.MainFormOnTaskbar := True;
+  Application.MainFormOnTaskbar := false;
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
   Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
-  Application.CreateForm(TfrmLancamentoDeCaixa, frmLancamentoDeCaixa);
-  Application.CreateForm(TfrmCadastroContasPagar, frmCadastroContasPagar);
-  Application.CreateForm(TfrmPesquisaFornecedor, frmPesquisaFornecedor);
-  Application.CreateForm(TfrmBaixaDocumentosPagar, frmBaixaDocumentosPagar);
   if TFrm_Login.Login then
     Application.Run
   else

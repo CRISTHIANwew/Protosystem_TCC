@@ -1,0 +1,36 @@
+unit ProtoSystem.Model.InterfaceRelatorioProd;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TfrmInterfaceRelatorioProd = class(TForm)
+    Panel1: TPanel;
+    Panel8: TPanel;
+    Pnl_sair: TPanel;
+    Shape19: TShape;
+    SpeedButton6: TSpeedButton;
+    Panel2: TPanel;
+    pnlButtons: TPanel;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnGerar: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Printed.ReportsRelatorioProdutos;
+
+end.

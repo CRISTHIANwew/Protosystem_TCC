@@ -146,7 +146,7 @@
             <Form>frmVendasFechamento</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Source\Printed\ProtoSystem.Model.ReportsPedidoDeVenda.pas">
+        <DCCReference Include="Source\Printed\ProtoSystem.Printed.ReportsPedidoDeVenda.pas">
             <Form>frmReportsPedidoDeVenda</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -185,6 +185,30 @@
         </DCCReference>
         <DCCReference Include="Source\Model\ProtoSystem.Model.BaixaDocumentoPagar.pas">
             <Form>frmBaixaDocumentosPagar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Printed\ProtoSystem.Printed.ReportsRelatorioProdutos.pas">
+            <Form>frmReportsRelatorioProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.InterfaceRelatorioProd.pas">
+            <Form>frmInterfaceRelatorioProd</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.InterfaceRelatorioMovimentacoes.pas">
+            <Form>frmInterfaceRelatorioMovimentacoes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Printed\ProtoSystem.Printed.ReportsRelatorioMovimentacoes.pas">
+            <Form>frmReportsRelatorioMovimentacoes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.InterfaceRelatorioLancamentos.pas">
+            <Form>frmInterfaceRelatorioLancamentos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Printed\ProtoSystem.Printed.ReportsRelatoriolancamentos.pas">
+            <Form>frmReportsRelatorioLancamentos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

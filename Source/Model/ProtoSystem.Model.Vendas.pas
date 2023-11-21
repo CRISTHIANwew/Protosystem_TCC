@@ -113,7 +113,7 @@ implementation
 {$R *.dfm}
 
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.VendasFechamento,
-  ProtoSystem.View.MenuPrincipal, ProtoSystem.Model.ReportsPedidoDeVenda;
+  ProtoSystem.View.MenuPrincipal, ProtoSystem.Printed.ReportsPedidoDeVenda;
 
 procedure TFrm_Vendas.btnCancelaVendaClick(Sender: TObject);
 begin

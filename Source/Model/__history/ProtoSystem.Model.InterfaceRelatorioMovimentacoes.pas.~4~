@@ -1,0 +1,46 @@
+unit ProtoSystem.Model.InterfaceRelatorioMovimentacoes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.WinXCalendars, Vcl.WinXPickers;
+
+type
+  TfrmInterfaceRelatorioMovimentacoes = class(TForm)
+    Panel1: TPanel;
+    Panel8: TPanel;
+    Pnl_sair: TPanel;
+    Shape19: TShape;
+    SpeedButton6: TSpeedButton;
+    Panel2: TPanel;
+    pnlButtons: TPanel;
+    pnlCadastrar: TPanel;
+    ShpCadastrar: TShape;
+    btnGerar: TSpeedButton;
+    Panel3: TPanel;
+    Shape1: TShape;
+    DatePicker1: TDatePicker;
+    CalendarPicker1: TCalendarPicker;
+    procedure SpeedButton6Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmInterfaceRelatorioMovimentacoes: TfrmInterfaceRelatorioMovimentacoes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmInterfaceRelatorioMovimentacoes.SpeedButton6Click(
+  Sender: TObject);
+begin
+  close;
+end;
+
+end.
