@@ -48,10 +48,11 @@ uses ProtoSystem.Controller.Dm,
 
 procedure TfrmInterfaceRelatorioMovimentacoes.btnGerarClick(Sender: TObject);
 begin
-frmReportsRelatorioMovimentacoes.lbPeriodo.Caption:='Periodo Selecionado: '+dm.RPdtInicial+' Até '+dm.RPdtFinal;
-dm.SQL_RelatorioMovimentacoes.Open;
-dm.SQL_RelatorioMovimentacoes.Refresh;
-frmReportsRelatorioMovimentacoes.RLReport1.Preview();
+  Application.CreateForm(TfrmReportsRelatorioMovimentacoes, frmReportsRelatorioMovimentacoes);
+  frmReportsRelatorioMovimentacoes.lbPeriodo.Caption:='Periodo Selecionado: '+dm.RPdtInicial+' Até '+dm.RPdtFinal;
+  dm.SQL_RelatorioMovimentacoes.Open;
+  dm.SQL_RelatorioMovimentacoes.Refresh;
+  frmReportsRelatorioMovimentacoes.RLReport1.Preview();
 end;
 
 procedure TfrmInterfaceRelatorioMovimentacoes.DT_FinalChange(Sender: TObject);
@@ -69,6 +70,7 @@ end;
 procedure TfrmInterfaceRelatorioMovimentacoes.SpeedButton6Click(
   Sender: TObject);
 begin
+  frmReportsRelatorioMovimentacoes.Free;
   close;
 end;
 

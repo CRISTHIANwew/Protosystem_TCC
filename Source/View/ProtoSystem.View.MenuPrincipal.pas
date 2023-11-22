@@ -188,6 +188,9 @@ type
     Panel56: TPanel;
     Shape25: TShape;
     SpeedButton19: TSpeedButton;
+    Panel57: TPanel;
+    Shape26: TShape;
+    SpeedButton20: TSpeedButton;
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure BTN_CAD_PRODClick(Sender: TObject);
@@ -217,6 +220,7 @@ type
     procedure SpeedButton17Click(Sender: TObject);
     procedure SpeedButton18Click(Sender: TObject);
     procedure SpeedButton19Click(Sender: TObject);
+    procedure SpeedButton20Click(Sender: TObject);
 
   private
     procedure PreencheEstilos(comboBox: TComboBox);
@@ -244,7 +248,9 @@ uses
   ProtoSystem.Model.BaixaDocumentoPagar,
   ProtoSystem.Model.InterfaceRelatorioProd,
   ProtoSystem.Model.InterfaceRelatorioMovimentacoes,
-  ProtoSystem.Model.InterfaceRelatorioLancamentos;
+  ProtoSystem.Model.InterfaceRelatorioLancamentos,
+  ProtoSystem.Printed.ReportsRelatorioProdutos,
+  ProtoSystem.Model.InterfaceRelatorioVendas;
 
 procedure TFrm_Principal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -467,7 +473,6 @@ var
   finally
     frmInterfaceRelatorioProd.Free; // Libere a memória após fechar o formulário
   end;
-
 end;
 
 procedure TFrm_Principal.SpeedButton18Click(Sender: TObject);
@@ -499,6 +504,19 @@ end;
 procedure TFrm_Principal.SpeedButton1Click(Sender: TObject);
 begin
     Application.Terminate;
+end;
+
+procedure TFrm_Principal.SpeedButton20Click(Sender: TObject);
+begin
+var
+    frmInterfaceRelatorioVendas: TfrmInterfaceRelatorioVendas; // Declare uma variável para o formulário
+  frmInterfaceRelatorioVendas := TfrmInterfaceRelatorioVendas.Create(Self);
+  // Crie uma instância do formulário
+  try
+    frmInterfaceRelatorioVendas.ShowModal; // Exiba o formulário de maneira modal
+  finally
+    frmInterfaceRelatorioVendas.Free; // Libere a memória após fechar o formulário
+  end;
 end;
 
 procedure TFrm_Principal.SpeedButton2Click(Sender: TObject);

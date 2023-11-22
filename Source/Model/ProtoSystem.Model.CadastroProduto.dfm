@@ -574,7 +574,7 @@ object Frm_CadProd: TFrm_CadProd
               end
               object DBLabeledEdit1: TDBLabeledEdit
                 Left = 7
-                Top = 19
+                Top = 22
                 Width = 136
                 Height = 17
                 BorderStyle = bsNone
@@ -913,6 +913,7 @@ object Frm_CadProd: TFrm_CadProd
     Top = 106
   end
   object Query_Produto: TFDQuery
+    Active = True
     Connection = DM.conexao
     SQL.Strings = (
       'select * from produto')
@@ -936,8 +937,9 @@ object Frm_CadProd: TFrm_CadProd
     object Query_ProdutoPRECO: TFloatField
       FieldName = 'PRECO'
     end
-    object Query_ProdutoDATAHORACADASTRO: TDateTimeField
+    object Query_ProdutoDATAHORACADASTRO: TDateField
       FieldName = 'DATAHORACADASTRO'
+      Origin = 'DATAHORACADASTRO'
     end
     object Query_ProdutoDATAHORAALTERACAO: TDateTimeField
       FieldName = 'DATAHORAALTERACAO'

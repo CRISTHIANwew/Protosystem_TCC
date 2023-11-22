@@ -211,6 +211,14 @@
             <Form>frmReportsRelatorioLancamentos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Source\Model\ProtoSystem.Model.InterfaceRelatorioVendas.pas">
+            <Form>frmInterfaceRelatorioVendas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Source\Printed\ProtoSystem.Printed.ReportsRelatorioVendas.pas">
+            <Form>frmReportsRelatorioVenda</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

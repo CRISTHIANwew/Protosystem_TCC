@@ -48,6 +48,7 @@ uses ProtoSystem.Printed.ReportsRelatoriolancamentos;
 
 procedure TfrmInterfaceRelatorioLancamentos.btnGerarClick(Sender: TObject);
 begin
+  Application.CreateForm(TfrmReportsRelatorioLancamentos, frmReportsRelatorioLancamentos);
   SQL_Relatorio.Open;
   SQL_Relatorio.Refresh;
   frmReportsRelatorioLancamentos.RLReport1.Preview();
@@ -56,6 +57,7 @@ end;
 procedure TfrmInterfaceRelatorioLancamentos.SpeedButton6Click(Sender: TObject);
 begin
   close;
+  frmReportsRelatorioLancamentos.Free;
 end;
 
 end.

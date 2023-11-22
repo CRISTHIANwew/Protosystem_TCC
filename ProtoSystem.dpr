@@ -31,7 +31,9 @@ uses
   ProtoSystem.Model.InterfaceRelatorioMovimentacoes in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioMovimentacoes.pas' {frmInterfaceRelatorioMovimentacoes},
   ProtoSystem.Printed.ReportsRelatorioMovimentacoes in 'Source\Printed\ProtoSystem.Printed.ReportsRelatorioMovimentacoes.pas' {frmReportsRelatorioMovimentacoes},
   ProtoSystem.Model.InterfaceRelatorioLancamentos in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioLancamentos.pas' {frmInterfaceRelatorioLancamentos},
-  ProtoSystem.Printed.ReportsRelatoriolancamentos in 'Source\Printed\ProtoSystem.Printed.ReportsRelatoriolancamentos.pas' {frmReportsRelatorioLancamentos};
+  ProtoSystem.Printed.ReportsRelatoriolancamentos in 'Source\Printed\ProtoSystem.Printed.ReportsRelatoriolancamentos.pas' {frmReportsRelatorioLancamentos},
+  ProtoSystem.Model.InterfaceRelatorioVendas in 'Source\Model\ProtoSystem.Model.InterfaceRelatorioVendas.pas' {frmInterfaceRelatorioVendas},
+  ProtoSystem.Printed.ReportsRelatorioVendas in 'Source\Printed\ProtoSystem.Printed.ReportsRelatorioVendas.pas' {frmReportsRelatorioVenda};
 
 {$R *.res}
 
@@ -42,7 +44,6 @@ begin
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFrm_Principal, Frm_Principal);
   Application.CreateForm(TFrm_Login, Frm_Login);
-  Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
   if TFrm_Login.Login then
     Application.Run
   else

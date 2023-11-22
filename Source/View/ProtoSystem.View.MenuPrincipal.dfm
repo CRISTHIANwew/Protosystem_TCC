@@ -181,7 +181,7 @@ object Frm_Principal: TFrm_Principal
         Top = 4
         Width = 1242
         Height = 725
-        ActivePage = TabSheet1
+        ActivePage = TabSheet3
         Align = alClient
         Font.Charset = DEFAULT_CHARSET
         Font.Color = 15649712
@@ -258,7 +258,7 @@ object Frm_Principal: TFrm_Principal
                 Top = 100
                 Width = 998
                 Height = 450
-                ActivePage = TabSheet37
+                ActivePage = TabSheet42
                 Align = alClient
                 Font.Charset = DEFAULT_CHARSET
                 Font.Color = 14725003
@@ -791,6 +791,52 @@ object Frm_Principal: TFrm_Principal
                 Padding.Bottom = 8
                 ParentBackground = False
                 TabOrder = 0
+                object Panel57: TPanel
+                  Left = 15
+                  Top = 16
+                  Width = 226
+                  Height = 52
+                  Cursor = crHandPoint
+                  BevelOuter = bvNone
+                  Color = 13274977
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = 2302755
+                  Font.Height = -12
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  Padding.Right = 6
+                  ParentBackground = False
+                  ParentFont = False
+                  TabOrder = 0
+                  object Shape26: TShape
+                    Left = 0
+                    Top = 0
+                    Width = 220
+                    Height = 52
+                    Align = alClient
+                    Brush.Color = 8739130
+                    Shape = stRoundRect
+                    ExplicitWidth = 155
+                  end
+                  object SpeedButton20: TSpeedButton
+                    Left = 0
+                    Top = 0
+                    Width = 220
+                    Height = 52
+                    Align = alClient
+                    Caption = 'Relat'#243'rio de Vendas'
+                    Flat = True
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = 15649712
+                    Font.Height = -12
+                    Font.Name = 'Segoe UI'
+                    Font.Style = [fsBold]
+                    Font.Quality = fqClearTypeNatural
+                    ParentFont = False
+                    OnClick = SpeedButton20Click
+                    ExplicitWidth = 155
+                  end
+                end
               end
             end
           end
@@ -803,7 +849,7 @@ object Frm_Principal: TFrm_Principal
             Top = 0
             Width = 1234
             Height = 693
-            ActivePage = TabSheet17
+            ActivePage = TabSheet20
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText

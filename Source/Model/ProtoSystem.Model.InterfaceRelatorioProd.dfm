@@ -26,9 +26,6 @@ object frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitTop = -60
-    ExplicitWidth = 459
-    ExplicitHeight = 335
     object Panel8: TPanel
       Left = 5
       Top = 5
@@ -53,7 +50,6 @@ object frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 449
       object Pnl_sair: TPanel
         Left = 460
         Top = 5
@@ -71,7 +67,6 @@ object frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 356
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -115,8 +110,6 @@ object frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 449
-      ExplicitHeight = 297
       object pnlButtons: TPanel
         Left = 5
         Top = 78
@@ -140,8 +133,6 @@ object frmInterfaceRelatorioProd: TfrmInterfaceRelatorioProd
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = 260
-        ExplicitWidth = 439
       end
       object pnlCadastrar: TPanel
         Left = 102

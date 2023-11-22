@@ -30,7 +30,6 @@ type
     Query_ProdutoESTOQUE: TIntegerField;
     Query_ProdutoCUSTO: TFloatField;
     Query_ProdutoPRECO: TFloatField;
-    Query_ProdutoDATAHORACADASTRO: TDateTimeField;
     Query_ProdutoDATAHORAALTERACAO: TDateTimeField;
     Query_ProdutoIMAGEM: TBlobField;
     dlgImagens: TOpenDialog;
@@ -77,6 +76,7 @@ type
     Shape12: TShape;
     DBLabeledEdit1: TDBLabeledEdit;
     DBLabeledEdit2: TDBLabeledEdit;
+    Query_ProdutoDATAHORACADASTRO: TDateField;
     procedure Button1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);

@@ -26,9 +26,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
     Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -38
-    ExplicitWidth = 623
-    ExplicitHeight = 216
     object Panel8: TPanel
       Left = 5
       Top = 5
@@ -53,7 +50,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 613
       object Pnl_sair: TPanel
         Left = 523
         Top = 5
@@ -71,7 +67,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 520
         object Shape19: TShape
           Left = 0
           Top = 0
@@ -115,8 +110,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
       Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 613
-      ExplicitHeight = 178
       object pnlButtons: TPanel
         Left = 5
         Top = 128
@@ -140,8 +133,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
         ParentBackground = False
         ParentFont = False
         TabOrder = 0
-        ExplicitTop = 127
-        ExplicitWidth = 603
       end
       object pnlCadastrar: TPanel
         Left = 5
@@ -151,8 +142,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 75
-        ExplicitWidth = 603
         object ShpCadastrar: TShape
           Left = 0
           Top = 0
@@ -191,7 +180,6 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitWidth = 603
         object Shape1: TShape
           Left = 0
           Top = 0
@@ -297,7 +285,7 @@ object frmInterfaceRelatorioLancamentos: TfrmInterfaceRelatorioLancamentos
     Connection = DM.conexao
     SQL.Strings = (
       'SELECT * FROM CAIXA_LANC')
-    Left = 296
-    Top = 93
+    Left = 176
+    Top = 117
   end
 end

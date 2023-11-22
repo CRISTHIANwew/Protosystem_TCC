@@ -62,7 +62,6 @@ type
     SQL_ProdutosCUSTO: TFloatField;
     SQL_ProdutosPRECO: TFloatField;
     SQL_ProdutosIMAGEM: TBlobField;
-    SQL_ProdutosDATAHORACADASTRO: TDateTimeField;
     SQL_ProdutosDATAHORAALTERACAO: TDateTimeField;
     edtCodigoProduto: TEdit;
     edtPrecoProduto: TEdit;
@@ -75,6 +74,7 @@ type
     Pnl_sair: TPanel;
     Shape15: TShape;
     SpeedButton2: TSpeedButton;
+    SQL_ProdutosDATAHORACADASTRO: TDateField;
     procedure btnPesquisaProdutoClick(Sender: TObject);
     procedure btn_FinalizarVendaClick(Sender: TObject);
     procedure gridTabelaProdutoCellClick(Column: TColumn);
@@ -168,9 +168,9 @@ begin
   // Finalizar Venda
   if not dm.cdsVendaProdutos.IsEmpty then
   begin
-  dm.VendasFechamentoStatus:=true;
-  Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
-  frmVendasFechamento.ShowModal;
+    dm.VendasFechamentoStatus:=true;
+    Application.CreateForm(TfrmVendasFechamento, frmVendasFechamento);
+    frmVendasFechamento.ShowModal;
   end;
   if dm.VendasFechamentoStatus=false then
   begin
@@ -217,6 +217,7 @@ procedure TFrm_Vendas.FormCreate(Sender: TObject);
 begin
   InicializaComponentes;
   VerificaIdPedido;
+  Application.CreateForm(TfrmReportsPedidoDeVenda, frmReportsPedidoDeVenda);
 end;
 
 procedure TFrm_Vendas.gridTabelaProdutoCellClick(Column: TColumn);
@@ -337,8 +338,6 @@ end;
 procedure TFrm_Vendas.ResetaVenda;
 begin
 
-
-
 end;
 
 procedure TFrm_Vendas.SpeedButton1Click(Sender: TObject);
@@ -353,6 +352,7 @@ end;
 
 procedure TFrm_Vendas.SpeedButton2Click(Sender: TObject);
 begin
+    frmReportsPedidoDeVenda.Free;
     close;
 end;
 

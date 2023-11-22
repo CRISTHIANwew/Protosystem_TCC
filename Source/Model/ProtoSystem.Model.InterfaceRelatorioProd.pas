@@ -37,6 +37,7 @@ uses ProtoSystem.Printed.ReportsRelatorioProdutos, ProtoSystem.Controller.Dm;
 
 procedure TfrmInterfaceRelatorioProd.btnGerarClick(Sender: TObject);
 begin
+Application.CreateForm(TfrmReportsRelatorioProdutos, frmReportsRelatorioProdutos);
 dm.SQL_RelatorioProdutos.Connection:=dm.conexao;
 dm.SQL_RelatorioProdutos.SQL.Text:='SELECT * FROM PRODUTO';
 dm.SQL_RelatorioProdutos.open;
@@ -47,6 +48,7 @@ end;
 procedure TfrmInterfaceRelatorioProd.SpeedButton6Click(Sender: TObject);
 begin
   close;
+  frmReportsRelatorioProdutos.Free;
 end;
 
 end.

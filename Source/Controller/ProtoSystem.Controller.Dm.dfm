@@ -18,7 +18,6 @@ object DM: TDM
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
         'CC\bin\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 66
     Top = 65534
@@ -231,7 +230,6 @@ object DM: TDM
     Top = 368
   end
   object SQL_RelatorioMovimentacoes: TFDQuery
-    Active = True
     Connection = conexao
     SQL.Strings = (
       'SELECT * FROM BANCO_MOV')
