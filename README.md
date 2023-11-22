@@ -15,7 +15,7 @@ Recursos Principais
   * Lançamento de Caixa
   
   * Movimento de Banco
-  * 
+    
 Relatórios e Análises
 
 Tenha acesso a informações e métricas relevantes por meio de relatórios personalizados, painéis de controle intuitivos e análises de dados em tempo real.
