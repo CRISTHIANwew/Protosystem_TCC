@@ -1,4 +1,4 @@
-ProtoSystem
+O Sistema ProtoSystem tem como finalidade ser um Protótipo de Sistema de gestão desenvolvido para posterior avaliação de TCC na Faculdade Unicesumar Graduação em Engenharia de Software.
 
 O Sistema de Gestão Empresarial é uma plataforma abrangente e altamente flexível projetada para ajudar empresas de todos os tamanhos a otimizar seus processos de negócios. Ele fornece um conjunto integrado de ferramentas e funcionalidades que abrangem áreas como contabilidade, finanças, recursos humanos, vendas, compras, estoque e muito mais.
 
