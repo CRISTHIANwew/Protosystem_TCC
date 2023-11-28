@@ -18,7 +18,6 @@ object DM: TDM
         'Database=C:\Users\ECO-03\Documents\PROJETOS DELPHI\Protosystem_T' +
         'CC\bin\Database\ProtoSystem.s3db'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 66
     Top = 65534
@@ -233,19 +232,8 @@ object DM: TDM
   object SQL_RelatorioMovimentacoes: TFDQuery
     Connection = conexao
     SQL.Strings = (
-      
-        'SELECT * FROM BANCO_MOV WHERE DATAMOVIMENTO BETWEEN :DATAINICIAL' +
-        ' AND :DATAFINAL')
+      'SELECT * FROM BANCO_MOV')
     Left = 512
     Top = 424
-    ParamData = <
-      item
-        Name = 'DATAINICIAL'
-        ParamType = ptInput
-      end
-      item
-        Name = 'DATAFINAL'
-        ParamType = ptInput
-      end>
   end
 end
