@@ -1,0 +1,51 @@
+unit ProtoSystem.Printed.ReportsRelatorioProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, Data.DB;
+
+type
+  TfrmReportsRelatorioProdutos = class(TForm)
+    RLReport1: TRLReport;
+    DS_RELATORIO: TDataSource;
+    RLBand1: TRLBand;
+    RLLabel1: TRLLabel;
+    RLSystemInfo1: TRLSystemInfo;
+    RLLabel2: TRLLabel;
+    RLLabel4: TRLLabel;
+    RLBand2: TRLBand;
+    RLBand3: TRLBand;
+    RLBand4: TRLBand;
+    RLLabel5: TRLLabel;
+    RLLabel6: TRLLabel;
+    RLLabel7: TRLLabel;
+    RLLabel8: TRLLabel;
+    RLLabel9: TRLLabel;
+    RLLabel10: TRLLabel;
+    RLLabel11: TRLLabel;
+    RLDBMemo1: TRLDBMemo;
+    RLDBMemo2: TRLDBMemo;
+    RLDBMemo3: TRLDBMemo;
+    RLDBMemo4: TRLDBMemo;
+    RLDBMemo5: TRLDBMemo;
+    RLDBMemo6: TRLDBMemo;
+    RLLabel3: TRLLabel;
+    RLSystemInfo2: TRLSystemInfo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmReportsRelatorioProdutos: TfrmReportsRelatorioProdutos;
+
+implementation
+
+{$R *.dfm}
+
+uses ProtoSystem.Controller.Dm;
+
+end.

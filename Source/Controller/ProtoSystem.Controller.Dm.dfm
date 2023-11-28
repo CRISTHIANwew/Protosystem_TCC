@@ -18,7 +18,7 @@ object DM: TDM
       'DriverID=SQLite')
     LoginPrompt = False
     Left = 83
-    Top = 8
+    Top = 65533
   end
   object FDQuery: TFDQuery
     Connection = conexao
@@ -219,5 +219,19 @@ object DM: TDM
     SQL.Strings = (
       'select descricao, estoque from produto')
     Left = 940
+  end
+  object SQL_RelatorioProdutos: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    Left = 640
+    Top = 460
+  end
+  object SQL_RelatorioMovimentacoes: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'SELECT * FROM BANCO_MOV')
+    Left = 640
+    Top = 530
   end
 end

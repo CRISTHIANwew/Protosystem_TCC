@@ -124,7 +124,7 @@ implementation
 {$R *.dfm}
 
 uses ProtoSystem.Controller.Dm, ProtoSystem.Model.Vendas,
-  ProtoSystem.Model.ReportsPedidoDeVenda;
+  ProtoSystem.Printed.ReportsPedidoDeVenda;
 
 procedure TfrmVendasFechamento.edtDespesasExit(Sender: TObject);
 begin

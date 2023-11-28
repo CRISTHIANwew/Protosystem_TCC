@@ -2,44 +2,35 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
   Left = 0
   Top = 0
   BorderStyle = bsNone
-  ClientHeight = 395
-  ClientWidth = 884
+  ClientHeight = 316
+  ClientWidth = 707
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -15
+  Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  PixelsPerInch = 120
-  TextHeight = 20
+  TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 884
-    Height = 395
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 707
+    Height = 316
     Align = alClient
     BevelOuter = bvNone
     Color = 8805178
-    Padding.Left = 6
-    Padding.Top = 6
-    Padding.Right = 6
-    Padding.Bottom = 6
+    Padding.Left = 5
+    Padding.Top = 5
+    Padding.Right = 5
+    Padding.Bottom = 5
     ParentBackground = False
     TabOrder = 0
     object Panel8: TPanel
-      Left = 6
-      Top = 6
-      Width = 872
-      Height = 35
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 5
+      Top = 5
+      Width = 697
+      Height = 28
       Align = alTop
       Alignment = taLeftJustify
       BevelOuter = bvNone
@@ -48,33 +39,29 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
       Color = 13275746
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 15649712
-      Font.Height = -21
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
-      Padding.Left = 6
-      Padding.Top = 6
-      Padding.Right = 6
-      Padding.Bottom = 6
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
       ParentBiDiMode = False
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
       object Pnl_sair: TPanel
-        Left = 756
-        Top = 6
-        Width = 110
-        Height = 23
+        Left = 604
+        Top = 5
+        Width = 88
+        Height = 18
         Cursor = crHandPoint
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
         Align = alRight
         BevelOuter = bvNone
         Color = 13274977
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Height = -15
+        Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentBackground = False
@@ -83,12 +70,8 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
         object Shape19: TShape
           Left = 0
           Top = 0
-          Width = 110
-          Height = 23
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Width = 88
+          Height = 18
           Align = alClient
           Brush.Color = 8739130
           Shape = stRoundRect
@@ -96,19 +79,15 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
         object SpeedButton6: TSpeedButton
           Left = 0
           Top = 0
-          Width = 110
-          Height = 23
+          Width = 88
+          Height = 18
           Cursor = crHandPoint
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
           Align = alClient
           Caption = 'Fechar'
           Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = 15649712
-          Font.Height = -16
+          Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
           Font.Quality = fqClearTypeNatural
@@ -118,113 +97,80 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
       end
     end
     object Panel2: TPanel
-      Left = 6
-      Top = 41
-      Width = 872
-      Height = 348
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 5
+      Top = 33
+      Width = 697
+      Height = 278
       Align = alClient
       BevelOuter = bvNone
       Color = 15649712
-      Padding.Left = 6
-      Padding.Top = 6
-      Padding.Right = 6
-      Padding.Bottom = 6
+      Padding.Left = 5
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
       ParentBackground = False
       TabOrder = 1
       object PgcUsuario: TPageControl
-        Left = 6
-        Top = 6
-        Width = 860
-        Height = 296
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Left = 5
+        Top = 5
+        Width = 687
+        Height = 236
         ActivePage = TabOperacao
         Align = alClient
         TabOrder = 0
         object TabOperacao: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
           Caption = 'Operacao'
           object Panel4: TPanel
             Left = 0
             Top = 0
-            Width = 852
-            Height = 261
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 679
+            Height = 206
             Align = alClient
             BevelOuter = bvNone
             Color = 13274977
-            Padding.Left = 6
-            Padding.Top = 6
-            Padding.Right = 6
-            Padding.Bottom = 6
+            Padding.Left = 5
+            Padding.Top = 5
+            Padding.Right = 5
+            Padding.Bottom = 5
             ParentBackground = False
             TabOrder = 0
             object pnl_dados_user: TPanel
-              Left = 6
-              Top = 6
-              Width = 840
-              Height = 249
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 5
+              Top = 5
+              Width = 669
+              Height = 196
               Align = alClient
               BevelOuter = bvNone
               Color = 15649712
-              Padding.Left = 6
-              Padding.Top = 6
-              Padding.Right = 6
-              Padding.Bottom = 6
+              Padding.Left = 5
+              Padding.Top = 5
+              Padding.Right = 5
+              Padding.Bottom = 5
               ParentBackground = False
               TabOrder = 0
               object Panel15: TPanel
-                Left = 503
-                Top = 16
-                Width = 73
-                Height = 50
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 402
+                Top = 13
+                Width = 59
+                Height = 40
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 0
                 object Shape34: TShape
                   Left = 0
                   Top = 0
-                  Width = 67
-                  Height = 50
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 54
+                  Height = 40
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitWidth = 68
                 end
                 object edtID: TDBLabeledEdit
-                  Left = 8
-                  Top = 24
-                  Width = 52
-                  Height = 22
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Left = 6
+                  Top = 19
+                  Width = 42
+                  Height = 18
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
@@ -234,14 +180,14 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 16512241
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = [fsBold]
                   ParentBiDiMode = False
                   ParentFont = False
                   TabOrder = 0
-                  EditLabel.Width = 15
-                  EditLabel.Height = 20
+                  EditLabel.Width = 11
+                  EditLabel.Height = 15
                   EditLabel.Margins.Left = 8
                   EditLabel.Margins.Top = 8
                   EditLabel.Margins.Right = 8
@@ -252,41 +198,29 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                 end
               end
               object Panel5: TPanel
-                Left = 578
-                Top = 16
-                Width = 245
-                Height = 50
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 462
+                Top = 13
+                Width = 196
+                Height = 40
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 1
                 object Shape1: TShape
                   Left = 0
                   Top = 0
-                  Width = 239
-                  Height = 50
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 191
+                  Height = 40
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
                 end
                 object edtUsuario: TDBLabeledEdit
                   Tag = 1
-                  Left = 8
-                  Top = 26
-                  Width = 220
-                  Height = 23
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Left = 6
+                  Top = 21
+                  Width = 176
+                  Height = 18
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
                   Color = 13275746
@@ -295,7 +229,7 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 16512241
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = [fsBold]
                   ParentFont = False
@@ -319,42 +253,29 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                 end
               end
               object Panel6: TPanel
-                Left = 18
-                Top = 16
-                Width = 293
-                Height = 50
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 14
+                Top = 13
+                Width = 235
+                Height = 40
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 2
                 object Shape2: TShape
                   Left = 0
                   Top = 0
-                  Width = 287
-                  Height = 50
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 230
+                  Height = 40
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitWidth = 288
                 end
                 object edtSenha: TDBLabeledEdit
                   Tag = 1
-                  Left = 6
-                  Top = 26
-                  Width = 275
-                  Height = 18
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Left = 5
+                  Top = 21
+                  Width = 220
+                  Height = 14
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
@@ -363,7 +284,7 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   DataSource = DS_Lancamento_Caixa
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 16512241
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = [fsBold]
                   ParentBiDiMode = False
@@ -390,43 +311,30 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                 end
               end
               object Panel7: TPanel
-                Left = 18
-                Top = 78
-                Width = 293
-                Height = 153
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 14
+                Top = 62
+                Width = 235
+                Height = 123
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 3
                 object Shape3: TShape
                   Left = 0
                   Top = 0
-                  Width = 287
-                  Height = 153
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 230
+                  Height = 123
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitWidth = 288
-                  ExplicitHeight = 154
+                  ExplicitHeight = 122
                 end
                 object DBLabeledEdit1: TDBLabeledEdit
                   Tag = 1
-                  Left = 10
-                  Top = 40
-                  Width = 261
-                  Height = 101
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Left = 8
+                  Top = 32
+                  Width = 209
+                  Height = 81
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
@@ -435,7 +343,7 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   DataSource = DS_Lancamento_Caixa
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 16512241
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = [fsBold]
                   ParentBiDiMode = False
@@ -462,44 +370,36 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                 end
               end
               object Panel9: TPanel
-                Left = 319
-                Top = 16
-                Width = 182
-                Height = 215
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 255
+                Top = 13
+                Width = 146
+                Height = 172
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 4
                 object Shape4: TShape
                   Left = 0
                   Top = 0
-                  Width = 176
-                  Height = 215
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 141
+                  Height = 172
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
                 end
                 object gpTipo: TRadioGroup
-                  Left = 13
-                  Top = 13
-                  Width = 152
-                  Height = 181
-                  Margins.Left = 6
-                  Margins.Top = 6
-                  Margins.Right = 6
-                  Margins.Bottom = 6
+                  Left = 10
+                  Top = 10
+                  Width = 122
+                  Height = 145
+                  Margins.Left = 5
+                  Margins.Top = 5
+                  Margins.Right = 5
+                  Margins.Bottom = 5
                   Caption = 'Tipo do Lan'#231'amento'
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = clWindowText
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = [fsBold]
                   Items.Strings = (
@@ -510,42 +410,29 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                 end
               end
               object Panel10: TPanel
-                Left = 503
-                Top = 74
-                Width = 318
-                Height = 50
-                Margins.Left = 4
-                Margins.Top = 4
-                Margins.Right = 4
-                Margins.Bottom = 4
+                Left = 402
+                Top = 59
+                Width = 255
+                Height = 40
                 Align = alCustom
                 BevelOuter = bvNone
-                Padding.Right = 6
+                Padding.Right = 5
                 TabOrder = 5
                 object Shape5: TShape
                   Left = 0
                   Top = 0
-                  Width = 312
-                  Height = 50
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Width = 250
+                  Height = 40
                   Align = alClient
                   Brush.Color = 13275746
                   Shape = stRoundRect
-                  ExplicitWidth = 313
                 end
                 object edtTipo: TDBLabeledEdit
                   Tag = 1
-                  Left = 16
-                  Top = 28
-                  Width = 275
-                  Height = 16
-                  Margins.Left = 4
-                  Margins.Top = 4
-                  Margins.Right = 4
-                  Margins.Bottom = 4
+                  Left = 13
+                  Top = 22
+                  Width = 220
+                  Height = 13
                   BiDiMode = bdLeftToRight
                   BorderStyle = bsNone
                   CharCase = ecUpperCase
@@ -555,7 +442,7 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   Enabled = False
                   Font.Charset = DEFAULT_CHARSET
                   Font.Color = 16512241
-                  Font.Height = -15
+                  Font.Height = -12
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentBiDiMode = False
@@ -585,39 +472,27 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           end
         end
         object TabPesquisa: TTabSheet
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
           Caption = 'Pesquisa'
           ImageIndex = 1
           object Panel3: TPanel
             Left = 0
             Top = 0
-            Width = 852
-            Height = 261
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 679
+            Height = 206
             Align = alClient
             Color = 14079702
-            Padding.Left = 5
-            Padding.Top = 5
-            Padding.Right = 5
-            Padding.Bottom = 5
+            Padding.Left = 4
+            Padding.Top = 4
+            Padding.Right = 4
+            Padding.Bottom = 4
             ParentBackground = False
             TabOrder = 0
             object DBGrid1: TDBGrid
-              Left = 6
-              Top = 34
-              Width = 840
-              Height = 221
+              Left = 5
+              Top = 28
+              Width = 669
+              Height = 173
               Hint = 'Clique duas vezes para selecionar'
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
               Align = alClient
               DataSource = DS_Lancamento_Caixa
               ParentShowHint = False
@@ -626,7 +501,7 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
               TabOrder = 0
               TitleFont.Charset = DEFAULT_CHARSET
               TitleFont.Color = clWindowText
-              TitleFont.Height = -15
+              TitleFont.Height = -12
               TitleFont.Name = 'Segoe UI'
               TitleFont.Style = []
               Columns = <
@@ -634,51 +509,46 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
                   Expanded = False
                   FieldName = 'ID'
                   Title.Caption = 'Id'
-                  Width = 80
                   Visible = True
                 end
                 item
                   Expanded = False
                   FieldName = 'TIPO'
                   Title.Caption = 'Tipo'
-                  Width = 79
+                  Width = 63
                   Visible = True
                 end
                 item
                   Alignment = taCenter
                   Expanded = False
-                  FieldName = 'DATAMOVIMENTO'
+                  FieldName = 'DATALANCAMENTO'
                   Title.Alignment = taCenter
                   Title.Caption = 'Data do Movimento'
-                  Width = 148
+                  Width = 118
                   Visible = True
                 end
                 item
                   Alignment = taCenter
                   Expanded = False
-                  FieldName = 'VALORMOVIMENTO'
+                  FieldName = 'VALORLANCAMENTO'
                   Title.Alignment = taCenter
                   Title.Caption = 'Valor'
-                  Width = 81
+                  Width = 65
                   Visible = True
                 end
                 item
                   Expanded = False
                   FieldName = 'OBSERVACAO'
                   Title.Caption = 'Observa'#231#227'o'
-                  Width = 406
+                  Width = 325
                   Visible = True
                 end>
             end
             object edtPesquisa: TEdit
-              Left = 6
-              Top = 6
-              Width = 840
-              Height = 28
-              Margins.Left = 4
-              Margins.Top = 4
-              Margins.Right = 4
-              Margins.Bottom = 4
+              Left = 5
+              Top = 5
+              Width = 669
+              Height = 23
               Align = alTop
               TabOrder = 1
             end
@@ -686,45 +556,33 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
         end
       end
       object pnlButtons: TPanel
-        Left = 6
-        Top = 302
-        Width = 860
-        Height = 40
-        Margins.Left = 4
-        Margins.Top = 4
-        Margins.Right = 4
-        Margins.Bottom = 4
+        Left = 5
+        Top = 241
+        Width = 687
+        Height = 32
         Align = alBottom
         BevelOuter = bvNone
         Color = 13275746
-        Padding.Left = 6
-        Padding.Top = 6
-        Padding.Right = 6
-        Padding.Bottom = 6
+        Padding.Left = 5
+        Padding.Top = 5
+        Padding.Right = 5
+        Padding.Bottom = 5
         ParentBackground = False
         TabOrder = 1
         object pnlCadastrar: TPanel
-          Left = 539
-          Top = 6
-          Width = 105
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 430
+          Top = 5
+          Width = 84
+          Height = 22
           Align = alRight
           BevelOuter = bvNone
-          Padding.Right = 6
+          Padding.Right = 5
           TabOrder = 0
           object ShpCadastrar: TShape
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Brush.Color = 8739130
             Pen.Style = psClear
@@ -733,18 +591,14 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           object btnCadastrar: TSpeedButton
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Caption = 'Cadastrar'
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -15
+            Font.Height = -12
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -752,27 +606,19 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           end
         end
         object pnlSalvar: TPanel
-          Left = 644
-          Top = 6
-          Width = 105
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 514
+          Top = 5
+          Width = 84
+          Height = 22
           Align = alRight
           BevelOuter = bvNone
-          Padding.Right = 6
+          Padding.Right = 5
           TabOrder = 1
           object shpSalvar: TShape
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Brush.Color = 8739130
             Pen.Style = psClear
@@ -781,19 +627,15 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           object btnSalvar: TSpeedButton
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Caption = 'Salvar'
             Enabled = False
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -15
+            Font.Height = -12
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False
@@ -801,27 +643,19 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           end
         end
         object pnlCancelar: TPanel
-          Left = 749
-          Top = 6
-          Width = 105
-          Height = 28
-          Margins.Left = 4
-          Margins.Top = 4
-          Margins.Right = 4
-          Margins.Bottom = 4
+          Left = 598
+          Top = 5
+          Width = 84
+          Height = 22
           Align = alRight
           BevelOuter = bvNone
-          Padding.Right = 6
+          Padding.Right = 5
           TabOrder = 2
           object ShpCancelar: TShape
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Brush.Color = 8739130
             Pen.Style = psClear
@@ -830,19 +664,15 @@ object frmLancamentoDeCaixa: TfrmLancamentoDeCaixa
           object btnCancelar: TSpeedButton
             Left = 0
             Top = 0
-            Width = 99
-            Height = 28
-            Margins.Left = 4
-            Margins.Top = 4
-            Margins.Right = 4
-            Margins.Bottom = 4
+            Width = 79
+            Height = 22
             Align = alClient
             Caption = 'Cancelar'
             Enabled = False
             Flat = True
             Font.Charset = DEFAULT_CHARSET
             Font.Color = 15649712
-            Font.Height = -15
+            Font.Height = -12
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
             ParentFont = False

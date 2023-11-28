@@ -1,0 +1,345 @@
+object frmReportsRelatorioLancamentos: TfrmReportsRelatorioLancamentos
+  Left = 0
+  Top = 0
+  ClientHeight = 716
+  ClientWidth = 796
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object RLReport1: TRLReport
+    Left = 8
+    Top = 0
+    Width = 794
+    Height = 1123
+    DataSource = DS_RELATORIO
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 75
+      BandType = btTitle
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = True
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      object RLLabel1: TRLLabel
+        Left = 0
+        Top = 1
+        Width = 718
+        Height = 25
+        Align = faTop
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = True
+        Caption = 'ProtoSystem Sistemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -19
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object RLSystemInfo1: TRLSystemInfo
+        Left = 634
+        Top = 27
+        Width = 83
+        Height = 22
+        AutoSize = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        Layout = tlCenter
+        ParentFont = False
+        Text = ''
+      end
+      object RLLabel2: TRLLabel
+        Left = 464
+        Top = 27
+        Width = 171
+        Height = 22
+        AutoSize = False
+        Caption = 'Data da impress'#227'o: '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLLabel4: TRLLabel
+        Left = 0
+        Top = 49
+        Width = 718
+        Height = 25
+        Align = faBottom
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = True
+        Borders.DrawTop = True
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Relat'#243'rio de Movimenta'#231#245'es Banc'#225'rias Por Periodo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lbPeriodo: TRLLabel
+        Left = 3
+        Top = 27
+        Width = 462
+        Height = 22
+        AutoSize = False
+        Caption = 'Periodo Selecionado: '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object RLBand4: TRLBand
+      Left = 38
+      Top = 169
+      Width = 718
+      Height = 48
+      BandType = btColumnFooter
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = True
+      Borders.DrawRight = False
+      Borders.DrawBottom = True
+      object RLLabel11: TRLLabel
+        Left = 0
+        Top = 31
+        Width = 718
+        Height = 16
+        Align = faBottom
+        Alignment = taRightJustify
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = False
+        Borders.DrawBottom = False
+        Caption = 'Desenvolvido Por: Analsita Cristhian - ProtoSistem Sistemas'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        ParentFont = False
+      end
+      object RLLabel3: TRLLabel
+        Left = 624
+        Top = 6
+        Width = 49
+        Height = 22
+        AutoSize = False
+        Caption = 'Pagina: '
+      end
+      object RLSystemInfo2: TRLSystemInfo
+        Left = 672
+        Top = 2
+        Width = 43
+        Height = 22
+        Alignment = taCenter
+        AutoSize = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Info = itPageNumber
+        Layout = tlCenter
+        ParentFont = False
+        Text = ''
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 113
+      Width = 718
+      Height = 24
+      BandType = btColumnHeader
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = True
+      Borders.DrawTop = True
+      Borders.DrawRight = True
+      Borders.DrawBottom = True
+      object RLLabel5: TRLLabel
+        Left = 1
+        Top = 1
+        Width = 41
+        Height = 22
+        Align = faLeft
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Id'
+      end
+      object RLLabel6: TRLLabel
+        Left = 42
+        Top = 1
+        Width = 160
+        Height = 22
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Data do Movimento'
+      end
+      object RLLabel7: TRLLabel
+        Left = 202
+        Top = 1
+        Width = 62
+        Height = 22
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Valor'
+      end
+      object RLLabel8: TRLLabel
+        Left = 264
+        Top = 1
+        Width = 84
+        Height = 22
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Tipo'
+      end
+      object RLLabel9: TRLLabel
+        Left = 348
+        Top = 1
+        Width = 368
+        Height = 22
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Borders.Sides = sdCustom
+        Borders.DrawLeft = False
+        Borders.DrawTop = False
+        Borders.DrawRight = True
+        Borders.DrawBottom = False
+        Caption = 'Observa'#231#227'o'
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 137
+      Width = 718
+      Height = 32
+      object RLDBMemo1: TRLDBMemo
+        Left = 0
+        Top = 0
+        Width = 41
+        Height = 32
+        Align = faLeft
+        AutoSize = False
+        Behavior = [beSiteExpander]
+        DataField = 'ID'
+      end
+      object RLDBMemo2: TRLDBMemo
+        Left = 41
+        Top = 0
+        Width = 160
+        Height = 32
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Behavior = [beSiteExpander]
+        DataField = 'DATAMOVIMENTO'
+      end
+      object RLDBMemo3: TRLDBMemo
+        Left = 201
+        Top = 0
+        Width = 59
+        Height = 32
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Behavior = [beSiteExpander]
+        DataField = 'VALORMOVIMENTO'
+      end
+      object RLDBMemo4: TRLDBMemo
+        Left = 260
+        Top = 0
+        Width = 88
+        Height = 32
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Behavior = [beSiteExpander]
+        DataField = 'TIPO'
+      end
+      object RLDBMemo5: TRLDBMemo
+        Left = 348
+        Top = 0
+        Width = 367
+        Height = 32
+        Align = faLeft
+        Alignment = taCenter
+        AutoSize = False
+        Behavior = [beSiteExpander]
+        DataField = 'OBSERVACAO'
+      end
+    end
+  end
+  object DS_RELATORIO: TDataSource
+    DataSet = SQL_Relatorio
+    Left = 360
+    Top = 344
+  end
+  object SQL_Relatorio: TFDQuery
+    Active = True
+    Connection = DM.conexao
+    SQL.Strings = (
+      'SELECT * FROM CAIXA_LANC')
+    Left = 448
+    Top = 344
+  end
+end

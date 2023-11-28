@@ -369,8 +369,8 @@ object frmVendasFechamento: TfrmVendasFechamento
           object Label1: TLabel
             Left = 0
             Top = 0
-            Width = 243
-            Height = 29
+            Width = 120
+            Height = 28
             Align = alClient
             Alignment = taCenter
             Caption = 'Faturamento'
@@ -382,8 +382,6 @@ object frmVendasFechamento: TfrmVendasFechamento
             Font.Style = [fsBold]
             ParentColor = False
             ParentFont = False
-            ExplicitWidth = 120
-            ExplicitHeight = 28
           end
         end
       end
@@ -735,8 +733,8 @@ object frmVendasFechamento: TfrmVendasFechamento
           object Label3: TLabel
             Left = 0
             Top = 0
-            Width = 243
-            Height = 29
+            Width = 229
+            Height = 28
             Align = alClient
             Alignment = taCenter
             Caption = 'Condi'#231#227'o de Pagamento'
@@ -748,8 +746,6 @@ object frmVendasFechamento: TfrmVendasFechamento
             Font.Style = [fsBold]
             ParentColor = False
             ParentFont = False
-            ExplicitWidth = 229
-            ExplicitHeight = 28
           end
         end
       end

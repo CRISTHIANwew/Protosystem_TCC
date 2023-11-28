@@ -49,6 +49,8 @@ type
     SQL_ImpressaoPedidoVALOR_UNIT: TFloatField;
     SQL_ImpressaoPedidoQUANTIDADE: TIntegerField;
     SQL_ImpressaoPedidoVALOR_TOTAL: TFloatField;
+    SQL_RelatorioProdutos: TFDQuery;
+    SQL_RelatorioMovimentacoes: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
 
   private
@@ -66,6 +68,8 @@ type
     NOMECliente: string;
     PesquisaClienteStatus: boolean;
     PesquisaFornecedorStatus: boolean;
+    RPdtInicial: string;
+    RPdtFinal: string;
     procedure fecharaplicacao;
   end;
 
@@ -304,8 +308,8 @@ begin
      'CUSTO REAL,' +
      'PRECO REAL,' +
      'IMAGEM BLOB,' +
-     'DATAHORACADASTRO DATETIME DEFAULT CURRENT_TIMESTAMP,' +
-     'DATAHORAALTERACAO DATETIME);');
+     'DATAHORACADASTRO DATE DEFAULT CURRENT_TIMESTAMP,' +
+     'DATAHORAALTERACAO DATE);');
 
     FDQuery.ExecSQL('CREATE TRIGGER UpdateDataHoraCadastro ' +
      'AFTER INSERT ON PRODUTO ' + 'BEGIN ' + '  UPDATE PRODUTO ' +

@@ -48,7 +48,6 @@ type
     SQL_MovimentoBan: TFDQuery;
     DS_MovimentoBan: TDataSource;
     SQL_MovimentoBanID: TFDAutoIncField;
-    SQL_MovimentoBanDATAMOVIMENTO: TDateTimeField;
     SQL_MovimentoBanVALORMOVIMENTO: TFloatField;
     SQL_MovimentoBanOBSERVACAO: TStringField;
     Panel7: TPanel;
@@ -61,10 +60,12 @@ type
     Panel10: TPanel;
     Shape5: TShape;
     edtTipo: TDBLabeledEdit;
+    SQL_MovimentoBanDATAMOVIMENTO: TDateTimeField;
     procedure SpeedButton6Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
     var
@@ -118,6 +119,11 @@ begin
     end;
     gpTipo.ItemIndex:=-1;
 end;
+procedure TfrmCadastroMovimento.FormCreate(Sender: TObject);
+begin
+ SQL_MovimentoBan.open;
+end;
+
 procedure TfrmCadastroMovimento.SpeedButton6Click(Sender: TObject);
 begin
   close;
