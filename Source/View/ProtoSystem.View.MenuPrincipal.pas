@@ -16,7 +16,7 @@ uses
   FireDAC.Phys.SQLiteDef, FireDAC.Phys.SQLite, FireDAC.Comp.UI, Data.DB,
   FireDAC.Comp.Client, Vcl.Buttons, VclTee.TeeGDIPlus, VCLTee.TeEngine,
   VCLTee.Series, VCLTee.TeeProcs, VCLTee.Chart, VCLTee.DBChart,
-  VCLTee.TeeDBCrossTab;
+  VCLTee.TeeDBCrossTab, midas, midaslib;
 
 type
   TFrm_Principal = class(TForm)
